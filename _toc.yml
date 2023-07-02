@@ -10,8 +10,12 @@ parts:
   - file: book/preface/intro
 
 - caption: Notes
+  numbered: true
+  chapters:
+  - file: book/conditionals
+
+- caption: Misc. Set up Files
   chapters:
   - file: book/markdown
   - file: book/notebooks
   - file: book/markdown-notebooks
-  - file: book/conditionals
