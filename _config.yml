@@ -12,7 +12,7 @@ logo: logo.png # A path to the book logo
 # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
 exclude_patterns: [_build, Thumbs.db, .DS_Store, "**.ipynb_checkpoints"]
 # Auto-exclude files not in the toc
-only_build_toc_files: true
+only_build_toc_files: false
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -70,9 +70,8 @@ sphinx:
     bibtex_reference_style: author_year
 
 sphinx_book_theme:
-  dark_mode:
-    enabled: false
-    disable_switch: true
+  html_theme_options:
+    style_dark_mode: false
 
 # Define the name of the latex output file for PDF builds
 # latex:

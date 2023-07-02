@@ -1,6 +1,6 @@
 # Welcome to the ESC180 Notes!
 
-Welcome to EngSci! Test Test test stink holy free mee
+Welcome to EngSci! This is a sample book built automatically from a collection of Jupyter notebooks using [Jupyter Book](https://jupyterbook.org/intro.html).
 
 This is a small sample book to give you a feel for how book content is
 structured.
