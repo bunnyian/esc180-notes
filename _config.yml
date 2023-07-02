@@ -32,9 +32,14 @@ launch_buttons:
   notebook_interface: "jupyterlab"
   binderhub_url: "https://mybinder.org"
 
-## add a search bar
-search:
-  prebuild: true
+
+jupyter_book:
+  search:
+    prebuild: true
+    navbar:
+      title: "Search"
+      placeholder: "Search the book..."
+
 
 # Information about where the book exists on the web
 repository:
