@@ -5,17 +5,19 @@ format: jb-book
 root: book/landing
 
 parts:
-- caption: Preface
-  chapters:
-  - file: book/preface/intro
+  - caption: Preface
+    chapters:
+      - file: book/preface/intro
 
-- caption: Notes
-  numbered: true
-  chapters:
-  - file: book/conditionals
+  - caption: Notes
+    numbered: true
+    chapters:
+      - file: book/conditionals
+        sections:
+        - file: book/example
 
-- caption: Misc. Set up Files
-  chapters:
-  - file: book/markdown
-  - file: book/notebooks
-  - file: book/markdown-notebooks
+  - caption: Misc. Set up Files
+    chapters:
+      - file: book/markdown
+      - file: book/notebooks
+      - file: book/markdown-notebooks
