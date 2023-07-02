@@ -2,9 +2,16 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: book/intro
-chapters:
-- file: book/markdown
-- file: book/notebooks
-- file: book/markdown-notebooks
-- file: book/conditionals
+root: book/landing
+
+parts:
+- caption: Preface
+  chapters:
+  - file: book/preface/intro
+
+- caption: Notes
+  chapters:
+  - file: book/markdown
+  - file: book/notebooks
+  - file: book/markdown-notebooks
+  - file: book/conditionals

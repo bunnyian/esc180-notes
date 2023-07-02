@@ -32,6 +32,10 @@ launch_buttons:
   notebook_interface: "jupyterlab"
   binderhub_url: "https://mybinder.org"
 
+## add a search bar
+search:
+  prebuild: true
+
 # Information about where the book exists on the web
 repository:
   url: https://github.com/bunnyian/esc180-notes # Online location of your book
