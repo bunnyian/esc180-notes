@@ -9,13 +9,27 @@ parts:
       - file: book/preface/intro
 
   - caption: Notes
-    numbered: True
+    numbered: False
     chapters:
       - file: book/ch1/intro1
         sections:
-        - file: book/ch1/book/Introduction to Python Expressions and Variables
+        - file: book/ch1/A Simple Python Program
+        - file: book/ch1/Introduction to Python Expressions and Variables
         - file: book/ch1/conditionals
+        - file: book/ch1/tracing.mkv
 
+      - file: book/ch2/intro2
+        sections:
+        - file: book/ch2/ConditionalPirates
+        - file: book/ch2/Quadratic.ipynb
+        - file: book/ch2/SecretMagic.ipynb
+
+      - file: book/ch3/intro3
+        sections:
+        - file: book/ch3/numericalTypes.ipynb
+        - file: book/ch3/printMultiple.ipynb
+        - file: book/ch3/quadraticMore.ipynb
+        - file: book/ch3/strings.ipynb
   - caption: Misc. Set up Files
     chapters:
       - file: book/misc/markdown
