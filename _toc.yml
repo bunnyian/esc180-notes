@@ -9,9 +9,11 @@ parts:
       - file: book/preface/intro
 
   - caption: Notes
+    numbered: True
     chapters:
       - file: book/ch1/intro1
         sections:
+        - file: book/ch1/book/Introduction to Python Expressions and Variables
         - file: book/ch1/conditionals
 
   - caption: Misc. Set up Files
