@@ -10,14 +10,12 @@ parts:
 
   - caption: Notes
     chapters:
-      - file: book/notes1
+      - file: book/ch1/intro1
         sections:
-        - file: book/conditionals
-        - file: book/example
-        - file: book/example2
+        - file: book/ch1/conditionals
 
   - caption: Misc. Set up Files
     chapters:
-      - file: book/markdown
-      - file: book/notebooks
-      - file: book/markdown-notebooks
+      - file: book/misc/markdown
+      - file: book/misc/notebooks
+      - file: book/misc/markdown-notebooks

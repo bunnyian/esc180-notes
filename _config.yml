@@ -68,10 +68,6 @@ sphinx:
       
     bibtex_reference_style: author_year
 
-sphinx_book_theme:
-  html_theme_options:
-    style_dark_mode: false
-
 # Define the name of the latex output file for PDF builds
 # latex:
 #   latex_documents:
