@@ -9,7 +9,7 @@ parts:
       - file: book/preface/intro
 
   - caption: Notes
-    numbered: False
+    numbered: True
     chapters:
       - file: book/ch1/intro1
         sections:
