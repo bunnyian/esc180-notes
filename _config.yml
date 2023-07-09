@@ -7,7 +7,7 @@
 # Book settings
 title: ESC180 Notes # The title of the book. Will be placed in the left navbar.
 author: Michael Guerzhoy, Ian Wu, Youssef Rachad # The author of the book
-copyright: "2023" # Copyright year to be placed in the footer
+copyright: "2023\nSharing, re-distribution, and adaptation is allowed for non-commercial purposes as long as attribution to the original author is given, and as long as you notify the original author at guerzhoy@cs.toronto.edu that you intend to use the materials. Atrribution must be given in a reasonable way and in a way that does not suggest that the original author endorses any adaptation. This permission to share, re-distribute and adapt is non-transferrable." # Copyright year to be placed in the footer
 logo: logo.png # A path to the book logo
 # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
 exclude_patterns: [_build, Thumbs.db, .DS_Store, "**.ipynb_checkpoints"]
@@ -63,7 +63,6 @@ sphinx:
       use_edit_page_button: true
       launch_buttons:
         {
-          binderhub_url: "https://mybinder.org",
           colab_url: "https://colab.research.google.com",
         }
       
