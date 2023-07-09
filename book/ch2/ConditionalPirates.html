@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Using Python as a calculator: Expressions and Variables &#8212; ESC180 Notes</title>
+    <title>Writing Conditional Statements &#8212; ESC180 Notes</title>
   
   
   
@@ -61,13 +61,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'book/ch1/Introduction to Python Expressions and Variables';</script>
-    <link rel="canonical" href="https://bunnyian.github.io/esc180-notes/book/ch1/Introduction to Python Expressions and Variables.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'book/ch2/ConditionalPirates';</script>
+    <link rel="canonical" href="https://bunnyian.github.io/esc180-notes/book/ch2/ConditionalPirates.html" />
     <link rel="shortcut icon" href="../../_static/fav.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Conditionals" href="conditionals.html" />
-    <link rel="prev" title="A simple Python program" href="A%20Simple%20Python%20Program.html" />
+    <link rel="next" title="Solving the quadratic equation" href="Quadratic.html" />
+    <link rel="prev" title="Basic Programs" href="intro2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -156,19 +156,19 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Notes</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="intro1.html">Introduction to Python Basics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="A%20Simple%20Python%20Program.html">A simple Python program</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Using Python as a calculator: Expressions and Variables</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../ch1/intro1.html">Introduction to Python Basics</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ch1/A%20Simple%20Python%20Program.html">A simple Python program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ch1/Introduction%20to%20Python%20Expressions%20and%20Variables.html">Using Python as a calculator: Expressions and Variables</a></li>
 
 
-<li class="toctree-l2"><a class="reference internal" href="conditionals.html">Conditionals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ch1/conditionals.html">Conditionals</a></li>
 
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../ch2/intro2.html">Basic Programs</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../ch2/ConditionalPirates.html">Writing Conditional Statements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ch2/Quadratic.html">Solving the quadratic equation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ch2/SecretMagic.html">Secret Number Magic Trick</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="intro2.html">Basic Programs</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Writing Conditional Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Quadratic.html">Solving the quadratic equation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SecretMagic.html">Secret Number Magic Trick</a></li>
 
 </ul>
 </li>
@@ -240,7 +240,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://colab.research.google.com/github/bunnyian/esc180-notes/blob/master/book/ch1/Introduction to Python Expressions and Variables.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/bunnyian/esc180-notes/blob/master/book/ch2/ConditionalPirates.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onColab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -288,7 +288,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/bunnyian/esc180-notes/edit/main/book/ch1/Introduction to Python Expressions and Variables.ipynb" target="_blank"
+      <li><a href="https://github.com/bunnyian/esc180-notes/edit/main/book/ch2/ConditionalPirates.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -305,7 +305,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/bunnyian/esc180-notes/issues/new?title=Issue%20on%20page%20%2Fbook/ch1/Introduction to Python Expressions and Variables.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/bunnyian/esc180-notes/issues/new?title=Issue%20on%20page%20%2Fbook/ch2/ConditionalPirates.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -335,7 +335,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/book/ch1/Introduction to Python Expressions and Variables.ipynb" target="_blank"
+      <li><a href="../../_sources/book/ch2/ConditionalPirates.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -417,7 +417,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Using Python as a calculator: Expressions and Variables</h1>
+    <h1>Writing Conditional Statements</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -427,14 +427,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Using Python as a calculator: Expressions and Variables</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#going-beyond-just-numbers">Going beyond just numbers</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">Variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditionals-possible-bugs">Conditionals: possible bugs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditionals-multilpe-elifs">Conditionals: multilpe elifs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditionals-multiple-if-statements-and-not-using-elifs-elses">Conditionals: multiple if statements and not using elifs/elses</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-reusable-code">Writing reusable code</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#printing-output-to-screen">Printing output to screen</a></li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -445,212 +442,153 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="using-python-as-a-calculator-expressions-and-variables">
-<h1>Using Python as a calculator: Expressions and Variables<a class="headerlink" href="#using-python-as-a-calculator-expressions-and-variables" title="Permalink to this heading">#</a></h1>
-<p>The following are examples of the kinds of Python expressions that we can use. The In [] lines are the expressions, and the Out [] lines are the values of the expressions.</p>
-<p>Simple arithmetic:</p>
+  <section id="writing-conditional-statements">
+<h1>Writing Conditional Statements<a class="headerlink" href="#writing-conditional-statements" title="Permalink to this heading">#</a></h1>
+<p>Here is the scenario from the <em>Pirates of the Caribbean</em>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">4</span> <span class="o">+</span> <span class="mi">5</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s2">&quot;DvzOjZu0NqI&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9
-</pre></div>
+<div class="output text_html">
+        <iframe
+            width="400"
+            height="300"
+            src="https://www.youtube.com/embed/DvzOjZu0NqI"
+            frameborder="0"
+            allowfullscreen
+        ></iframe>
+        </div></div>
 </div>
-</div>
-</div>
+<p>It costs 1 shilling to tie up the boat at the dock, and 3 shillings to do so under a pseudonym (say Mr. Smith). Here is one possible way of writing this</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">15</span> <span class="o">-</span> <span class="mi">12</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
-</pre></div>
-</div>
-</div>
-</div>
-<p>Boolean expressions are expressions whose value is either <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>. Note the double equals sign (a single equals sign means something else – see elsewhere in the lecture.) These are in most ways just like expressions whose values are integers, except the result <code class="docutils literal notranslate"><span class="pre">True</span></code>/<code class="docutils literal notranslate"><span class="pre">False</span></code> instead of things like 3.14, 10, or 42.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span> <span class="o">==</span> <span class="mi">4</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">6</span><span class="p">)</span> <span class="o">==</span> <span class="mi">12</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="going-beyond-just-numbers">
-<h1>Going beyond just numbers<a class="headerlink" href="#going-beyond-just-numbers" title="Permalink to this heading">#</a></h1>
-<p>So far, we have only seen numbers (integers) and boolean values (True and False) as values. Strings (i.e., text) is another possible value.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Hello&#39;</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Hello&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<p>In fact, we can add strings:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;ha&#39;</span> <span class="o">+</span> <span class="s1">&#39;ha&#39;</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;haha&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<p>In fact, we can even multiply strings by integers</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;ha&#39;</span> <span class="o">*</span> <span class="mi">10</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;hahahahahahahahahaha&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<p>Note that this is the same as</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;ha&#39;</span> <span class="o">+</span> <span class="s1">&#39;ha&#39;</span> <span class="o">+</span> <span class="s1">&#39;ha&#39;</span> <span class="o">+</span> <span class="s1">&#39;ha&#39;</span> <span class="o">+</span> <span class="s1">&#39;ha&#39;</span> <span class="o">+</span> <span class="s1">&#39;ha&#39;</span> <span class="o">+</span> <span class="s1">&#39;ha&#39;</span> <span class="o">+</span> <span class="s1">&#39;ha&#39;</span> <span class="o">+</span> <span class="s1">&#39;ha&#39;</span> <span class="o">+</span> <span class="s1">&#39;ha&#39;</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;hahahahahahahahahaha&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<p>So it makes sense that <code class="docutils literal notranslate"><span class="pre">'ha'</span> <span class="pre">*</span> <span class="pre">10</span></code> is <code class="docutils literal notranslate"><span class="pre">'ha'</span></code> added to itself 9 times.</p>
-<section id="variables">
-<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this heading">#</a></h2>
-<p>Variables are used to store values in memory. They are not really like variables in math – they are more like labelled boxes where you store values.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">memory</span> <span class="o">=</span> <span class="mi">42</span>
-<span class="n">memory</span> <span class="o">+</span> <span class="mi">5</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>47
-</pre></div>
-</div>
-</div>
-</div>
-<p>First, we store 42 in the variable memory (an assignment statement like the one on line above means “take the value on the right of the =, and store it in the variable on the left of the =”)</p>
-<p>Note that there’s nothing special about calling the variable memory. We could as well have done the following:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">engsci</span> <span class="o">=</span> <span class="mi">42</span>
-<span class="n">engsci</span> <span class="o">+</span> <span class="mi">5</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>47
-</pre></div>
-</div>
-</div>
-</div>
-<p>Note that we can <em>reassign</em> values to variables</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">exam</span> <span class="o">=</span> <span class="mi">98</span>
-<span class="n">engsci_adj</span> <span class="o">=</span> <span class="mi">15</span>
-<span class="n">exam</span> <span class="o">=</span> <span class="n">exam</span> <span class="o">-</span> <span class="n">engsci_adj</span>
-<span class="n">exam</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>83
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-</section>
-<section id="printing-output-to-screen">
-<h1>Printing output to screen<a class="headerlink" href="#printing-output-to-screen" title="Permalink to this heading">#</a></h1>
-<p>In order for our program to print something (rather than for a single line), we need to use the print function. For example:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;hahaha&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hahaha
-</pre></div>
-</div>
-</div>
-</div>
-<p>Note that <code class="docutils literal notranslate"><span class="pre">hahaha</span></code> had to be in quotes. If it hadn’t been, we would get an error:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">hahaha</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">13</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="n">hahaha</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shillings</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Jack Sparrow&quot;</span>
 
-<span class="ne">NameError</span>: name &#39;hahaha&#39; is not defined
-</pre></div>
-</div>
-</div>
-</div>
-<p>What happened here? If hahaha is not in quotes, Python assumes that hahaha is a variable. But we haven’t  assigned any value to the variable hahaha, is Python reasonably says that it’s undefined.</p>
-<p>We <em>could</em>, of course, assign a value to the variable hahaha:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hahaha</span> <span class="o">=</span> <span class="s2">&quot;not hahaha!&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">hahaha</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">shillings</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Welcome to Port Royal, Mr. Smith&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">shillings</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Welcome to Port Royal, &quot;</span> <span class="o">+</span> <span class="n">name</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Go away please&quot;</span><span class="p">)</span>
+    
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>not hahaha!
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Welcome to Port Royal, Jack Sparrow
 </pre></div>
 </div>
 </div>
 </div>
+<section id="conditionals-possible-bugs">
+<h2>Conditionals: possible bugs<a class="headerlink" href="#conditionals-possible-bugs" title="Permalink to this heading">#</a></h2>
+<p>Here is an <em>incorrect</em> way of writing this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shillings</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Jack Sparrow&quot;</span>
+
+<span class="k">if</span> <span class="n">shillings</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Welcome to Port Royal, &quot;</span> <span class="o">+</span> <span class="n">name</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">shillings</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Welcome to Port Royal, Mr. Smith&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Go away please&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;It was a pleasure serving you&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Welcome to Port Royal, Jack Sparrow
+It was a pleasure serving you
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">if-elif-else</span></code> structure works as follows: each condition is evaluated in turn, top-to-bottom. When a condition that evaluates to <code class="docutils literal notranslate"><span class="pre">True</span></code> is encountered, the corresponding lines are executed, and no more conditions are evaluated.</p>
+<p>In the code above, since <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">&gt;=</span> <span class="pre">1</span></code>, we print <code class="docutils literal notranslate"><span class="pre">Welcome</span> <span class="pre">to</span> <span class="pre">Port</span> <span class="pre">Royal,</span> <span class="pre">Jack</span> <span class="pre">Sparrow</span></code>, even though <code class="docutils literal notranslate"><span class="pre">shillings</span> <span class="pre">==</span> <span class="pre">3</span></code>, so that what we wanted to print is <code class="docutils literal notranslate"><span class="pre">Welcome</span> <span class="pre">to</span> <span class="pre">Port</span> <span class="pre">Royal,</span> <span class="pre">Mr.</span> <span class="pre">Smith</span></code>.</p>
+<p>Note that since the line <code class="docutils literal notranslate"><span class="pre">print(&quot;It</span> <span class="pre">was</span> <span class="pre">a</span> <span class="pre">pleasure</span> <span class="pre">serving</span> <span class="pre">you&quot;)</span></code> is not indented, it is always executed. If it were indented, it would be part of the <code class="docutils literal notranslate"><span class="pre">else</span></code> caluse, and would be executed if none of the conditions held.</p>
+<p>The nice thing about the code in [2] is that the second condition really means <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">&lt;=</span> <span class="pre">shillings</span> <span class="pre">&lt;</span> <span class="pre">3</span></code>, because by the time we are evaluating <code class="docutils literal notranslate"><span class="pre">shillings</span> <span class="pre">&gt;=</span> <span class="pre">1</span></code>, we already know that <code class="docutils literal notranslate"><span class="pre">shillings</span> <span class="pre">&lt;</span> <span class="pre">3</span></code>, since we first checked whether shillings was greater or equal to three, and if we are checking whether <code class="docutils literal notranslate"><span class="pre">shillings</span> <span class="pre">&gt;=</span> <span class="pre">1</span></code>, the first condition evaluated to <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</section>
+<section id="conditionals-multilpe-elifs">
+<h2>Conditionals: multilpe elifs<a class="headerlink" href="#conditionals-multilpe-elifs" title="Permalink to this heading">#</a></h2>
+<p>We can have multiple <code class="docutils literal notranslate"><span class="pre">elif</span></code>s. For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shillings</span> <span class="o">=</span> <span class="mi">300000001</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Jack Sparrow&quot;</span>
+
+<span class="k">if</span> <span class="n">shillings</span> <span class="o">&gt;=</span> <span class="mi">300000000</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Welcome to Port Royal, Mr. Smith. Here is your iron ring&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">shillings</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Welcome to Port Royal, Mr. Smith&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">shillings</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Welcome to Port Royal, &quot;</span> <span class="o">+</span> <span class="n">name</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Go away please&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Welcome to Port Royal, Mr. Smith. Here is your iron ring
+</pre></div>
+</div>
+</div>
+</div>
+<p>Again, all the conditions are evaluated top-to-bottom, until we reach a true condition, which gets executed. If none of the conditions are executed, the <code class="docutils literal notranslate"><span class="pre">else</span></code> blog is executed.</p>
+</section>
+<section id="conditionals-multiple-if-statements-and-not-using-elifs-elses">
+<h2>Conditionals: multiple if statements and not using elifs/elses<a class="headerlink" href="#conditionals-multiple-if-statements-and-not-using-elifs-elses" title="Permalink to this heading">#</a></h2>
+<p>Consider the following:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shillings</span> <span class="o">=</span> <span class="mi">300000001</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Jack Sparrow&quot;</span>
+
+<span class="k">if</span> <span class="n">shillings</span> <span class="o">&gt;=</span> <span class="mi">300000000</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Welcome to Port Royal, Mr. Smith. Here is your iron ring&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">shillings</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Welcome to Port Royal, Mr. Smith&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Welcome to Port Royal, Mr. Smith. Here is your iron ring
+Welcome to Port Royal, Mr. Smith
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here, we switched the <code class="docutils literal notranslate"><span class="pre">elif</span></code> in the second clause to an <code class="docutils literal notranslate"><span class="pre">if</span></code>. The effect is that <em>every</em> conditon is evaluated, and more than one block can get executed.</p>
+</section>
+<section id="writing-reusable-code">
+<h2>Writing reusable code<a class="headerlink" href="#writing-reusable-code" title="Permalink to this heading">#</a></h2>
+<p>Above, we repeated the phrase “Welcome to Port Royal” multiple times. This is perhaps not ideal – what if we wanted to change that message? We would have to change the welcome message multiple times. Here is another way of writing similar code to what we have been doing before</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shillings</span> <span class="o">=</span> <span class="o">-</span><span class="mf">.5</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Jack Sparrow&quot;</span>
+<span class="n">welcome_message</span> <span class="o">=</span> <span class="s2">&quot;Welcome to Port Royal&quot;</span>
+<span class="k">if</span> <span class="n">shillings</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">:</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Mr. Smith&quot;</span>
+<span class="k">elif</span> <span class="n">shillings</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>             <span class="c1">#Could say if shillings &lt; 1 -- why?</span>
+    <span class="n">welcome_message</span> <span class="o">=</span> <span class="s2">&quot;Go away&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">welcome_message</span> <span class="o">+</span> <span class="s2">&quot;, &quot;</span> <span class="o">+</span> <span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Go away, Jack Sparrow
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -666,7 +604,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./book/ch1"
+            path: "./book/ch2"
         },
         predefinedOutput: true
     }
@@ -685,20 +623,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="A%20Simple%20Python%20Program.html"
+       href="intro2.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">A simple Python program</p>
+        <p class="prev-next-title">Basic Programs</p>
       </div>
     </a>
     <a class="right-next"
-       href="conditionals.html"
+       href="Quadratic.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Conditionals</p>
+        <p class="prev-next-title">Solving the quadratic equation</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -720,14 +658,11 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Using Python as a calculator: Expressions and Variables</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#going-beyond-just-numbers">Going beyond just numbers</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">Variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditionals-possible-bugs">Conditionals: possible bugs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditionals-multilpe-elifs">Conditionals: multilpe elifs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditionals-multiple-if-statements-and-not-using-elifs-elses">Conditionals: multiple if statements and not using elifs/elses</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-reusable-code">Writing reusable code</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#printing-output-to-screen">Printing output to screen</a></li>
-</ul>
-
   </nav></div>
 
 </div></div>
