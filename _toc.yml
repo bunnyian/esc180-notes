@@ -8,26 +8,33 @@ parts:
     chapters:
       - file: book/preface/intro
 
-  - caption: Lecture 1
-    numbered: True
+  - caption: Notes
+    #numbered: False # keep numbering off as each 'header_' file has numbered titles
+                    # if lecture titles added in future, change the title within the 'header_' file,
+                    # then re-enable numbering for lecture titles
     chapters:
-        - file: book/ch1/A Simple Python Program
-        - file: book/ch1/Introduction to Python Expressions and Variables
-        - file: book/ch1/conditionals
-        - file: book/ch1/tracing.mkv
-
-      - file: book/ch2/intro2
+      - file: book/L1/header1
         sections:
-        - file: book/ch2/ConditionalPirates
-        - file: book/ch2/Quadratic.ipynb
-        - file: book/ch2/SecretMagic.ipynb
+        - file: book/L1/A Simple Python Program
+        - file: book/L1/Introduction to Python Expressions and Variables
+        - file: book/L1/conditionals
 
-      - file: book/ch3/intro3
+      - file: book/L2/header2
         sections:
-        - file: book/ch3/numericalTypes.ipynb
-        - file: book/ch3/printMultiple.ipynb
-        - file: book/ch3/quadraticMore.ipynb
-        - file: book/ch3/strings.ipynb
+        - file: book/L2/ConditionalPirates
+        - file: book/L2/Quadratic.ipynb
+        - file: book/L2/SecretMagic.ipynb
+
+      - file: book/L3/header3
+        sections:
+        - file: book/L3/numericalTypes.ipynb
+        - file: book/L3/printMultiple.ipynb
+        - file: book/L3/quadraticMore.ipynb
+        - file: book/L3/strings.ipynb
+
+      
+
+
   - caption: Misc. Set up Files
     chapters:
       - file: book/misc/markdown
