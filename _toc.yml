@@ -1,6 +1,30 @@
 # Table of contents
 # Learn more at https://jupyterbook.org/customize/toc.html
 
+# IMPORTANT NOTES !!!
+# 0. Adding new files
+# If you add new files, you must add them to the toc manually
+# First line of notebooks/md MUST be a header (eg. # Lecture 1) to be included
+
+# 1. Changes to file/toc structure
+# If major changes are made to the file structure, simply move the files around in the file system
+# Export the file tree
+# eg. 
+# ├── L01
+# │   ├── A Simple Python Program.ipynb
+# │   ├── Introduction to Python Expressions and Variables.ipynb
+# │   ├── conditionals.ipynb
+# │   ├── header01.md
+# │   └── tracing.mkv
+
+# Then pass the file tree and part of this toc to Chat-GPT and it can regenerate the toc for you
+# of course, check the output to make sure it's correct
+
+# 2. HEADER files are used to change the title of the chapter
+# they are currently only used as  "Lecture 1", "Lecture 2", etc.
+# you can choose to give more descriptive lecture titles
+# if you do so, you can reenable automatic numbering of lecture titles by setting 'numbered' to True
+
 format: jb-book
 root: book/landing
 parts:
@@ -9,13 +33,14 @@ parts:
       - file: book/preface/intro
 
   - caption: Notes
-    #numbered: False # keep numbering off as each 'header_' file has numbered titles
+    numbered: False # keep numbering off as each 'header_' file has numbered titles
                     # if lecture titles added in future, change the title within the 'header_' file,
                     # then re-enable numbering for lecture titles
+
     chapters:
-      - file: book/L01/header01
+      - file: book/L01/header01 # modify this file to change the title of the chapter
         sections:
-        - file: book/L01/A Simple Python Program
+        - file: book/L01/A Simple Python Program # swap around order of individual files as desired
         - file: book/L01/Introduction to Python Expressions and Variables
         - file: book/L01/conditionals
 
@@ -32,7 +57,223 @@ parts:
         - file: book/L03/quadraticMore.ipynb
         - file: book/L03/strings.ipynb
 
-      
+      - file: book/L04/header04
+        sections:
+        - file: book/L04/Functions; Local and Global Variables.ipynb
+        - file: book/L04/Multiple Assignments and Swapping Variable Values.ipynb
+
+      - file: book/L05/header05
+        sections:
+        - file: book/L05/Boolean Values and Boolean Algebra.ipynb
+        - file: book/L05/Converting Boolean Values.ipynb
+        - file: book/L05/Fixing has_roots.ipynb
+        - file: book/L05/Variable Naming Conventions.ipynb
+
+      - file: book/L06/header06
+        sections:
+        - file: book/L06/Passing data to and from functions.ipynb
+        - file: book/L06/Swapping variables, Part 2.ipynb
+
+      - file: book/L07/header07
+        sections:
+        - file: book/L07/Checking for primality.ipynb
+        - file: book/L07/Control flow using return statements.ipynb
+        - file: book/L07/For-loops.ipynb
+        - file: book/L07/While-loops.ipynb
+
+      - file: book/L08/header08
+        sections:
+        - file: book/L08/Integer division.ipynb
+        - file: book/L08/Factorial and trailing zeros.ipynb
+        - file: book/L08/More assignment operators.ipynb
+        - file: book/L08/morefore.ipynb
+        - file: book/L08/range.ipynb
+        - file: book/L08/Swapping variable values without temporary storage.ipynb
+        - file: book/L08/Testing calculator.py.ipynb
+
+      - file: book/L09/header09
+        sections:
+        - file: book/L09/Computing PI by generating random numbers.ipynb
+        - file: book/L09/Infinite loops.ipynb book/L09/Input from keyboard, and a bit more on design.ipynb
+        - file: book/L09/More on while loops, break, and continue.ipynb
+
+      - file: book/L10/header10
+        sections:
+        - file: book/L10/The truth about the if __name__ == '__main__'
+        - file: block.ipynb book/L10/Lists.ipynb
+
+      - file: book/L11/header11
+        sections:
+        - file: book/L11/Lists II.ipynb
+        - file: book/L11/Lists III.ipynb
+        - file: book/L11/Loops, lists, and globals.ipynb
+        - file: book/L11/Slicing lists.ipynb
+        - file: book/L11/Slicing using range() and while().ipynb
+        - file: book/L11/While-loops and user input.ipynb
+
+      - file: book/L12/header12
+        sections: 
+        - file: book/L12/Missing k.ipynb
+        - file: book/L12/Lists IV.ipynb
+
+      - file: book/L13/header13
+        sections:
+        - file: book/L13/Lists V.ipynb
+        - file: book/L13/Counting trailing zeros -- Solution.ipynb
+        - file: book/L13/Missing K problem.ipynb
+
+      - file: book/L14/header14
+        sections:
+        - file: book/L14/MissngKSorted.ipynb
+        - file: book/L14/NestedLoops.ipynb
+        - file: book/L14/NestedLoopsNestedLists.ipynb
+        - file: book/L14/Return review.ipynb
+
+      - file: book/L15/header15
+        sections:
+        - file: book/L15/Modifying mutable objects inside functions.ipynb
+        - file: book/L15/Aliasing and mutability.ipynb
+
+      - file: book/L16/header16
+        sections:
+        - file: book/L16/Adding and extending lists.ipynb
+        - file: book/L16/Intro to shallow and deep copy.ipynb
+        - file: book/L16/Placing mutable and immutable objects in memory.ipynb
+
+      - file: book/L17/header17
+        sections:
+        - file: book/L17/A final go at the missing K problem .ipynb
+        - file: book/L17/Deep Copy (two levels deep).ipynb
+        - file: book/L17/Finding a winning move in tic-tac-toe.ipynb
+        - file: book/L17/Intro to strings.ipynb
+
+      - file: book/L18/header18
+        sections:
+        - file: book/L18/Anagrams.ipynb
+        - file: book/L18/Longest run.ipynb
+        - file: book/L18/Reversing strings.ipynb
+        - file: book/L18/Transmitting a random packet.ipynb
+
+      - file: book/L19/header19
+        sections:
+        - file: book/L19/Don't iterate over lists while modifying them.ipynb
+        - file: book/L19/Generating all password with variable lengths.ipynb
+        - file: book/L19/Generating all passwords of length n.ipynb
+        - file: book/L19/State variables.ipynb
+        - file: book/L19/String formatting.ipynb
+        - file: book/L19/exec.ipynb
+
+      - file: book/L20/header20
+        sections:
+        - file: book/L20/Iterating over lists while modifying them Pt. 2.ipynb
+        - file: book/L20/Selection Sort.ipynb
+
+      - file: book/L21/header21
+        sections:
+        - file: book/L21/Dictionaries.ipynb
+        - file: book/L21/Inverting Dictionaries, Pt. 1.ipynb
+        - file: book/L21/Tuples.ipynb
+
+      - file: book/L22/header22
+        sections:
+        - file: book/L22/Intro to files.ipynb
+        - file: book/L22/Inverting dictionaries.ipynb
+        - file: book/L22/More on iterating over dictionaries.ipynb
+        - file: book/L22/Sparse matrices.ipynb
+
+      - file: book/L23/header23
+        sections:
+        - file: book/L23/A few notes on numerical stability.ipynb
+        - file: book/L23/File encoding.ipynb
+        - file: book/L23/Files Part 2.ipynb
+        - file: book/L23/Intro to runtime.ipynb
+
+      - file: book/L24/header24
+        sections:
+        - file: book/L24/Binary search.ipynb
+        - file: book/L24/Complexity analysis.ipynb
+
+      - file: book/L25/header25
+        sections:
+        - file: book/L25/Complexity analysis for longest_run().ipynb
+        - file: book/L25/Functions as variables.ipynb
+        - file: book/L25/How long does an operation take?.ipynb
+        - file: book/L25/Observing the runtime complexity of the longest_run functions.ipynb
+
+      - file: book/L26/header26
+        sections:
+        - file: book/L26/Selection Sort Runtime Complexity Analysis.ipynb
+        - file: book/L26/Sets.ipynb
+        - file: book/L26/Untitled.ipynb
+
+      - file: book/L27/header27
+        sections:
+        - file: book/L27/A more careful analysis of Selection Sort.ipynb
+        - file: book/L27/Bubble Sort.ipynb
+        - file: book/L27/Computing Definite Integrals using Monte Carlo Integration.ipynb
+
+      - file: book/L28/header28
+        sections:
+        - file: book/L28/Bozosort.ipynb
+        - file: book/L28/Bubble Sort Complexity Analysis.ipynb
+        - file: book/L28/Bucket (or Counting) Sort.ipynb
+
+      - file: book/L29/header29
+        sections:
+        - file: book/L29/BucketSort Complexity Analysis.ipynb
+        - file: book/L29/Complexity is Hard.ipynb
+        - file: book/L29/Complexity of Arithmetic.ipynb
+
+      - file: book/L30/header30
+        sections:
+        - file: book/L30/Complexity of multiplication 2.ipynb
+        - file: book/L30/Intro to recursion and n!.ipynb
+        - file: book/L30/Printing forward and backward.ipynb
+        - file: book/L30/fib(n).ipynb
+        - file: book/L30/is_even.ipynb
+
+      - file: book/L31/header31
+        sections:
+        - file: book/L31/Race to 21.ipynb
+        - file: book/L31/Summing lists.ipynb
+        - file: book/L31/Tracing is_even.ipynb
+        - file: book/L31/Tracing print_list and print_list_reverse.ipynb
+        - file: book/L31/play21.py
+
+      - file: book/L32/header32
+        sections:
+        - file: book/L32/Complexity of recursive functions, sum_list.ipynb
+        - file: book/L32/Intro to the Complexity of Recursive Functions, fact() and slow_fact().ipynb
+        - file: book/L32/Iteration using recursive functions.ipynb
+        - file: book/L32/Named arguments.ipynb
+
+      - file: book/L33/header33
+        sections:
+        - file: book/L33/Complexity of exponentiation.ipynb
+        - file: book/L33/Complexity of fib(n).ipynb
+        - file: book/L33/Intro to MergeSort.ipynb
+        - file: book/L33/mergesort.py
+
+      - file: book/L34/header34
+        sections:
+        - file: book/L34/2015 Exam Partial Solutions.ipynb
+        - file: book/L34/Complexity of MergeSort.ipynb
+        - file: book/L34/Insertion Sort.ipynb
+        - file: book/L34/Recursive Deep Copy.ipynb
+        - file: book/L34/Untitled.ipynb
+        - file: book/L34/We cannot do better than nlog(n).ipynb
+
+      - file: book/L35/header35
+        sections:
+        - file: book/L35/output_pred.py
+
+      - file: book/L36/header36
+        sections:
+        - file: book/L36/Fast exponentiation.ipynb
+        - file: book/L36/Recursive merge.ipynb
+        - file: book/L36/Review of call trees.ipynb
+        - file: book/L36/Turing and Godel.ipynb
+
 
 
   - caption: Misc. Set up Files
