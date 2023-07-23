@@ -1,0 +1,876 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Functions &#8212; ESC180 Notes</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'book/L04/Functions; Local and Global Variables';</script>
+    <link rel="canonical" href="https://bunnyian.github.io/esc180-notes/book/L04/Functions; Local and Global Variables.html" />
+    <link rel="shortcut icon" href="../../_static/fav.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../landing.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preface</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../preface/intro.html">How to Navigate these Notes</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Notes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../L01/header01.html">Lecture 1</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L01/A%20Simple%20Python%20Program.html">A simple Python program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L01/Introduction%20to%20Python%20Expressions%20and%20Variables.html">Using Python as a calculator: Expressions and Variables</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../L01/conditionals.html">Conditionals</a></li>
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../L02/header02.html">Lecture 2</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L02/ConditionalPirates.html">Writing Conditional Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L02/Quadratic.html">Solving the quadratic equation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L02/SecretMagic.html">Secret Number Magic Trick</a></li>
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../L03/header03.html">Lecture 3</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L03/numericalTypes.html">Numerical types in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L03/printMultiple.html">Printing multiple things at the same time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L03/quadraticMore.html">Solving the Quadratic Equation and Finite Precision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L03/strings.html">Strings in Python</a></li>
+
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Misc. Set up Files</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../misc/markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/notebooks.html">Content with notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/bunnyian/esc180-notes/blob/master/book/L04/Functions; Local and Global Variables.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/bunnyian/esc180-notes" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/bunnyian/esc180-notes/edit/main/book/L04/Functions; Local and Global Variables.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/bunnyian/esc180-notes/issues/new?title=Issue%20on%20page%20%2Fbook/L04/Functions; Local and Global Variables.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/book/L04/Functions; Local and Global Variables.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Functions</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Functions</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#local-variables">Local variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#note-if-name-main">Note: if <strong>name</strong> == ‘<strong>main</strong>’</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#note-functions-with-no-parameters">Note: functions with no parameters</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#global-variables">Global variables</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-global-variables">Changing global variables</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="functions">
+<h1>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">#</a></h1>
+<p>We have already seen two kinds of functions:</p>
+<ul class="simple">
+<li><p>Functions that have an <em>effect</em>. For example, <code class="docutils literal notranslate"><span class="pre">print</span></code> has the effect of printing stuff to the screen.</p></li>
+<li><p>Functions that are used to compute a <em>value</em>. For example, the value of <code class="docutils literal notranslate"><span class="pre">math.sqrt(9)</span></code> is <code class="docutils literal notranslate"><span class="pre">3.0</span></code></p></li>
+</ul>
+<p>Let’s write our first function, piratically-themed in honour of the
+<a class="reference external" href="https://en.wikipedia.org/wiki/International_Talk_Like_a_Pirate_Day">International Talk Like a Pirate Day</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">pirate_print</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;Print the piratified version of the string s: &quot;Ahoy! [s] Yarr!&quot;</span>
+<span class="sd">    </span>
+<span class="sd">    Arguments:</span>
+<span class="sd">    s -- a string</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ahoy! &quot;</span> <span class="o">+</span> <span class="n">s</span> <span class="o">+</span> <span class="s2">&quot; Yarrrrr!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here is what a function skeleton looks like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="k">def</span> <span class="o">&lt;</span><span class="n">function</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&lt;</span><span class="n">parameters</span><span class="p">,</span> <span class="n">separated</span> <span class="n">by</span> <span class="n">commans</span><span class="o">&gt;</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Docstring -- a description of the function. The first sentence says what the function </span>
+<span class="sd">        should do, in the imperative. </span>
+<span class="sd">        </span>
+<span class="sd">        Arguments:</span>
+<span class="sd">        &lt;a list of the arguments/parameters, briefly describing what they are&gt;</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="o">&lt;</span><span class="n">body</span> <span class="n">of</span> <span class="n">the</span> <span class="n">function</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>The docstring – a string enclosed in triple quotes right after the first line of the function definition – is conventionally included to make things more readable.</p>
+<p>Let’s now use the function. The proper terminology for using a function is <em>calling a function</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pirate_print</span><span class="p">(</span><span class="s2">&quot;I love CIV!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ahoy! I love CIV! Yarrrrr!
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pirate_print</span><span class="p">(</span><span class="s2">&quot;Praxis too!!!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ahoy! Praxis too!!! Yarrrrr!
+</pre></div>
+</div>
+</div>
+</div>
+<p>What is happening there is that the argument (<code class="docutils literal notranslate"><span class="pre">&quot;I</span> <span class="pre">love</span> <span class="pre">CIV!&quot;</span></code>, or <code class="docutils literal notranslate"><span class="pre">&quot;Praxis</span> <span class="pre">too!&quot;</span></code>) gets assigned to the parameter <code class="docutils literal notranslate"><span class="pre">s</span></code>. Then, the body of the function (in this case, <code class="docutils literal notranslate"><span class="pre">print(&quot;Ahoy!</span> <span class="pre">&quot;</span> <span class="pre">+</span> <span class="pre">s</span> <span class="pre">+</span> <span class="pre">&quot;</span> <span class="pre">Yarrrrr!&quot;)</span></code>) gets executed.</p>
+<p>This is the nice thing about functions – we can write the once, but use them multiple times, as you see above.</p>
+<p>Note that <code class="docutils literal notranslate"><span class="pre">pirate_print()</span></code> is not like the functions we know from math – we use it because it has an effect. The effic is printing stuff to the screen. But we don’t use it to compute some value. Here is a function that <em>can</em> be used to compute a value.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">pirate_transform</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;Return a &quot;piratified&quot; version of the string s, with &quot;Ahoy!&quot; in front,</span>
+<span class="sd">    and &quot; Yarrrrr!&quot; at the end</span>
+<span class="sd">    </span>
+<span class="sd">    Arguments:</span>
+<span class="sd">    s -- a string</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">piratified_s</span> <span class="o">=</span> <span class="s2">&quot;Ahoy! &quot;</span> <span class="o">+</span> <span class="n">s</span> <span class="o">+</span> <span class="s2">&quot; Yarrrrr!&quot;</span>
+    <span class="k">return</span> <span class="n">piratified_s</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We have a new construct here – the <code class="docutils literal notranslate"><span class="pre">return</span></code> statement. The value of <code class="docutils literal notranslate"><span class="pre">pirate_transform(s)</span></code> is whatever comes after the <code class="docutils literal notranslate"><span class="pre">return</span></code>. For example,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pirate_transform</span><span class="p">(</span><span class="s2">&quot;I love PHY!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Ahoy! I love PHY! Yarrrrr!&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>The value of <code class="docutils literal notranslate"><span class="pre">pirate_transform(&quot;I</span> <span class="pre">love</span> <span class="pre">PHY!&quot;)</span></code> is <code class="docutils literal notranslate"><span class="pre">'Ahoy!</span> <span class="pre">I</span> <span class="pre">love</span> <span class="pre">PHY!</span> <span class="pre">Yarrrrr!'</span></code>. Note that this is different from what happenned before – we can tell by the fact that there are quotes around the string that we are just looking at the value of an expression. It’s as if we just said.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Ahoy! I love PHY! Yarrrrr!&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Ahoy! I love PHY! Yarrrrr!&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>The line  <code class="docutils literal notranslate"><span class="pre">pirate_transform(&quot;I</span> <span class="pre">love</span> <span class="pre">PHY!&quot;)</span></code> would not print anything to the screen if the line were part of the program. This line would, however:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">pirate_transform</span><span class="p">(</span><span class="s2">&quot;I love PHY!&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ahoy! I love PHY! Yarrrrr!
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can go one step further:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">pirate_transform</span><span class="p">(</span><span class="n">pirate_transform</span><span class="p">(</span><span class="s2">&quot;I love PHY!&quot;</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ahoy! Ahoy! I love PHY! Yarrrrr! Yarrrrr!
+</pre></div>
+</div>
+</div>
+</div>
+<p>What happenned here? First, we evaluated <code class="docutils literal notranslate"><span class="pre">pirate_transform(&quot;I</span> <span class="pre">love</span> <span class="pre">PHY!&quot;)</span></code>, and it’s value turned out to be <code class="docutils literal notranslate"><span class="pre">&quot;Ahoy!</span> <span class="pre">I</span> <span class="pre">love</span> <span class="pre">PHY!</span> <span class="pre">Yarrrrr!&quot;</span></code>. That means the line <code class="docutils literal notranslate"><span class="pre">print(pirate_transform(pirate_transform(&quot;I</span> <span class="pre">love</span> <span class="pre">PHY!&quot;)))</span></code> has the same effect as</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">pirate_transform</span><span class="p">(</span><span class="s2">&quot;Ahoy! I love PHY! Yarrrrr!&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ahoy! Ahoy! I love PHY! Yarrrrr! Yarrrrr!
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note that <code class="docutils literal notranslate"><span class="pre">pirate_transform(s)</span></code> is very similar to the functions that you know from school algebra, like <span class="math notranslate nohighlight">\(f(x) = x^2\)</span>. The value of <span class="math notranslate nohighlight">\(f(3)\)</span> is 9 in the same way that the value of <code class="docutils literal notranslate"><span class="pre">pirate_transform(&quot;hi!&quot;)</span></code> is <code class="docutils literal notranslate"><span class="pre">&quot;Ahoy!</span> <span class="pre">hi!</span> <span class="pre">Yarrrrr!&quot;</span></code>.</p>
+<section id="local-variables">
+<h2>Local variables<a class="headerlink" href="#local-variables" title="Permalink to this heading">#</a></h2>
+<p>Let’s write one more function:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">has_roots</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;Return True iff ax^2+bx+c=0 has real roots</span>
+<span class="sd">    </span>
+<span class="sd">    [Note: Return True iff ... means, in Python (but not in math!) Return </span>
+<span class="sd">    True if ax^2+bx+c=0 has real roots and False otherwise]</span>
+<span class="sd">    </span>
+<span class="sd">    Arguments:</span>
+<span class="sd">    a, b, c -- floats</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    
+    <span class="n">disc</span> <span class="o">=</span> <span class="n">b</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">c</span>
+    
+    <span class="c1">#This is not the nicest way to write this -- we&#39;ll rewrite this function later</span>
+    <span class="k">if</span> <span class="n">disc</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    
+</pre></div>
+</div>
+</div>
+</div>
+<p>As you can see, a function can have more than one parameter. In this case, it has three – <code class="docutils literal notranslate"><span class="pre">a,</span> <span class="pre">b,</span></code> and <code class="docutils literal notranslate"><span class="pre">c</span></code>. Let’s use the function:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">has_roots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">has_roots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s now try to see what the value of the discriminant is:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">disc</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">13</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">disc</span>
+
+<span class="ne">NameError</span>: name &#39;disc&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>We cannot see the value of <code class="docutils literal notranslate"><span class="pre">disc</span></code>. That’s because <code class="docutils literal notranslate"><span class="pre">disc</span></code> is a <em>local</em> variable inside the function <code class="docutils literal notranslate"><span class="pre">has_roots</span></code>. You can think of local variables as “scratch work”. After the function finishes running, all the local variables inside it get discarded.</p>
+<p>The parameters are also local variables:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="nn">&lt;ipython-input-14-60b725f10c9c&gt;</span> in <span class="ni">&lt;module&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">a</span>
+
+<span class="ne">NameError</span>: name &#39;a&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s now see another demonstration of this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plunder_grade</span><span class="p">():</span>
+    <span class="n">grade</span> <span class="o">=</span> <span class="mi">0</span>
+    
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">grade</span> <span class="o">=</span> <span class="mi">95</span>
+    <span class="n">plunder_grade</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">grade</span><span class="p">)</span>
+    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>95
+</pre></div>
+</div>
+</div>
+</div>
+<p>The line <code class="docutils literal notranslate"><span class="pre">grade</span> <span class="pre">=</span> <span class="pre">0</span></code> defines a <em>local</em> variable grade. It gets discarded after <code class="docutils literal notranslate"><span class="pre">plunder_grade()</span></code> is executed. The global value of <code class="docutils literal notranslate"><span class="pre">grade</span></code> stays at 95.</p>
+</section>
+<section id="note-if-name-main">
+<h2>Note: if <strong>name</strong> == ‘<strong>main</strong>’<a class="headerlink" href="#note-if-name-main" title="Permalink to this heading">#</a></h2>
+<p>I’ll sometimes call the block of code under <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">__name__</span> <span class="pre">==</span> <span class="pre">'__main__':</span></code> is called the “main block.” For now, think of the line <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">__name__</span> <span class="pre">==</span> <span class="pre">'__main__':</span></code> as just separating the function definitions from the code that uses the functions. We’ll have more of an explanation soon.</p>
+</section>
+<section id="note-functions-with-no-parameters">
+<h2>Note: functions with no parameters<a class="headerlink" href="#note-functions-with-no-parameters" title="Permalink to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">plunder_grade()</span></code> has no parameters. It’s defined as you see above, and it’s called using <code class="docutils literal notranslate"><span class="pre">()</span></code>. Functions without parameters have their uses – see <code class="docutils literal notranslate"><span class="pre">print_grade()</span></code> below.</p>
+</section>
+</section>
+<section id="global-variables">
+<h1>Global variables<a class="headerlink" href="#global-variables" title="Permalink to this heading">#</a></h1>
+<p>Global variables are variables defined <em>outside</em> of any function. For example, the variable <code class="docutils literal notranslate"><span class="pre">grade</span></code> in the main block above is global. Here is an example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_grade</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">grade</span><span class="p">)</span>
+    
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">grade</span> <span class="o">=</span> <span class="mi">95</span>
+    <span class="n">print_grade</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>95
+</pre></div>
+</div>
+</div>
+</div>
+<p>Since there is no <em>local</em> variable grade, the line <code class="docutils literal notranslate"><span class="pre">print(grade)</span></code> prints the <em>global</em> variable <code class="docutils literal notranslate"><span class="pre">grade</span></code>.</p>
+<section id="changing-global-variables">
+<h2>Changing global variables<a class="headerlink" href="#changing-global-variables" title="Permalink to this heading">#</a></h2>
+<p>Here is how we can actually modify a global variable:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">actually_plunder_grade</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">grade</span>
+    <span class="n">grade</span> <span class="o">=</span> <span class="mi">56</span>
+    
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span>    <span class="p">:</span>
+    <span class="n">grade</span> <span class="o">=</span> <span class="mi">95</span>
+    <span class="n">actually_plunder_grade</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">grade</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>56
+</pre></div>
+</div>
+</div>
+</div>
+<p>The line <code class="docutils literal notranslate"><span class="pre">global</span> <span class="pre">grade</span></code> in the function <code class="docutils literal notranslate"><span class="pre">actually_plunder_grade()</span></code> means that when we say <code class="docutils literal notranslate"><span class="pre">grade</span> <span class="pre">=</span> <span class="pre">56</span></code>, we mean we want to assign 56 to <code class="docutils literal notranslate"><span class="pre">grade</span></code>.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./book/L04"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Functions</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#local-variables">Local variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#note-if-name-main">Note: if <strong>name</strong> == ‘<strong>main</strong>’</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#note-functions-with-no-parameters">Note: functions with no parameters</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#global-variables">Global variables</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-global-variables">Changing global variables</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Michael Guerzhoy, Ian Wu, Youssef Rachad
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023
+Sharing, re-distribution, and adaptation is allowed for non-commercial purposes as long as attribution to the original author is given, and as long as you notify the original author at guerzhoy@cs.toronto.edu that you intend to use the materials. Atrribution must be given in a reasonable way and in a way that does not suggest that the original author endorses any adaptation. This permission to share, re-distribute and adapt is non-transferrable..
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
