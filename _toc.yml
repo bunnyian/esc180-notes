@@ -8,11 +8,9 @@ parts:
     chapters:
       - file: book/preface/intro
 
-  - caption: Notes
+  - caption: Lecture 1
     numbered: True
     chapters:
-      - file: book/ch1/intro1
-        sections:
         - file: book/ch1/A Simple Python Program
         - file: book/ch1/Introduction to Python Expressions and Variables
         - file: book/ch1/conditionals
