@@ -28,8 +28,9 @@ jobs:
 
     # Build the book
     - name: Build the book
-      run: |
-        jupyter-book build --all .
+      run: #jupyter-book build --all . #to rebuild all
+        jupyter-book clean .
+        jupyter-book build .
 
     # Deploy the book's HTML to gh-pages branch
     - name: GitHub Pages action
