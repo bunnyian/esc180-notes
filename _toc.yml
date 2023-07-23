@@ -40,9 +40,9 @@ parts:
     chapters:
       - file: book/L01/header01 # modify this file to change the title of the chapter
         sections:
-        - file: book/L01/A Simple Python Program # swap around order of individual files as desired
-        - file: book/L01/Introduction to Python Expressions and Variables
+        - file: book/L01/Introduction to Python Expressions and Variables # swap around order of individual files as desired
         - file: book/L01/conditionals
+        - file: book/L01/A Simple Python Program
 
       - file: book/L02/header02
         sections:
@@ -94,13 +94,14 @@ parts:
       - file: book/L09/header09
         sections:
         - file: book/L09/Computing PI by generating random numbers.ipynb
-        - file: book/L09/Infinite loops.ipynb book/L09/Input from keyboard, and a bit more on design.ipynb
+        - file: book/L09/Infinite loops.ipynb
+        - file: book/L09/Input from keyboard, and a bit more on design.ipynb
         - file: book/L09/More on while loops, break, and continue.ipynb
 
       - file: book/L10/header10
         sections:
-        - file: book/L10/The truth about the if __name__ == '__main__'
-        - file: block.ipynb book/L10/Lists.ipynb
+        - file: book/L10/The truth about the if __name__ == '__main__' block.ipynb
+        - file: book/L10/Lists.ipynb
 
       - file: book/L11/header11
         sections:
@@ -238,7 +239,7 @@ parts:
         - file: book/L31/Summing lists.ipynb
         - file: book/L31/Tracing is_even.ipynb
         - file: book/L31/Tracing print_list and print_list_reverse.ipynb
-        - file: book/L31/play21.py
+        # - file: book/L31/play21.py # add to a new ipynb
 
       - file: book/L32/header32
         sections:
@@ -252,7 +253,6 @@ parts:
         - file: book/L33/Complexity of exponentiation.ipynb
         - file: book/L33/Complexity of fib(n).ipynb
         - file: book/L33/Intro to MergeSort.ipynb
-        - file: book/L33/mergesort.py
 
       - file: book/L34/header34
         sections:
@@ -265,7 +265,7 @@ parts:
 
       - file: book/L35/header35
         sections:
-        - file: book/L35/output_pred.py
+        - file: book/L35/print_all.ipynb
 
       - file: book/L36/header36
         sections:
@@ -273,7 +273,6 @@ parts:
         - file: book/L36/Recursive merge.ipynb
         - file: book/L36/Review of call trees.ipynb
         - file: book/L36/Turing and Godel.ipynb
-
 
 
   - caption: Misc. Set up Files
