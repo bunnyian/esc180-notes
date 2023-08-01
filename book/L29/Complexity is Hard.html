@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>&lt;no title&gt; &#8212; ESC180 Notes</title>
+    <title>Complexity is Hard, Fermat’s Theorem &#8212; ESC180 Notes</title>
   
   
   
@@ -69,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Complexity of arithmetic operations" href="Complexity%20of%20Arithmetic.html" />
-    <link rel="prev" title="When is Bucket Sort appropriate" href="BucketSort%20Complexity%20Analysis.html" />
+    <link rel="prev" title="Bucket/Counting Sort Complexity Analysis" href="BucketSort%20Complexity%20Analysis.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -157,7 +157,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../preface/intro.html">How to Navigate these Notes</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Notes</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../L01/header01.html">Lecture 1</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../L01/Introduction%20to%20Python%20Expressions%20and%20Variables.html">Expressions and Variables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../L01/conditionals.html">Conditionals</a></li>
@@ -190,6 +190,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../L05/Boolean%20Values%20and%20Boolean%20Algebra.html">Boolean Values</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../L05/Converting%20Boolean%20Values.html">Converting Boolean Values</a></li>
 
+<li class="toctree-l2"><a class="reference internal" href="../L05/Fixing%20has_roots.html">Fixing <code class="docutils literal notranslate"><span class="pre">has_roots</span></code> function</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../L05/Variable%20Naming%20Conventions.html">Variable Naming Conventions</a></li>
 </ul>
 </li>
@@ -217,6 +218,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 <li class="toctree-l2"><a class="reference internal" href="../L08/range.html">More about range()</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../L08/Swapping%20variable%20values%20without%20temporary%20storage.html">Swapping variable values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L08/Testing%20calculator.py.html">Testing <code class="docutils literal notranslate"><span class="pre">calculator.py</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../L09/header09.html">Lecture 9</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -232,7 +234,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../L10/header10.html">Lecture 10</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../L10/The%20truth%20about%20the%20if%20__name__%20%3D%3D%20%27__main__%27%20block.html">The if <strong>name</strong> == ‘<strong>main</strong>’ block</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L10/The%20truth%20about%20the%20if%20__name__%20%3D%3D%20%27__main__%27%20block.html">The if __name__ == ‘__main__’ block</a></li>
 
 
 <li class="toctree-l2"><a class="reference internal" href="../L10/Lists.html">Lists</a></li>
@@ -306,14 +308,10 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../L17/header17.html">Lecture 17</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../L17/Deep%20Copy%20%28two%20levels%20deep%29.html">Reminder: aliasing</a></li>
-
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../L17/Intro%20to%20strings.html">Strings are immutable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L17/A%20final%20go%20at%20the%20missing%20K%20problem%20.html">The Missing K Problem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L17/Deep%20Copy%20%28two%20levels%20deep%29.html">Copying Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L17/Finding%20a%20winning%20move%20in%20tic-tac-toe.html">Finding a winning move in tic-tac-toe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L17/Intro%20to%20strings.html">Intro to Strings</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../L18/header18.html">Lecture 18</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -324,12 +322,16 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../L19/header19.html">Lecture 19</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../L19/Don%27t%20iterate%20over%20lists%20while%20modifying%20them.html">Iterating over lists while modifying them</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L19/Don%27t%20iterate%20over%20lists%20while%20modifying%20them.html">Don’t iterate over lists while modifying them</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L19/Generating%20all%20passwords%20of%20length%20n.html">Generating Passwords of Fixed Length n</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L19/Generating%20all%20password%20with%20variable%20lengths.html">Variable Length Password Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L19/State%20variables.html">State Variables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../L19/String%20formatting.html">String formatting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../L19/exec.html"><code class="docutils literal notranslate"><span class="pre">exec</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../L20/header20.html">Lecture 20</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L20/Iterating%20over%20lists%20while%20modifying%20them%20Pt.%202.html">Iterating over lists while modifying them Pt. 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../L20/Selection%20Sort.html">Selection Sort</a></li>
 </ul>
 </li>
@@ -341,12 +343,15 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+<li class="toctree-l2"><a class="reference internal" href="../L21/Inverting%20Dictionaries%2C%20Pt.%201.html">Inverting Dictionaries Pt. 1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../L21/Tuples.html">Tuples</a></li>
 
 
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../L22/header22.html">Lecture 22</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-22"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L22/Intro%20to%20files.html">Intro to Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L22/Inverting%20dictionaries.html">Inverting Dictionaries Pt. 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../L22/More%20on%20iterating%20over%20dictionaries.html">Modifying dictionaries</a></li>
 
 
@@ -354,29 +359,33 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../L23/header23.html">Lecture 23</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-23"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../L23/A%20few%20notes%20on%20numerical%20stability.html">The upshot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../L23/File%20encoding.html">A bit about file encoding</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../L23/Files%20Part%202.html">Splitting strings: reminder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L23/A%20few%20notes%20on%20numerical%20stability.html">Notes on numerical stability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L23/File%20encoding.html">File Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L23/Files%20Part%202.html">Files Pt. 2, splitting strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L23/Intro%20to%20runtime.html">Intro to Runtime</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../L24/header24.html">Lecture 24</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-24"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../L24/Complexity%20analysis.html">Case 1: <code class="docutils literal notranslate"><span class="pre">L[k]</span> <span class="pre">==</span> <span class="pre">e</span></code> for some <code class="docutils literal notranslate"><span class="pre">k</span></code></a></li>
-
-
-
-
-
-
+<li class="toctree-l2"><a class="reference internal" href="../L24/Binary%20search.html">Binary Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L24/Complexity%20analysis.html">Complexity Analysis</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../L25/header25.html">Lecture 25</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-25"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../L25/header25.html">Lecture 25</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-25"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L25/Complexity%20analysis%20for%20longest_run%28%29.html">Complexity Analysis of <code class="docutils literal notranslate"><span class="pre">longest_run()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L25/Functions%20as%20variables.html">Functions as Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L25/How%20long%20does%20an%20operation%20take%3F.html">How long does an operation take <code class="docutils literal notranslate"><span class="pre">time.time()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L25/Observing%20the%20runtime%20complexity%20of%20the%20longest_run%20functions.html">Complexity of <code class="docutils literal notranslate"><span class="pre">longest_run</span></code> functions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../L26/header26.html">Lecture 26</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-26"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L26/dict.update%20and%20dict.get.html">Accessing dictionaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L26/Selection%20Sort%20Runtime%20Complexity%20Analysis.html">Selection Sort Runtime Complexity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../L26/Sets.html">Sets</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../L27/header27.html">Lecture 27</a><input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-27"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L27/A%20more%20careful%20analysis%20of%20Selection%20Sort.html">More Detailed Analysis of Selection Sort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L27/Bubble%20Sort.html">Bubble Sort</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../L27/Computing%20Definite%20Integrals%20using%20Monte%20Carlo%20Integration.html">Monte Carlo Integration</a></li>
 
 
@@ -384,24 +393,30 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../L28/header28.html">Lecture 28</a><input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-28"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../L28/Bozosort.html">Runtime Complexity of Bozosort</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../L28/Bubble%20Sort%20Complexity%20Analysis.html">Runtime Complexity Analysis – Bubble Sort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L28/Bozosort.html">Bozosort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L28/Bubble%20Sort%20Complexity%20Analysis.html">Bubble Sort Complexity Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L28/Bucket%20%28or%20Counting%29%20Sort.html">Bucket/Counting Sort</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="header29.html">Lecture 29</a><input class="toctree-checkbox" id="toctree-checkbox-29" name="toctree-checkbox-29" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-29"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="BucketSort%20Complexity%20Analysis.html">When is Bucket Sort appropriate</a></li>
-
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="header29.html">Lecture 29</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-29" name="toctree-checkbox-29" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-29"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="BucketSort%20Complexity%20Analysis.html">Bucket/Counting Sort Complexity Analysis</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Complexity is Hard, Fermat’s Theorem</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Complexity%20of%20Arithmetic.html">Complexity of arithmetic operations</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../L30/header30.html">Lecture 30</a><input class="toctree-checkbox" id="toctree-checkbox-30" name="toctree-checkbox-30" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-30"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../L30/Complexity%20of%20multiplication%202.html">Complexity of long multiplication</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../L30/Intro%20to%20recursion%20and%20n%21.html">Recursion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../L30/Printing%20forward%20and%20backward.html">Printing the list in reverse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L30/Printing%20forward%20and%20backward.html">Recursive <code class="docutils literal notranslate"><span class="pre">print_list(L)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L30/fib%28n%29.html">Fibonacci Sequence <code class="docutils literal notranslate"><span class="pre">fib(n)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L30/is_even.html">Recursive <code class="docutils literal notranslate"><span class="pre">is_even(n)</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../L31/header31.html">Lecture 31</a><input class="toctree-checkbox" id="toctree-checkbox-31" name="toctree-checkbox-31" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-31"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../L31/Race%20to%2021.html">Race to 21</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L31/Summing%20lists.html">Recursive Summing Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L31/Tracing%20is_even.html">Tracing Recursive <code class="docutils literal notranslate"><span class="pre">is_even(n)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L31/Tracing%20print_list%20and%20print_list_reverse.html">Tracing Recursive <code class="docutils literal notranslate"><span class="pre">print_list()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../L32/header32.html">Lecture 32</a><input class="toctree-checkbox" id="toctree-checkbox-32" name="toctree-checkbox-32" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-32"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -412,27 +427,23 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../L32/Iteration%20using%20recursive%20functions.html">n! using a while loop</a></li>
 
 
+<li class="toctree-l2"><a class="reference internal" href="../L32/Named%20arguments.html">Named Arguments</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../L33/header33.html">Lecture 33</a><input class="toctree-checkbox" id="toctree-checkbox-33" name="toctree-checkbox-33" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-33"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../L33/Complexity%20of%20exponentiation.html">The naive way to compute <span class="math notranslate nohighlight">\(x^n\)</span></a></li>
 
 
-<li class="toctree-l2"><a class="reference internal" href="../L33/Complexity%20of%20fib%28n%29.html">Complexity of <code class="docutils literal notranslate"><span class="pre">fib(n)</span></code>, the naive way</a></li>
-
+<li class="toctree-l2"><a class="reference internal" href="../L33/Complexity%20of%20fib%28n%29.html">Complexity of <code class="docutils literal notranslate"><span class="pre">fib(n)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L33/Intro%20to%20MergeSort.html">Merge Sort</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../L34/header34.html">Lecture 34</a><input class="toctree-checkbox" id="toctree-checkbox-34" name="toctree-checkbox-34" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-34"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../L34/2015%20Exam%20Partial%20Solutions.html">Q6(a)</a></li>
-
-
-
-
-
 <li class="toctree-l2"><a class="reference internal" href="../L34/Complexity%20of%20MergeSort.html">Complexity of MergeSort</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../L34/Insertion%20Sort.html">Complexity of Insertion Sort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L34/2015%20Exam%20Partial%20Solutions.html">2015 Exam Partial Solutions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../L34/Recursive%20Deep%20Copy.html">Deep Copy vs. Shallow Copy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../L34/We%20cannot%20do%20better%20than%20nlog%28n%29.html">How fast can a sorting algorithm be?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L34/We%20cannot%20do%20better%20than%20nlog%28n%29.html">How fast can a sorting algorithm be? hint: <span class="math notranslate nohighlight">\(\mathcal{O}(n\log n)\)</span></a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../L35/header35.html">Lecture 35</a><input class="toctree-checkbox" id="toctree-checkbox-35" name="toctree-checkbox-35" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-35"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -440,21 +451,13 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../L36/header36.html">Lecture 36</a><input class="toctree-checkbox" id="toctree-checkbox-36" name="toctree-checkbox-36" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-36"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../L36/Review%20of%20call%20trees.html">Example 1: Factorial</a></li>
-
-
-
-
+<li class="toctree-l2"><a class="reference internal" href="../L36/Fast%20exponentiation.html">Fast Exponentiation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L36/Recursive%20merge.html">Recursive <code class="docutils literal notranslate"><span class="pre">merge(L1,</span> <span class="pre">L2)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L36/Review%20of%20call%20trees.html">Review of Call Trees</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../L36/Turing%20and%20Godel.html">The Halting Problem</a></li>
 
 </ul>
 </li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Misc. Set up Files</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../misc/markdown.html">Markdown Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../misc/notebooks.html">Content with notebooks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../misc/markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
 </ul>
 
     </div>
@@ -673,9 +676,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -686,19 +687,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><no title></h1>
+    <h1>Complexity is Hard, Fermat’s Theorem</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -708,7 +701,9 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <p>Fermat’s Last Theorem states that for integers <span class="math notranslate nohighlight">\(p &gt; 2\)</span>, there are are no natural numbers <span class="math notranslate nohighlight">\(a, b, c\)</span> such that</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="complexity-is-hard-fermat-s-theorem">
+<h1>Complexity is Hard, Fermat’s Theorem<a class="headerlink" href="#complexity-is-hard-fermat-s-theorem" title="Permalink to this heading">#</a></h1>
+<p>Fermat’s Last Theorem states that for integers <span class="math notranslate nohighlight">\(p &gt; 2\)</span>, there are are no natural numbers <span class="math notranslate nohighlight">\(a, b, c\)</span> such that</p>
 <div class="math notranslate nohighlight">
 \[a^p + b^p = c^p.\]</div>
 <p>Note that, for example, for <span class="math notranslate nohighlight">\(p=2\)</span>, there are such <span class="math notranslate nohighlight">\(a, b, c\)</span> (e.g., <span class="math notranslate nohighlight">\(3^2+4^2=5^2.\)</span></p>
@@ -742,6 +737,7 @@ document.write(`
 </div>
 </div>
 <p>According to Fermat’s Last Theorem, <code class="docutils literal notranslate"><span class="pre">fermat(p)</span></code> will never return for <code class="docutils literal notranslate"><span class="pre">p</span> <span class="pre">&gt;</span> <span class="pre">2</span></code>. (So that we could claim that the complexity is infinity.) However, this is not at all obvious a priori (it took hundreds of years to figure out!)</p>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -780,7 +776,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">When is Bucket Sort appropriate</p>
+        <p class="prev-next-title">Bucket/Counting Sort Complexity Analysis</p>
       </div>
     </a>
     <a class="right-next"
@@ -801,20 +797,6 @@ document.write(`
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-  </nav></div>
-
-</div></div>
               
             
           </div>
