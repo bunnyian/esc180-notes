@@ -1,0 +1,852 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Conditionals &#8212; ESC180 Notes</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebook/Intro to Python/conditionals';</script>
+    <link rel="canonical" href="https://bunnyian.github.io/esc180-notes/notebook/Intro to Python/conditionals.html" />
+    <link rel="shortcut icon" href="../../_static/fav.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Numerical Types and Strings" href="../Numerical%20Types%20and%20Strings/title.html" />
+    <link rel="prev" title="Secret Number Magic Trick" href="SecretMagic.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../landing.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preface</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../preface/intro.html">How to Navigate these Notes</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Notes</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="title.html">Intro to Python</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="A%20Simple%20Python%20Program.html">A simple Python program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ConditionalPirates.html">Writing Conditional Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Introduction%20to%20Python%20Expressions%20and%20Variables.html">Expressions and Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Quadratic.html">Solving the quadratic equation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SecretMagic.html">Secret Number Magic Trick</a></li>
+
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Conditionals</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Numerical%20Types%20and%20Strings/title.html">Numerical Types and Strings</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Numerical%20Types%20and%20Strings/numericalTypes.html">Numerical types in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Numerical%20Types%20and%20Strings/printMultiple.html">Printing multiple things at the same time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Numerical%20Types%20and%20Strings/quadraticMore.html">Solving the Quadratic Equation and Finite Precision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Numerical%20Types%20and%20Strings/strings.html">Strings in Python</a></li>
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Loops/title.html">Loops</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Loops/Checking%20for%20primality.html">Checking for primality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Loops/Computing%20PI%20by%20generating%20random%20numbers.html">A simple idea for computing <span class="math notranslate nohighlight">\(\pi\)</span></a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../Loops/Factorial%20and%20trailing%20zeros.html">Factorials</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../Loops/For-loops.html">For loops</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../Loops/Infinite%20loops.html">Infinite loops</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../Loops/Input%20from%20keyboard%2C%20and%20a%20bit%20more%20on%20design.html">Input and style</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Loops/Integer%20division.html">Integer division</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Loops/More%20assignment%20operators.html">+=, -=, etc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Loops/More%20on%20while%20loops%2C%20break%2C%20and%20continue.html">Transforming for loops into while loops</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Loops/Swapping%20variable%20values%20without%20temporary%20storage.html">Swapping variable values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Loops/Testing%20calculator.py.html">Testing <code class="docutils literal notranslate"><span class="pre">calculator.py</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Loops/While-loops.html">While loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Loops/morefore.html">Fixing the style of is_prime</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Loops/range.html">More about range()</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Functions%20and%20Variables/title.html">Functions and Variables</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Functions%20and%20Variables/Boolean%20Values%20and%20Boolean%20Algebra.html">Boolean Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Functions%20and%20Variables/Control%20flow%20using%20return%20statements.html">Control flow using return statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Functions%20and%20Variables/Converting%20Boolean%20Values.html">Converting Boolean Values</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../Functions%20and%20Variables/Fixing%20has_roots.html">Fixing <code class="docutils literal notranslate"><span class="pre">has_roots</span></code> function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Functions%20and%20Variables/Functions%3B%20Local%20and%20Global%20Variables.html">Functions</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../Functions%20and%20Variables/Multiple%20Assignments%20and%20Swapping%20Variable%20Values.html">Multiple assignments</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../Functions%20and%20Variables/Named%20arguments.html">Named Arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Functions%20and%20Variables/Passing%20data%20to%20and%20from%20functions.html">Passing data to and from functions</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../Functions%20and%20Variables/Swapping%20variables%2C%20Part%202.html">Swapping variable values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Functions%20and%20Variables/Variable%20Naming%20Conventions.html">Variable Naming Conventions</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Lists/title.html">Lists</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Counting%20trailing%20zeros%20--%20Solution.html">Counting trailing zeros in n!</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Lists.html">Lists</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Lists%20II.html">More on Lists in Python</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Lists%20III.html"><code class="docutils literal notranslate"><span class="pre">list.insert()</span></code></a></li>
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Lists%20IV.html"><code class="docutils literal notranslate"><span class="pre">list.extend()</span></code></a></li>
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Lists%20V.html">More on accessing list elements: last element, negative indices</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Loops%2C%20lists%2C%20and%20globals.html">Idea: looking up the password</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Missing%20K%20problem.html">The missing number problem</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Lists/MissingKSorted.html">Another approach to the Missing Number problem</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../Lists/The%20truth%20about%20the%20if%20__name__%20%3D%3D%20%27__main__%27%20block.html">The if __name__ == ‘__main__’ block</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Lists/While-loops%20and%20user%20input.html">While-loops and user input</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../List%20Copies/title.html">List Copies</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../List%20Copies/A%20final%20go%20at%20the%20missing%20K%20problem%20.html">The Missing K Problem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../List%20Copies/Aliasing%20and%20mutability.html">Variables refer to addresses</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../List%20Copies/Deep%20Copy%20%28two%20levels%20deep%29.html">Copying Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../List%20Copies/Finding%20a%20winning%20move%20in%20tic-tac-toe.html">Finding a winning move in tic-tac-toe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../List%20Copies/Intro%20to%20shallow%20and%20deep%20copy.html">Aliasing</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../List%20Copies/Modifying%20mutable%20objects%20inside%20functions.html">Modifying lists in functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../List%20Copies/Placing%20mutable%20and%20immutable%20objects%20in%20memory.html">Placing objects in memory</a></li>
+
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../List%20Operations/title.html">List Operations</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../List%20Operations/Adding%20and%20extending%20lists.html">Adding lists</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../List%20Operations/Don%27t%20iterate%20over%20lists%20while%20modifying%20them.html">Don’t iterate over lists while modifying them</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../List%20Operations/Iterating%20over%20lists%20while%20modifying%20them%20Pt.%202.html">Iterating over lists while modifying them Pt. 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../List%20Operations/NestedLoops.html">Nested loops</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../List%20Operations/NestedLoopsNestedLists.html">Nested loops and nested lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../List%20Operations/Return%20review.html">Review of <code class="docutils literal notranslate"><span class="pre">return</span></code></a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../List%20Operations/Slicing%20lists.html">Slicing lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../List%20Operations/Slicing%20using%20range%28%29%20and%20while%28%29.html">Slicing manually using for and while loops</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Working%20with%20Strings/title.html">Working with Strings</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Strings/Anagrams.html">Anagrams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Strings/Generating%20all%20password%20with%20variable%20lengths.html">Variable Length Password Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Strings/Generating%20all%20passwords%20of%20length%20n.html">Generating Passwords of Fixed Length n</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Strings/Intro%20to%20strings.html">Intro to Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Strings/Longest%20run.html">Longest run</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Strings/Reversing%20strings.html">Reversing strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Strings/State%20variables.html">State Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Strings/String%20formatting.html">String formatting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Strings/Transmitting%20a%20random%20packet.html">Transmitting a random packet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Strings/exec.html"><code class="docutils literal notranslate"><span class="pre">exec</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Turtle%20Graphics/title.html">Turtle Graphics</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/title.html">Dictionaries, Tuples, Sets</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/A%20few%20notes%20on%20numerical%20stability.html">Notes on numerical stability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/Dictionaries.html">Dictionaries</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/Inverting%20Dictionaries%2C%20Pt.%201.html">Inverting Dictionaries Pt. 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/Inverting%20dictionaries.html">Inverting Dictionaries Pt. 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/More%20on%20iterating%20over%20dictionaries.html">Modifying dictionaries</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/Sets.html">Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/Sparse%20matrices.html">Sparse matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/Tuples.html">Tuples</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/dict.update%20and%20dict.get.html">Accessing dictionaries</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Working%20with%20Files/title.html">Working with Files</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Files/File%20encoding.html">File Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Files/Files%20Part%202.html">Files Pt. 2, splitting strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Files/Intro%20to%20files.html">Intro to Files</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/title.html">Sorting Algorithms and Complexity</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/A%20more%20careful%20analysis%20of%20Selection%20Sort.html">More Detailed Analysis of Selection Sort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/Bozosort.html">Bozosort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/Bubble%20Sort%20Complexity%20Analysis.html">Bubble Sort Complexity Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/Bubble%20Sort.html">Bubble Sort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/Bucket%20%28or%20Counting%29%20Sort.html">Bucket/Counting Sort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/BucketSort%20Complexity%20Analysis.html">Bucket/Counting Sort Complexity Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/Complexity%20analysis.html">Complexity Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/Intro%20to%20runtime.html">Intro to Runtime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/Selection%20Sort%20Runtime%20Complexity%20Analysis.html">Selection Sort Runtime Complexity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/Selection%20Sort.html">Selection Sort</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../More%20on%20Functions%20and%20Complexity/title.html">More on Functions and Complexity</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../More%20on%20Functions%20and%20Complexity/Binary%20search.html">Binary Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20on%20Functions%20and%20Complexity/Complexity%20analysis%20for%20longest_run%28%29.html">Complexity Analysis of <code class="docutils literal notranslate"><span class="pre">longest_run()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20on%20Functions%20and%20Complexity/Complexity%20is%20Hard.html">Complexity is Hard, Fermat’s Theorem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20on%20Functions%20and%20Complexity/Complexity%20of%20Arithmetic.html">Complexity of arithmetic operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20on%20Functions%20and%20Complexity/Complexity%20of%20multiplication%202.html">Complexity of long multiplication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20on%20Functions%20and%20Complexity/Functions%20as%20variables.html">Functions as Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20on%20Functions%20and%20Complexity/How%20long%20does%20an%20operation%20take%3F.html">How long does an operation take <code class="docutils literal notranslate"><span class="pre">time.time()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20on%20Functions%20and%20Complexity/Observing%20the%20runtime%20complexity%20of%20the%20longest_run%20functions.html">Complexity of <code class="docutils literal notranslate"><span class="pre">longest_run</span></code> functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Monte%20Carlo%20Integration/title.html">Monte Carlo Integration</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Monte%20Carlo%20Integration/Computing%20Definite%20Integrals%20using%20Monte%20Carlo%20Integration.html">Monte Carlo Integration</a></li>
+
+
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Recursion/title.html">Recursion</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Recursion/Intro%20to%20recursion%20and%20n%21.html">Recursion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Recursion/Printing%20forward%20and%20backward.html">Recursive <code class="docutils literal notranslate"><span class="pre">print_list(L)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Recursion/Race%20to%2021.html">Race to 21</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Recursion/Summing%20lists.html">Recursive Summing Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Recursion/Tracing%20is_even.html">Tracing Recursive <code class="docutils literal notranslate"><span class="pre">is_even(n)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Recursion/Tracing%20print_list%20and%20print_list_reverse.html">Tracing Recursive <code class="docutils literal notranslate"><span class="pre">print_list()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Recursion/fib%28n%29.html">Fibonacci Sequence <code class="docutils literal notranslate"><span class="pre">fib(n)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Recursion/is_even.html">Recursive <code class="docutils literal notranslate"><span class="pre">is_even(n)</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Recursive%20Complexity/title.html">Recursive Complexity</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Recursive%20Complexity/Complexity%20of%20exponentiation.html">The naive way to compute <span class="math notranslate nohighlight">\(x^n\)</span></a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Recursive%20Complexity/Complexity%20of%20fib%28n%29.html">Complexity of <code class="docutils literal notranslate"><span class="pre">fib(n)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Recursive%20Complexity/Complexity%20of%20recursive%20functions%2C%20sum_list.html"><code class="docutils literal notranslate"><span class="pre">sum_list2</span></code> again</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../Recursive%20Complexity/Intro%20to%20the%20Complexity%20of%20Recursive%20Functions%2C%20fact%28%29%20and%20slow_fact%28%29.html">The runtime complexity of recursive functions</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../Recursive%20Complexity/Iteration%20using%20recursive%20functions.html">n! using a while loop</a></li>
+
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../More%20Sorting/title.html">More Sorting</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/Complexity%20of%20MergeSort.html">Complexity of MergeSort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/Insertion%20Sort.html">Complexity of Insertion Sort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/Intro%20to%20MergeSort.html">Merge Sort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/Recursive%20merge.html">Recursive <code class="docutils literal notranslate"><span class="pre">merge(L1,</span> <span class="pre">L2)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/We%20cannot%20do%20better%20than%20nlog%28n%29.html">How fast can a sorting algorithm be? hint: <span class="math notranslate nohighlight">\(\mathcal{O}(n\log n)\)</span></a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../More%20Recursion/title.html">More Recursion</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../More%20Recursion/2015%20Exam%20Partial%20Solutions.html">2015 Exam Partial Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20Recursion/Fast%20exponentiation.html">Fast Exponentiation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20Recursion/Recursive%20Deep%20Copy.html">Recursive Deep Copy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20Recursion/Review%20of%20call%20trees.html">Review of Call Trees</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20Recursion/Turing%20and%20Godel.html">The Halting Problem</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../More%20Recursion/print_all.html">Print All</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/bunnyian/esc180-notes" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/bunnyian/esc180-notes/edit/main/notebook/Intro to Python/conditionals.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/bunnyian/esc180-notes/issues/new?title=Issue%20on%20page%20%2Fnotebook/Intro to Python/conditionals.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/notebook/Intro to Python/conditionals.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Conditionals</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#more-complicated-conditionals">More complicated conditionals</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="cell tag_remove-input docutils container">
+</div>
+<section class="tex2jax_ignore mathjax_ignore" id="conditionals">
+<h1>Conditionals<a class="headerlink" href="#conditionals" title="Permalink to this heading">#</a></h1>
+<p>If statements, or conditionals, are useful for doing different things depending on what the values of some expressions are.</p>
+<p>For example, suppose we want to print the absolute value of <code class="docutils literal notranslate"><span class="pre">n</span></code>. If <span class="math notranslate nohighlight">\(n \geq 0\)</span>, we should print n, and otherwise we should pring <code class="docutils literal notranslate"><span class="pre">-n</span></code></p>
+<p>The (simplified) format of the if statement is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="o">&lt;</span><span class="n">condition</span><span class="o">&gt;</span><span class="p">:</span>
+   <span class="o">&lt;</span><span class="n">block1</span><span class="o">&gt;</span>
+<span class="k">else</span><span class="p">:</span>
+   <span class="o">&lt;</span><span class="n">block2</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Note that the columns and the tabs before the blocks are mandatory!</p>
+<p>If the condition is True, <code class="docutils literal notranslate"><span class="pre">&lt;block1&gt;</span></code> is executed, and otherwise <code class="docutils literal notranslate"><span class="pre">&lt;block2&gt;</span></code> is executed.</p>
+<p>In our case, the condition is n &gt;= 0</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><button><a href="https://google.com">Click me</a></button></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="o">-</span><span class="mi">5</span>
+<span class="k">if</span> <span class="n">n</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="o">-</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s now write a more complicated grade adjustment program: we’ll adjust the grade by 20 if it’s at or above 70, and we’ll adjust it by 19 if it’s below 70.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">exam_grade</span> <span class="o">=</span> <span class="mi">60</span>
+<span class="n">engsci_adjustment</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">ece_adjustment</span> <span class="o">=</span> <span class="mi">19</span>
+<span class="k">if</span> <span class="n">exam_grade</span> <span class="o">&gt;=</span> <span class="mi">70</span><span class="p">:</span>
+    <span class="n">exam_grade</span> <span class="o">=</span> <span class="n">exam_grade</span> <span class="o">-</span> <span class="n">engsci_adjustment</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">exam_grade</span> <span class="o">=</span> <span class="n">exam_grade</span> <span class="o">-</span> <span class="n">ece_adjustment</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">exam_grade</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>41
+</pre></div>
+</div>
+</div>
+</div>
+<section id="more-complicated-conditionals">
+<h2>More complicated conditionals<a class="headerlink" href="#more-complicated-conditionals" title="Permalink to this heading">#</a></h2>
+<p>Suppose we have more than two outcomes. Let’s say that you bet your friend that you’ll get a 98 on the exam, and let’s say that you want to print “I am happy” if you got a grade of 99 or 100. Otherwise, you want to print the frownie emoticon.</p>
+<p>Here is how we can set this up. The general format is:</p>
+<div class="highlight-if notranslate"><div class="highlight"><pre><span></span>   &lt;block1&gt;
+elif &lt;condition2&gt;:
+   &lt;block2&gt;
+elif &lt;condition3&gt;:
+   &lt;block3&gt;
+.
+.
+.
+else:
+   &lt;blockn&gt;
+</pre></div>
+</div>
+<p>Python will keep checking the conditions in order until one is True, and  will execute the corresponding block. If no condition is True, Python will execute the block under else (blockn)</p>
+<p>Note: the tabs and columns are all mandatory, and the format has to be exactly right!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">exam_grade</span> <span class="o">=</span> <span class="mi">99</span>
+
+<span class="k">if</span> <span class="n">exam_grade</span> <span class="o">==</span> <span class="mi">98</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;I won the bet!&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;I am happy&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">exam_grade</span> <span class="o">&gt;</span> <span class="mi">98</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;I am happy&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;)-:&#39;</span><span class="p">)</span>
+    
+    
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;At least I am not an artsci&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I am happy
+At least I am not an artsci
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./notebook/Intro to Python"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="SecretMagic.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Secret Number Magic Trick</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../Numerical%20Types%20and%20Strings/title.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Numerical Types and Strings</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#more-complicated-conditionals">More complicated conditionals</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Michael Guerzhoy, Ian Wu, Youssef Rachad
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023
+Sharing, re-distribution, and adaptation is allowed for non-commercial purposes as long as attribution to the original author is given, and as long as you notify the original author at guerzhoy@cs.toronto.edu that you intend to use the materials. Atrribution must be given in a reasonable way and in a way that does not suggest that the original author endorses any adaptation. This permission to share, re-distribute and adapt is non-transferrable..
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
