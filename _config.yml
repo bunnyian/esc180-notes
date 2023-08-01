@@ -27,11 +27,6 @@ execute:
   allow_errors: false # If `False`, when a code cell raises an error the execution is stopped, otherwise all cells are always run.
   stderr_output: show # One of 'show', 'remove', 'remove-warn', 'warn', 'error', 'severe'
 
-launch_buttons:
-  colab_url: "https://colab.research.google.com"
-  notebook_interface: "jupyterlab"
-  binderhub_url: "https://mybinder.org"
-
 
 # Information about where the book exists on the web
 repository:
@@ -61,10 +56,10 @@ sphinx:
       use_issues_button: true
       use_repository_button: true
       use_edit_page_button: true
-      launch_buttons:
-        {
-          colab_url: "https://colab.research.google.com",
-        }
+      # launch_buttons:
+      #   {
+      #     colab_url: "https://colab.research.google.com",
+      #   }
       
     bibtex_reference_style: author_year
 
@@ -75,5 +70,5 @@ sphinx:
 
 
 # Add a bibtex file so that we can create citations
-bibtex_bibfiles:
-  - book/references.bib
+# bibtex_bibfiles:
+#   - book/references.bib
