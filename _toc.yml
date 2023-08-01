@@ -158,8 +158,8 @@ parts:
       - file: book/L19/header19
         sections:
         - file: book/L19/Don't iterate over lists while modifying them.ipynb
-        - file: book/L19/Generating all password with variable lengths.ipynb
         - file: book/L19/Generating all passwords of length n.ipynb
+        - file: book/L19/Generating all password with variable lengths.ipynb
         - file: book/L19/State variables.ipynb
         - file: book/L19/String formatting.ipynb
         - file: book/L19/exec.ipynb
@@ -203,9 +203,9 @@ parts:
 
       - file: book/L26/header26
         sections:
+        - file: book/L26/dict.update and dict.get.ipynb
         - file: book/L26/Selection Sort Runtime Complexity Analysis.ipynb
         - file: book/L26/Sets.ipynb
-        - file: book/L26/Untitled.ipynb
 
       - file: book/L27/header27
         sections:
@@ -256,11 +256,10 @@ parts:
 
       - file: book/L34/header34
         sections:
-        - file: book/L34/2015 Exam Partial Solutions.ipynb
         - file: book/L34/Complexity of MergeSort.ipynb
         - file: book/L34/Insertion Sort.ipynb
+        - file: book/L34/2015 Exam Partial Solutions.ipynb
         - file: book/L34/Recursive Deep Copy.ipynb
-        - file: book/L34/Untitled.ipynb
         - file: book/L34/We cannot do better than nlog(n).ipynb
 
       - file: book/L35/header35
@@ -273,10 +272,3 @@ parts:
         - file: book/L36/Recursive merge.ipynb
         - file: book/L36/Review of call trees.ipynb
         - file: book/L36/Turing and Godel.ipynb
-
-
-  - caption: Misc. Set up Files
-    chapters:
-      - file: book/misc/markdown
-      - file: book/misc/notebooks
-      - file: book/misc/markdown-notebooks
