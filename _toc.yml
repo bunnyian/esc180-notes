@@ -223,3 +223,9 @@ parts:
         - file: notebook/More Recursion/Review of call trees.ipynb
         - file: notebook/More Recursion/Turing and Godel.ipynb
         - file: notebook/More Recursion/print_all.ipynb
+
+  - caption: The Next Chapter
+    chapters:
+      - file: notebook/ESC190/title.md
+
+
