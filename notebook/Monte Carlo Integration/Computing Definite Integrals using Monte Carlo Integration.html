@@ -511,54 +511,6 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-
-
-<div class="dropdown dropdown-download-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
-    <i class="fas fa-download"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="../../_sources/notebook/Monte Carlo Integration/Computing Definite Integrals using Monte Carlo Integration.ipynb" target="_blank"
-   class="btn btn-sm btn-download-source-button dropdown-item"
-   title="Download source file"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="btn__text-container">.ipynb</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li>
-<button onclick="window.print()"
-  class="btn btn-sm btn-download-pdf-button dropdown-item"
-  title="Print to PDF"
-  data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="btn__text-container">.pdf</span>
-</button>
-</li>
-      
-  </ul>
-</div>
-
-
-
-
 <button onclick="toggleFullScreen()"
   class="btn btn-sm btn-fullscreen-button"
   title="Fullscreen mode"
@@ -652,7 +604,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.141278
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.1409704
 </pre></div>
 </div>
 </div>
@@ -690,10 +642,10 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7efd940ee910&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f1a7473d610&gt;
 </pre></div>
 </div>
-<img alt="../../_images/ee97f2ca12424557409ab7e5b165f6d942790415d01ab4ddc784374f521451b8.png" src="../../_images/ee97f2ca12424557409ab7e5b165f6d942790415d01ab4ddc784374f521451b8.png" />
+<img alt="../../_images/ffd017605020b2e61dd09d4b854aa18b51a88e108ab48f301f080101f0a09fae.png" src="../../_images/ffd017605020b2e61dd09d4b854aa18b51a88e108ab48f301f080101f0a09fae.png" />
 </div>
 </div>
 <p>The red curve is the unit qaurter circle, and also the curve <span class="math notranslate nohighlight">\(y = \sqrt{1-x^2}\)</span>.</p>
@@ -731,10 +683,10 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7efd7df41250&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f1a746abfd0&gt;
 </pre></div>
 </div>
-<img alt="../../_images/342d85af5a17d88b900413ee66fcc6e34368737d87da73a4b174bce52e473b96.png" src="../../_images/342d85af5a17d88b900413ee66fcc6e34368737d87da73a4b174bce52e473b96.png" />
+<img alt="../../_images/2c8dda93ece3f20289b78362e67b27dfd63ec6c254482ef61f02daa1c0757a19.png" src="../../_images/2c8dda93ece3f20289b78362e67b27dfd63ec6c254482ef61f02daa1c0757a19.png" />
 </div>
 </div>
 <p>Whe computing <span class="math notranslate nohighlight">\(\int_{x_0}^{x_1} f(x) dx\)</span>, we want to find the rectangle in which to generate random points. A suitable rectangle can be found by finding <span class="math notranslate nohighlight">\(f_{max} = \max_{x_0\leq x\leq x_1} f(x)\)</span>. The rectangle would then be <span class="math notranslate nohighlight">\([x_0, x_1]\times [0, f_{max}]\)</span>.</p>
@@ -809,7 +761,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.54809186, 0.07597915, 0.61306939, 0.46745577, 0.66053546])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.35940872, 0.11512677, 0.36305285, 0.73839119, 0.74089979])
 </pre></div>
 </div>
 </div>
@@ -823,7 +775,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.61306939, 0.46745577])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.36305285, 0.73839119])
 </pre></div>
 </div>
 </div>
@@ -836,7 +788,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([0, 2, 4]),)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([3, 4]),)
 </pre></div>
 </div>
 </div>
@@ -849,7 +801,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ True, False,  True, False,  True])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([False, False, False,  True,  True])
 </pre></div>
 </div>
 </div>
@@ -950,14 +902,14 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of pts above the curve: 32
-Number of pts below the curve: 168
-N. below/N.total: 0.84
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of pts above the curve: 41
+Number of pts below the curve: 159
+N. below/N.total: 0.795
 Rectangle area: 1.0
-Area under the curve: 0.84
+Area under the curve: 0.795
 </pre></div>
 </div>
-<img alt="../../_images/123596f6fb47ab6135e9b20970a4601203f0e0a4ea865917273a5aa6b3f053ce.png" src="../../_images/123596f6fb47ab6135e9b20970a4601203f0e0a4ea865917273a5aa6b3f053ce.png" />
+<img alt="../../_images/92b1858f5687389041b4c69d6360a5a34ae53fc1dfb4853148563de8f79c3e35.png" src="../../_images/92b1858f5687389041b4c69d6360a5a34ae53fc1dfb4853148563de8f79c3e35.png" />
 </div>
 </div>
 <p>Let’s now define another function:</p>
@@ -971,14 +923,14 @@ Area under the curve: 0.84
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of pts above the curve: 651
-Number of pts below the curve: 349
-N. below/N.total: 0.349
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of pts above the curve: 662
+Number of pts below the curve: 338
+N. below/N.total: 0.338
 Rectangle area: 204.1474722428738
-Area under the curve: 71.24746781276296
+Area under the curve: 69.00184561809134
 </pre></div>
 </div>
-<img alt="../../_images/c7dc13a728b83155e37f13bed95ac2f4f581780b750217ceb9cbf0b15105d1c7.png" src="../../_images/c7dc13a728b83155e37f13bed95ac2f4f581780b750217ceb9cbf0b15105d1c7.png" />
+<img alt="../../_images/7a0742161c224ae5e6053445ab629b338ae0a910cb2156912bc06b8e00469490.png" src="../../_images/7a0742161c224ae5e6053445ab629b338ae0a910cb2156912bc06b8e00469490.png" />
 </div>
 </div>
 </section>
@@ -999,14 +951,14 @@ Area under the curve: 71.24746781276296
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of pts above the curve: 68
-Number of pts below the curve: 32
-N. below/N.total: 0.32
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of pts above the curve: 54
+Number of pts below the curve: 46
+N. below/N.total: 0.46
 Rectangle area: 4.0
-Area under the curve: 1.28
+Area under the curve: 1.84
 </pre></div>
 </div>
-<img alt="../../_images/1cf99bb5dd46ee8227a07d31e7007761f496eb89b8b8d2c70248d2cfb7e8df9a.png" src="../../_images/1cf99bb5dd46ee8227a07d31e7007761f496eb89b8b8d2c70248d2cfb7e8df9a.png" />
+<img alt="../../_images/9a6fbeadcf1c3fa1213323ece9f87c94746561ea746a9a0d2760c9d57cd53124.png" src="../../_images/9a6fbeadcf1c3fa1213323ece9f87c94746561ea746a9a0d2760c9d57cd53124.png" />
 </div>
 </div>
 <p>With more points:</p>
@@ -1017,14 +969,14 @@ Area under the curve: 1.28
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of pts above the curve: 597
-Number of pts below the curve: 403
-N. below/N.total: 0.403
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of pts above the curve: 580
+Number of pts below the curve: 420
+N. below/N.total: 0.42
 Rectangle area: 4.0
-Area under the curve: 1.612
+Area under the curve: 1.68
 </pre></div>
 </div>
-<img alt="../../_images/b6f7803c930007dc4789387462ca168be6f20db893a6740f0f2400044a45e257.png" src="../../_images/b6f7803c930007dc4789387462ca168be6f20db893a6740f0f2400044a45e257.png" />
+<img alt="../../_images/e501492a93630063657b400cd1044f8f6523cfa83b001078a454a1cbf1676465.png" src="../../_images/e501492a93630063657b400cd1044f8f6523cfa83b001078a454a1cbf1676465.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1034,14 +986,14 @@ Area under the curve: 1.612
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of pts above the curve: 59946
-Number of pts below the curve: 40054
-N. below/N.total: 0.40054
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of pts above the curve: 59763
+Number of pts below the curve: 40237
+N. below/N.total: 0.40237
 Rectangle area: 4.0
-Area under the curve: 1.60216
+Area under the curve: 1.60948
 </pre></div>
 </div>
-<img alt="../../_images/6829182f3d1327810b0c03f0ca25baab1f704c77c2d85fff5505a94d4850c673.png" src="../../_images/6829182f3d1327810b0c03f0ca25baab1f704c77c2d85fff5505a94d4850c673.png" />
+<img alt="../../_images/3d8a57dc59885b5a43e05a17b2f3523f17e56d1120c6a58669fec1f1ac39f482.png" src="../../_images/3d8a57dc59885b5a43e05a17b2f3523f17e56d1120c6a58669fec1f1ac39f482.png" />
 </div>
 </div>
 <p>The actual value is:</p>

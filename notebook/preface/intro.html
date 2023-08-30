@@ -472,7 +472,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/bunnyian/esc180-notes/edit/main/notebook/preface/intro.md" target="_blank"
+      <li><a href="https://github.com/bunnyian/esc180-notes/edit/main/notebook/preface/intro.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -501,54 +501,6 @@ const thebe_selector_output = ".output, .cell_output"
   </span>
 <span class="btn__text-container">Open issue</span>
 </a>
-</li>
-      
-  </ul>
-</div>
-
-
-
-
-
-
-<div class="dropdown dropdown-download-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
-    <i class="fas fa-download"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="../../_sources/notebook/preface/intro.md" target="_blank"
-   class="btn btn-sm btn-download-source-button dropdown-item"
-   title="Download source file"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="btn__text-container">.md</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li>
-<button onclick="window.print()"
-  class="btn btn-sm btn-download-pdf-button dropdown-item"
-  title="Print to PDF"
-  data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="btn__text-container">.pdf</span>
-</button>
 </li>
       
   </ul>
@@ -612,6 +564,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-features">Key Features</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-example-code-snippet">An Example Code Snippet</a></li>
 </ul>
             </nav>
         </div>
@@ -625,12 +578,37 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="how-to-navigate-these-notes">
 <h1>How to Navigate these Notes<a class="headerlink" href="#how-to-navigate-these-notes" title="Permalink to this heading">#</a></h1>
-<p>Welcome to the notes for the course <em>ESC180: Introduction to Programming</em>.</p>
+<p>Some helpful tips to make the most of this resource.</p>
 <section id="key-features">
 <h2>Key Features<a class="headerlink" href="#key-features" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
-<li><p><strong>Search</strong> the entire notes using the bar on the left</p></li>
+<li><p><strong>Run code snippets</strong> by copying the code blocks and pasting them into an IDE or the <a class="reference external" href="http://pythontutor.com/">Python Tutor</a>. (Hint: When you hover over the upper right corner of the code block, a button will appear that will allow you to copy the code to your clipboard.)</p></li>
+<li><p><strong>Search</strong> the entire site using the button on the top right of the page. <em>OR</em> use by pressing <code class="docutils literal notranslate"><span class="pre">Ctrl</span></code> + <code class="docutils literal notranslate"><span class="pre">K</span></code> / <code class="docutils literal notranslate"><span class="pre">⌘</span></code> + <code class="docutils literal notranslate"><span class="pre">K</span></code> on your keyboard.</p></li>
+<li><p><strong>Navigate</strong> the site using the table of contents on the left.</p></li>
+<li><p><strong>Toggle</strong> between light and dark mode using the button on the top right of the page.</p></li>
 </ul>
+</section>
+<section id="an-example-code-snippet">
+<h2>An Example Code Snippet<a class="headerlink" href="#an-example-code-snippet" title="Permalink to this heading">#</a></h2>
+<p>Unlike regular <code class="docutils literal notranslate"><span class="pre">.py</span></code> files, Jupyter notebooks allow you to run code in blocks and see the output of each block. Below is an example.</p>
+<p>The first block is python code, and the block below is the code output. Sometimes a page will have multiple code blocks, be sure to run them all and in order!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># code block</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello World!
+</pre></div>
+</div>
+</div>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">The output of the code block above is…</p>
+<p>Hello World!</p>
+</div>
 </section>
 </section>
 
@@ -702,6 +680,7 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-features">Key Features</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-example-code-snippet">An Example Code Snippet</a></li>
 </ul>
   </nav></div>
 
