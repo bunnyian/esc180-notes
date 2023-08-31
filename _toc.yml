@@ -40,13 +40,13 @@ parts:
     chapters:
       - file: notebook/Intro to Python/title.md # modify this file to change the title of the chapter
         sections:
-        - file: notebook/Intro to Python/A Simple Python Program.ipynb # swap around order of individual files as desired
-        - file: notebook/Intro to Python/ConditionalPirates.ipynb
         - file: notebook/Intro to Python/Introduction to Python Expressions and Variables.ipynb
-        - file: notebook/Intro to Python/Quadratic.ipynb
+        - file: notebook/Intro to Python/A Simple Python Program.ipynb # swap around order of individual files as desired
         - file: notebook/Intro to Python/SecretMagic.ipynb
-        - file: notebook/Intro to Python/conditionals.ipynb
-        - file: notebook/Intro to Python/tracing.mkv
+        - file: notebook/Intro to Python/conditionals.ipynb # remove HTML block!!!!
+        - file: notebook/Intro to Python/ConditionalPirates.ipynb
+        - file: notebook/Intro to Python/Quadratic.ipynb
+        - file: notebook/Intro to Python/tracing.ipynb
 
       - file: notebook/Numerical Types and Strings/title.md
         sections:
