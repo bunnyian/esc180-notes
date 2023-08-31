@@ -83,9 +83,8 @@ parts:
         - file: notebook/Functions/Named arguments.ipynb
         - file: notebook/Functions/Control flow using return statements.ipynb
         - file: notebook/Functions/Fixing has_roots.ipynb
-        - file: notebook/Functions/primality.ipynb
         - file: notebook/Functions/Checking for primality.ipynb
-
+        - file: notebook/Functions/rewrite_primality.ipynb
 
       - file: notebook/Lists/title.md
         sections:
