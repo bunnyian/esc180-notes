@@ -61,6 +61,7 @@ parts:
         - file: notebook/Loops/range.ipynb
         - file: notebook/Loops/While-loops.ipynb
         - file: notebook/Loops/Infinite loops.ipynb
+        - file: notebook/Loops/While-loops and user input.ipynb
         - file: notebook/Loops/More on while loops, break, and continue.ipynb
         - file: notebook/Loops/Factorial and trailing zeros.ipynb
         - file: notebook/Loops/Computing PI by generating random numbers.ipynb
@@ -82,13 +83,14 @@ parts:
         - file: notebook/Functions/Passing data to and from functions.ipynb
         - file: notebook/Functions/Named arguments.ipynb
         - file: notebook/Functions/Control flow using return statements.ipynb
+        - file: notebook/Functions/The truth about the if __name__ == '__main__' block.ipynb
         - file: notebook/Functions/Fixing has_roots.ipynb
         - file: notebook/Functions/Checking for primality.ipynb
         - file: notebook/Functions/rewrite_primality.ipynb
+        - file: notebook/Functions/Counting trailing zeros -- Solution.ipynb
 
       - file: notebook/Lists/title.md
         sections:
-        - file: notebook/Lists/Counting trailing zeros -- Solution.ipynb
         - file: notebook/Lists/Lists.ipynb
         - file: notebook/Lists/Lists II.ipynb
         - file: notebook/Lists/Lists III.ipynb
@@ -97,8 +99,6 @@ parts:
         - file: notebook/Lists/Loops, lists, and globals.ipynb
         - file: notebook/Lists/Missing K problem.ipynb
         - file: notebook/Lists/MissingKSorted.ipynb
-        - file: notebook/Lists/The truth about the if __name__ == '__main__' block.ipynb
-        - file: notebook/Lists/While-loops and user input.ipynb
 
       - file: notebook/List Copies/title.md
         sections:
