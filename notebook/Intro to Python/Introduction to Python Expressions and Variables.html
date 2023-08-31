@@ -66,8 +66,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/fav.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Solving the quadratic equation" href="Quadratic.html" />
-    <link rel="prev" title="Writing Conditional Statements" href="ConditionalPirates.html" />
+    <link rel="next" title="A simple Python program" href="A%20Simple%20Python%20Program.html" />
+    <link rel="prev" title="Intro to Python" href="title.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -157,13 +157,14 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Notes</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="title.html">Intro to Python</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="A%20Simple%20Python%20Program.html">A simple Python program</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ConditionalPirates.html">Writing Conditional Statements</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Expressions and Variables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Quadratic.html">Solving the quadratic equation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A%20Simple%20Python%20Program.html">A simple Python program</a></li>
 <li class="toctree-l2"><a class="reference internal" href="SecretMagic.html">Secret Number Magic Trick</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="conditionals.html">Conditionals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ConditionalPirates.html">Writing Conditional Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Quadratic.html">Solving the quadratic equation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tracing.html">Tracing your code</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Numerical%20Types%20and%20Strings/title.html">Numerical Types and Strings</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -567,7 +568,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#going-beyond-just-numbers">Going beyond just numbers</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-arithmetic">Simple Arithmetic:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boolean-expressions">Boolean Expressions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#going-beyond-just-numbers-strings">Going beyond just numbers (Strings)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">Variables</a></li>
 </ul>
 </li>
@@ -585,8 +588,9 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="expressions-and-variables">
 <h1>Expressions and Variables<a class="headerlink" href="#expressions-and-variables" title="Permalink to this heading">#</a></h1>
-<p>The following are examples of the kinds of Python expressions that we can use. The In [] lines are the expressions, and the Out [] lines are the values of the expressions.</p>
-<p>Simple arithmetic:</p>
+<p>The following are examples of the kinds of Python expressions that we can use. The input blocks (marked by the green left column) are the expressions, and the output blocks (directly following the input blocks) are the values of the expressions.</p>
+<section id="simple-arithmetic">
+<h2>Simple Arithmetic:<a class="headerlink" href="#simple-arithmetic" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">4</span> <span class="o">+</span> <span class="mi">5</span>
@@ -611,7 +615,10 @@ document.write(`
 </div>
 </div>
 </div>
-<p>Boolean expressions are expressions whose value is either <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>. Note the double equals sign (a single equals sign means something else – see elsewhere in the lecture.) These are in most ways just like expressions whose values are integers, except the result <code class="docutils literal notranslate"><span class="pre">True</span></code>/<code class="docutils literal notranslate"><span class="pre">False</span></code> instead of things like 3.14, 10, or 42.</p>
+</section>
+<section id="boolean-expressions">
+<h2>Boolean Expressions<a class="headerlink" href="#boolean-expressions" title="Permalink to this heading">#</a></h2>
+<p>Boolean expressions are expressions whose value is either <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>. Note the double equals sign (a single equals sign means something else – see <span class="xref myst">Variables</span>) These are in most ways just like expressions whose values are integers, except the result <code class="docutils literal notranslate"><span class="pre">True</span></code>/<code class="docutils literal notranslate"><span class="pre">False</span></code> instead of things like 3.14, 10, or 42.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span> <span class="o">==</span> <span class="mi">4</span>
@@ -636,8 +643,17 @@ document.write(`
 </div>
 </div>
 </div>
-<section id="going-beyond-just-numbers">
-<h2>Going beyond just numbers<a class="headerlink" href="#going-beyond-just-numbers" title="Permalink to this heading">#</a></h2>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>True and False must be capitalized. true and false are not valid (they would instead be considered variable names).</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>True and False can also be represented as 1 and 0, respectively. Try running True == 1 and False == 0 in your IDE</p>
+</div>
+</section>
+<section id="going-beyond-just-numbers-strings">
+<h2>Going beyond just numbers (Strings)<a class="headerlink" href="#going-beyond-just-numbers-strings" title="Permalink to this heading">#</a></h2>
 <p>So far, we have only seen numbers (integers) and boolean values (True and False) as values. Strings (i.e., text) is another possible value.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -708,7 +724,8 @@ document.write(`
 </div>
 </div>
 <p>First, we store 42 in the variable memory (an assignment statement like the one on line above means “take the value on the right of the =, and store it in the variable on the left of the =”)</p>
-<p>Note that there’s nothing special about calling the variable memory. We could as well have done the following:</p>
+<p>Note that there’s nothing special about calling the variable memory (ie. variable names can be anything, except for some keywords).</p>
+<p>We could also have done the following:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">engsci</span> <span class="o">=</span> <span class="mi">42</span>
@@ -727,7 +744,7 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">exam</span> <span class="o">=</span> <span class="mi">98</span>
 <span class="n">engsci_adj</span> <span class="o">=</span> <span class="mi">15</span>
-<span class="n">exam</span> <span class="o">=</span> <span class="n">exam</span> <span class="o">-</span> <span class="n">engsci_adj</span>
+<span class="n">exam</span> <span class="o">=</span> <span class="n">exam</span> <span class="o">-</span> <span class="n">engsci_adj</span> <span class="c1"># reassigning the value of exam to be exam - engsci_adj</span>
 <span class="n">exam</span>
 </pre></div>
 </div>
@@ -818,20 +835,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="ConditionalPirates.html"
+       href="title.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Writing Conditional Statements</p>
+        <p class="prev-next-title">Intro to Python</p>
       </div>
     </a>
     <a class="right-next"
-       href="Quadratic.html"
+       href="A%20Simple%20Python%20Program.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Solving the quadratic equation</p>
+        <p class="prev-next-title">A simple Python program</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -853,7 +870,9 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#going-beyond-just-numbers">Going beyond just numbers</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-arithmetic">Simple Arithmetic:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boolean-expressions">Boolean Expressions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#going-beyond-just-numbers-strings">Going beyond just numbers (Strings)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">Variables</a></li>
 </ul>
 </li>

@@ -66,8 +66,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/fav.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Expressions and Variables" href="Introduction%20to%20Python%20Expressions%20and%20Variables.html" />
-    <link rel="prev" title="A simple Python program" href="A%20Simple%20Python%20Program.html" />
+    <link rel="next" title="Solving the quadratic equation" href="Quadratic.html" />
+    <link rel="prev" title="Conditionals" href="conditionals.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -157,13 +157,14 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Notes</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="title.html">Intro to Python</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="A%20Simple%20Python%20Program.html">A simple Python program</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Writing Conditional Statements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Introduction%20to%20Python%20Expressions%20and%20Variables.html">Expressions and Variables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Quadratic.html">Solving the quadratic equation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A%20Simple%20Python%20Program.html">A simple Python program</a></li>
 <li class="toctree-l2"><a class="reference internal" href="SecretMagic.html">Secret Number Magic Trick</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="conditionals.html">Conditionals</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Writing Conditional Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Quadratic.html">Solving the quadratic equation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tracing.html">Tracing your code</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Numerical%20Types%20and%20Strings/title.html">Numerical Types and Strings</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -585,13 +586,7 @@ document.write(`
   <section id="writing-conditional-statements">
 <h1>Writing Conditional Statements<a class="headerlink" href="#writing-conditional-statements" title="Permalink to this heading">#</a></h1>
 <p>Here is the scenario from the <em>Pirates of the Caribbean</em>:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
-<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s2">&quot;DvzOjZu0NqI&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
+<div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html">
         <iframe
@@ -600,6 +595,7 @@ document.write(`
             src="https://www.youtube.com/embed/DvzOjZu0NqI"
             frameborder="0"
             allowfullscreen
+            
         ></iframe>
         </div></div>
 </div>
@@ -653,7 +649,7 @@ It was a pleasure serving you
 <p>The <code class="docutils literal notranslate"><span class="pre">if-elif-else</span></code> structure works as follows: each condition is evaluated in turn, top-to-bottom. When a condition that evaluates to <code class="docutils literal notranslate"><span class="pre">True</span></code> is encountered, the corresponding lines are executed, and no more conditions are evaluated.</p>
 <p>In the code above, since <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">&gt;=</span> <span class="pre">1</span></code>, we print <code class="docutils literal notranslate"><span class="pre">Welcome</span> <span class="pre">to</span> <span class="pre">Port</span> <span class="pre">Royal,</span> <span class="pre">Jack</span> <span class="pre">Sparrow</span></code>, even though <code class="docutils literal notranslate"><span class="pre">shillings</span> <span class="pre">==</span> <span class="pre">3</span></code>, so that what we wanted to print is <code class="docutils literal notranslate"><span class="pre">Welcome</span> <span class="pre">to</span> <span class="pre">Port</span> <span class="pre">Royal,</span> <span class="pre">Mr.</span> <span class="pre">Smith</span></code>.</p>
 <p>Note that since the line <code class="docutils literal notranslate"><span class="pre">print(&quot;It</span> <span class="pre">was</span> <span class="pre">a</span> <span class="pre">pleasure</span> <span class="pre">serving</span> <span class="pre">you&quot;)</span></code> is not indented, it is always executed. If it were indented, it would be part of the <code class="docutils literal notranslate"><span class="pre">else</span></code> caluse, and would be executed if none of the conditions held.</p>
-<p>The nice thing about the code in [2] is that the second condition really means <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">&lt;=</span> <span class="pre">shillings</span> <span class="pre">&lt;</span> <span class="pre">3</span></code>, because by the time we are evaluating <code class="docutils literal notranslate"><span class="pre">shillings</span> <span class="pre">&gt;=</span> <span class="pre">1</span></code>, we already know that <code class="docutils literal notranslate"><span class="pre">shillings</span> <span class="pre">&lt;</span> <span class="pre">3</span></code>, since we first checked whether shillings was greater or equal to three, and if we are checking whether <code class="docutils literal notranslate"><span class="pre">shillings</span> <span class="pre">&gt;=</span> <span class="pre">1</span></code>, the first condition evaluated to <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+<p>The nice thing about the code in the first (correct) example is that the second condition really means <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">&lt;=</span> <span class="pre">shillings</span> <span class="pre">&lt;</span> <span class="pre">3</span></code>, because by the time we are evaluating <code class="docutils literal notranslate"><span class="pre">shillings</span> <span class="pre">&gt;=</span> <span class="pre">1</span></code>, we already know that <code class="docutils literal notranslate"><span class="pre">shillings</span> <span class="pre">&lt;</span> <span class="pre">3</span></code>, since we first checked whether shillings was greater or equal to three, and if we are checking whether <code class="docutils literal notranslate"><span class="pre">shillings</span> <span class="pre">&gt;=</span> <span class="pre">1</span></code>, the first condition evaluated to <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </section>
 <section id="conditionals-multilpe-elifs">
 <h2>Conditionals: multilpe elifs<a class="headerlink" href="#conditionals-multilpe-elifs" title="Permalink to this heading">#</a></h2>
@@ -680,7 +676,7 @@ It was a pleasure serving you
 </div>
 </div>
 </div>
-<p>Again, all the conditions are evaluated top-to-bottom, until we reach a true condition, which gets executed. If none of the conditions are executed, the <code class="docutils literal notranslate"><span class="pre">else</span></code> blog is executed.</p>
+<p>Again, all the conditions are evaluated top-to-bottom, until we reach a true condition, which gets executed. If none of the conditions are executed, the <code class="docutils literal notranslate"><span class="pre">else</span></code> block is executed.</p>
 </section>
 <section id="conditionals-multiple-if-statements-and-not-using-elifs-elses">
 <h2>Conditionals: multiple if statements and not using elifs/elses<a class="headerlink" href="#conditionals-multiple-if-statements-and-not-using-elifs-elses" title="Permalink to this heading">#</a></h2>
@@ -716,7 +712,7 @@ Welcome to Port Royal, Mr. Smith
 <span class="n">welcome_message</span> <span class="o">=</span> <span class="s2">&quot;Welcome to Port Royal&quot;</span>
 <span class="k">if</span> <span class="n">shillings</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">:</span>
     <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Mr. Smith&quot;</span>
-<span class="k">elif</span> <span class="n">shillings</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>             <span class="c1">#Could say if shillings &lt; 1 -- why?</span>
+<span class="k">elif</span> <span class="n">shillings</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>         <span class="c1">#Could say if shillings &lt; 1 -- why?</span>
     <span class="n">welcome_message</span> <span class="o">=</span> <span class="s2">&quot;Go away&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">welcome_message</span> <span class="o">+</span> <span class="s2">&quot;, &quot;</span> <span class="o">+</span> <span class="n">name</span><span class="p">)</span>
 </pre></div>
@@ -763,20 +759,20 @@ Welcome to Port Royal, Mr. Smith
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="A%20Simple%20Python%20Program.html"
+       href="conditionals.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">A simple Python program</p>
+        <p class="prev-next-title">Conditionals</p>
       </div>
     </a>
     <a class="right-next"
-       href="Introduction%20to%20Python%20Expressions%20and%20Variables.html"
+       href="Quadratic.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Expressions and Variables</p>
+        <p class="prev-next-title">Solving the quadratic equation</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

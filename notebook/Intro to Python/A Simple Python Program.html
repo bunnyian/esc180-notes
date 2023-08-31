@@ -66,8 +66,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/fav.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Writing Conditional Statements" href="ConditionalPirates.html" />
-    <link rel="prev" title="Intro to Python" href="title.html" />
+    <link rel="next" title="Secret Number Magic Trick" href="SecretMagic.html" />
+    <link rel="prev" title="Expressions and Variables" href="Introduction%20to%20Python%20Expressions%20and%20Variables.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -157,13 +157,14 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Notes</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="title.html">Intro to Python</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">A simple Python program</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ConditionalPirates.html">Writing Conditional Statements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Introduction%20to%20Python%20Expressions%20and%20Variables.html">Expressions and Variables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Quadratic.html">Solving the quadratic equation</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">A simple Python program</a></li>
 <li class="toctree-l2"><a class="reference internal" href="SecretMagic.html">Secret Number Magic Trick</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="conditionals.html">Conditionals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ConditionalPirates.html">Writing Conditional Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Quadratic.html">Solving the quadratic equation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tracing.html">Tracing your code</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Numerical%20Types%20and%20Strings/title.html">Numerical Types and Strings</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -592,8 +593,8 @@ document.write(`
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">exam_grade</span> <span class="o">=</span> <span class="n">exam_grade</span> <span class="o">-</span> <span class="n">engsci_adjustment</span>
 </pre></div>
 </div>
-<p>is not an equation (i.e., we can’t conclude that <code class="docutils literal notranslate"><span class="pre">engsci_adjustment</span></code> is 0 or anything like that). Rather, it’s an instruction: evaluate <code class="docutils literal notranslate"><span class="pre">(exam_grade</span> <span class="pre">-</span> <span class="pre">engsci_adjustment)</span></code>, and put whatever value you get into the variable <code class="docutils literal notranslate"><span class="pre">exam_grade</span></code>, forgetting what <code class="docutils literal notranslate"><span class="pre">exam_grade</span></code> was before.</p>
-<p>The result is that <code class="docutils literal notranslate"><span class="pre">exam_grade</span></code> becomes 78, and then that value gets printed.</p>
+<p>is not an equation (i.e., we can’t conclude that <code class="docutils literal notranslate"><span class="pre">engsci_adjustment</span></code> is 0 or anything like that). Rather, it’s an instruction: evaluate <code class="docutils literal notranslate"><span class="pre">(exam_grade</span> <span class="pre">-</span> <span class="pre">engsci_adjustment)</span></code>, and assign the value you get to the variable <code class="docutils literal notranslate"><span class="pre">exam_grade</span></code>, forgetting what <code class="docutils literal notranslate"><span class="pre">exam_grade</span></code> was before.</p>
+<p>The result is that <code class="docutils literal notranslate"><span class="pre">exam_grade</span></code> becomes 78, and then that value gets printed via <code class="docutils literal notranslate"><span class="pre">print(exam_grade)</span></code>.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -628,20 +629,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="title.html"
+       href="Introduction%20to%20Python%20Expressions%20and%20Variables.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Intro to Python</p>
+        <p class="prev-next-title">Expressions and Variables</p>
       </div>
     </a>
     <a class="right-next"
-       href="ConditionalPirates.html"
+       href="SecretMagic.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Writing Conditional Statements</p>
+        <p class="prev-next-title">Secret Number Magic Trick</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

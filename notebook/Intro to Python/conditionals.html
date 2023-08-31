@@ -68,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/fav.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Numerical Types and Strings" href="../Numerical%20Types%20and%20Strings/title.html" />
+    <link rel="next" title="Writing Conditional Statements" href="ConditionalPirates.html" />
     <link rel="prev" title="Secret Number Magic Trick" href="SecretMagic.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -159,13 +159,14 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Notes</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="title.html">Intro to Python</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="A%20Simple%20Python%20Program.html">A simple Python program</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ConditionalPirates.html">Writing Conditional Statements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Introduction%20to%20Python%20Expressions%20and%20Variables.html">Expressions and Variables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Quadratic.html">Solving the quadratic equation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A%20Simple%20Python%20Program.html">A simple Python program</a></li>
 <li class="toctree-l2"><a class="reference internal" href="SecretMagic.html">Secret Number Magic Trick</a></li>
 
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Conditionals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ConditionalPirates.html">Writing Conditional Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Quadratic.html">Solving the quadratic equation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tracing.html">Tracing your code</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Numerical%20Types%20and%20Strings/title.html">Numerical Types and Strings</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -594,12 +595,15 @@ document.write(`
    <span class="o">&lt;</span><span class="n">block2</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<p>Note that the columns and the tabs before the blocks are mandatory!</p>
 <p>If the condition is True, <code class="docutils literal notranslate"><span class="pre">&lt;block1&gt;</span></code> is executed, and otherwise <code class="docutils literal notranslate"><span class="pre">&lt;block2&gt;</span></code> is executed.</p>
 <p>In our case, the condition is n &gt;= 0</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>The columns and the tabs before the blocks are mandatory! Both blocks must be indented by the same number of tabs or spaces.</p>
+</div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><button><a href="https://pythontutor.com/python-debugger.html#code=n%20%3D%20-5%0Aif%20n%20%3E%3D%200%3A%0A%20%20%20%20print%28n%29%0Aelse%3A%0A%20%20%20%20print%28-n%29&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false">Run in Python Tutor</a></button></div></div>
+<div class="output text_html"><button><a href="https://pythontutor.com/python-debugger.html#code=n%20%3D%20-5%0Aif%20n%20%3E%3D%200%3A%0A%20%20%20%20print%28n%29%0Aelse%3A%0A%20%20%20%20print%28-n%29&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank">Run in Python Tutor</a></button></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -680,6 +684,7 @@ At least I am not an artsci
 </div>
 </div>
 </div>
+<p>Note that the order of conditionals matters. For example, if we had put the condition <code class="docutils literal notranslate"><span class="pre">grade</span> <span class="pre">&gt;=</span> <span class="pre">90</span></code> first, then the program would have printed “I am happy” for any grade of 90 or above, and would never have checked the other conditions.</p>
 </section>
 </section>
 
@@ -724,11 +729,11 @@ At least I am not an artsci
       </div>
     </a>
     <a class="right-next"
-       href="../Numerical%20Types%20and%20Strings/title.html"
+       href="ConditionalPirates.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Numerical Types and Strings</p>
+        <p class="prev-next-title">Writing Conditional Statements</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
