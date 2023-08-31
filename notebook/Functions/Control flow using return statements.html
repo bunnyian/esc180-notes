@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>5.5. Control flow using return statements &#8212; ESC180 Notes</title>
+    <title>5.4. Control flow using return statements &#8212; ESC180 Notes</title>
   
   
   
@@ -66,8 +66,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/fav.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="5.6. Fixing has_roots function" href="Fixing%20has_roots.html" />
-    <link rel="prev" title="5.4. Named Arguments" href="Named%20arguments.html" />
+    <link rel="next" title="5.5. Fixing has_roots function" href="Fixing%20has_roots.html" />
+    <link rel="prev" title="5.3. Named Arguments" href="Named%20arguments.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -200,14 +200,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="title.html">5. Functions</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="Functions%3B%20Local%20and%20Global%20Variables.html">5.1. Functions; Local and Global Variables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Passing%20data%20to%20and%20from%20functions.html">5.2. Passing data to and from functions</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="Named%20arguments.html">5.4. Named Arguments</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">5.5. Control flow using return statements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Fixing%20has_roots.html">5.6. Fixing <code class="docutils literal notranslate"><span class="pre">has_roots</span></code> function</a></li>
-<li class="toctree-l2"><a class="reference internal" href="primality.html">5.7. Fixing the style of is_prime</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="Checking%20for%20primality.html">5.10. Checking for primality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Named%20arguments.html">5.3. Named Arguments</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">5.4. Control flow using return statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Fixing%20has_roots.html">5.5. Fixing <code class="docutils literal notranslate"><span class="pre">has_roots</span></code> function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Checking%20for%20primality.html">5.6. <code class="docutils literal notranslate"><span class="pre">is_prime(n)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="rewrite_primality.html">5.7. Rewriting <code class="docutils literal notranslate"><span class="pre">is_prime()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Lists/title.html">6. Lists</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -560,7 +557,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rewriting-artsie-math">5.5.1. Rewriting artsie_math</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rewriting-artsie-math">5.4.1. Rewriting artsie_math</a></li>
 </ul>
             </nav>
         </div>
@@ -572,8 +569,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="control-flow-using-return-statements">
-<h1><span class="section-number">5.5. </span>Control flow using return statements<a class="headerlink" href="#control-flow-using-return-statements" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="control-flow-using-return-statements">
+<h1><span class="section-number">5.4. </span>Control flow using return statements<a class="headerlink" href="#control-flow-using-return-statements" title="Permalink to this heading">#</a></h1>
 <p>Return statements (stuff like <code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">True</span></code>) always terminate the execution of the function once they are reached. After the return statement, we return to the place in the program where the function was called, so that the part of the function that comes after a return statement <em>that gets executed</em> is not executed.</p>
 <p>(Note: not every return statement is executed. For example, return statments might occur inside if statements, and are only executed conditionally. For example,
 if False:
@@ -646,7 +643,7 @@ None None
 </div>
 </div>
 <section id="rewriting-artsie-math">
-<h2><span class="section-number">5.5.1. </span>Rewriting artsie_math<a class="headerlink" href="#rewriting-artsie-math" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">5.4.1. </span>Rewriting artsie_math<a class="headerlink" href="#rewriting-artsie-math" title="Permalink to this heading">#</a></h2>
 <p>It’s nicer to <em>first</em> check the whether we need to do any computation, and then to do the computation if necessary. The following is equivalent to <code class="docutils literal notranslate"><span class="pre">artsie_math</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -724,7 +721,7 @@ None None
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">5.4. </span>Named Arguments</p>
+        <p class="prev-next-title"><span class="section-number">5.3. </span>Named Arguments</p>
       </div>
     </a>
     <a class="right-next"
@@ -732,7 +729,7 @@ None None
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">5.6. </span>Fixing <code class="docutils literal notranslate"><span class="pre">has_roots</span></code> function</p>
+        <p class="prev-next-title"><span class="section-number">5.5. </span>Fixing <code class="docutils literal notranslate"><span class="pre">has_roots</span></code> function</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -754,7 +751,7 @@ None None
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rewriting-artsie-math">5.5.1. Rewriting artsie_math</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rewriting-artsie-math">5.4.1. Rewriting artsie_math</a></li>
 </ul>
   </nav></div>
 
