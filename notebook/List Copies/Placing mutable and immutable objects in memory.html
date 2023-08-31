@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>6.10. Placing objects in memory &#8212; ESC180 Notes</title>
+    <title>7.10. Placing objects in memory &#8212; ESC180 Notes</title>
   
   
   
@@ -66,8 +66,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/fav.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="7. List Operations" href="../List%20Operations/title.html" />
-    <link rel="prev" title="6.9. Modifying lists in functions" href="Modifying%20mutable%20objects%20inside%20functions.html" />
+    <link rel="next" title="8. List Operations" href="../List%20Operations/title.html" />
+    <link rel="prev" title="7.9. Modifying lists in functions" href="Modifying%20mutable%20objects%20inside%20functions.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -173,233 +173,225 @@ const thebe_selector_output = ".output, .cell_output"
 
 <li class="toctree-l2"><a class="reference internal" href="../Numerical%20Types%20and%20Strings/printMultiple.html">2.4. Printing multiple things at the same time</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Numerical%20Types%20and%20Strings/quadraticMore.html">2.5. Solving the Quadratic Equation and Finite Precision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Numerical%20Types%20and%20Strings/Integer%20division.html">2.6. Integer division</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Loops/title.html">3. Loops</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Loops/Checking%20for%20primality.html">3.1. Checking for primality</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Loops/Computing%20PI%20by%20generating%20random%20numbers.html">3.2. A simple idea for computing <span class="math notranslate nohighlight">\(\pi\)</span></a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Loops/Factorial%20and%20trailing%20zeros.html">3.4. Factorials</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Loops/For-loops.html">3.6. For loops</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Loops/Infinite%20loops.html">3.8. Infinite loops</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Loops/Input%20from%20keyboard%2C%20and%20a%20bit%20more%20on%20design.html">3.10. Input and style</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Loops/Integer%20division.html">3.11. Integer division</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Loops/More%20assignment%20operators.html">3.12. +=, -=, etc</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Loops/More%20on%20while%20loops%2C%20break%2C%20and%20continue.html">3.13. Transforming for loops into while loops</a></li>
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../Loops/Swapping%20variable%20values%20without%20temporary%20storage.html">3.17. Swapping variable values</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Loops/Testing%20calculator.py.html">3.18. Testing <code class="docutils literal notranslate"><span class="pre">calculator.py</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Loops/While-loops.html">3.19. While loops</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Loops/morefore.html">3.20. Fixing the style of is_prime</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="../Loops/range.html">3.23. More about range()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Loops/For-loops.html">3.1. For loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Loops/range.html">3.2. More about range()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Loops/While-loops.html">3.3. While loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Loops/Infinite%20loops.html">3.4. Infinite loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Loops/More%20on%20while%20loops%2C%20break%2C%20and%20continue.html">3.5. More on While Loops, Break, and Continue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Loops/Factorial%20and%20trailing%20zeros.html">3.6. Factorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Loops/Computing%20PI%20by%20generating%20random%20numbers.html">3.7. Computing <span class="math notranslate nohighlight">\(\pi\)</span> using Random Numbers</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Functions%20and%20Variables/title.html">4. Functions and Variables</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Functions%20and%20Variables/Boolean%20Values%20and%20Boolean%20Algebra.html">4.1. Boolean Values</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Functions%20and%20Variables/Control%20flow%20using%20return%20statements.html">4.2. Control flow using return statements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Functions%20and%20Variables/Converting%20Boolean%20Values.html">4.3. Converting Boolean Values</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Functions%20and%20Variables/Fixing%20has_roots.html">4.5. Fixing <code class="docutils literal notranslate"><span class="pre">has_roots</span></code> function</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Functions%20and%20Variables/Functions%3B%20Local%20and%20Global%20Variables.html">4.6. Functions</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Functions%20and%20Variables/Multiple%20Assignments%20and%20Swapping%20Variable%20Values.html">4.8. Multiple assignments</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Functions%20and%20Variables/Named%20arguments.html">4.10. Named Arguments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Functions%20and%20Variables/Passing%20data%20to%20and%20from%20functions.html">4.11. Passing data to and from functions</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Functions%20and%20Variables/Swapping%20variables%2C%20Part%202.html">4.13. Swapping variable values</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Functions%20and%20Variables/Variable%20Naming%20Conventions.html">4.14. Variable Naming Conventions</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Variables/title.html">4. Variables</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Variables/Variable%20Naming%20Conventions.html">4.1. Variable Naming Conventions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Variables/Multiple%20Assignments.html">4.2. Multiple Assignments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Variables/swapping%20with%20Temp.html">4.3. Swapping with Temp Variable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Variables/swapping%20trick.html">4.4. Trick to Swapping Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Variables/More%20assignment%20operators.html">4.5. More Assignment Operators (+=, -=, etc)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Variables/Input%20from%20keyboard%2C%20and%20a%20bit%20more%20on%20design.html">4.6. Keyboard Input and Style</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Variables/Boolean%20Values%20and%20Boolean%20Algebra.html">4.7. Boolean Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Variables/Converting%20Boolean%20Values.html">4.8. Converting Boolean Values</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Lists/title.html">5. Lists</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Lists/Counting%20trailing%20zeros%20--%20Solution.html">5.1. Counting trailing zeros in n!</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Functions/title.html">5. Functions</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Functions/Functions%3B%20Local%20and%20Global%20Variables.html">5.1. Functions; Local and Global Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Functions/Passing%20data%20to%20and%20from%20functions.html">5.2. Passing data to and from functions</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="../Lists/Lists.html">5.3. Lists</a></li>
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../Lists/Lists%20II.html">5.7. More on Lists in Python</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Lists/Lists%20III.html">5.9. <code class="docutils literal notranslate"><span class="pre">list.insert()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Functions/Named%20arguments.html">5.4. Named Arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Functions/Control%20flow%20using%20return%20statements.html">5.5. Control flow using return statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Functions/Fixing%20has_roots.html">5.6. Fixing <code class="docutils literal notranslate"><span class="pre">has_roots</span></code> function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Functions/primality.html">5.7. Fixing the style of is_prime</a></li>
 
 
-
-
-<li class="toctree-l2"><a class="reference internal" href="../Lists/Lists%20IV.html">5.14. <code class="docutils literal notranslate"><span class="pre">list.extend()</span></code></a></li>
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../Lists/Lists%20V.html">5.19. More on accessing list elements: last element, negative indices</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Lists/Loops%2C%20lists%2C%20and%20globals.html">5.21. Idea: looking up the password</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Lists/Missing%20K%20problem.html">5.23. The missing number problem</a></li>
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../Lists/MissingKSorted.html">5.27. Another approach to the Missing Number problem</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Lists/The%20truth%20about%20the%20if%20__name__%20%3D%3D%20%27__main__%27%20block.html">5.29. The if __name__ == ‘__main__’ block</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="../Lists/While-loops%20and%20user%20input.html">5.32. While-loops and user input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Functions/Checking%20for%20primality.html">5.10. Checking for primality</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="title.html">6. List Copies</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="A%20final%20go%20at%20the%20missing%20K%20problem%20.html">6.1. The Missing K Problem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Aliasing%20and%20mutability.html">6.2. Variables refer to addresses</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Lists/title.html">6. Lists</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Counting%20trailing%20zeros%20--%20Solution.html">6.1. Counting trailing zeros in n!</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="Deep%20Copy%20%28two%20levels%20deep%29.html">6.4. Copying Lists</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Finding%20a%20winning%20move%20in%20tic-tac-toe.html">6.5. Finding a winning move in tic-tac-toe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Intro%20to%20shallow%20and%20deep%20copy.html">6.6. Aliasing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Lists.html">6.3. Lists</a></li>
 
 
-<li class="toctree-l2"><a class="reference internal" href="Modifying%20mutable%20objects%20inside%20functions.html">6.9. Modifying lists in functions</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">6.10. Placing objects in memory</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Lists%20II.html">6.7. More on Lists in Python</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Lists%20III.html">6.9. <code class="docutils literal notranslate"><span class="pre">list.insert()</span></code></a></li>
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Lists%20IV.html">6.14. <code class="docutils literal notranslate"><span class="pre">list.extend()</span></code></a></li>
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Lists%20V.html">6.19. More on accessing list elements: last element, negative indices</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Loops%2C%20lists%2C%20and%20globals.html">6.21. Idea: looking up the password</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Missing%20K%20problem.html">6.23. The missing number problem</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Lists/MissingKSorted.html">6.27. Another approach to the Missing Number problem</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../Lists/The%20truth%20about%20the%20if%20__name__%20%3D%3D%20%27__main__%27%20block.html">6.29. The if __name__ == ‘__main__’ block</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Lists/While-loops%20and%20user%20input.html">6.32. While-loops and user input</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="title.html">7. List Copies</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="A%20final%20go%20at%20the%20missing%20K%20problem%20.html">7.1. The Missing K Problem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Aliasing%20and%20mutability.html">7.2. Variables refer to addresses</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="Deep%20Copy%20%28two%20levels%20deep%29.html">7.4. Copying Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Finding%20a%20winning%20move%20in%20tic-tac-toe.html">7.5. Finding a winning move in tic-tac-toe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Intro%20to%20shallow%20and%20deep%20copy.html">7.6. Aliasing</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="Modifying%20mutable%20objects%20inside%20functions.html">7.9. Modifying lists in functions</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">7.10. Placing objects in memory</a></li>
 
 
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../List%20Operations/title.html">7. List Operations</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../List%20Operations/Adding%20and%20extending%20lists.html">7.1. Adding lists</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../List%20Operations/title.html">8. List Operations</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../List%20Operations/Adding%20and%20extending%20lists.html">8.1. Adding lists</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="../List%20Operations/Don%27t%20iterate%20over%20lists%20while%20modifying%20them.html">7.3. Don’t iterate over lists while modifying them</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../List%20Operations/Iterating%20over%20lists%20while%20modifying%20them%20Pt.%202.html">7.4. Iterating over lists while modifying them Pt. 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../List%20Operations/NestedLoops.html">7.5. Nested loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../List%20Operations/Don%27t%20iterate%20over%20lists%20while%20modifying%20them.html">8.3. Don’t iterate over lists while modifying them</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../List%20Operations/Iterating%20over%20lists%20while%20modifying%20them%20Pt.%202.html">8.4. Iterating over lists while modifying them Pt. 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../List%20Operations/NestedLoops.html">8.5. Nested loops</a></li>
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="../List%20Operations/NestedLoopsNestedLists.html">7.9. Nested loops and nested lists</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../List%20Operations/Return%20review.html">7.10. Review of <code class="docutils literal notranslate"><span class="pre">return</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../List%20Operations/NestedLoopsNestedLists.html">8.9. Nested loops and nested lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../List%20Operations/Return%20review.html">8.10. Review of <code class="docutils literal notranslate"><span class="pre">return</span></code></a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="../List%20Operations/Slicing%20lists.html">7.12. Slicing lists</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../List%20Operations/Slicing%20using%20range%28%29%20and%20while%28%29.html">7.13. Slicing manually using for and while loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../List%20Operations/Slicing%20lists.html">8.12. Slicing lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../List%20Operations/Slicing%20using%20range%28%29%20and%20while%28%29.html">8.13. Slicing manually using for and while loops</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Working%20with%20Strings/title.html">8. Working with Strings</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Strings/Anagrams.html">8.1. Anagrams</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Strings/Generating%20all%20password%20with%20variable%20lengths.html">8.2. Variable Length Password Generator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Strings/Generating%20all%20passwords%20of%20length%20n.html">8.3. Generating Passwords of Fixed Length n</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Strings/Intro%20to%20strings.html">8.4. Intro to Strings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Strings/Longest%20run.html">8.5. Longest run</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Strings/Reversing%20strings.html">8.6. Reversing strings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Strings/State%20variables.html">8.7. State Variables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Strings/String%20formatting.html">8.8. String formatting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Strings/Transmitting%20a%20random%20packet.html">8.9. Transmitting a random packet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Strings/exec.html">8.10. <code class="docutils literal notranslate"><span class="pre">exec</span></code></a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Working%20with%20Strings/title.html">9. Working with Strings</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Strings/Anagrams.html">9.1. Anagrams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Strings/Generating%20all%20password%20with%20variable%20lengths.html">9.2. Variable Length Password Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Strings/Generating%20all%20passwords%20of%20length%20n.html">9.3. Generating Passwords of Fixed Length n</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Strings/Intro%20to%20strings.html">9.4. Intro to Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Strings/Longest%20run.html">9.5. Longest run</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Strings/Reversing%20strings.html">9.6. Reversing strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Strings/State%20variables.html">9.7. State Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Strings/String%20formatting.html">9.8. String formatting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Strings/Transmitting%20a%20random%20packet.html">9.9. Transmitting a random packet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Strings/exec.html">9.10. <code class="docutils literal notranslate"><span class="pre">exec</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Turtle%20Graphics/title.html">9. Turtle Graphics</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Turtle%20Graphics/title.html">10. Turtle Graphics</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/title.html">10. Dictionaries, Tuples, Sets</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/A%20few%20notes%20on%20numerical%20stability.html">10.1. Notes on numerical stability</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/Dictionaries.html">10.2. Dictionaries</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/title.html">11. Dictionaries, Tuples, Sets</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/A%20few%20notes%20on%20numerical%20stability.html">11.1. Notes on numerical stability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/Dictionaries.html">11.2. Dictionaries</a></li>
 
 
 
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/Inverting%20Dictionaries%2C%20Pt.%201.html">10.9. Inverting Dictionaries Pt. 1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/Inverting%20dictionaries.html">10.10. Inverting Dictionaries Pt. 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/More%20on%20iterating%20over%20dictionaries.html">10.11. Modifying dictionaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/Inverting%20Dictionaries%2C%20Pt.%201.html">11.9. Inverting Dictionaries Pt. 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/Inverting%20dictionaries.html">11.10. Inverting Dictionaries Pt. 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/More%20on%20iterating%20over%20dictionaries.html">11.11. Modifying dictionaries</a></li>
 
 
-<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/Sets.html">10.14. Sets</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/Sparse%20matrices.html">10.15. Sparse matrices</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/Tuples.html">10.16. Tuples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/Sets.html">11.14. Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/Sparse%20matrices.html">11.15. Sparse matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/Tuples.html">11.16. Tuples</a></li>
 
 
-<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/dict.update%20and%20dict.get.html">10.19. Accessing dictionaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/dict.update%20and%20dict.get.html">11.19. Accessing dictionaries</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Working%20with%20Files/title.html">11. Working with Files</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Files/File%20encoding.html">11.1. File Encoding</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Files/Files%20Part%202.html">11.2. Files Pt. 2, splitting strings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Files/Intro%20to%20files.html">11.3. Intro to Files</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Working%20with%20Files/title.html">12. Working with Files</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Files/File%20encoding.html">12.1. File Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Files/Files%20Part%202.html">12.2. Files Pt. 2, splitting strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Files/Intro%20to%20files.html">12.3. Intro to Files</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/title.html">12. Sorting Algorithms and Complexity</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/A%20more%20careful%20analysis%20of%20Selection%20Sort.html">12.1. More Detailed Analysis of Selection Sort</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/Bozosort.html">12.2. Bozosort</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/Bubble%20Sort%20Complexity%20Analysis.html">12.3. Bubble Sort Complexity Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/Bubble%20Sort.html">12.4. Bubble Sort</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/Bucket%20%28or%20Counting%29%20Sort.html">12.5. Bucket/Counting Sort</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/BucketSort%20Complexity%20Analysis.html">12.6. Bucket/Counting Sort Complexity Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/Complexity%20analysis.html">12.7. Complexity Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/Intro%20to%20runtime.html">12.8. Intro to Runtime</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/Selection%20Sort%20Runtime%20Complexity%20Analysis.html">12.9. Selection Sort Runtime Complexity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/Selection%20Sort.html">12.10. Selection Sort</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/title.html">13. Sorting Algorithms and Complexity</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/A%20more%20careful%20analysis%20of%20Selection%20Sort.html">13.1. More Detailed Analysis of Selection Sort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/Bozosort.html">13.2. Bozosort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/Bubble%20Sort%20Complexity%20Analysis.html">13.3. Bubble Sort Complexity Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/Bubble%20Sort.html">13.4. Bubble Sort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/Bucket%20%28or%20Counting%29%20Sort.html">13.5. Bucket/Counting Sort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/BucketSort%20Complexity%20Analysis.html">13.6. Bucket/Counting Sort Complexity Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/Complexity%20analysis.html">13.7. Complexity Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/Intro%20to%20runtime.html">13.8. Intro to Runtime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/Selection%20Sort%20Runtime%20Complexity%20Analysis.html">13.9. Selection Sort Runtime Complexity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/Selection%20Sort.html">13.10. Selection Sort</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../More%20on%20Functions%20and%20Complexity/title.html">13. More on Functions and Complexity</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../More%20on%20Functions%20and%20Complexity/Binary%20search.html">13.1. Binary Search</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../More%20on%20Functions%20and%20Complexity/Complexity%20analysis%20for%20longest_run%28%29.html">13.2. Complexity Analysis of <code class="docutils literal notranslate"><span class="pre">longest_run()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../More%20on%20Functions%20and%20Complexity/Complexity%20is%20Hard.html">13.3. Complexity is Hard, Fermat’s Theorem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../More%20on%20Functions%20and%20Complexity/Complexity%20of%20Arithmetic.html">13.4. Complexity of arithmetic operations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../More%20on%20Functions%20and%20Complexity/Complexity%20of%20multiplication%202.html">13.5. Complexity of long multiplication</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../More%20on%20Functions%20and%20Complexity/Functions%20as%20variables.html">13.6. Functions as Variables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../More%20on%20Functions%20and%20Complexity/How%20long%20does%20an%20operation%20take%3F.html">13.7. How long does an operation take <code class="docutils literal notranslate"><span class="pre">time.time()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../More%20on%20Functions%20and%20Complexity/Observing%20the%20runtime%20complexity%20of%20the%20longest_run%20functions.html">13.8. Complexity of <code class="docutils literal notranslate"><span class="pre">longest_run</span></code> functions</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../More%20on%20Functions%20and%20Complexity/title.html">14. More on Functions and Complexity</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../More%20on%20Functions%20and%20Complexity/Binary%20search.html">14.1. Binary Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20on%20Functions%20and%20Complexity/Complexity%20analysis%20for%20longest_run%28%29.html">14.2. Complexity Analysis of <code class="docutils literal notranslate"><span class="pre">longest_run()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20on%20Functions%20and%20Complexity/Complexity%20is%20Hard.html">14.3. Complexity is Hard, Fermat’s Theorem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20on%20Functions%20and%20Complexity/Complexity%20of%20Arithmetic.html">14.4. Complexity of arithmetic operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20on%20Functions%20and%20Complexity/Complexity%20of%20multiplication%202.html">14.5. Complexity of long multiplication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20on%20Functions%20and%20Complexity/Functions%20as%20variables.html">14.6. Functions as Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20on%20Functions%20and%20Complexity/How%20long%20does%20an%20operation%20take%3F.html">14.7. How long does an operation take <code class="docutils literal notranslate"><span class="pre">time.time()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20on%20Functions%20and%20Complexity/Observing%20the%20runtime%20complexity%20of%20the%20longest_run%20functions.html">14.8. Complexity of <code class="docutils literal notranslate"><span class="pre">longest_run</span></code> functions</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Monte%20Carlo%20Integration/title.html">14. Monte Carlo Integration</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Monte%20Carlo%20Integration/Computing%20Definite%20Integrals%20using%20Monte%20Carlo%20Integration.html">14.1. Monte Carlo Integration</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Monte%20Carlo%20Integration/title.html">15. Monte Carlo Integration</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Monte%20Carlo%20Integration/Computing%20Definite%20Integrals%20using%20Monte%20Carlo%20Integration.html">15.1. Monte Carlo Integration</a></li>
 
 
 
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Recursion/title.html">15. Recursion</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Recursion/Intro%20to%20recursion%20and%20n%21.html">15.1. Recursion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Recursion/Printing%20forward%20and%20backward.html">15.2. Recursive <code class="docutils literal notranslate"><span class="pre">print_list(L)</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Recursion/Race%20to%2021.html">15.3. Race to 21</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Recursion/Summing%20lists.html">15.4. Recursive Summing Lists</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Recursion/Tracing%20is_even.html">15.5. Tracing Recursive <code class="docutils literal notranslate"><span class="pre">is_even(n)</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Recursion/Tracing%20print_list%20and%20print_list_reverse.html">15.6. Tracing Recursive <code class="docutils literal notranslate"><span class="pre">print_list()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Recursion/fib%28n%29.html">15.7. Fibonacci Sequence <code class="docutils literal notranslate"><span class="pre">fib(n)</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Recursion/is_even.html">15.8. Recursive <code class="docutils literal notranslate"><span class="pre">is_even(n)</span></code></a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Recursion/title.html">16. Recursion</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Recursion/Intro%20to%20recursion%20and%20n%21.html">16.1. Recursion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Recursion/Printing%20forward%20and%20backward.html">16.2. Recursive <code class="docutils literal notranslate"><span class="pre">print_list(L)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Recursion/Race%20to%2021.html">16.3. Race to 21</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Recursion/Summing%20lists.html">16.4. Recursive Summing Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Recursion/Tracing%20is_even.html">16.5. Tracing Recursive <code class="docutils literal notranslate"><span class="pre">is_even(n)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Recursion/Tracing%20print_list%20and%20print_list_reverse.html">16.6. Tracing Recursive <code class="docutils literal notranslate"><span class="pre">print_list()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Recursion/fib%28n%29.html">16.7. Fibonacci Sequence <code class="docutils literal notranslate"><span class="pre">fib(n)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Recursion/is_even.html">16.8. Recursive <code class="docutils literal notranslate"><span class="pre">is_even(n)</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Recursive%20Complexity/title.html">16. Recursive Complexity</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Recursive%20Complexity/Complexity%20of%20exponentiation.html">16.1. The naive way to compute <span class="math notranslate nohighlight">\(x^n\)</span></a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Recursive%20Complexity/title.html">17. Recursive Complexity</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Recursive%20Complexity/Complexity%20of%20exponentiation.html">17.1. The naive way to compute <span class="math notranslate nohighlight">\(x^n\)</span></a></li>
 
 
-<li class="toctree-l2"><a class="reference internal" href="../Recursive%20Complexity/Complexity%20of%20fib%28n%29.html">16.4. Complexity of <code class="docutils literal notranslate"><span class="pre">fib(n)</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Recursive%20Complexity/Complexity%20of%20recursive%20functions%2C%20sum_list.html">16.5. <code class="docutils literal notranslate"><span class="pre">sum_list2</span></code> again</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Recursive%20Complexity/Complexity%20of%20fib%28n%29.html">17.4. Complexity of <code class="docutils literal notranslate"><span class="pre">fib(n)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Recursive%20Complexity/Complexity%20of%20recursive%20functions%2C%20sum_list.html">17.5. <code class="docutils literal notranslate"><span class="pre">sum_list2</span></code> again</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="../Recursive%20Complexity/Intro%20to%20the%20Complexity%20of%20Recursive%20Functions%2C%20fact%28%29%20and%20slow_fact%28%29.html">16.7. The runtime complexity of recursive functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Recursive%20Complexity/Intro%20to%20the%20Complexity%20of%20Recursive%20Functions%2C%20fact%28%29%20and%20slow_fact%28%29.html">17.7. The runtime complexity of recursive functions</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="../Recursive%20Complexity/Iteration%20using%20recursive%20functions.html">16.9. n! using a while loop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Recursive%20Complexity/Iteration%20using%20recursive%20functions.html">17.9. n! using a while loop</a></li>
 
 
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../More%20Sorting/title.html">17. More Sorting</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/Complexity%20of%20MergeSort.html">17.1. Complexity of MergeSort</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/Insertion%20Sort.html">17.2. Complexity of Insertion Sort</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/Intro%20to%20MergeSort.html">17.3. Merge Sort</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/Recursive%20merge.html">17.4. Recursive <code class="docutils literal notranslate"><span class="pre">merge(L1,</span> <span class="pre">L2)</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/We%20cannot%20do%20better%20than%20nlog%28n%29.html">17.5. How fast can a sorting algorithm be? hint: <span class="math notranslate nohighlight">\(\mathcal{O}(n\log n)\)</span></a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../More%20Sorting/title.html">18. More Sorting</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/Complexity%20of%20MergeSort.html">18.1. Complexity of MergeSort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/Insertion%20Sort.html">18.2. Complexity of Insertion Sort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/Intro%20to%20MergeSort.html">18.3. Merge Sort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/Recursive%20merge.html">18.4. Recursive <code class="docutils literal notranslate"><span class="pre">merge(L1,</span> <span class="pre">L2)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/We%20cannot%20do%20better%20than%20nlog%28n%29.html">18.5. How fast can a sorting algorithm be? hint: <span class="math notranslate nohighlight">\(\mathcal{O}(n\log n)\)</span></a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../More%20Recursion/title.html">18. More Recursion</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../More%20Recursion/2015%20Exam%20Partial%20Solutions.html">18.1. 2015 Exam Partial Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../More%20Recursion/Fast%20exponentiation.html">18.2. Fast Exponentiation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../More%20Recursion/Recursive%20Deep%20Copy.html">18.3. Recursive Deep Copy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../More%20Recursion/Review%20of%20call%20trees.html">18.4. Review of Call Trees</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../More%20Recursion/Turing%20and%20Godel.html">18.5. The Halting Problem</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../More%20Recursion/title.html">19. More Recursion</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../More%20Recursion/2015%20Exam%20Partial%20Solutions.html">19.1. 2015 Exam Partial Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20Recursion/Fast%20exponentiation.html">19.2. Fast Exponentiation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20Recursion/Recursive%20Deep%20Copy.html">19.3. Recursive Deep Copy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20Recursion/Review%20of%20call%20trees.html">19.4. Review of Call Trees</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20Recursion/Turing%20and%20Godel.html">19.5. The Halting Problem</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="../More%20Recursion/print_all.html">18.7. Print All</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20Recursion/print_all.html">19.7. Print All</a></li>
 </ul>
 </li>
 </ul>
@@ -568,9 +560,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">6.10. Placing objects in memory</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#placing-mutable-objects-in-memory">6.11. Placing mutable objects in memory</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">6.12. Placing mutable objects in memory</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">7.10. Placing objects in memory</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#placing-mutable-objects-in-memory">7.11. Placing mutable objects in memory</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">7.12. Placing mutable objects in memory</a></li>
 </ul>
 
             </nav>
@@ -584,13 +576,13 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="placing-objects-in-memory">
-<h1><span class="section-number">6.10. </span>Placing objects in memory<a class="headerlink" href="#placing-objects-in-memory" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">7.10. </span>Placing objects in memory<a class="headerlink" href="#placing-objects-in-memory" title="Permalink to this heading">#</a></h1>
 <p>Any time we place something like <code class="docutils literal notranslate"><span class="pre">[2,</span> <span class="pre">3,</span> <span class="pre">4]</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;hello&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">123456123</span></code> in our program, the corresponding object is placed into memory. For example, the following:
 a = “hello”</p>
 <p>Places the string <code class="docutils literal notranslate"><span class="pre">&quot;hello&quot;</span></code> in memory, and assigned the address where <code class="docutils literal notranslate"><span class="pre">&quot;hello&quot;</span></code> was stored to <code class="docutils literal notranslate"><span class="pre">a</span></code>. We can find that address using <code class="docutils literal notranslate"><span class="pre">id(a)</span></code>.</p>
 </section>
 <section id="placing-mutable-objects-in-memory">
-<h1><span class="section-number">6.11. </span>Placing mutable objects in memory<a class="headerlink" href="#placing-mutable-objects-in-memory" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">7.11. </span>Placing mutable objects in memory<a class="headerlink" href="#placing-mutable-objects-in-memory" title="Permalink to this heading">#</a></h1>
 <p>Consider the following:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -602,8 +594,8 @@ a = “hello”</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>139946087178096
-139946087178096
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>139669396802416
+139669396802416
 </pre></div>
 </div>
 </div>
@@ -623,9 +615,9 @@ a = “hello”</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>139946087178096
-139946087178096
-139946087287856
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>139669396802416
+139669396802416
+139669396835440
 </pre></div>
 </div>
 </div>
@@ -645,316 +637,316 @@ a = “hello”</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-10 139946087650576 1920
--9 139946087652400 -2016
--8 139946087650064 2432
--7 139946087652432 -2048
--6 139946087652784 108853952
--5 139946196506736 32
--4 139946196506768 32
--3 139946196506800 32
--2 139946196506832 32
--1 139946196506864 32
-0 139946196506896 32
-1 139946196506928 32
-2 139946196506960 32
-3 139946196506992 32
-4 139946196507024 32
-5 139946196507056 32
-6 139946196507088 32
-7 139946196507120 32
-8 139946196507152 32
-9 139946196507184 32
-10 139946196507216 32
-11 139946196507248 32
-12 139946196507280 32
-13 139946196507312 32
-14 139946196507344 32
-15 139946196507376 32
-16 139946196507408 32
-17 139946196507440 32
-18 139946196507472 32
-19 139946196507504 32
-20 139946196507536 32
-21 139946196507568 32
-22 139946196507600 32
-23 139946196507632 32
-24 139946196507664 32
-25 139946196507696 32
-26 139946196507728 32
-27 139946196507760 32
-28 139946196507792 32
-29 139946196507824 32
-30 139946196507856 32
-31 139946196507888 32
-32 139946196507920 32
-33 139946196507952 32
-34 139946196507984 32
-35 139946196508016 32
-36 139946196508048 32
-37 139946196508080 32
-38 139946196508112 32
-39 139946196508144 32
-40 139946196508176 32
-41 139946196508208 32
-42 139946196508240 32
-43 139946196508272 32
-44 139946196508304 32
-45 139946196508336 32
-46 139946196508368 32
-47 139946196508400 32
-48 139946196508432 32
-49 139946196508464 32
-50 139946196508496 32
-51 139946196508528 32
-52 139946196508560 32
-53 139946196508592 32
-54 139946196508624 188512
-55 139946196697136 32
-56 139946196697168 32
-57 139946196697200 32
-58 139946196697232 32
-59 139946196697264 32
-60 139946196697296 32
-61 139946196697328 32
-62 139946196697360 32
-63 139946196697392 32
-64 139946196697424 32
-65 139946196697456 32
-66 139946196697488 32
-67 139946196697520 32
-68 139946196697552 32
-69 139946196697584 32
-70 139946196697616 32
-71 139946196697648 32
-72 139946196697680 32
-73 139946196697712 32
-74 139946196697744 32
-75 139946196697776 32
-76 139946196697808 32
-77 139946196697840 32
-78 139946196697872 32
-79 139946196697904 32
-80 139946196697936 32
-81 139946196697968 32
-82 139946196698000 32
-83 139946196698032 32
-84 139946196698064 32
-85 139946196698096 32
-86 139946196698128 32
-87 139946196698160 32
-88 139946196698192 32
-89 139946196698224 32
-90 139946196698256 32
-91 139946196698288 32
-92 139946196698320 32
-93 139946196698352 32
-94 139946196698384 32
-95 139946196698416 32
-96 139946196698448 32
-97 139946196698480 32
-98 139946196698512 32
-99 139946196698544 32
-100 139946196698576 32
-101 139946196698608 32
-102 139946196698640 32
-103 139946196698672 32
-104 139946196698704 32
-105 139946196698736 32
-106 139946196698768 32
-107 139946196698800 32
-108 139946196698832 32
-109 139946196698864 32
-110 139946196698896 32
-111 139946196698928 32
-112 139946196698960 32
-113 139946196698992 32
-114 139946196699024 32
-115 139946196699056 32
-116 139946196699088 32
-117 139946196699120 32
-118 139946196699152 32
-119 139946196699184 32
-120 139946196699216 32
-121 139946196699248 32
-122 139946196699280 32
-123 139946196699312 32
-124 139946196699344 32
-125 139946196699376 32
-126 139946196699408 32
-127 139946196699440 32
-128 139946196699472 32
-129 139946196699504 32
-130 139946196699536 32
-131 139946196699568 32
-132 139946196699600 32
-133 139946196699632 32
-134 139946196699664 32
-135 139946196699696 32
-136 139946196699728 32
-137 139946196699760 32
-138 139946196699792 32
-139 139946196699824 32
-140 139946196699856 32
-141 139946196699888 32
-142 139946196699920 32
-143 139946196699952 32
-144 139946196699984 32
-145 139946196700016 32
-146 139946196700048 32
-147 139946196700080 32
-148 139946196700112 32
-149 139946196700144 32
-150 139946196700176 32
-151 139946196700208 32
-152 139946196700240 32
-153 139946196700272 32
-154 139946196700304 32
-155 139946196700336 32
-156 139946196700368 32
-157 139946196700400 32
-158 139946196700432 32
-159 139946196700464 32
-160 139946196700496 32
-161 139946196700528 32
-162 139946196700560 32
-163 139946196700592 32
-164 139946196700624 32
-165 139946196700656 32
-166 139946196700688 32
-167 139946196700720 32
-168 139946196700752 32
-169 139946196700784 32
-170 139946196700816 32
-171 139946196700848 32
-172 139946196700880 32
-173 139946196700912 32
-174 139946196700944 32
-175 139946196700976 32
-176 139946196701008 32
-177 139946196701040 32
-178 139946196701072 32
-179 139946196701104 32
-180 139946196701136 96
-181 139946196701232 32
-182 139946196701264 32
-183 139946196701296 32
-184 139946196701328 32
-185 139946196701360 32
-186 139946196701392 32
-187 139946196701424 32
-188 139946196701456 32
-189 139946196701488 32
-190 139946196701520 32
-191 139946196701552 32
-192 139946196701584 32
-193 139946196701616 32
-194 139946196701648 32
-195 139946196701680 32
-196 139946196701712 32
-197 139946196701744 32
-198 139946196701776 32
-199 139946196701808 32
-200 139946196701840 32
-201 139946196701872 32
-202 139946196701904 32
-203 139946196701936 32
-204 139946196701968 32
-205 139946196702000 32
-206 139946196702032 32
-207 139946196702064 32
-208 139946196702096 32
-209 139946196702128 32
-210 139946196702160 32
-211 139946196702192 32
-212 139946196702224 32
-213 139946196702256 32
-214 139946196702288 32
-215 139946196702320 32
-216 139946196702352 32
-217 139946196702384 32
-218 139946196702416 32
-219 139946196702448 32
-220 139946196702480 32
-221 139946196702512 32
-222 139946196702544 32
-223 139946196702576 32
-224 139946196702608 32
-225 139946196702640 32
-226 139946196702672 32
-227 139946196702704 32
-228 139946196702736 32
-229 139946196702768 32
-230 139946196702800 32
-231 139946196702832 32
-232 139946196702864 32
-233 139946196702896 32
-234 139946196702928 32
-235 139946196702960 32
-236 139946196702992 32
-237 139946196703024 32
-238 139946196703056 32
-239 139946196703088 32
-240 139946196703120 32
-241 139946196703152 32
-242 139946196703184 32
-243 139946196703216 32
-244 139946196703248 32
-245 139946196703280 32
-246 139946196703312 32
-247 139946196703344 32
-248 139946196703376 32
-249 139946196703408 32
-250 139946196703440 32
-251 139946196703472 32
-252 139946196703504 32
-253 139946196703536 32
-254 139946196703568 32
-255 139946196703600 32
-256 139946196703632 -109053248
-257 139946087652464 -480
-258 139946087650512 -128
-259 139946087650608 1376
-260 139946087650480 -96
-261 139946087650640 1344
-262 139946087652720 -2336
-263 139946087651504 480
-264 139946087651472 -1088
-265 139946087650704 1280
-266 139946087650736 -352
-267 139946087650800 1184
-268 139946087650768 -384
-269 139946087650672 1312
-270 139946087650416 -32
-271 139946087650896 1088
-272 139946087650928 -544
-273 139946087650960 1024
-274 139946087650992 -608
-275 139946087651024 960
-276 139946087651056 -672
-277 139946087651088 896
-278 139946087651120 -736
-279 139946087651152 832
-280 139946087651184 -800
-281 139946087651216 768
-282 139946087651248 -864
-283 139946087651280 704
-284 139946087651312 -928
-285 139946087651344 640
-286 139946087651376 -992
-287 139946087651408 576
-288 139946087651440 512
-289 139946087652368 -384
-290 139946087652336 -384
-291 139946087651600 384
-292 139946087651632 320
-293 139946087651664 320
-294 139946087651696 256
-295 139946087651568 -1184
-296 139946087651728 256
-297 139946087651760 192
-298 139946087651792 192
-299 139946087651824 128
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-10 139669414053008 2048
+-9 139669414053168 2144
+-8 139669414052752 2304
+-7 139669414055280 32
+-6 139669414055696 125397344
+-5 139669539453040 32
+-4 139669539453072 32
+-3 139669539453104 32
+-2 139669539453136 32
+-1 139669539453168 32
+0 139669539453200 32
+1 139669539453232 32
+2 139669539453264 32
+3 139669539453296 32
+4 139669539453328 32
+5 139669539453360 32
+6 139669539453392 32
+7 139669539453424 32
+8 139669539453456 32
+9 139669539453488 32
+10 139669539453520 32
+11 139669539453552 32
+12 139669539453584 32
+13 139669539453616 32
+14 139669539453648 32
+15 139669539453680 32
+16 139669539453712 32
+17 139669539453744 32
+18 139669539453776 32
+19 139669539453808 32
+20 139669539453840 32
+21 139669539453872 32
+22 139669539453904 32
+23 139669539453936 32
+24 139669539453968 32
+25 139669539454000 32
+26 139669539454032 32
+27 139669539454064 32
+28 139669539454096 32
+29 139669539454128 32
+30 139669539454160 32
+31 139669539454192 32
+32 139669539454224 32
+33 139669539454256 32
+34 139669539454288 32
+35 139669539454320 32
+36 139669539454352 32
+37 139669539454384 32
+38 139669539454416 32
+39 139669539454448 32
+40 139669539454480 32
+41 139669539454512 32
+42 139669539454544 32
+43 139669539454576 32
+44 139669539454608 32
+45 139669539454640 32
+46 139669539454672 32
+47 139669539454704 32
+48 139669539454736 32
+49 139669539454768 32
+50 139669539454800 32
+51 139669539454832 32
+52 139669539454864 32
+53 139669539454896 32
+54 139669539454928 188512
+55 139669539643440 32
+56 139669539643472 32
+57 139669539643504 32
+58 139669539643536 32
+59 139669539643568 32
+60 139669539643600 32
+61 139669539643632 32
+62 139669539643664 32
+63 139669539643696 32
+64 139669539643728 32
+65 139669539643760 32
+66 139669539643792 32
+67 139669539643824 32
+68 139669539643856 32
+69 139669539643888 32
+70 139669539643920 32
+71 139669539643952 32
+72 139669539643984 32
+73 139669539644016 32
+74 139669539644048 32
+75 139669539644080 32
+76 139669539644112 32
+77 139669539644144 32
+78 139669539644176 32
+79 139669539644208 32
+80 139669539644240 32
+81 139669539644272 32
+82 139669539644304 32
+83 139669539644336 32
+84 139669539644368 32
+85 139669539644400 32
+86 139669539644432 32
+87 139669539644464 32
+88 139669539644496 32
+89 139669539644528 32
+90 139669539644560 32
+91 139669539644592 32
+92 139669539644624 32
+93 139669539644656 32
+94 139669539644688 32
+95 139669539644720 32
+96 139669539644752 32
+97 139669539644784 32
+98 139669539644816 32
+99 139669539644848 32
+100 139669539644880 32
+101 139669539644912 32
+102 139669539644944 32
+103 139669539644976 32
+104 139669539645008 32
+105 139669539645040 32
+106 139669539645072 32
+107 139669539645104 32
+108 139669539645136 32
+109 139669539645168 32
+110 139669539645200 32
+111 139669539645232 32
+112 139669539645264 32
+113 139669539645296 32
+114 139669539645328 32
+115 139669539645360 32
+116 139669539645392 32
+117 139669539645424 32
+118 139669539645456 32
+119 139669539645488 32
+120 139669539645520 32
+121 139669539645552 32
+122 139669539645584 32
+123 139669539645616 32
+124 139669539645648 32
+125 139669539645680 32
+126 139669539645712 32
+127 139669539645744 32
+128 139669539645776 32
+129 139669539645808 32
+130 139669539645840 32
+131 139669539645872 32
+132 139669539645904 32
+133 139669539645936 32
+134 139669539645968 32
+135 139669539646000 32
+136 139669539646032 32
+137 139669539646064 32
+138 139669539646096 32
+139 139669539646128 32
+140 139669539646160 32
+141 139669539646192 32
+142 139669539646224 32
+143 139669539646256 32
+144 139669539646288 32
+145 139669539646320 32
+146 139669539646352 32
+147 139669539646384 32
+148 139669539646416 32
+149 139669539646448 32
+150 139669539646480 32
+151 139669539646512 32
+152 139669539646544 32
+153 139669539646576 32
+154 139669539646608 32
+155 139669539646640 32
+156 139669539646672 32
+157 139669539646704 32
+158 139669539646736 32
+159 139669539646768 32
+160 139669539646800 32
+161 139669539646832 32
+162 139669539646864 32
+163 139669539646896 32
+164 139669539646928 32
+165 139669539646960 32
+166 139669539646992 32
+167 139669539647024 32
+168 139669539647056 32
+169 139669539647088 32
+170 139669539647120 32
+171 139669539647152 32
+172 139669539647184 32
+173 139669539647216 32
+174 139669539647248 32
+175 139669539647280 32
+176 139669539647312 32
+177 139669539647344 32
+178 139669539647376 32
+179 139669539647408 32
+180 139669539647440 96
+181 139669539647536 32
+182 139669539647568 32
+183 139669539647600 32
+184 139669539647632 32
+185 139669539647664 32
+186 139669539647696 32
+187 139669539647728 32
+188 139669539647760 32
+189 139669539647792 32
+190 139669539647824 32
+191 139669539647856 32
+192 139669539647888 32
+193 139669539647920 32
+194 139669539647952 32
+195 139669539647984 32
+196 139669539648016 32
+197 139669539648048 32
+198 139669539648080 32
+199 139669539648112 32
+200 139669539648144 32
+201 139669539648176 32
+202 139669539648208 32
+203 139669539648240 32
+204 139669539648272 32
+205 139669539648304 32
+206 139669539648336 32
+207 139669539648368 32
+208 139669539648400 32
+209 139669539648432 32
+210 139669539648464 32
+211 139669539648496 32
+212 139669539648528 32
+213 139669539648560 32
+214 139669539648592 32
+215 139669539648624 32
+216 139669539648656 32
+217 139669539648688 32
+218 139669539648720 32
+219 139669539648752 32
+220 139669539648784 32
+221 139669539648816 32
+222 139669539648848 32
+223 139669539648880 32
+224 139669539648912 32
+225 139669539648944 32
+226 139669539648976 32
+227 139669539649008 32
+228 139669539649040 32
+229 139669539649072 32
+230 139669539649104 32
+231 139669539649136 32
+232 139669539649168 32
+233 139669539649200 32
+234 139669539649232 32
+235 139669539649264 32
+236 139669539649296 32
+237 139669539649328 32
+238 139669539649360 32
+239 139669539649392 32
+240 139669539649424 32
+241 139669539649456 32
+242 139669539649488 32
+243 139669539649520 32
+244 139669539649552 32
+245 139669539649584 32
+246 139669539649616 32
+247 139669539649648 32
+248 139669539649680 32
+249 139669539649712 32
+250 139669539649744 32
+251 139669539649776 32
+252 139669539649808 32
+253 139669539649840 32
+254 139669539649872 32
+255 139669539649904 32
+256 139669539649936 -125594880
+257 139669414055024 -480
+258 139669414053136 1920
+259 139669414053104 1440
+260 139669414054992 64
+261 139669414053200 896
+262 139669414055376 -832
+263 139669414054064 32
+264 139669414054032 1024
+265 139669414053264 1280
+266 139669414053296 1760
+267 139669414053360 1184
+268 139669414053328 1728
+269 139669414053232 1312
+270 139669414052944 2112
+271 139669414053456 1088
+272 139669414053488 1568
+273 139669414053520 1024
+274 139669414053552 1504
+275 139669414053584 960
+276 139669414053616 1440
+277 139669414053648 896
+278 139669414053680 1376
+279 139669414053712 832
+280 139669414053744 1312
+281 139669414053776 768
+282 139669414053808 1248
+283 139669414053840 704
+284 139669414053872 1184
+285 139669414053904 640
+286 139669414053936 1120
+287 139669414053968 576
+288 139669414054000 1056
+289 139669414054928 -384
+290 139669414054896 160
+291 139669414054160 -64
+292 139669414054192 352
+293 139669414054224 -128
+294 139669414054256 288
+295 139669414054128 -32
+296 139669414054288 256
+297 139669414054320 736
+298 139669414054352 -256
+299 139669414054384 672
 </pre></div>
 </div>
 </div>
@@ -962,7 +954,7 @@ a = “hello”</p>
 <p>As you can see, -5..255 are placed in sequence in memory (with addresses differing by 32 from each other.) This is done when Python starts. Other integers are placed as they are needed in free spaces.</p>
 </section>
 <section id="id1">
-<h1><span class="section-number">6.12. </span>Placing mutable objects in memory<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">7.12. </span>Placing mutable objects in memory<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
 <p>Unlike strings and integers, lists <em>are</em> mutable – their contents can be changed. Consider:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -982,8 +974,8 @@ a = “hello”</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>139946086925888
-139946086928256
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>139669396874240
+139669396557952
 </pre></div>
 </div>
 </div>
@@ -1046,7 +1038,7 @@ a = “hello”</p>
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">6.9. </span>Modifying lists in functions</p>
+        <p class="prev-next-title"><span class="section-number">7.9. </span>Modifying lists in functions</p>
       </div>
     </a>
     <a class="right-next"
@@ -1054,7 +1046,7 @@ a = “hello”</p>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">7. </span>List Operations</p>
+        <p class="prev-next-title"><span class="section-number">8. </span>List Operations</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1076,9 +1068,9 @@ a = “hello”</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">6.10. Placing objects in memory</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#placing-mutable-objects-in-memory">6.11. Placing mutable objects in memory</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">6.12. Placing mutable objects in memory</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">7.10. Placing objects in memory</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#placing-mutable-objects-in-memory">7.11. Placing mutable objects in memory</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">7.12. Placing mutable objects in memory</a></li>
 </ul>
 
   </nav></div>
