@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>6.29. The if __name__ == ‘__main__’ block &#8212; ESC180 Notes</title>
+    <title>5.5. The if __name__ == ‘__main__’ block &#8212; ESC180 Notes</title>
   
   
   
@@ -61,13 +61,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebook/Lists/The truth about the if __name__ == '__main__' block';</script>
-    <link rel="canonical" href="https://bunnyian.github.io/esc180-notes/notebook/Lists/The truth about the if __name__ == &#39;__main__&#39; block.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebook/Functions/The truth about the if __name__ == '__main__' block';</script>
+    <link rel="canonical" href="https://bunnyian.github.io/esc180-notes/notebook/Functions/The truth about the if __name__ == &#39;__main__&#39; block.html" />
     <link rel="shortcut icon" href="../../_static/fav.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="6.32. While-loops and user input" href="While-loops%20and%20user%20input.html" />
-    <link rel="prev" title="6.27. Another approach to the Missing Number problem" href="MissingKSorted.html" />
+    <link rel="next" title="5.6. Fixing has_roots function" href="Fixing%20has_roots.html" />
+    <link rel="prev" title="5.4. Control flow using return statements" href="Control%20flow%20using%20return%20statements.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -181,9 +181,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../Loops/range.html">3.2. More about range()</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Loops/While-loops.html">3.3. While loops</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Loops/Infinite%20loops.html">3.4. Infinite loops</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Loops/More%20on%20while%20loops%2C%20break%2C%20and%20continue.html">3.5. More on While Loops, Break, and Continue</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Loops/Factorial%20and%20trailing%20zeros.html">3.6. Factorials</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Loops/Computing%20PI%20by%20generating%20random%20numbers.html">3.7. Computing <span class="math notranslate nohighlight">\(\pi\)</span> using Random Numbers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Loops/While-loops%20and%20user%20input.html">3.5. While-loops and user input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Loops/More%20on%20while%20loops%2C%20break%2C%20and%20continue.html">3.6. More on While Loops, Break, and Continue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Loops/Factorial%20and%20trailing%20zeros.html">3.7. Factorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Loops/Computing%20PI%20by%20generating%20random%20numbers.html">3.8. Computing <span class="math notranslate nohighlight">\(\pi\)</span> using Random Numbers</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Variables/title.html">4. Variables</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -197,49 +198,27 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../Variables/Converting%20Boolean%20Values.html">4.8. Converting Boolean Values</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Functions/title.html">5. Functions</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Functions/Functions%3B%20Local%20and%20Global%20Variables.html">5.1. Functions; Local and Global Variables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Functions/Passing%20data%20to%20and%20from%20functions.html">5.2. Passing data to and from functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Functions/Named%20arguments.html">5.3. Named Arguments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Functions/Control%20flow%20using%20return%20statements.html">5.4. Control flow using return statements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Functions/Fixing%20has_roots.html">5.5. Fixing <code class="docutils literal notranslate"><span class="pre">has_roots</span></code> function</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Functions/Checking%20for%20primality.html">5.6. <code class="docutils literal notranslate"><span class="pre">is_prime(n)</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Functions/rewrite_primality.html">5.7. Rewriting <code class="docutils literal notranslate"><span class="pre">is_prime()</span></code></a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="title.html">5. Functions</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Functions%3B%20Local%20and%20Global%20Variables.html">5.1. Functions; Local and Global Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Passing%20data%20to%20and%20from%20functions.html">5.2. Passing data to and from functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Named%20arguments.html">5.3. Named Arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control%20flow%20using%20return%20statements.html">5.4. Control flow using return statements</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">5.5. The if __name__ == ‘__main__’ block</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Fixing%20has_roots.html">5.6. Fixing <code class="docutils literal notranslate"><span class="pre">has_roots</span></code> function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Checking%20for%20primality.html">5.7. <code class="docutils literal notranslate"><span class="pre">is_prime(n)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="rewrite_primality.html">5.8. Rewriting <code class="docutils literal notranslate"><span class="pre">is_prime()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Counting%20trailing%20zeros%20--%20Solution.html">5.9. Counting trailing zeros in n!</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="title.html">6. Lists</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="Counting%20trailing%20zeros%20--%20Solution.html">6.1. Counting trailing zeros in n!</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="Lists.html">6.3. Lists</a></li>
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="Lists%20II.html">6.7. More on Lists in Python</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="Lists%20III.html">6.9. <code class="docutils literal notranslate"><span class="pre">list.insert()</span></code></a></li>
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="Lists%20IV.html">6.14. <code class="docutils literal notranslate"><span class="pre">list.extend()</span></code></a></li>
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="Lists%20V.html">6.19. More on accessing list elements: last element, negative indices</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="Loops%2C%20lists%2C%20and%20globals.html">6.21. Idea: looking up the password</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="Missing%20K%20problem.html">6.23. The missing number problem</a></li>
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="MissingKSorted.html">6.27. Another approach to the Missing Number problem</a></li>
-
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">6.29. The if __name__ == ‘__main__’ block</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="While-loops%20and%20user%20input.html">6.32. While-loops and user input</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Lists/title.html">6. Lists</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Lists.html">6.1. Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Lists%20II.html">6.2. More on Lists in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Lists%20III.html">6.3. <code class="docutils literal notranslate"><span class="pre">list.insert()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Lists%20IV.html">6.4. <code class="docutils literal notranslate"><span class="pre">list.extend()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Lists%20V.html">6.5. Accessing list elements: last element, negative indices, middle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Loops%2C%20lists%2C%20and%20globals.html">6.6. Login System with Loops, Lists, and Globals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Missing%20K%20problem.html">6.7. The Missing Number Problem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lists/MissingKSorted.html">6.8. Sorted Approach to Missing Number Problem</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../List%20Copies/title.html">7. List Copies</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -466,7 +445,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/bunnyian/esc180-notes/edit/main/notebook/Lists/The truth about the if __name__ == '__main__' block.ipynb" target="_blank"
+      <li><a href="https://github.com/bunnyian/esc180-notes/edit/main/notebook/Functions/The truth about the if __name__ == '__main__' block.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -483,7 +462,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/bunnyian/esc180-notes/issues/new?title=Issue%20on%20page%20%2Fnotebook/Lists/The truth about the if __name__ == '__main__' block.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/bunnyian/esc180-notes/issues/new?title=Issue%20on%20page%20%2Fnotebook/Functions/The truth about the if __name__ == '__main__' block.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -557,14 +536,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">6.29. The if __name__ == ‘__main__’ block</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#program-py">6.30. program.py</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#test-program-py">6.31. test_program.py</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#things-to-keep-in-mind">6.31.1. Things to keep in mind</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#program-py">5.5.1. <code class="docutils literal notranslate"><span class="pre">program.py</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-program-py">5.5.2. <code class="docutils literal notranslate"><span class="pre">test_program.py</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#things-to-keep-in-mind">5.5.3. Things to keep in mind</a></li>
 </ul>
-</li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -575,15 +550,15 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="the-if-name-main-block">
-<h1><span class="section-number">6.29. </span>The if __name__ == ‘__main__’ block<a class="headerlink" href="#the-if-name-main-block" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="the-if-name-main-block">
+<h1><span class="section-number">5.5. </span>The if __name__ == ‘__main__’ block<a class="headerlink" href="#the-if-name-main-block" title="Permalink to this heading">#</a></h1>
 <p>The main block is only run when the file is run <em>directly</em> by Python. When the file is imported, the main block is not run.</p>
 <p>Here is one use: put the testing code in the main block, so that when you’re importing the file (like you would <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">math</span></code>) you can use the functions, but don’t see the output of the testing</p>
 <p>An important consequence of this is that you must always initialize all global variables <em>outside</em> of the main block.</p>
-<p>Here is an example:</p>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="program-py">
-<h1><span class="section-number">6.30. </span><a class="reference external" href="http://program.py">program.py</a><a class="headerlink" href="#program-py" title="Permalink to this heading">#</a></h1>
+<p>Here is an example: <code class="docutils literal notranslate"><span class="pre">program.py</span></code> and <code class="docutils literal notranslate"><span class="pre">test_m.py</span></code> are separate files in the same directory.</p>
+<hr class="docutils" />
+<section id="program-py">
+<h2><span class="section-number">5.5.1. </span><code class="docutils literal notranslate"><span class="pre">program.py</span></code><a class="headerlink" href="#program-py" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_b</span><span class="p">():</span>
@@ -619,8 +594,9 @@ document.write(`
 </div>
 </div>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="test-program-py">
-<h1><span class="section-number">6.31. </span>test_program.py<a class="headerlink" href="#test-program-py" title="Permalink to this heading">#</a></h1>
+<hr class="docutils" />
+<section id="test-program-py">
+<h2><span class="section-number">5.5.2. </span><code class="docutils literal notranslate"><span class="pre">test_program.py</span></code><a class="headerlink" href="#test-program-py" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
@@ -639,11 +615,13 @@ document.write(`
 </div>
 </div>
 </div>
+<hr class="docutils" />
 <p><code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">program</span></code> allows us to use the function and global variables from <code class="docutils literal notranslate"><span class="pre">program.py</span></code>. Similarly to using <code class="docutils literal notranslate"><span class="pre">math.sqrt(9)</span></code> or <code class="docutils literal notranslate"><span class="pre">math.py</span></code>, we can use the function <code class="docutils literal notranslate"><span class="pre">program.print_b()</span></code> (the function <code class="docutils literal notranslate"><span class="pre">print_b()</span></code> defined in <code class="docutils literal notranslate"><span class="pre">program.py</span></code>) and refer to the variable <code class="docutils literal notranslate"><span class="pre">program.a</span></code> (the global variable <code class="docutils literal notranslate"><span class="pre">a</span></code> defined in <code class="docutils literal notranslate"><span class="pre">program.py</span></code>.)</p>
 <p>When we say <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">program</span></code>, the <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">__name__</span> <span class="pre">==</span> <span class="pre">'__main__'</span></code> block in <code class="docutils literal notranslate"><span class="pre">program.py</span></code> is <em>not</em> run. That why only three zeros are printed above (instead of five.)</p>
 <p>The global variable <code class="docutils literal notranslate"><span class="pre">c</span></code> is only defined in the <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">__name__</span> <span class="pre">==</span> <span class="pre">'__main__'</span></code> block, which means that in <code class="docutils literal notranslate"><span class="pre">test_program.py</span></code>, we cannot refer to the variable <code class="docutils literal notranslate"><span class="pre">program.c</span></code>– this will cause an error.</p>
+</section>
 <section id="things-to-keep-in-mind">
-<h2><span class="section-number">6.31.1. </span>Things to keep in mind<a class="headerlink" href="#things-to-keep-in-mind" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">5.5.3. </span>Things to keep in mind<a class="headerlink" href="#things-to-keep-in-mind" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>If we want to use a global variable from a file we are importing, that variable must be initialized outside the main block. In <code class="docutils literal notranslate"><span class="pre">program.py</span></code>, the variables <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code> are initialized by called <code class="docutils literal notranslate"><span class="pre">initialize()</span></code> outside the <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">__name__</span> <span class="pre">==</span> <span class="pre">'__main__'</span></code> block. (But the variable <code class="docutils literal notranslate"><span class="pre">c</span></code> isn’t.)</p></li>
 <li><p>You can put whatever you want in the <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">__name__</span> <span class="pre">==</span> <span class="pre">'__main__'</span></code> in a file if you are only going to import it and not run it directly – for example, you can put testing code which you do now want to run automatically.</p></li>
@@ -664,7 +642,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./notebook/Lists"
+            path: "./notebook/Functions"
         },
         predefinedOutput: true
     }
@@ -683,20 +661,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="MissingKSorted.html"
+       href="Control%20flow%20using%20return%20statements.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">6.27. </span>Another approach to the Missing Number problem</p>
+        <p class="prev-next-title"><span class="section-number">5.4. </span>Control flow using return statements</p>
       </div>
     </a>
     <a class="right-next"
-       href="While-loops%20and%20user%20input.html"
+       href="Fixing%20has_roots.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">6.32. </span>While-loops and user input</p>
+        <p class="prev-next-title"><span class="section-number">5.6. </span>Fixing <code class="docutils literal notranslate"><span class="pre">has_roots</span></code> function</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -718,14 +696,10 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">6.29. The if __name__ == ‘__main__’ block</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#program-py">6.30. program.py</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#test-program-py">6.31. test_program.py</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#things-to-keep-in-mind">6.31.1. Things to keep in mind</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#program-py">5.5.1. <code class="docutils literal notranslate"><span class="pre">program.py</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-program-py">5.5.2. <code class="docutils literal notranslate"><span class="pre">test_program.py</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#things-to-keep-in-mind">5.5.3. Things to keep in mind</a></li>
 </ul>
-</li>
-</ul>
-
   </nav></div>
 
 </div></div>

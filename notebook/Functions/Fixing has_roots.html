@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>5.5. Fixing has_roots function &#8212; ESC180 Notes</title>
+    <title>5.6. Fixing has_roots function &#8212; ESC180 Notes</title>
   
   
   
@@ -68,8 +68,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/fav.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="5.6. is_prime(n)" href="Checking%20for%20primality.html" />
-    <link rel="prev" title="5.4. Control flow using return statements" href="Control%20flow%20using%20return%20statements.html" />
+    <link rel="next" title="5.7. is_prime(n)" href="Checking%20for%20primality.html" />
+    <link rel="prev" title="5.5. The if __name__ == ‘__main__’ block" href="The%20truth%20about%20the%20if%20__name__%20%3D%3D%20%27__main__%27%20block.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -183,9 +183,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../Loops/range.html">3.2. More about range()</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Loops/While-loops.html">3.3. While loops</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Loops/Infinite%20loops.html">3.4. Infinite loops</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Loops/More%20on%20while%20loops%2C%20break%2C%20and%20continue.html">3.5. More on While Loops, Break, and Continue</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Loops/Factorial%20and%20trailing%20zeros.html">3.6. Factorials</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Loops/Computing%20PI%20by%20generating%20random%20numbers.html">3.7. Computing <span class="math notranslate nohighlight">\(\pi\)</span> using Random Numbers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Loops/While-loops%20and%20user%20input.html">3.5. While-loops and user input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Loops/More%20on%20while%20loops%2C%20break%2C%20and%20continue.html">3.6. More on While Loops, Break, and Continue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Loops/Factorial%20and%20trailing%20zeros.html">3.7. Factorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Loops/Computing%20PI%20by%20generating%20random%20numbers.html">3.8. Computing <span class="math notranslate nohighlight">\(\pi\)</span> using Random Numbers</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Variables/title.html">4. Variables</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -204,44 +205,22 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="Passing%20data%20to%20and%20from%20functions.html">5.2. Passing data to and from functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Named%20arguments.html">5.3. Named Arguments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Control%20flow%20using%20return%20statements.html">5.4. Control flow using return statements</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">5.5. Fixing <code class="docutils literal notranslate"><span class="pre">has_roots</span></code> function</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Checking%20for%20primality.html">5.6. <code class="docutils literal notranslate"><span class="pre">is_prime(n)</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="rewrite_primality.html">5.7. Rewriting <code class="docutils literal notranslate"><span class="pre">is_prime()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="The%20truth%20about%20the%20if%20__name__%20%3D%3D%20%27__main__%27%20block.html">5.5. The if __name__ == ‘__main__’ block</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">5.6. Fixing <code class="docutils literal notranslate"><span class="pre">has_roots</span></code> function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Checking%20for%20primality.html">5.7. <code class="docutils literal notranslate"><span class="pre">is_prime(n)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="rewrite_primality.html">5.8. Rewriting <code class="docutils literal notranslate"><span class="pre">is_prime()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Counting%20trailing%20zeros%20--%20Solution.html">5.9. Counting trailing zeros in n!</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Lists/title.html">6. Lists</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Lists/Counting%20trailing%20zeros%20--%20Solution.html">6.1. Counting trailing zeros in n!</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Lists/Lists.html">6.3. Lists</a></li>
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../Lists/Lists%20II.html">6.7. More on Lists in Python</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Lists/Lists%20III.html">6.9. <code class="docutils literal notranslate"><span class="pre">list.insert()</span></code></a></li>
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../Lists/Lists%20IV.html">6.14. <code class="docutils literal notranslate"><span class="pre">list.extend()</span></code></a></li>
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../Lists/Lists%20V.html">6.19. More on accessing list elements: last element, negative indices</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Lists/Loops%2C%20lists%2C%20and%20globals.html">6.21. Idea: looking up the password</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Lists/Missing%20K%20problem.html">6.23. The missing number problem</a></li>
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../Lists/MissingKSorted.html">6.27. Another approach to the Missing Number problem</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Lists/The%20truth%20about%20the%20if%20__name__%20%3D%3D%20%27__main__%27%20block.html">6.29. The if __name__ == ‘__main__’ block</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="../Lists/While-loops%20and%20user%20input.html">6.32. While-loops and user input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Lists.html">6.1. Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Lists%20II.html">6.2. More on Lists in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Lists%20III.html">6.3. <code class="docutils literal notranslate"><span class="pre">list.insert()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Lists%20IV.html">6.4. <code class="docutils literal notranslate"><span class="pre">list.extend()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Lists%20V.html">6.5. Accessing list elements: last element, negative indices, middle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Loops%2C%20lists%2C%20and%20globals.html">6.6. Login System with Loops, Lists, and Globals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Missing%20K%20problem.html">6.7. The Missing Number Problem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lists/MissingKSorted.html">6.8. Sorted Approach to Missing Number Problem</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../List%20Copies/title.html">7. List Copies</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -562,7 +541,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="fixing-has-roots-function">
-<h1><span class="section-number">5.5. </span>Fixing <code class="docutils literal notranslate"><span class="pre">has_roots</span></code> function<a class="headerlink" href="#fixing-has-roots-function" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">5.6. </span>Fixing <code class="docutils literal notranslate"><span class="pre">has_roots</span></code> function<a class="headerlink" href="#fixing-has-roots-function" title="Permalink to this heading">#</a></h1>
 <p>Recall the <code class="docutils literal notranslate"><span class="pre">has_roots</span></code> function that we wrote.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -662,12 +641,12 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Control%20flow%20using%20return%20statements.html"
+       href="The%20truth%20about%20the%20if%20__name__%20%3D%3D%20%27__main__%27%20block.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">5.4. </span>Control flow using return statements</p>
+        <p class="prev-next-title"><span class="section-number">5.5. </span>The if __name__ == ‘__main__’ block</p>
       </div>
     </a>
     <a class="right-next"
@@ -675,7 +654,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">5.6. </span><code class="docutils literal notranslate"><span class="pre">is_prime(n)</span></code></p>
+        <p class="prev-next-title"><span class="section-number">5.7. </span><code class="docutils literal notranslate"><span class="pre">is_prime(n)</span></code></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

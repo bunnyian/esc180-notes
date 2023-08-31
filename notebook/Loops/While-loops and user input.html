@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>6.1. Counting trailing zeros in n! &#8212; ESC180 Notes</title>
+    <title>3.5. While-loops and user input &#8212; ESC180 Notes</title>
   
   
   
@@ -61,15 +61,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebook/Lists/Counting trailing zeros -- Solution';</script>
-    <link rel="canonical" href="https://bunnyian.github.io/esc180-notes/notebook/Lists/Counting trailing zeros -- Solution.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebook/Loops/While-loops and user input';</script>
+    <link rel="canonical" href="https://bunnyian.github.io/esc180-notes/notebook/Loops/While-loops and user input.html" />
     <link rel="shortcut icon" href="../../_static/fav.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="6.3. Lists" href="Lists.html" />
-    <link rel="prev" title="6. Lists" href="title.html" />
+    <link rel="next" title="3.6. More on While Loops, Break, and Continue" href="More%20on%20while%20loops%2C%20break%2C%20and%20continue.html" />
+    <link rel="prev" title="3.4. Infinite loops" href="Infinite%20loops.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -178,14 +176,15 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../Numerical%20Types%20and%20Strings/Integer%20division.html">2.6. Integer division</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Loops/title.html">3. Loops</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Loops/For-loops.html">3.1. For loops</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Loops/range.html">3.2. More about range()</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Loops/While-loops.html">3.3. While loops</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Loops/Infinite%20loops.html">3.4. Infinite loops</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Loops/More%20on%20while%20loops%2C%20break%2C%20and%20continue.html">3.5. More on While Loops, Break, and Continue</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Loops/Factorial%20and%20trailing%20zeros.html">3.6. Factorials</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Loops/Computing%20PI%20by%20generating%20random%20numbers.html">3.7. Computing <span class="math notranslate nohighlight">\(\pi\)</span> using Random Numbers</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="title.html">3. Loops</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="For-loops.html">3.1. For loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="range.html">3.2. More about range()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="While-loops.html">3.3. While loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Infinite%20loops.html">3.4. Infinite loops</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.5. While-loops and user input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="More%20on%20while%20loops%2C%20break%2C%20and%20continue.html">3.6. More on While Loops, Break, and Continue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Factorial%20and%20trailing%20zeros.html">3.7. Factorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Computing%20PI%20by%20generating%20random%20numbers.html">3.8. Computing <span class="math notranslate nohighlight">\(\pi\)</span> using Random Numbers</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Variables/title.html">4. Variables</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -204,44 +203,22 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../Functions/Passing%20data%20to%20and%20from%20functions.html">5.2. Passing data to and from functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Functions/Named%20arguments.html">5.3. Named Arguments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Functions/Control%20flow%20using%20return%20statements.html">5.4. Control flow using return statements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Functions/Fixing%20has_roots.html">5.5. Fixing <code class="docutils literal notranslate"><span class="pre">has_roots</span></code> function</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Functions/Checking%20for%20primality.html">5.6. <code class="docutils literal notranslate"><span class="pre">is_prime(n)</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Functions/rewrite_primality.html">5.7. Rewriting <code class="docutils literal notranslate"><span class="pre">is_prime()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Functions/The%20truth%20about%20the%20if%20__name__%20%3D%3D%20%27__main__%27%20block.html">5.5. The if __name__ == ‘__main__’ block</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Functions/Fixing%20has_roots.html">5.6. Fixing <code class="docutils literal notranslate"><span class="pre">has_roots</span></code> function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Functions/Checking%20for%20primality.html">5.7. <code class="docutils literal notranslate"><span class="pre">is_prime(n)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Functions/rewrite_primality.html">5.8. Rewriting <code class="docutils literal notranslate"><span class="pre">is_prime()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Functions/Counting%20trailing%20zeros%20--%20Solution.html">5.9. Counting trailing zeros in n!</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="title.html">6. Lists</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">6.1. Counting trailing zeros in n!</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="Lists.html">6.3. Lists</a></li>
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="Lists%20II.html">6.7. More on Lists in Python</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="Lists%20III.html">6.9. <code class="docutils literal notranslate"><span class="pre">list.insert()</span></code></a></li>
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="Lists%20IV.html">6.14. <code class="docutils literal notranslate"><span class="pre">list.extend()</span></code></a></li>
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="Lists%20V.html">6.19. More on accessing list elements: last element, negative indices</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="Loops%2C%20lists%2C%20and%20globals.html">6.21. Idea: looking up the password</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="Missing%20K%20problem.html">6.23. The missing number problem</a></li>
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="MissingKSorted.html">6.27. Another approach to the Missing Number problem</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="The%20truth%20about%20the%20if%20__name__%20%3D%3D%20%27__main__%27%20block.html">6.29. The if __name__ == ‘__main__’ block</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="While-loops%20and%20user%20input.html">6.32. While-loops and user input</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Lists/title.html">6. Lists</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Lists.html">6.1. Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Lists%20II.html">6.2. More on Lists in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Lists%20III.html">6.3. <code class="docutils literal notranslate"><span class="pre">list.insert()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Lists%20IV.html">6.4. <code class="docutils literal notranslate"><span class="pre">list.extend()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Lists%20V.html">6.5. Accessing list elements: last element, negative indices, middle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Loops%2C%20lists%2C%20and%20globals.html">6.6. Login System with Loops, Lists, and Globals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Missing%20K%20problem.html">6.7. The Missing Number Problem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lists/MissingKSorted.html">6.8. Sorted Approach to Missing Number Problem</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../List%20Copies/title.html">7. List Copies</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -468,7 +445,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/bunnyian/esc180-notes/edit/main/notebook/Lists/Counting trailing zeros -- Solution.ipynb" target="_blank"
+      <li><a href="https://github.com/bunnyian/esc180-notes/edit/main/notebook/Loops/While-loops and user input.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -485,7 +462,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/bunnyian/esc180-notes/issues/new?title=Issue%20on%20page%20%2Fnotebook/Lists/Counting trailing zeros -- Solution.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/bunnyian/esc180-notes/issues/new?title=Issue%20on%20page%20%2Fnotebook/Loops/While-loops and user input.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -536,9 +513,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -549,21 +524,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Counting trailing zeros in n!</h1>
+    <h1>While-loops and user input</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">6.1. Counting trailing zeros in n!</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#refactoring-trailing-zerosa">6.2. Refactoring <code class="docutils literal notranslate"><span class="pre">trailing_zerosA()</span></code></a></li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -573,181 +538,61 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="counting-trailing-zeros-in-n">
-<h1><span class="section-number">6.1. </span>Counting trailing zeros in n!<a class="headerlink" href="#counting-trailing-zeros-in-n" title="Permalink to this heading">#</a></h1>
-<p>Recall that the problem that we’re trying to solve is to count the number of <em>trailing zeros</em> in <span class="math notranslate nohighlight">\(n!\)</span>. Here is an example:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="while-loops-and-user-input">
+<h1><span class="section-number">3.5. </span>While-loops and user input<a class="headerlink" href="#while-loops-and-user-input" title="Permalink to this heading">#</a></h1>
+<p>A cursor that blinks in a text editor is an example of a (potentially) infinite loop: it will blink forever if the user doesn’t enter input.</p>
+<p>Let’s try to emulate that behaviour:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fact</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="n">res</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-        <span class="n">res</span> <span class="o">*=</span> <span class="n">i</span>
-    <span class="k">return</span> <span class="n">res</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_input</span> <span class="o">=</span> <span class="kc">None</span>
 
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">fact</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>
+<span class="c1">#keep asking a question until the user says yes</span>
+<span class="k">while</span> <span class="n">user_input</span> <span class="o">!=</span> <span class="s2">&quot;yes&quot;</span><span class="p">:</span>
+    <span class="n">user_input</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Have you started Project 1 yet?&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2432902008176640000
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Have you started Project 1 yet?hmm
+Have you started Project 1 yet?say what?
+Have you started Project 1 yet?no
+Have you started Project 1 yet?yes
 </pre></div>
 </div>
 </div>
 </div>
-<p><span class="math notranslate nohighlight">\(20!\)</span> has 4 trailing zeros – zeros at the end of the number.</p>
-<p>Here is the naive approach to the problem. First, compute <span class="math notranslate nohighlight">\(n!\)</span>, then, keep dividing the number by 10 (i.e., removing 0’s), while that’s possible; all the while, keep incrementing a counter that keeps track of how many times we divided by 10.</p>
+<p>While <code class="docutils literal notranslate"><span class="pre">user_input</span></code> hasn’t been assigned the value <code class="docutils literal notranslate"><span class="pre">&quot;yes&quot;</span></code> (because that’s what the user types in and the function <code class="docutils literal notranslate"><span class="pre">input()</span></code> returns, so that it’s assigned to <code class="docutils literal notranslate"><span class="pre">user_input</span></code>), the line</p>
+<p><code class="docutils literal notranslate"><span class="pre">user_input</span> <span class="pre">=</span> <span class="pre">input(&quot;Have</span> <span class="pre">you</span> <span class="pre">started</span> <span class="pre">Project</span> <span class="pre">1</span> <span class="pre">yet?&quot;)</span></code></p>
+<p>keeps running.</p>
+<p>The process is</p>
+<ul class="simple">
+<li><p>Check whether <code class="docutils literal notranslate"><span class="pre">user_input</span></code> is equal to <code class="docutils literal notranslate"><span class="pre">&quot;yes&quot;</span></code>. If it is, stop the loop</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user_input</span> <span class="pre">=</span> <span class="pre">input(&quot;Have</span> <span class="pre">you</span> <span class="pre">started</span> <span class="pre">Project</span> <span class="pre">1</span> <span class="pre">yet?&quot;)</span></code></p></li>
+<li><p>Check whether <code class="docutils literal notranslate"><span class="pre">user_input</span></code> is equal to <code class="docutils literal notranslate"><span class="pre">&quot;yes&quot;</span></code>. If it is, stop the loop</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user_input</span> <span class="pre">=</span> <span class="pre">input(&quot;Have</span> <span class="pre">you</span> <span class="pre">started</span> <span class="pre">Project</span> <span class="pre">1</span> <span class="pre">yet?&quot;)</span></code></p></li>
+<li><p>Check whether <code class="docutils literal notranslate"><span class="pre">user_input</span></code> is equal to <code class="docutils literal notranslate"><span class="pre">&quot;yes&quot;</span></code>. If it is, stop the loop</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user_input</span> <span class="pre">=</span> <span class="pre">input(&quot;Have</span> <span class="pre">you</span> <span class="pre">started</span> <span class="pre">Project</span> <span class="pre">1</span> <span class="pre">yet?&quot;)</span></code></p></li>
+<li><p>Check whether <code class="docutils literal notranslate"><span class="pre">user_input</span></code> is equal to <code class="docutils literal notranslate"><span class="pre">&quot;yes&quot;</span></code>. If it is, stop the loop</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user_input</span> <span class="pre">=</span> <span class="pre">input(&quot;Have</span> <span class="pre">you</span> <span class="pre">started</span> <span class="pre">Project</span> <span class="pre">1</span> <span class="pre">yet?&quot;)</span></code></p></li>
+<li><p>…</p></li>
+</ul>
+<p>Above, a sample run is shown. Since the loop stopped, it must be the case that <code class="docutils literal notranslate"><span class="pre">user_input</span></code> is not <code class="docutils literal notranslate"><span class="pre">&quot;yes&quot;</span></code>. Indeed, it is.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">trailing_zerosA</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;Return the number of trailing zeros in n!</span>
-<span class="sd">    </span>
-<span class="sd">    Arguments:</span>
-<span class="sd">    n - a positive integer</span>
-<span class="sd">    </span>
-<span class="sd">    &#39;&#39;&#39;</span>
-    <span class="n">n_fact</span> <span class="o">=</span> <span class="n">fact</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-    
-    <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1">#number of times</span>
-             <span class="c1">#n_fact was divided by 10 </span>
-             <span class="c1">#so far.</span>
-    
-    <span class="k">while</span> <span class="n">n_fact</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> 
-        <span class="n">n_fact</span> <span class="o">//=</span> <span class="mi">10</span>
-        <span class="n">res</span> <span class="o">+=</span> <span class="mi">1</span>
-        
-    <span class="k">return</span> <span class="n">res</span>
-
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="mi">20</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The number of trailing zeros in&quot;</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="s2">&quot;factorial is&quot;</span><span class="p">,</span> <span class="n">trailing_zerosA</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_input</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The number of trailing zeros in 20 factorial is 4
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;yes&#39;
 </pre></div>
 </div>
 </div>
 </div>
-<p>Here is another approach. Observe that</p>
-<p><span class="math notranslate nohighlight">\(n! = 1\times 2\times 3\times ... \times n = a\times 10^k\)</span>. If <span class="math notranslate nohighlight">\(k\)</span> is as large as it can be, then <span class="math notranslate nohighlight">\(k\)</span> is the number of trailing zeros in <span class="math notranslate nohighlight">\(n!\)</span>.</p>
-<p>Now, we also have <span class="math notranslate nohighlight">\(n! = a\times 2^k\times 5^k\)</span>. So if we find out how many factors of <span class="math notranslate nohighlight">\(5\)</span> there are in the product <span class="math notranslate nohighlight">\(n! = 1\times 2\times 3\times ... \times n\)</span>, we can find the number of trailing zeros. Let’s do it factor-by-factor.</p>
-<p>First, let’s write a function that finds how many factors of <code class="docutils literal notranslate"><span class="pre">factor</span></code> there are in an arbitrary number <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">count_factor</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">factor</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;Return k s.t. k is the largest number s.t. m = factor^k * a</span>
-<span class="sd">    </span>
-<span class="sd">    Arguments</span>
-<span class="sd">    m, factor -- positive integers</span>
-<span class="sd">    &#39;&#39;&#39;</span>        
-    
-    <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1">#number of times</span>
-             <span class="c1">#m  was divided by factor </span>
-             <span class="c1">#so far.</span>
-    <span class="k">while</span> <span class="n">m</span> <span class="o">%</span> <span class="n">factor</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> 
-        <span class="n">m</span> <span class="o">//=</span> <span class="n">factor</span>
-        <span class="n">res</span> <span class="o">+=</span> <span class="mi">1</span>
-    
-    <span class="k">return</span> <span class="n">res</span>
+<p>An alternative way to write the same loop is:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>while input(&quot;Have you started P1?&quot;) != &quot;yes&quot;:
+    pass
 </pre></div>
-</div>
-</div>
-</div>
-<p>The idea is to count up the number of factors of 5 in 1, 2, 3, 4, …., n, and add them all up. Here is how this would go for <span class="math notranslate nohighlight">\(31!\)</span>:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>1: 0 factors of 5
-2: 0 factors of 5
-3: 0 factors of 5
-4: 0 factors of 5
-5: 1 factors of 5
-6: 0 factors of 5
-7: 0 factors of 5
-8: 0 factors of 5
-9: 0 factors of 5
-10: 1 factors of 5
-11: 0 factors of 5
-12: 0 factors of 5
-13: 0 factors of 5
-14: 0 factors of 5
-15: 1 factors of 5
-16: 0 factors of 5
-17: 0 factors of 5
-18: 0 factors of 5
-19: 0 factors of 5
-20: 1 factors of 5
-21: 0 factors of 5
-22: 0 factors of 5
-23: 0 factors of 5
-24: 0 factors of 5
-25: 2 factors of 5
-26: 0 factors of 5
-27: 0 factors of 5
-28: 0 factors of 5
-29: 0 factors of 5
-30: 1 factors of 5
-31: 0 factors of 5
-</pre></div>
-</div>
-<p>In total, we have 1+1+1+1+2+1=7 factors of 5, which is also the number of 0’s</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">trailing_zerosB</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    
-    <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span>
-    
-    <span class="c1">#Compute the total number of factors of 5 in all of</span>
-    <span class="c1">#1, 2, 3, ..., n</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-        <span class="n">res</span> <span class="o">+=</span> <span class="n">count_factor</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-        
-    <span class="k">return</span> <span class="n">res</span>
-
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="mi">20</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The number of trailing zeros in&quot;</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="s2">&quot;factorial is&quot;</span><span class="p">,</span> <span class="n">trailing_zerosA</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
-    
-    <span class="n">n</span> <span class="o">=</span> <span class="mi">31</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The number of trailing zeros in&quot;</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="s2">&quot;factorial is&quot;</span><span class="p">,</span> <span class="n">trailing_zerosA</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The number of trailing zeros in 20 factorial is 4
-The number of trailing zeros in 31 factorial is 7
-</pre></div>
-</div>
-</div>
-</div>
-<p>Why bother with all this? Because, as we saw in class, computing <span class="math notranslate nohighlight">\(n!\)</span> for large <span class="math notranslate nohighlight">\(n\)</span> is very computationally expensive, since it involves multiplying huge numbers. The second method is much more efficient.</p>
-</section>
-<section id="refactoring-trailing-zerosa">
-<h1><span class="section-number">6.2. </span>Refactoring <code class="docutils literal notranslate"><span class="pre">trailing_zerosA()</span></code><a class="headerlink" href="#refactoring-trailing-zerosa" title="Permalink to this heading">#</a></h1>
-<p>Note that we can now refactor <code class="docutils literal notranslate"><span class="pre">trailing_zerosA()</span></code>. That is, we can rewrite it to reuse a helper function:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">trailing_zerosA</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;Return the number of trailing zeros in n!</span>
-<span class="sd">    </span>
-<span class="sd">    Arguments:</span>
-<span class="sd">    n - a positive integer</span>
-<span class="sd">    </span>
-<span class="sd">    &#39;&#39;&#39;</span>
-    <span class="n">n_fact</span> <span class="o">=</span> <span class="n">fact</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-    
-    <span class="k">return</span> <span class="n">count_factor</span><span class="p">(</span><span class="n">n_fact</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="mi">20</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The number of trailing zeros in&quot;</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="s2">&quot;factorial is&quot;</span><span class="p">,</span> <span class="n">trailing_zerosA</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The number of trailing zeros in 20 factorial is 4
-</pre></div>
-</div>
-</div>
 </div>
 </section>
 
@@ -764,7 +609,7 @@ The number of trailing zeros in 31 factorial is 7
         },
         kernelOptions: {
             name: "python3",
-            path: "./notebook/Lists"
+            path: "./notebook/Loops"
         },
         predefinedOutput: true
     }
@@ -783,20 +628,20 @@ The number of trailing zeros in 31 factorial is 7
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="title.html"
+       href="Infinite%20loops.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">6. </span>Lists</p>
+        <p class="prev-next-title"><span class="section-number">3.4. </span>Infinite loops</p>
       </div>
     </a>
     <a class="right-next"
-       href="Lists.html"
+       href="More%20on%20while%20loops%2C%20break%2C%20and%20continue.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">6.3. </span>Lists</p>
+        <p class="prev-next-title"><span class="section-number">3.6. </span>More on While Loops, Break, and Continue</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -809,22 +654,6 @@ The number of trailing zeros in 31 factorial is 7
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">6.1. Counting trailing zeros in n!</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#refactoring-trailing-zerosa">6.2. Refactoring <code class="docutils literal notranslate"><span class="pre">trailing_zerosA()</span></code></a></li>
-</ul>
-
-  </nav></div>
-
-</div></div>
               
             
           </div>
