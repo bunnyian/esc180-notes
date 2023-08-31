@@ -41,7 +41,7 @@ parts:
         - file: notebook/Intro to Python/Introduction to Python Expressions and Variables.ipynb
         - file: notebook/Intro to Python/A Simple Python Program.ipynb # swap around order of individual files as desired
         - file: notebook/Intro to Python/SecretMagic.ipynb
-        - file: notebook/Intro to Python/conditionals.ipynb # remove HTML block!!!!
+        - file: notebook/Intro to Python/conditionals.ipynb
         - file: notebook/Intro to Python/ConditionalPirates.ipynb
         - file: notebook/Intro to Python/Quadratic.ipynb
         - file: notebook/Intro to Python/tracing.ipynb
@@ -52,36 +52,40 @@ parts:
         - file: notebook/Numerical Types and Strings/strings.ipynb
         - file: notebook/Numerical Types and Strings/printMultiple.ipynb
         - file: notebook/Numerical Types and Strings/quadraticMore.ipynb
+        - file: notebook/Numerical Types and Strings/Integer division.ipynb
 
+        
       - file: notebook/Loops/title.md
         sections:
-        - file: notebook/Loops/Checking for primality.ipynb
-        - file: notebook/Loops/Computing PI by generating random numbers.ipynb
-        - file: notebook/Loops/Factorial and trailing zeros.ipynb
         - file: notebook/Loops/For-loops.ipynb
-        - file: notebook/Loops/Infinite loops.ipynb
-        - file: notebook/Loops/Input from keyboard, and a bit more on design.ipynb
-        - file: notebook/Loops/Integer division.ipynb
-        - file: notebook/Loops/More assignment operators.ipynb
-        - file: notebook/Loops/More on while loops, break, and continue.ipynb
-        - file: notebook/Loops/Swapping variable values without temporary storage.ipynb
-        - file: notebook/Loops/Testing calculator.py.ipynb
-        - file: notebook/Loops/While-loops.ipynb
-        - file: notebook/Loops/morefore.ipynb
         - file: notebook/Loops/range.ipynb
+        - file: notebook/Loops/While-loops.ipynb
+        - file: notebook/Loops/Infinite loops.ipynb
+        - file: notebook/Loops/More on while loops, break, and continue.ipynb
+        - file: notebook/Loops/Factorial and trailing zeros.ipynb
+        - file: notebook/Loops/Computing PI by generating random numbers.ipynb
 
-      - file: notebook/Functions and Variables/title.md
+      - file: notebook/Variables/title.md
         sections:
-        - file: notebook/Functions and Variables/Boolean Values and Boolean Algebra.ipynb
-        - file: notebook/Functions and Variables/Control flow using return statements.ipynb
-        - file: notebook/Functions and Variables/Converting Boolean Values.ipynb
-        - file: notebook/Functions and Variables/Fixing has_roots.ipynb
-        - file: notebook/Functions and Variables/Functions; Local and Global Variables.ipynb
-        - file: notebook/Functions and Variables/Multiple Assignments and Swapping Variable Values.ipynb
-        - file: notebook/Functions and Variables/Named arguments.ipynb
-        - file: notebook/Functions and Variables/Passing data to and from functions.ipynb
-        - file: notebook/Functions and Variables/Swapping variables, Part 2.ipynb
-        - file: notebook/Functions and Variables/Variable Naming Conventions.ipynb
+        - file: notebook/Variables/Variable Naming Conventions.ipynb
+        - file: notebook/Variables/Multiple Assignments.ipynb
+        - file: notebook/Variables/swapping with Temp.ipynb
+        - file: notebook/Variables/swapping trick.ipynb
+        - file: notebook/Variables/More assignment operators.ipynb
+        - file: notebook/Variables/Input from keyboard, and a bit more on design.ipynb # has Python Tutor button
+        - file: notebook/Variables/Boolean Values and Boolean Algebra.ipynb
+        - file: notebook/Variables/Converting Boolean Values.ipynb
+
+      - file: notebook/Functions/title.md
+        sections:
+        - file: notebook/Functions/Functions; Local and Global Variables.ipynb
+        - file: notebook/Functions/Passing data to and from functions.ipynb
+        - file: notebook/Functions/Named arguments.ipynb
+        - file: notebook/Functions/Control flow using return statements.ipynb
+        - file: notebook/Functions/Fixing has_roots.ipynb
+        - file: notebook/Functions/primality.ipynb
+        - file: notebook/Functions/Checking for primality.ipynb
+
 
       - file: notebook/Lists/title.md
         sections:
