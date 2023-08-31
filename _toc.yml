@@ -33,9 +33,7 @@ parts:
       - file: notebook/preface/intro
 
   - caption: Notes
-    numbered: False # keep numbering off as each 'header_' file has numbered titles
-                    # if lecture titles added in future, change the title within the 'header_' file,
-                    # then re-enable numbering for lecture titles
+    numbered: True
 
     chapters:
       - file: notebook/Intro to Python/title.md # modify this file to change the title of the chapter
@@ -51,9 +49,9 @@ parts:
       - file: notebook/Numerical Types and Strings/title.md
         sections:
         - file: notebook/Numerical Types and Strings/numericalTypes.ipynb
+        - file: notebook/Numerical Types and Strings/strings.ipynb
         - file: notebook/Numerical Types and Strings/printMultiple.ipynb
         - file: notebook/Numerical Types and Strings/quadraticMore.ipynb
-        - file: notebook/Numerical Types and Strings/strings.ipynb
 
       - file: notebook/Loops/title.md
         sections:
