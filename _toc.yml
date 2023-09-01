@@ -113,13 +113,13 @@ parts:
       - file: notebook/List Operations/title.md
         sections:
         - file: notebook/List Operations/Adding and extending lists.ipynb
-        - file: notebook/List Operations/Don't iterate over lists while modifying them.ipynb
-        - file: notebook/List Operations/Iterating over lists while modifying them Pt. 2.ipynb
         - file: notebook/List Operations/NestedLoops.ipynb
         - file: notebook/List Operations/NestedLoopsNestedLists.ipynb
-        - file: notebook/List Operations/Return review.ipynb
         - file: notebook/List Operations/Slicing lists.ipynb
         - file: notebook/List Operations/Slicing using range() and while().ipynb
+        - file: notebook/List Operations/Don't iterate over lists while modifying them.ipynb
+        - file: notebook/List Operations/Iterating over lists while modifying them Pt. 2.ipynb
+        - file: notebook/List Operations/Return review.ipynb
 
       - file: notebook/Working with Strings/title.md
         sections:
