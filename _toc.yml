@@ -73,7 +73,7 @@ parts:
         - file: notebook/Variables/swapping with Temp.ipynb
         - file: notebook/Variables/swapping trick.ipynb
         - file: notebook/Variables/More assignment operators.ipynb
-        - file: notebook/Variables/Input from keyboard, and a bit more on design.ipynb # has Python Tutor button
+        - file: notebook/Variables/Input from keyboard, and a bit more on design.ipynb
         - file: notebook/Variables/Boolean Values and Boolean Algebra.ipynb
         - file: notebook/Variables/Converting Boolean Values.ipynb
 
@@ -99,17 +99,16 @@ parts:
         - file: notebook/Lists/Loops, lists, and globals.ipynb
         - file: notebook/Lists/Missing K problem.ipynb
         - file: notebook/Lists/MissingKSorted.ipynb
+        - file: notebook/Lists/A final go at the missing K problem .ipynb
+        - file: notebook/Lists/Finding a winning move in tic-tac-toe.ipynb # LAB SOLUTION
 
       - file: notebook/List Copies/title.md
         sections:
-        - file: notebook/List Copies/A final go at the missing K problem .ipynb
         - file: notebook/List Copies/Aliasing and mutability.ipynb
-        - file: notebook/List Copies/Deep Copy (two levels deep).ipynb
-        - file: notebook/List Copies/Finding a winning move in tic-tac-toe.ipynb
-        - file: notebook/List Copies/Intro to shallow and deep copy.ipynb
-        - file: notebook/List Copies/Modifying mutable objects inside functions.ipynb
         - file: notebook/List Copies/Placing mutable and immutable objects in memory.ipynb
-        - file: notebook/List Copies/deeper1.jpg
+        - file: notebook/List Copies/Intro to shallow and deep copy.ipynb
+        - file: notebook/List Copies/Deep Copy (two levels deep).ipynb
+        - file: notebook/List Copies/Modifying mutable objects inside functions.ipynb
 
       - file: notebook/List Operations/title.md
         sections:
