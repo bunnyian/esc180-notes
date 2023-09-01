@@ -221,21 +221,16 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../Lists/Loops%2C%20lists%2C%20and%20globals.html">6.6. Login System with Loops, Lists, and Globals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Lists/Missing%20K%20problem.html">6.7. The Missing Number Problem</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Lists/MissingKSorted.html">6.8. Sorted Approach to Missing Number Problem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lists/A%20final%20go%20at%20the%20missing%20K%20problem%20.html">6.9. Single Pass Missing Number Solution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Finding%20a%20winning%20move%20in%20tic-tac-toe.html">6.10. Finding a winning move in tic-tac-toe</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../List%20Copies/title.html">7. List Copies</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../List%20Copies/A%20final%20go%20at%20the%20missing%20K%20problem%20.html">7.1. The Missing K Problem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../List%20Copies/Aliasing%20and%20mutability.html">7.2. Variables refer to addresses</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../List%20Copies/Deep%20Copy%20%28two%20levels%20deep%29.html">7.4. Copying Lists</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../List%20Copies/Finding%20a%20winning%20move%20in%20tic-tac-toe.html">7.5. Finding a winning move in tic-tac-toe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../List%20Copies/Intro%20to%20shallow%20and%20deep%20copy.html">7.6. Aliasing</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="../List%20Copies/Modifying%20mutable%20objects%20inside%20functions.html">7.9. Modifying lists in functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../List%20Copies/Placing%20mutable%20and%20immutable%20objects%20in%20memory.html">7.10. Placing objects in memory</a></li>
-
-
+<li class="toctree-l2"><a class="reference internal" href="../List%20Copies/Aliasing%20and%20mutability.html">7.1. Aliasing and Mutability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../List%20Copies/Placing%20mutable%20and%20immutable%20objects%20in%20memory.html">7.2. Placing objects in memory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../List%20Copies/Intro%20to%20shallow%20and%20deep%20copy.html">7.3. First Deep Copy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../List%20Copies/Deep%20Copy%20%28two%20levels%20deep%29.html">7.4. Deep Copy (two levels deep)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../List%20Copies/Modifying%20mutable%20objects%20inside%20functions.html">7.5. Modifying lists in functions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../List%20Operations/title.html">8. List Operations</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -577,7 +572,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.1420728
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.141574
 </pre></div>
 </div>
 </div>
@@ -615,10 +610,10 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fa2e4738610&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f0460945b50&gt;
 </pre></div>
 </div>
-<img alt="../../_images/035e7f67e91b59b3df0e089ccaecf9ed80a696e0b1a77a90574c3ad4972dc51b.png" src="../../_images/035e7f67e91b59b3df0e089ccaecf9ed80a696e0b1a77a90574c3ad4972dc51b.png" />
+<img alt="../../_images/6da7c3c4b627f43afb928c0539c1d21f531d862b5a623e02eab668b95f24eff0.png" src="../../_images/6da7c3c4b627f43afb928c0539c1d21f531d862b5a623e02eab668b95f24eff0.png" />
 </div>
 </div>
 <p>The red curve is the unit qaurter circle, and also the curve <span class="math notranslate nohighlight">\(y = \sqrt{1-x^2}\)</span>.</p>
@@ -656,10 +651,10 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fa2e462ad60&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f04608515b0&gt;
 </pre></div>
 </div>
-<img alt="../../_images/3d1ac019d42a44a46d94196dfa830ee53172e882bc2bd8df14ea7bc42fa87212.png" src="../../_images/3d1ac019d42a44a46d94196dfa830ee53172e882bc2bd8df14ea7bc42fa87212.png" />
+<img alt="../../_images/96a50a66c3ffb09450ab838aec33ca693a55c9a12f71e85234f1710d22119673.png" src="../../_images/96a50a66c3ffb09450ab838aec33ca693a55c9a12f71e85234f1710d22119673.png" />
 </div>
 </div>
 <p>Whe computing <span class="math notranslate nohighlight">\(\int_{x_0}^{x_1} f(x) dx\)</span>, we want to find the rectangle in which to generate random points. A suitable rectangle can be found by finding <span class="math notranslate nohighlight">\(f_{max} = \max_{x_0\leq x\leq x_1} f(x)\)</span>. The rectangle would then be <span class="math notranslate nohighlight">\([x_0, x_1]\times [0, f_{max}]\)</span>.</p>
@@ -734,7 +729,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.61416743, 0.18868315, 0.55530658, 0.40443317, 0.56186389])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.76908328, 0.28335792, 0.98418919, 0.66094923, 0.71512435])
 </pre></div>
 </div>
 </div>
@@ -748,7 +743,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.55530658, 0.40443317])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.98418919, 0.66094923])
 </pre></div>
 </div>
 </div>
@@ -761,7 +756,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([0, 2, 4]),)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([0, 2, 3, 4]),)
 </pre></div>
 </div>
 </div>
@@ -774,7 +769,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ True, False,  True, False,  True])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ True, False,  True,  True,  True])
 </pre></div>
 </div>
 </div>
@@ -875,14 +870,14 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of pts above the curve: 47
-Number of pts below the curve: 153
-N. below/N.total: 0.765
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of pts above the curve: 37
+Number of pts below the curve: 163
+N. below/N.total: 0.815
 Rectangle area: 1.0
-Area under the curve: 0.765
+Area under the curve: 0.815
 </pre></div>
 </div>
-<img alt="../../_images/e3b99bb4ab30d7ed0bda61f0bbd92aa75c0b1ee3468214807d0c4b83cec3a8ef.png" src="../../_images/e3b99bb4ab30d7ed0bda61f0bbd92aa75c0b1ee3468214807d0c4b83cec3a8ef.png" />
+<img alt="../../_images/6ff590d8ab1e59224b5324147f8479b7e20881bffed4d93f6080a3cba05ca9e1.png" src="../../_images/6ff590d8ab1e59224b5324147f8479b7e20881bffed4d93f6080a3cba05ca9e1.png" />
 </div>
 </div>
 <p>Let’s now define another function:</p>
@@ -896,14 +891,14 @@ Area under the curve: 0.765
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of pts above the curve: 699
-Number of pts below the curve: 301
-N. below/N.total: 0.301
-Rectangle area: 204.14747224287382
-Area under the curve: 61.448389145105025
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of pts above the curve: 685
+Number of pts below the curve: 315
+N. below/N.total: 0.315
+Rectangle area: 204.1474722428738
+Area under the curve: 64.30645375650525
 </pre></div>
 </div>
-<img alt="../../_images/cd220e3a9f9289e80490117d12174ba5169247bcdffeb594446dd01c10d73a56.png" src="../../_images/cd220e3a9f9289e80490117d12174ba5169247bcdffeb594446dd01c10d73a56.png" />
+<img alt="../../_images/44a30246703278cf1f968e5218e8540435734629f2c7d7dd9e29b83c4c8c0e2b.png" src="../../_images/44a30246703278cf1f968e5218e8540435734629f2c7d7dd9e29b83c4c8c0e2b.png" />
 </div>
 </div>
 </section>
@@ -924,14 +919,14 @@ Area under the curve: 61.448389145105025
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of pts above the curve: 55
-Number of pts below the curve: 45
-N. below/N.total: 0.45
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of pts above the curve: 62
+Number of pts below the curve: 38
+N. below/N.total: 0.38
 Rectangle area: 4.0
-Area under the curve: 1.8
+Area under the curve: 1.52
 </pre></div>
 </div>
-<img alt="../../_images/d54513e0d83838ebb328b7ff57ae08df0bf20ab1e0a744017dc4a5224322683a.png" src="../../_images/d54513e0d83838ebb328b7ff57ae08df0bf20ab1e0a744017dc4a5224322683a.png" />
+<img alt="../../_images/200334e9f339d348cb7239c1ba57e9c81e9bd0cc26220d623fd7083e8e69e2a3.png" src="../../_images/200334e9f339d348cb7239c1ba57e9c81e9bd0cc26220d623fd7083e8e69e2a3.png" />
 </div>
 </div>
 <p>With more points:</p>
@@ -942,14 +937,14 @@ Area under the curve: 1.8
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of pts above the curve: 615
-Number of pts below the curve: 385
-N. below/N.total: 0.385
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of pts above the curve: 587
+Number of pts below the curve: 413
+N. below/N.total: 0.413
 Rectangle area: 4.0
-Area under the curve: 1.54
+Area under the curve: 1.652
 </pre></div>
 </div>
-<img alt="../../_images/dce437b060bf873f2e62f60873f2c1cbccaa05c2a2c1a2f8f34be57183433aeb.png" src="../../_images/dce437b060bf873f2e62f60873f2c1cbccaa05c2a2c1a2f8f34be57183433aeb.png" />
+<img alt="../../_images/cdbd1a80cf3f0ba9a46cf1819bb98ccf32b5f75cb405464c688bab59050c7d63.png" src="../../_images/cdbd1a80cf3f0ba9a46cf1819bb98ccf32b5f75cb405464c688bab59050c7d63.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -959,14 +954,14 @@ Area under the curve: 1.54
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of pts above the curve: 59949
-Number of pts below the curve: 40051
-N. below/N.total: 0.40051
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of pts above the curve: 59965
+Number of pts below the curve: 40035
+N. below/N.total: 0.40035
 Rectangle area: 4.0
-Area under the curve: 1.60204
+Area under the curve: 1.6014
 </pre></div>
 </div>
-<img alt="../../_images/2986d625a66ec5f13215b5ffb541923fe033d25a7d9acccf76a0ad83fc8a6651.png" src="../../_images/2986d625a66ec5f13215b5ffb541923fe033d25a7d9acccf76a0ad83fc8a6651.png" />
+<img alt="../../_images/2d825a2f1d9100a6905f48e1770629d5bf9aef273910a7261ad83c18f9d2e302.png" src="../../_images/2d825a2f1d9100a6905f48e1770629d5bf9aef273910a7261ad83c18f9d2e302.png" />
 </div>
 </div>
 <p>The actual value is:</p>

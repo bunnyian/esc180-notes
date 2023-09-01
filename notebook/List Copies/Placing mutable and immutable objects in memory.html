@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>7.10. Placing objects in memory &#8212; ESC180 Notes</title>
+    <title>7.2. Placing objects in memory &#8212; ESC180 Notes</title>
   
   
   
@@ -66,8 +66,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/fav.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="8. List Operations" href="../List%20Operations/title.html" />
-    <link rel="prev" title="7.9. Modifying lists in functions" href="Modifying%20mutable%20objects%20inside%20functions.html" />
+    <link rel="next" title="7.3. First Deep Copy" href="Intro%20to%20shallow%20and%20deep%20copy.html" />
+    <link rel="prev" title="7.1. Aliasing and Mutability" href="Aliasing%20and%20mutability.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -219,21 +219,16 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../Lists/Loops%2C%20lists%2C%20and%20globals.html">6.6. Login System with Loops, Lists, and Globals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Lists/Missing%20K%20problem.html">6.7. The Missing Number Problem</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Lists/MissingKSorted.html">6.8. Sorted Approach to Missing Number Problem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lists/A%20final%20go%20at%20the%20missing%20K%20problem%20.html">6.9. Single Pass Missing Number Solution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Finding%20a%20winning%20move%20in%20tic-tac-toe.html">6.10. Finding a winning move in tic-tac-toe</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="title.html">7. List Copies</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="A%20final%20go%20at%20the%20missing%20K%20problem%20.html">7.1. The Missing K Problem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Aliasing%20and%20mutability.html">7.2. Variables refer to addresses</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="Deep%20Copy%20%28two%20levels%20deep%29.html">7.4. Copying Lists</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Finding%20a%20winning%20move%20in%20tic-tac-toe.html">7.5. Finding a winning move in tic-tac-toe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Intro%20to%20shallow%20and%20deep%20copy.html">7.6. Aliasing</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="Modifying%20mutable%20objects%20inside%20functions.html">7.9. Modifying lists in functions</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">7.10. Placing objects in memory</a></li>
-
-
+<li class="toctree-l2"><a class="reference internal" href="Aliasing%20and%20mutability.html">7.1. Aliasing and Mutability</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">7.2. Placing objects in memory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Intro%20to%20shallow%20and%20deep%20copy.html">7.3. First Deep Copy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Deep%20Copy%20%28two%20levels%20deep%29.html">7.4. Deep Copy (two levels deep)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Modifying%20mutable%20objects%20inside%20functions.html">7.5. Modifying lists in functions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../List%20Operations/title.html">8. List Operations</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -536,11 +531,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">7.10. Placing objects in memory</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#placing-mutable-objects-in-memory">7.11. Placing mutable objects in memory</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">7.12. Placing mutable objects in memory</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#placing-mutable-objects-in-memory">7.2.1. Placing mutable objects in memory</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">7.2.1.1. Placing mutable objects in memory</a></li>
 </ul>
-
+</li>
+</ul>
             </nav>
         </div>
     </div>
@@ -551,14 +546,13 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="placing-objects-in-memory">
-<h1><span class="section-number">7.10. </span>Placing objects in memory<a class="headerlink" href="#placing-objects-in-memory" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="placing-objects-in-memory">
+<h1><span class="section-number">7.2. </span>Placing objects in memory<a class="headerlink" href="#placing-objects-in-memory" title="Permalink to this heading">#</a></h1>
 <p>Any time we place something like <code class="docutils literal notranslate"><span class="pre">[2,</span> <span class="pre">3,</span> <span class="pre">4]</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;hello&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">123456123</span></code> in our program, the corresponding object is placed into memory. For example, the following:
 a = “hello”</p>
 <p>Places the string <code class="docutils literal notranslate"><span class="pre">&quot;hello&quot;</span></code> in memory, and assigned the address where <code class="docutils literal notranslate"><span class="pre">&quot;hello&quot;</span></code> was stored to <code class="docutils literal notranslate"><span class="pre">a</span></code>. We can find that address using <code class="docutils literal notranslate"><span class="pre">id(a)</span></code>.</p>
-</section>
 <section id="placing-mutable-objects-in-memory">
-<h1><span class="section-number">7.11. </span>Placing mutable objects in memory<a class="headerlink" href="#placing-mutable-objects-in-memory" title="Permalink to this heading">#</a></h1>
+<h2><span class="section-number">7.2.1. </span>Placing mutable objects in memory<a class="headerlink" href="#placing-mutable-objects-in-memory" title="Permalink to this heading">#</a></h2>
 <p>Consider the following:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -570,8 +564,8 @@ a = “hello”</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140520664958192
-140520664958192
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>139872126300784
+139872126300784
 </pre></div>
 </div>
 </div>
@@ -591,9 +585,9 @@ a = “hello”</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140520664958192
-140520664958192
-140520664871920
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>139872126300784
+139872126300784
+139872126269872
 </pre></div>
 </div>
 </div>
@@ -601,7 +595,7 @@ a = “hello”</p>
 <p>Even though the we could theoretically figure out that <code class="docutils literal notranslate"><span class="pre">f</span></code> can have the same <code class="docutils literal notranslate"><span class="pre">id</span></code> as <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code>, this was not done, and there are now two copies of the string <code class="docutils literal notranslate"><span class="pre">&quot;CSC180&quot;</span></code> in memory.</p>
 <p>What about integers? Python (or rather CPython, the version of Python we are using) always knows to find integers between -5 and 256, but may place larger (and smaller) integers in many places in memory.</p>
 <p>Here is a fun thing to do: let’s display the <code class="docutils literal notranslate"><span class="pre">id</span></code>’s of integers between -10 and 299:</p>
-<div class="cell docutils container">
+<div class="cell tag_output_scroll docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Cannot do this with for i in range(-10, 300) directly because</span>
 <span class="c1">#python keeps recreating the integers and putting them in </span>
@@ -613,324 +607,323 @@ a = “hello”</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-10 140520665355088 512
--9 140520665358128 -2592
--8 140520665357680 -2080
--7 140520665357744 -2208
--6 140520665357872 108767808
--5 140520774125680 32
--4 140520774125712 32
--3 140520774125744 32
--2 140520774125776 32
--1 140520774125808 32
-0 140520774125840 32
-1 140520774125872 32
-2 140520774125904 32
-3 140520774125936 32
-4 140520774125968 32
-5 140520774126000 32
-6 140520774126032 32
-7 140520774126064 32
-8 140520774126096 32
-9 140520774126128 32
-10 140520774126160 32
-11 140520774126192 32
-12 140520774126224 32
-13 140520774126256 32
-14 140520774126288 32
-15 140520774126320 32
-16 140520774126352 32
-17 140520774126384 32
-18 140520774126416 32
-19 140520774126448 32
-20 140520774126480 32
-21 140520774126512 32
-22 140520774126544 32
-23 140520774126576 32
-24 140520774126608 32
-25 140520774126640 32
-26 140520774126672 32
-27 140520774126704 32
-28 140520774126736 32
-29 140520774126768 32
-30 140520774126800 32
-31 140520774126832 32
-32 140520774126864 32
-33 140520774126896 32
-34 140520774126928 32
-35 140520774126960 32
-36 140520774126992 32
-37 140520774127024 32
-38 140520774127056 32
-39 140520774127088 32
-40 140520774127120 32
-41 140520774127152 32
-42 140520774127184 32
-43 140520774127216 32
-44 140520774127248 32
-45 140520774127280 32
-46 140520774127312 32
-47 140520774127344 32
-48 140520774127376 32
-49 140520774127408 32
-50 140520774127440 32
-51 140520774127472 32
-52 140520774127504 32
-53 140520774127536 32
-54 140520774127568 188512
-55 140520774316080 32
-56 140520774316112 32
-57 140520774316144 32
-58 140520774316176 32
-59 140520774316208 32
-60 140520774316240 32
-61 140520774316272 32
-62 140520774316304 32
-63 140520774316336 32
-64 140520774316368 32
-65 140520774316400 32
-66 140520774316432 32
-67 140520774316464 32
-68 140520774316496 32
-69 140520774316528 32
-70 140520774316560 32
-71 140520774316592 32
-72 140520774316624 32
-73 140520774316656 32
-74 140520774316688 32
-75 140520774316720 32
-76 140520774316752 32
-77 140520774316784 32
-78 140520774316816 32
-79 140520774316848 32
-80 140520774316880 32
-81 140520774316912 32
-82 140520774316944 32
-83 140520774316976 32
-84 140520774317008 32
-85 140520774317040 32
-86 140520774317072 32
-87 140520774317104 32
-88 140520774317136 32
-89 140520774317168 32
-90 140520774317200 32
-91 140520774317232 32
-92 140520774317264 32
-93 140520774317296 32
-94 140520774317328 32
-95 140520774317360 32
-96 140520774317392 32
-97 140520774317424 32
-98 140520774317456 32
-99 140520774317488 32
-100 140520774317520 32
-101 140520774317552 32
-102 140520774317584 32
-103 140520774317616 32
-104 140520774317648 32
-105 140520774317680 32
-106 140520774317712 32
-107 140520774317744 32
-108 140520774317776 32
-109 140520774317808 32
-110 140520774317840 32
-111 140520774317872 32
-112 140520774317904 32
-113 140520774317936 32
-114 140520774317968 32
-115 140520774318000 32
-116 140520774318032 32
-117 140520774318064 32
-118 140520774318096 32
-119 140520774318128 32
-120 140520774318160 32
-121 140520774318192 32
-122 140520774318224 32
-123 140520774318256 32
-124 140520774318288 32
-125 140520774318320 32
-126 140520774318352 32
-127 140520774318384 32
-128 140520774318416 32
-129 140520774318448 32
-130 140520774318480 32
-131 140520774318512 32
-132 140520774318544 32
-133 140520774318576 32
-134 140520774318608 32
-135 140520774318640 32
-136 140520774318672 32
-137 140520774318704 32
-138 140520774318736 32
-139 140520774318768 32
-140 140520774318800 32
-141 140520774318832 32
-142 140520774318864 32
-143 140520774318896 32
-144 140520774318928 32
-145 140520774318960 32
-146 140520774318992 32
-147 140520774319024 32
-148 140520774319056 32
-149 140520774319088 32
-150 140520774319120 32
-151 140520774319152 32
-152 140520774319184 32
-153 140520774319216 32
-154 140520774319248 32
-155 140520774319280 32
-156 140520774319312 32
-157 140520774319344 32
-158 140520774319376 32
-159 140520774319408 32
-160 140520774319440 32
-161 140520774319472 32
-162 140520774319504 32
-163 140520774319536 32
-164 140520774319568 32
-165 140520774319600 32
-166 140520774319632 32
-167 140520774319664 32
-168 140520774319696 32
-169 140520774319728 32
-170 140520774319760 32
-171 140520774319792 32
-172 140520774319824 32
-173 140520774319856 32
-174 140520774319888 32
-175 140520774319920 32
-176 140520774319952 32
-177 140520774319984 32
-178 140520774320016 32
-179 140520774320048 32
-180 140520774320080 96
-181 140520774320176 32
-182 140520774320208 32
-183 140520774320240 32
-184 140520774320272 32
-185 140520774320304 32
-186 140520774320336 32
-187 140520774320368 32
-188 140520774320400 32
-189 140520774320432 32
-190 140520774320464 32
-191 140520774320496 32
-192 140520774320528 32
-193 140520774320560 32
-194 140520774320592 32
-195 140520774320624 32
-196 140520774320656 32
-197 140520774320688 32
-198 140520774320720 32
-199 140520774320752 32
-200 140520774320784 32
-201 140520774320816 32
-202 140520774320848 32
-203 140520774320880 32
-204 140520774320912 32
-205 140520774320944 32
-206 140520774320976 32
-207 140520774321008 32
-208 140520774321040 32
-209 140520774321072 32
-210 140520774321104 32
-211 140520774321136 32
-212 140520774321168 32
-213 140520774321200 32
-214 140520774321232 32
-215 140520774321264 32
-216 140520774321296 32
-217 140520774321328 32
-218 140520774321360 32
-219 140520774321392 32
-220 140520774321424 32
-221 140520774321456 32
-222 140520774321488 32
-223 140520774321520 32
-224 140520774321552 32
-225 140520774321584 32
-226 140520774321616 32
-227 140520774321648 32
-228 140520774321680 32
-229 140520774321712 32
-230 140520774321744 32
-231 140520774321776 32
-232 140520774321808 32
-233 140520774321840 32
-234 140520774321872 32
-235 140520774321904 32
-236 140520774321936 32
-237 140520774321968 32
-238 140520774322000 32
-239 140520774322032 32
-240 140520774322064 32
-241 140520774322096 32
-242 140520774322128 32
-243 140520774322160 32
-244 140520774322192 32
-245 140520774322224 32
-246 140520774322256 32
-247 140520774322288 32
-248 140520774322320 32
-249 140520774322352 32
-250 140520774322384 32
-251 140520774322416 32
-252 140520774322448 32
-253 140520774322480 32
-254 140520774322512 32
-255 140520774322544 32
-256 140520774322576 -108967040
-257 140520665355344 1536
-258 140520665357520 -1984
-259 140520665357488 -608
-260 140520665357456 -1920
-261 140520665355440 1440
-262 140520665355568 -32
-263 140520665357424 -544
-264 140520665357392 -1856
-265 140520665356528 352
-266 140520665356496 -960
-267 140520665356464 416
-268 140520665355696 -160
-269 140520665355728 1152
-270 140520665355792 -256
-271 140520665355760 1120
-272 140520665355664 -128
-273 140520665355504 1376
-274 140520665355888 -352
-275 140520665355920 960
-276 140520665355952 -416
-277 140520665355984 896
-278 140520665356016 -480
-279 140520665356048 832
-280 140520665356080 -544
-281 140520665356112 768
-282 140520665356144 -608
-283 140520665356176 704
-284 140520665356208 -672
-285 140520665356240 640
-286 140520665356272 -736
-287 140520665356304 576
-288 140520665356336 -800
-289 140520665356368 512
-290 140520665356400 -864
-291 140520665356432 448
-292 140520665357360 -1824
-293 140520665357328 -448
-294 140520665356592 -1056
-295 140520665356624 256
-296 140520665356656 -1056
-297 140520665356688 -1152
-298 140520665356560 -960
-299 140520665356720 -1184
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-10 139872126219792 768
+-9 139872126221168 32
+-8 139872126221232 -896
+-7 139872126222128 -1568
+-6 139872126220272 142479488
+-5 139872268699760 32
+-4 139872268699792 32
+-3 139872268699824 32
+-2 139872268699856 32
+-1 139872268699888 32
+0 139872268699920 32
+1 139872268699952 32
+2 139872268699984 32
+3 139872268700016 32
+4 139872268700048 32
+5 139872268700080 32
+6 139872268700112 32
+7 139872268700144 32
+8 139872268700176 32
+9 139872268700208 32
+10 139872268700240 32
+11 139872268700272 32
+12 139872268700304 32
+13 139872268700336 32
+14 139872268700368 32
+15 139872268700400 32
+16 139872268700432 32
+17 139872268700464 32
+18 139872268700496 32
+19 139872268700528 32
+20 139872268700560 32
+21 139872268700592 32
+22 139872268700624 32
+23 139872268700656 32
+24 139872268700688 32
+25 139872268700720 32
+26 139872268700752 32
+27 139872268700784 32
+28 139872268700816 32
+29 139872268700848 32
+30 139872268700880 32
+31 139872268700912 32
+32 139872268700944 32
+33 139872268700976 32
+34 139872268701008 32
+35 139872268701040 32
+36 139872268701072 32
+37 139872268701104 32
+38 139872268701136 32
+39 139872268701168 32
+40 139872268701200 32
+41 139872268701232 32
+42 139872268701264 32
+43 139872268701296 32
+44 139872268701328 32
+45 139872268701360 32
+46 139872268701392 32
+47 139872268701424 32
+48 139872268701456 32
+49 139872268701488 32
+50 139872268701520 32
+51 139872268701552 32
+52 139872268701584 32
+53 139872268701616 32
+54 139872268701648 188512
+55 139872268890160 32
+56 139872268890192 32
+57 139872268890224 32
+58 139872268890256 32
+59 139872268890288 32
+60 139872268890320 32
+61 139872268890352 32
+62 139872268890384 32
+63 139872268890416 32
+64 139872268890448 32
+65 139872268890480 32
+66 139872268890512 32
+67 139872268890544 32
+68 139872268890576 32
+69 139872268890608 32
+70 139872268890640 32
+71 139872268890672 32
+72 139872268890704 32
+73 139872268890736 32
+74 139872268890768 32
+75 139872268890800 32
+76 139872268890832 32
+77 139872268890864 32
+78 139872268890896 32
+79 139872268890928 32
+80 139872268890960 32
+81 139872268890992 32
+82 139872268891024 32
+83 139872268891056 32
+84 139872268891088 32
+85 139872268891120 32
+86 139872268891152 32
+87 139872268891184 32
+88 139872268891216 32
+89 139872268891248 32
+90 139872268891280 32
+91 139872268891312 32
+92 139872268891344 32
+93 139872268891376 32
+94 139872268891408 32
+95 139872268891440 32
+96 139872268891472 32
+97 139872268891504 32
+98 139872268891536 32
+99 139872268891568 32
+100 139872268891600 32
+101 139872268891632 32
+102 139872268891664 32
+103 139872268891696 32
+104 139872268891728 32
+105 139872268891760 32
+106 139872268891792 32
+107 139872268891824 32
+108 139872268891856 32
+109 139872268891888 32
+110 139872268891920 32
+111 139872268891952 32
+112 139872268891984 32
+113 139872268892016 32
+114 139872268892048 32
+115 139872268892080 32
+116 139872268892112 32
+117 139872268892144 32
+118 139872268892176 32
+119 139872268892208 32
+120 139872268892240 32
+121 139872268892272 32
+122 139872268892304 32
+123 139872268892336 32
+124 139872268892368 32
+125 139872268892400 32
+126 139872268892432 32
+127 139872268892464 32
+128 139872268892496 32
+129 139872268892528 32
+130 139872268892560 32
+131 139872268892592 32
+132 139872268892624 32
+133 139872268892656 32
+134 139872268892688 32
+135 139872268892720 32
+136 139872268892752 32
+137 139872268892784 32
+138 139872268892816 32
+139 139872268892848 32
+140 139872268892880 32
+141 139872268892912 32
+142 139872268892944 32
+143 139872268892976 32
+144 139872268893008 32
+145 139872268893040 32
+146 139872268893072 32
+147 139872268893104 32
+148 139872268893136 32
+149 139872268893168 32
+150 139872268893200 32
+151 139872268893232 32
+152 139872268893264 32
+153 139872268893296 32
+154 139872268893328 32
+155 139872268893360 32
+156 139872268893392 32
+157 139872268893424 32
+158 139872268893456 32
+159 139872268893488 32
+160 139872268893520 32
+161 139872268893552 32
+162 139872268893584 32
+163 139872268893616 32
+164 139872268893648 32
+165 139872268893680 32
+166 139872268893712 32
+167 139872268893744 32
+168 139872268893776 32
+169 139872268893808 32
+170 139872268893840 32
+171 139872268893872 32
+172 139872268893904 32
+173 139872268893936 32
+174 139872268893968 32
+175 139872268894000 32
+176 139872268894032 32
+177 139872268894064 32
+178 139872268894096 32
+179 139872268894128 32
+180 139872268894160 96
+181 139872268894256 32
+182 139872268894288 32
+183 139872268894320 32
+184 139872268894352 32
+185 139872268894384 32
+186 139872268894416 32
+187 139872268894448 32
+188 139872268894480 32
+189 139872268894512 32
+190 139872268894544 32
+191 139872268894576 32
+192 139872268894608 32
+193 139872268894640 32
+194 139872268894672 32
+195 139872268894704 32
+196 139872268894736 32
+197 139872268894768 32
+198 139872268894800 32
+199 139872268894832 32
+200 139872268894864 32
+201 139872268894896 32
+202 139872268894928 32
+203 139872268894960 32
+204 139872268894992 32
+205 139872268895024 32
+206 139872268895056 32
+207 139872268895088 32
+208 139872268895120 32
+209 139872268895152 32
+210 139872268895184 32
+211 139872268895216 32
+212 139872268895248 32
+213 139872268895280 32
+214 139872268895312 32
+215 139872268895344 32
+216 139872268895376 32
+217 139872268895408 32
+218 139872268895440 32
+219 139872268895472 32
+220 139872268895504 32
+221 139872268895536 32
+222 139872268895568 32
+223 139872268895600 32
+224 139872268895632 32
+225 139872268895664 32
+226 139872268895696 32
+227 139872268895728 32
+228 139872268895760 32
+229 139872268895792 32
+230 139872268895824 32
+231 139872268895856 32
+232 139872268895888 32
+233 139872268895920 32
+234 139872268895952 32
+235 139872268895984 32
+236 139872268896016 32
+237 139872268896048 32
+238 139872268896080 32
+239 139872268896112 32
+240 139872268896144 32
+241 139872268896176 32
+242 139872268896208 32
+243 139872268896240 32
+244 139872268896272 32
+245 139872268896304 32
+246 139872268896336 32
+247 139872268896368 32
+248 139872268896400 32
+249 139872268896432 32
+250 139872268896464 32
+251 139872268896496 32
+252 139872268896528 32
+253 139872268896560 32
+254 139872268896592 32
+255 139872268896624 32
+256 139872268896656 -142676096
+257 139872126220304 1664
+258 139872126220400 160
+259 139872126220464 -128
+260 139872126220368 1600
+261 139872126220432 -96
+262 139872126222192 -224
+263 139872126220624 -288
+264 139872126220656 1312
+265 139872126220688 -352
+266 139872126220720 1248
+267 139872126220752 -416
+268 139872126220784 1184
+269 139872126220816 -480
+270 139872126220848 1120
+271 139872126220880 -544
+272 139872126220912 1056
+273 139872126220944 -608
+274 139872126220976 992
+275 139872126221008 -672
+276 139872126221040 928
+277 139872126221072 -736
+278 139872126221104 864
+279 139872126221136 -800
+280 139872126222064 -96
+281 139872126222032 -1696
+282 139872126221296 672
+283 139872126221328 -992
+284 139872126221360 608
+285 139872126221392 -1056
+286 139872126221264 704
+287 139872126221424 -1088
+288 139872126221456 512
+289 139872126221488 -1152
+290 139872126221520 448
+291 139872126221552 -1216
+292 139872126221584 384
+293 139872126221616 -1280
+294 139872126221648 320
+295 139872126221680 -1344
+296 139872126221712 256
+297 139872126221744 -1184
+298 139872126221776 -1440
+299 139872126221808 -1248
 </pre></div>
 </div>
 </div>
 </div>
 <p>As you can see, -5..255 are placed in sequence in memory (with addresses differing by 32 from each other.) This is done when Python starts. Other integers are placed as they are needed in free spaces.</p>
-</section>
 <section id="id1">
-<h1><span class="section-number">7.12. </span>Placing mutable objects in memory<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<h3><span class="section-number">7.2.1.1. </span>Placing mutable objects in memory<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
 <p>Unlike strings and integers, lists <em>are</em> mutable – their contents can be changed. Consider:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -950,13 +943,17 @@ a = “hello”</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140520664634048
-140520664636288
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>139872125991616
+139872125997760
 </pre></div>
 </div>
 </div>
 </div>
 <p>To remind you, here is what would happen if the addresses of <code class="docutils literal notranslate"><span class="pre">L1</span></code> and <code class="docutils literal notranslate"><span class="pre">L2</span></code> had been the same:</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><button><a href="https://pythontutor.com/render.html#code=L1%20%3D%20%5B1,%202,%203%5D%0AL2%20%3D%20L1%20%23id%28L1%29%3D%3Did%28L2%29%20now,%20since%20L1%20and%20L2%20are%20aliases%0AL2%5B0%5D%20%3D%205%0Aprint%28L1%29%0Aprint%28L2%29&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank">Run in Python Tutor</a></button></div></div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
@@ -975,6 +972,8 @@ a = “hello”</p>
 </div>
 </div>
 <p>Both <code class="docutils literal notranslate"><span class="pre">L1</span></code> and <code class="docutils literal notranslate"><span class="pre">L2</span></code> were changed when we went <code class="docutils literal notranslate"><span class="pre">L2[0]</span> <span class="pre">=</span> <span class="pre">5</span></code>!</p>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1009,20 +1008,20 @@ a = “hello”</p>
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Modifying%20mutable%20objects%20inside%20functions.html"
+       href="Aliasing%20and%20mutability.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">7.9. </span>Modifying lists in functions</p>
+        <p class="prev-next-title"><span class="section-number">7.1. </span>Aliasing and Mutability</p>
       </div>
     </a>
     <a class="right-next"
-       href="../List%20Operations/title.html"
+       href="Intro%20to%20shallow%20and%20deep%20copy.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">8. </span>List Operations</p>
+        <p class="prev-next-title"><span class="section-number">7.3. </span>First Deep Copy</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1044,11 +1043,11 @@ a = “hello”</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">7.10. Placing objects in memory</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#placing-mutable-objects-in-memory">7.11. Placing mutable objects in memory</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">7.12. Placing mutable objects in memory</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#placing-mutable-objects-in-memory">7.2.1. Placing mutable objects in memory</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">7.2.1.1. Placing mutable objects in memory</a></li>
 </ul>
-
+</li>
+</ul>
   </nav></div>
 
 </div></div>

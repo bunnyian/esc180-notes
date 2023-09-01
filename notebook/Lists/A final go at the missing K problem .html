@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>7.5. Finding a winning move in tic-tac-toe &#8212; ESC180 Notes</title>
+    <title>6.9. Single Pass Missing Number Solution &#8212; ESC180 Notes</title>
   
   
   
@@ -61,13 +61,15 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebook/List Copies/Finding a winning move in tic-tac-toe';</script>
-    <link rel="canonical" href="https://bunnyian.github.io/esc180-notes/notebook/List Copies/Finding a winning move in tic-tac-toe.html" />
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebook/Lists/A final go at the missing K problem ';</script>
+    <link rel="canonical" href="https://bunnyian.github.io/esc180-notes/notebook/Lists/A final go at the missing K problem .html" />
     <link rel="shortcut icon" href="../../_static/fav.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="7.6. Aliasing" href="Intro%20to%20shallow%20and%20deep%20copy.html" />
-    <link rel="prev" title="7.4. Copying Lists" href="Deep%20Copy%20%28two%20levels%20deep%29.html" />
+    <link rel="next" title="6.10. Finding a winning move in tic-tac-toe" href="Finding%20a%20winning%20move%20in%20tic-tac-toe.html" />
+    <link rel="prev" title="6.8. Sorted Approach to Missing Number Problem" href="MissingKSorted.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -210,30 +212,25 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../Functions/Counting%20trailing%20zeros%20--%20Solution.html">5.9. Counting trailing zeros in n!</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Lists/title.html">6. Lists</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Lists/Lists.html">6.1. Lists</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Lists/Lists%20II.html">6.2. More on Lists in Python</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Lists/Lists%20III.html">6.3. <code class="docutils literal notranslate"><span class="pre">list.insert()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Lists/Lists%20IV.html">6.4. <code class="docutils literal notranslate"><span class="pre">list.extend()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Lists/Lists%20V.html">6.5. Accessing list elements: last element, negative indices, middle</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Lists/Loops%2C%20lists%2C%20and%20globals.html">6.6. Login System with Loops, Lists, and Globals</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Lists/Missing%20K%20problem.html">6.7. The Missing Number Problem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Lists/MissingKSorted.html">6.8. Sorted Approach to Missing Number Problem</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="title.html">6. Lists</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Lists.html">6.1. Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Lists%20II.html">6.2. More on Lists in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Lists%20III.html">6.3. <code class="docutils literal notranslate"><span class="pre">list.insert()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Lists%20IV.html">6.4. <code class="docutils literal notranslate"><span class="pre">list.extend()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Lists%20V.html">6.5. Accessing list elements: last element, negative indices, middle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Loops%2C%20lists%2C%20and%20globals.html">6.6. Login System with Loops, Lists, and Globals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Missing%20K%20problem.html">6.7. The Missing Number Problem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MissingKSorted.html">6.8. Sorted Approach to Missing Number Problem</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">6.9. Single Pass Missing Number Solution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Finding%20a%20winning%20move%20in%20tic-tac-toe.html">6.10. Finding a winning move in tic-tac-toe</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="title.html">7. List Copies</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="A%20final%20go%20at%20the%20missing%20K%20problem%20.html">7.1. The Missing K Problem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Aliasing%20and%20mutability.html">7.2. Variables refer to addresses</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="Deep%20Copy%20%28two%20levels%20deep%29.html">7.4. Copying Lists</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">7.5. Finding a winning move in tic-tac-toe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Intro%20to%20shallow%20and%20deep%20copy.html">7.6. Aliasing</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="Modifying%20mutable%20objects%20inside%20functions.html">7.9. Modifying lists in functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Placing%20mutable%20and%20immutable%20objects%20in%20memory.html">7.10. Placing objects in memory</a></li>
-
-
+<li class="toctree-l1 has-children"><a class="reference internal" href="../List%20Copies/title.html">7. List Copies</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../List%20Copies/Aliasing%20and%20mutability.html">7.1. Aliasing and Mutability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../List%20Copies/Placing%20mutable%20and%20immutable%20objects%20in%20memory.html">7.2. Placing objects in memory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../List%20Copies/Intro%20to%20shallow%20and%20deep%20copy.html">7.3. First Deep Copy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../List%20Copies/Deep%20Copy%20%28two%20levels%20deep%29.html">7.4. Deep Copy (two levels deep)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../List%20Copies/Modifying%20mutable%20objects%20inside%20functions.html">7.5. Modifying lists in functions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../List%20Operations/title.html">8. List Operations</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -445,7 +442,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/bunnyian/esc180-notes/edit/main/notebook/List Copies/Finding a winning move in tic-tac-toe.ipynb" target="_blank"
+      <li><a href="https://github.com/bunnyian/esc180-notes/edit/main/notebook/Lists/A final go at the missing K problem .ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -462,7 +459,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/bunnyian/esc180-notes/issues/new?title=Issue%20on%20page%20%2Fnotebook/List Copies/Finding a winning move in tic-tac-toe.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/bunnyian/esc180-notes/issues/new?title=Issue%20on%20page%20%2Fnotebook/Lists/A final go at the missing K problem .html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -524,7 +521,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Finding a winning move in tic-tac-toe</h1>
+    <h1>Single Pass Missing Number Solution</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -538,48 +535,45 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="finding-a-winning-move-in-tic-tac-toe">
-<h1><span class="section-number">7.5. </span>Finding a winning move in tic-tac-toe<a class="headerlink" href="#finding-a-winning-move-in-tic-tac-toe" title="Permalink to this heading">#</a></h1>
-<p>Let’s look in a little more detail at the solution to Lab 6.</p>
-<p>Here is the <code class="docutils literal notranslate"><span class="pre">make_computer_move_attack(board,</span> <span class="pre">mark)</span></code> function. The function makes use of the <code class="docutils literal notranslate"><span class="pre">is_win(board,</span> <span class="pre">mark)</span></code> function, which returns <code class="docutils literal notranslate"><span class="pre">True</span></code> iff <code class="docutils literal notranslate"><span class="pre">mark</span></code> has won on board <code class="docutils literal notranslate"><span class="pre">board</span></code>. The strategy is to try every possible move, see if it resulted in a win, return (and stop the execution of the function) if it did, and undo it if it didn’t.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="single-pass-missing-number-solution">
+<h1><span class="section-number">6.9. </span>Single Pass Missing Number Solution<a class="headerlink" href="#single-pass-missing-number-solution" title="Permalink to this heading">#</a></h1>
+<p>Here is the solution to the Missing K problem that only requires us to go through the list once.</p>
+<p>The idea is this: if we have the numbers <span class="math notranslate nohighlight">\(L = [1, 2, 3, k-1, k+1, ..., n]\)</span>, then their sum is <span class="math notranslate nohighlight">\(\text{sum(L)} \sum_{i=1}^n i -k = \frac{n(n+1)}{2} - k\)</span>.</p>
+<p>We can find <span class="math notranslate nohighlight">\(k\)</span> by computing <span class="math notranslate nohighlight">\(k = \sum_{i=1}^n i - \text{sum(L)}\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">make_computer_move_attack</span><span class="p">(</span><span class="n">board</span><span class="p">,</span> <span class="n">mark</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;If possible, make a winning move using mark mark on the board. If not,</span>
-<span class="sd">    put the mark mark in the first available square, where we&#39;re going </span>
-<span class="sd">    through the square in the order</span>
-<span class="sd">    for i in range(3):</span>
-<span class="sd">      for j in range(3)</span>
-<span class="sd">      </span>
-<span class="sd">    Aruguments:</span>
-<span class="sd">    board -- a list of lists of strings representing a 3x3 table of &quot; &quot;, &quot;X&quot;, and &quot;O&quot;. Assume board is not full.</span>
-<span class="sd">    mark -- &quot;X&quot; or &quot;O&quot;</span>
-<span class="sd">    &#39;&#39;&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">missing_k</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">s_full</span> <span class="o">=</span> <span class="n">n</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+    <span class="n">s_partial</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+        
+    <span class="k">return</span> <span class="n">s_full</span> <span class="o">-</span> <span class="n">s_partial</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>A small note: Python has the built-in function function <code class="docutils literal notranslate"><span class="pre">sum()</span></code> which computes the sum of (amonth other things) lists.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
+</pre></div>
+</div>
+</div>
+</div>
+<p>However, nothing is stopping us from writing our own <code class="docutils literal notranslate"><span class="pre">sum</span></code> function:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sum</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">L</span><span class="p">:</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="n">e</span>
     
-    <span class="c1">#First, we look through all the squares and</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
-            <span class="c1">#Only try to make the move at (i, j)</span>
-            <span class="c1">#if the square is current empty</span>
-            <span class="k">if</span> <span class="n">board</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot; &quot;</span><span class="p">:</span>
-                <span class="n">board</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">mark</span>
-                <span class="k">if</span> <span class="n">is_win</span><span class="p">(</span><span class="n">board</span><span class="p">,</span> <span class="n">mark</span><span class="p">):</span>
-                    <span class="c1">#We found the winning move -- keep the move</span>
-                    <span class="c1">#on the board, and stop the function</span>
-                    <span class="k">return</span>
-                
-                <span class="c1">#is_win(board, mark) is False, so we should undo</span>
-                <span class="c1">#the move and keep going.</span>
-                <span class="n">board</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span>
-            
-    <span class="c1">#If we reached this point, we haven&#39;t found a winning move. Go</span>
-    <span class="c1">#through the board until we find an empty square, put mark</span>
-    <span class="c1">#there, and return</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
-            <span class="k">if</span> <span class="n">board</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot; &quot;</span><span class="p">:</span>
-                <span class="n">board</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">mark</span>
-                <span class="k">return</span>
+    <span class="k">return</span> <span class="n">s</span>
 </pre></div>
 </div>
 </div>
@@ -599,7 +593,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./notebook/List Copies"
+            path: "./notebook/Lists"
         },
         predefinedOutput: true
     }
@@ -618,20 +612,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Deep%20Copy%20%28two%20levels%20deep%29.html"
+       href="MissingKSorted.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">7.4. </span>Copying Lists</p>
+        <p class="prev-next-title"><span class="section-number">6.8. </span>Sorted Approach to Missing Number Problem</p>
       </div>
     </a>
     <a class="right-next"
-       href="Intro%20to%20shallow%20and%20deep%20copy.html"
+       href="Finding%20a%20winning%20move%20in%20tic-tac-toe.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">7.6. </span>Aliasing</p>
+        <p class="prev-next-title"><span class="section-number">6.10. </span>Finding a winning move in tic-tac-toe</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

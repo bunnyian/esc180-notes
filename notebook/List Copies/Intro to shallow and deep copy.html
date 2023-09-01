@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>7.6. Aliasing &#8212; ESC180 Notes</title>
+    <title>7.3. First Deep Copy &#8212; ESC180 Notes</title>
   
   
   
@@ -66,8 +66,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/fav.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="7.9. Modifying lists in functions" href="Modifying%20mutable%20objects%20inside%20functions.html" />
-    <link rel="prev" title="7.5. Finding a winning move in tic-tac-toe" href="Finding%20a%20winning%20move%20in%20tic-tac-toe.html" />
+    <link rel="next" title="7.4. Deep Copy (two levels deep)" href="Deep%20Copy%20%28two%20levels%20deep%29.html" />
+    <link rel="prev" title="7.2. Placing objects in memory" href="Placing%20mutable%20and%20immutable%20objects%20in%20memory.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -219,21 +219,16 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../Lists/Loops%2C%20lists%2C%20and%20globals.html">6.6. Login System with Loops, Lists, and Globals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Lists/Missing%20K%20problem.html">6.7. The Missing Number Problem</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Lists/MissingKSorted.html">6.8. Sorted Approach to Missing Number Problem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lists/A%20final%20go%20at%20the%20missing%20K%20problem%20.html">6.9. Single Pass Missing Number Solution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Finding%20a%20winning%20move%20in%20tic-tac-toe.html">6.10. Finding a winning move in tic-tac-toe</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="title.html">7. List Copies</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="A%20final%20go%20at%20the%20missing%20K%20problem%20.html">7.1. The Missing K Problem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Aliasing%20and%20mutability.html">7.2. Variables refer to addresses</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="Deep%20Copy%20%28two%20levels%20deep%29.html">7.4. Copying Lists</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Finding%20a%20winning%20move%20in%20tic-tac-toe.html">7.5. Finding a winning move in tic-tac-toe</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">7.6. Aliasing</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="Modifying%20mutable%20objects%20inside%20functions.html">7.9. Modifying lists in functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Placing%20mutable%20and%20immutable%20objects%20in%20memory.html">7.10. Placing objects in memory</a></li>
-
-
+<li class="toctree-l2"><a class="reference internal" href="Aliasing%20and%20mutability.html">7.1. Aliasing and Mutability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Placing%20mutable%20and%20immutable%20objects%20in%20memory.html">7.2. Placing objects in memory</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">7.3. First Deep Copy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Deep%20Copy%20%28two%20levels%20deep%29.html">7.4. Deep Copy (two levels deep)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Modifying%20mutable%20objects%20inside%20functions.html">7.5. Modifying lists in functions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../List%20Operations/title.html">8. List Operations</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -526,7 +521,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Aliasing</h1>
+    <h1>First Deep Copy</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -536,11 +531,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">7.6. Aliasing</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-problem-with-shallow-copy">7.7. The problem with shallow copy</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#a-first-attempt-at-a-deep-copy">7.8. A first attempt at a deep copy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aliasing">7.3.1. Aliasing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-problem-with-shallow-copy">7.3.1.1. The problem with shallow copy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-first-attempt-at-a-deep-copy">7.3.1.2. A first attempt at a deep copy</a></li>
 </ul>
-
+</li>
+</ul>
             </nav>
         </div>
     </div>
@@ -551,9 +547,15 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="aliasing">
-<h1><span class="section-number">7.6. </span>Aliasing<a class="headerlink" href="#aliasing" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="first-deep-copy">
+<h1><span class="section-number">7.3. </span>First Deep Copy<a class="headerlink" href="#first-deep-copy" title="Permalink to this heading">#</a></h1>
+<section id="aliasing">
+<h2><span class="section-number">7.3.1. </span>Aliasing<a class="headerlink" href="#aliasing" title="Permalink to this heading">#</a></h2>
 <p>Here is the classical case of aliasing:</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><button><a href="https://pythontutor.com/render.html#code=%0AL1+%3D+%5B1%2C+2%2C+3%5D%0AL2+%3D+L1%0AL2%5B0%5D+%3D+5%0Aprint%28L1%29%0Aprint%28L2%29%0A&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank">Run in Python Tutor</a></button></div></div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
@@ -574,6 +576,10 @@ document.write(`
 <p>Like we saw before <code class="docutils literal notranslate"><span class="pre">L1</span></code> and <code class="docutils literal notranslate"><span class="pre">L2</span></code> refer to the same list in memory, so modifying thecontents of one means modifying the contents of the other.</p>
 <p>Suppose we want to avoid that. In order to do that, we’d like to create a <em>copy</em> of L1: alist stored at a different location in memory that has the same contents.</p>
 <p>Here is the simplest way to achieve this:</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><button><a href="https://pythontutor.com/render.html#code=%0AL1+%3D+%5B1%2C+2%2C+3%5D%0AL2+%3D+%5BL1%5B0%5D%2C+L1%5B1%5D%2C+L1%5B2%5D%5D%0A&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank">Run in Python Tutor</a></button></div></div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
@@ -584,6 +590,10 @@ document.write(`
 </div>
 <p>This creates a new list whose contents are <code class="docutils literal notranslate"><span class="pre">L1[0],</span> <span class="pre">L1[1],</span> <span class="pre">L1[2]</span></code>. Modifying <code class="docutils literal notranslate"><span class="pre">L1</span></code> will now not affect <code class="docutils literal notranslate"><span class="pre">L2</span></code>.</p>
 <p>Here is another way to do this:</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><button><a href="https://pythontutor.com/render.html#code=%0AL1+%3D+%5B1%2C+2%2C+3%5D%0AL2+%3D+L1%5B%3A%5D%0A&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank">Run in Python Tutor</a></button></div></div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
@@ -594,6 +604,10 @@ document.write(`
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">L1[:]</span></code> creates a new list whose contents are <code class="docutils literal notranslate"><span class="pre">L1[0],</span> <span class="pre">L1[1],</span> <span class="pre">...,</span> <span class="pre">L[len(L)-1]</span></code>, and places it in memory. We then assign the address of the new list to <code class="docutils literal notranslate"><span class="pre">L2</span></code>. (Review slicing notation to understand <code class="docutils literal notranslate"><span class="pre">L[:]</span></code>; slicing always creates a new list.)</p>
 <p>Finally, we could accomplish the same thing using a loop.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><button><a href="https://pythontutor.com/render.html#code=%0AL1+%3D+%5B1%2C+2%2C+3%5D%0AL2+%3D+%5B%5D%0Afor+e+in+L1%3A%0A++++L2.append%28e%29%0A&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank">Run in Python Tutor</a></button></div></div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
@@ -605,9 +619,8 @@ document.write(`
 </div>
 </div>
 <p>Here, we repeatedly appended elements of <code class="docutils literal notranslate"><span class="pre">L1</span></code> to the newly-created list <code class="docutils literal notranslate"><span class="pre">L2</span></code>, which is initially just empty.</p>
-</section>
 <section id="the-problem-with-shallow-copy">
-<h1><span class="section-number">7.7. </span>The problem with shallow copy<a class="headerlink" href="#the-problem-with-shallow-copy" title="Permalink to this heading">#</a></h1>
+<h3><span class="section-number">7.3.1.1. </span>The problem with shallow copy<a class="headerlink" href="#the-problem-with-shallow-copy" title="Permalink to this heading">#</a></h3>
 <p>What we did above is called making a <em>shallow copy</em>. Here is why. Suppose we have a nested list, and try to make a copy of it.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -619,6 +632,10 @@ document.write(`
 </div>
 <p>The problem is that we only have one of the list <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2]</span></code>, and one of the list <code class="docutils literal notranslate"><span class="pre">[3,</span> <span class="pre">4]</span></code> placed in memory. When we create <code class="docutils literal notranslate"><span class="pre">L2</span></code>, it’s separate from <code class="docutils literal notranslate"><span class="pre">L1</span></code>, but <code class="docutils literal notranslate"><span class="pre">L1[0]</span></code> and <code class="docutils literal notranslate"><span class="pre">L2[0]</span></code> are aliases (and also <code class="docutils literal notranslate"><span class="pre">L1[1]</span></code> and <code class="docutils literal notranslate"><span class="pre">L2[1]</span></code> are aliases) – we never created copies of <code class="docutils literal notranslate"><span class="pre">L1[0]</span></code> and <code class="docutils literal notranslate"><span class="pre">L1[1]</span></code>.</p>
 <p>That means that modifying the contents of the inner lists of <code class="docutils literal notranslate"><span class="pre">L1</span></code> will have an effect on the inner lists of <code class="docutils literal notranslate"><span class="pre">L2</span></code> – since they are aliases of each other!</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><button><a href="https://pythontutor.com/render.html#code=%0AL1+%3D+%5B%5B1%2C+2%5D%2C+%5B3%2C+4%5D%5D%0AL2+%3D+L1%5B%3A%5D+%23the+same+as+L2+%3D+%5BL1%5B0%5D%2C+L1%5B1%5D%5D%0AL1%5B1%5D%5B0%5D+%3D+7%0Aprint%28%22L1+%3D+%22%2C+L1%29%0Aprint%28%22L2+%3D+%22%2C+L2%29%0A&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank">Run in Python Tutor</a></button></div></div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L1</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]]</span>
@@ -637,6 +654,10 @@ L2 =  [[1, 2], [7, 4]]
 </div>
 </div>
 <p>On the other hand, since <code class="docutils literal notranslate"><span class="pre">L1</span></code> and <code class="docutils literal notranslate"><span class="pre">L2</span></code> are <em>not</em> aliases of each other, modifying <code class="docutils literal notranslate"><span class="pre">L1[0]</span></code> won’t effect <code class="docutils literal notranslate"><span class="pre">L2[0]</span></code>:</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><button><a href="https://pythontutor.com/render.html#code=%0AL1+%3D+%5B%5B1%2C+2%5D%2C+%5B3%2C+4%5D%5D%0AL2+%3D+L1%5B%3A%5D+%23the+same+as+L2+%3D+%5BL1%5B0%5D%2C+L1%5B1%5D%5D%0AL1%5B0%5D+%3D+%5B5%2C+6%5D%0Aprint%28%22L1+%3D+%22%2C+L1%29%0Aprint%28%22L2+%3D+%22%2C+L2%29%0A&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank">Run in Python Tutor</a></button></div></div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L1</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]]</span>
@@ -657,8 +678,12 @@ L2 =  [[1, 2], [3, 4]]
 <p>We say the copy is <em>shallow</em> because the inner nested lists are still aliases of each other.</p>
 </section>
 <section id="a-first-attempt-at-a-deep-copy">
-<h1><span class="section-number">7.8. </span>A first attempt at a deep copy<a class="headerlink" href="#a-first-attempt-at-a-deep-copy" title="Permalink to this heading">#</a></h1>
+<h3><span class="section-number">7.3.1.2. </span>A first attempt at a deep copy<a class="headerlink" href="#a-first-attempt-at-a-deep-copy" title="Permalink to this heading">#</a></h3>
 <p>Here is the least flexible way to make a deep copy:</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><button><a href="https://pythontutor.com/render.html#code=%0AL1+%3D+%5B%5B1%2C+2%5D%2C+%5B3%2C+4%5D%5D%0AL2+%3D+%5B%5BL1%5B0%5D%5B0%5D%2C+L1%5B0%5D%5B1%5D%5D%2C+%5BL1%5B1%5D%5B0%5D%2C+L1%5B1%5D%5B1%5D%5D%5D%0AL1%5B1%5D%5B0%5D+%3D+7%0Aprint%28%22L1+%3D+%22%2C+L1%29%0Aprint%28%22L2+%3D+%22%2C+L2%29%0A&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank">Run in Python Tutor</a></button></div></div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L1</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]]</span>
@@ -677,6 +702,8 @@ L2 =  [[1, 2], [3, 4]]
 </div>
 </div>
 <p>The lists are completely disentagled (of course, the <code class="docutils literal notranslate"><span class="pre">id</span></code>’s of equal integers are equal, but the contents of integers cannot be changed, so that’s not a problem.)</p>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -711,20 +738,20 @@ L2 =  [[1, 2], [3, 4]]
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Finding%20a%20winning%20move%20in%20tic-tac-toe.html"
+       href="Placing%20mutable%20and%20immutable%20objects%20in%20memory.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">7.5. </span>Finding a winning move in tic-tac-toe</p>
+        <p class="prev-next-title"><span class="section-number">7.2. </span>Placing objects in memory</p>
       </div>
     </a>
     <a class="right-next"
-       href="Modifying%20mutable%20objects%20inside%20functions.html"
+       href="Deep%20Copy%20%28two%20levels%20deep%29.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">7.9. </span>Modifying lists in functions</p>
+        <p class="prev-next-title"><span class="section-number">7.4. </span>Deep Copy (two levels deep)</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -746,11 +773,12 @@ L2 =  [[1, 2], [3, 4]]
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">7.6. Aliasing</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-problem-with-shallow-copy">7.7. The problem with shallow copy</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#a-first-attempt-at-a-deep-copy">7.8. A first attempt at a deep copy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aliasing">7.3.1. Aliasing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-problem-with-shallow-copy">7.3.1.1. The problem with shallow copy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-first-attempt-at-a-deep-copy">7.3.1.2. A first attempt at a deep copy</a></li>
 </ul>
-
+</li>
+</ul>
   </nav></div>
 
 </div></div>

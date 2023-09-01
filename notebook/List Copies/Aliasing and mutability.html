@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>7.2. Variables refer to addresses &#8212; ESC180 Notes</title>
+    <title>7.1. Aliasing and Mutability &#8212; ESC180 Notes</title>
   
   
   
@@ -66,8 +66,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/fav.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="7.4. Copying Lists" href="Deep%20Copy%20%28two%20levels%20deep%29.html" />
-    <link rel="prev" title="7.1. The Missing K Problem" href="A%20final%20go%20at%20the%20missing%20K%20problem%20.html" />
+    <link rel="next" title="7.2. Placing objects in memory" href="Placing%20mutable%20and%20immutable%20objects%20in%20memory.html" />
+    <link rel="prev" title="7. List Copies" href="title.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -219,21 +219,16 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../Lists/Loops%2C%20lists%2C%20and%20globals.html">6.6. Login System with Loops, Lists, and Globals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Lists/Missing%20K%20problem.html">6.7. The Missing Number Problem</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Lists/MissingKSorted.html">6.8. Sorted Approach to Missing Number Problem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lists/A%20final%20go%20at%20the%20missing%20K%20problem%20.html">6.9. Single Pass Missing Number Solution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Finding%20a%20winning%20move%20in%20tic-tac-toe.html">6.10. Finding a winning move in tic-tac-toe</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="title.html">7. List Copies</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="A%20final%20go%20at%20the%20missing%20K%20problem%20.html">7.1. The Missing K Problem</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">7.2. Variables refer to addresses</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="Deep%20Copy%20%28two%20levels%20deep%29.html">7.4. Copying Lists</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Finding%20a%20winning%20move%20in%20tic-tac-toe.html">7.5. Finding a winning move in tic-tac-toe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Intro%20to%20shallow%20and%20deep%20copy.html">7.6. Aliasing</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="Modifying%20mutable%20objects%20inside%20functions.html">7.9. Modifying lists in functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Placing%20mutable%20and%20immutable%20objects%20in%20memory.html">7.10. Placing objects in memory</a></li>
-
-
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">7.1. Aliasing and Mutability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Placing%20mutable%20and%20immutable%20objects%20in%20memory.html">7.2. Placing objects in memory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Intro%20to%20shallow%20and%20deep%20copy.html">7.3. First Deep Copy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Deep%20Copy%20%28two%20levels%20deep%29.html">7.4. Deep Copy (two levels deep)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Modifying%20mutable%20objects%20inside%20functions.html">7.5. Modifying lists in functions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../List%20Operations/title.html">8. List Operations</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -526,7 +521,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Variables refer to addresses</h1>
+    <h1>Aliasing and Mutability</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -536,10 +531,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">7.2. Variables refer to addresses</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mutability-and-immutability">7.3. Mutability and immutability</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-refer-to-addresses">7.1.1. Variables refer to addresses</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mutability-and-immutability">7.1.1.1. Mutability and immutability</a></li>
 </ul>
-
+</li>
+</ul>
             </nav>
         </div>
     </div>
@@ -550,8 +546,10 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="variables-refer-to-addresses">
-<h1><span class="section-number">7.2. </span>Variables refer to addresses<a class="headerlink" href="#variables-refer-to-addresses" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="aliasing-and-mutability">
+<h1><span class="section-number">7.1. </span>Aliasing and Mutability<a class="headerlink" href="#aliasing-and-mutability" title="Permalink to this heading">#</a></h1>
+<section id="variables-refer-to-addresses">
+<h2><span class="section-number">7.1.1. </span>Variables refer to addresses<a class="headerlink" href="#variables-refer-to-addresses" title="Permalink to this heading">#</a></h2>
 <p>Here is (almost) the real story of how data is handled in Python. Variables refer to addresses (cells) in memory, where the actual data is stored. For example, let’s definte the variable <code class="docutils literal notranslate"><span class="pre">n</span></code> and initialize it to <code class="docutils literal notranslate"><span class="pre">42</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -568,7 +566,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140357930557008
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140505518145104
 </pre></div>
 </div>
 </div>
@@ -583,13 +581,17 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140357930557008
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140505518145104
 </pre></div>
 </div>
 </div>
 </div>
 <p>This makes sense – <code class="docutils literal notranslate"><span class="pre">m</span></code> and <code class="docutils literal notranslate"><span class="pre">n</span></code> both should evaluate to <code class="docutils literal notranslate"><span class="pre">42</span></code>, so there refer to the same address, which contains <code class="docutils literal notranslate"><span class="pre">42</span></code>.</p>
 <p>So far, so boring – we just introduced one more level of indirection. Here is where things become interesting. Let’s define a list.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><button><a href="https://pythontutor.com/render.html#code=%23%20block%201%0AL%20%3D%20%5B1,%202,%203%5D%0Aid%28L%29%0A%0A%23%20block%202%0AL1%20%3D%20L%0Aid%28L1%29%0A%0A%23%20block%203%0AL%5B0%5D%20%3D%204%0Aprint%28L,%20L1%29&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank">Run in Python Tutor</a></button></div></div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
@@ -598,7 +600,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140357787541312
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140505443428480
 </pre></div>
 </div>
 </div>
@@ -612,7 +614,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140357787541312
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140505443428480
 </pre></div>
 </div>
 </div>
@@ -634,10 +636,11 @@ document.write(`
 <p>Both <code class="docutils literal notranslate"><span class="pre">L</span></code> and <code class="docutils literal notranslate"><span class="pre">L1</span></code> <em>were</em> affected by <code class="docutils literal notranslate"><span class="pre">L[0]</span> <span class="pre">=</span> <span class="pre">4</span></code>!</p>
 <p>When two variables refer to the same address, the variables are said to be <em>aliases</em> of each other. The phenomenon itself is known as <em>aliasing</em>.</p>
 <p>Note that <code class="docutils literal notranslate"><span class="pre">m</span></code> and <code class="docutils literal notranslate"><span class="pre">n</span></code> above are also aliases. It just wasn’t very important, since we cannot change the <em>contents</em> of an integer in the same way that we can change the <em>contents</em> of a list.</p>
-</section>
 <section id="mutability-and-immutability">
-<h1><span class="section-number">7.3. </span>Mutability and immutability<a class="headerlink" href="#mutability-and-immutability" title="Permalink to this heading">#</a></h1>
+<h3><span class="section-number">7.1.1.1. </span>Mutability and immutability<a class="headerlink" href="#mutability-and-immutability" title="Permalink to this heading">#</a></h3>
 <p>Objects whose contents you can change (e.g., lists) are said to be <em>mutable</em>. Objects whose contents you cannot change (e.g., <code class="docutils literal notranslate"><span class="pre">int</span></code>s and <code class="docutils literal notranslate"><span class="pre">float</span></code>s) are said to be <em>immutable</em>.</p>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -672,20 +675,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="A%20final%20go%20at%20the%20missing%20K%20problem%20.html"
+       href="title.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">7.1. </span>The Missing K Problem</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>List Copies</p>
       </div>
     </a>
     <a class="right-next"
-       href="Deep%20Copy%20%28two%20levels%20deep%29.html"
+       href="Placing%20mutable%20and%20immutable%20objects%20in%20memory.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">7.4. </span>Copying Lists</p>
+        <p class="prev-next-title"><span class="section-number">7.2. </span>Placing objects in memory</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -707,10 +710,11 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">7.2. Variables refer to addresses</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mutability-and-immutability">7.3. Mutability and immutability</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-refer-to-addresses">7.1.1. Variables refer to addresses</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mutability-and-immutability">7.1.1.1. Mutability and immutability</a></li>
 </ul>
-
+</li>
+</ul>
   </nav></div>
 
 </div></div>

@@ -219,21 +219,16 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../Lists/Loops%2C%20lists%2C%20and%20globals.html">6.6. Login System with Loops, Lists, and Globals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Lists/Missing%20K%20problem.html">6.7. The Missing Number Problem</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Lists/MissingKSorted.html">6.8. Sorted Approach to Missing Number Problem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lists/A%20final%20go%20at%20the%20missing%20K%20problem%20.html">6.9. Single Pass Missing Number Solution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Finding%20a%20winning%20move%20in%20tic-tac-toe.html">6.10. Finding a winning move in tic-tac-toe</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../List%20Copies/title.html">7. List Copies</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../List%20Copies/A%20final%20go%20at%20the%20missing%20K%20problem%20.html">7.1. The Missing K Problem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../List%20Copies/Aliasing%20and%20mutability.html">7.2. Variables refer to addresses</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../List%20Copies/Deep%20Copy%20%28two%20levels%20deep%29.html">7.4. Copying Lists</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../List%20Copies/Finding%20a%20winning%20move%20in%20tic-tac-toe.html">7.5. Finding a winning move in tic-tac-toe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../List%20Copies/Intro%20to%20shallow%20and%20deep%20copy.html">7.6. Aliasing</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="../List%20Copies/Modifying%20mutable%20objects%20inside%20functions.html">7.9. Modifying lists in functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../List%20Copies/Placing%20mutable%20and%20immutable%20objects%20in%20memory.html">7.10. Placing objects in memory</a></li>
-
-
+<li class="toctree-l2"><a class="reference internal" href="../List%20Copies/Aliasing%20and%20mutability.html">7.1. Aliasing and Mutability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../List%20Copies/Placing%20mutable%20and%20immutable%20objects%20in%20memory.html">7.2. Placing objects in memory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../List%20Copies/Intro%20to%20shallow%20and%20deep%20copy.html">7.3. First Deep Copy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../List%20Copies/Deep%20Copy%20%28two%20levels%20deep%29.html">7.4. Deep Copy (two levels deep)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../List%20Copies/Modifying%20mutable%20objects%20inside%20functions.html">7.5. Modifying lists in functions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../List%20Operations/title.html">8. List Operations</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -604,7 +599,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;aabbaababbbbaabbbaaabaaaaabbbbabbbbababbbabbbbabbbabaaaaababaababbbabaaaabbaaaabbbbabbbbbabbabbaaaaa&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;baababbaabbaabbabbbababbbbabbbaabbbabbbaabbabbbabbaaaabaaaaabbabaabbabbbabbababaabbbaabbababbabaabba&#39;
 </pre></div>
 </div>
 </div>
@@ -685,11 +680,11 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[4.852771759033203e-05,
- 8.863449096679687e-05,
- 0.00013423442840576171,
- 0.00019247055053710937,
- 0.00022966861724853515]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[8.737087249755859e-05,
+ 0.00010146141052246094,
+ 0.0001592397689819336,
+ 0.00020497798919677735,
+ 0.0002619600296020508]
 </pre></div>
 </div>
 </div>
@@ -701,11 +696,11 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.008498106002807617,
- 0.03717758178710937,
- 0.08421703815460205,
- 0.15837637901306154,
- 0.23907750129699706]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.010251641273498535,
+ 0.04327033996582031,
+ 0.09930002212524414,
+ 0.17818950176239012,
+ 0.28042510509490964]
 </pre></div>
 </div>
 </div>
@@ -726,7 +721,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;The $O(n)$ algorithm&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/94938fad9763ca888d328f49a9d1648e4aea22f168d0b94dfc657b039b4a3edd.png" src="../../_images/94938fad9763ca888d328f49a9d1648e4aea22f168d0b94dfc657b039b4a3edd.png" />
+<img alt="../../_images/619eaa57f6c49c0f52cb1d2ec7ded07845532abec3629e2b900f279b1fa64c85.png" src="../../_images/619eaa57f6c49c0f52cb1d2ec7ded07845532abec3629e2b900f279b1fa64c85.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -743,7 +738,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;The $O(n^2)$ algorithm&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/e370316d623c2108b133f413b983dece1b15e9299e402ff286a906624f764ae5.png" src="../../_images/e370316d623c2108b133f413b983dece1b15e9299e402ff286a906624f764ae5.png" />
+<img alt="../../_images/c1821da9cd7ca103dd0c46e368625b641400e4064a12b700122631fee3ed9e21.png" src="../../_images/c1821da9cd7ca103dd0c46e368625b641400e4064a12b700122631fee3ed9e21.png" />
 </div>
 </div>
 <p>We <em>could</em> try to plot both curves on the same Figure, but it won’t look good, because the scales are so different:</p>
@@ -762,7 +757,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;The $O(n)$ algorithm and the $O(n^2)$ algorithm&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/5c5e9d51a8cc7a5d789e734328ede8623630d9dedd32a244988e2a747c236ba0.png" src="../../_images/5c5e9d51a8cc7a5d789e734328ede8623630d9dedd32a244988e2a747c236ba0.png" />
+<img alt="../../_images/56e7ba53f5a804a23e34a591321cb7fd8eba6d12ab43990530d49452571a9c50.png" src="../../_images/56e7ba53f5a804a23e34a591321cb7fd8eba6d12ab43990530d49452571a9c50.png" />
 </div>
 </div>
 <p>We’d have to plot the lines on a log-scale to make things make more sense:</p>
@@ -782,7 +777,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;The $O(n)$ algorithm and $O(n^2)$ algorithm&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/395ed7000922e237d414d602c43a5ac8dbe223435d592466845b0a3eeebd5ef3.png" src="../../_images/395ed7000922e237d414d602c43a5ac8dbe223435d592466845b0a3eeebd5ef3.png" />
+<img alt="../../_images/eaf675f122e07822bae7d36dbfe75281e4f53ed25b37834f4a15f526c4016497.png" src="../../_images/eaf675f122e07822bae7d36dbfe75281e4f53ed25b37834f4a15f526c4016497.png" />
 </div>
 </div>
 </section>

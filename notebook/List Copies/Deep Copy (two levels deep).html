@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>7.4. Copying Lists &#8212; ESC180 Notes</title>
+    <title>7.4. Deep Copy (two levels deep) &#8212; ESC180 Notes</title>
   
   
   
@@ -66,8 +66,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/fav.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="7.5. Finding a winning move in tic-tac-toe" href="Finding%20a%20winning%20move%20in%20tic-tac-toe.html" />
-    <link rel="prev" title="7.2. Variables refer to addresses" href="Aliasing%20and%20mutability.html" />
+    <link rel="next" title="7.5. Modifying lists in functions" href="Modifying%20mutable%20objects%20inside%20functions.html" />
+    <link rel="prev" title="7.3. First Deep Copy" href="Intro%20to%20shallow%20and%20deep%20copy.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -219,21 +219,16 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../Lists/Loops%2C%20lists%2C%20and%20globals.html">6.6. Login System with Loops, Lists, and Globals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Lists/Missing%20K%20problem.html">6.7. The Missing Number Problem</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Lists/MissingKSorted.html">6.8. Sorted Approach to Missing Number Problem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lists/A%20final%20go%20at%20the%20missing%20K%20problem%20.html">6.9. Single Pass Missing Number Solution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Finding%20a%20winning%20move%20in%20tic-tac-toe.html">6.10. Finding a winning move in tic-tac-toe</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="title.html">7. List Copies</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="A%20final%20go%20at%20the%20missing%20K%20problem%20.html">7.1. The Missing K Problem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Aliasing%20and%20mutability.html">7.2. Variables refer to addresses</a></li>
-
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">7.4. Copying Lists</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Finding%20a%20winning%20move%20in%20tic-tac-toe.html">7.5. Finding a winning move in tic-tac-toe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Intro%20to%20shallow%20and%20deep%20copy.html">7.6. Aliasing</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="Modifying%20mutable%20objects%20inside%20functions.html">7.9. Modifying lists in functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Placing%20mutable%20and%20immutable%20objects%20in%20memory.html">7.10. Placing objects in memory</a></li>
-
-
+<li class="toctree-l2"><a class="reference internal" href="Aliasing%20and%20mutability.html">7.1. Aliasing and Mutability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Placing%20mutable%20and%20immutable%20objects%20in%20memory.html">7.2. Placing objects in memory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Intro%20to%20shallow%20and%20deep%20copy.html">7.3. First Deep Copy</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">7.4. Deep Copy (two levels deep)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Modifying%20mutable%20objects%20inside%20functions.html">7.5. Modifying lists in functions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../List%20Operations/title.html">8. List Operations</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -526,7 +521,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Copying Lists</h1>
+    <h1>Deep Copy (two levels deep)</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -554,8 +549,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="copying-lists">
-<h1><span class="section-number">7.4. </span>Copying Lists<a class="headerlink" href="#copying-lists" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="deep-copy-two-levels-deep">
+<h1><span class="section-number">7.4. </span>Deep Copy (two levels deep)<a class="headerlink" href="#deep-copy-two-levels-deep" title="Permalink to this heading">#</a></h1>
 <section id="reminder-aliasing">
 <h2><span class="section-number">7.4.1. </span>Reminder: aliasing<a class="headerlink" href="#reminder-aliasing" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
@@ -678,7 +673,16 @@ L2 =  [[1, 2], [3, 4]]
 </section>
 <section id="we-need-to-go-deeper-sometimes">
 <h2><span class="section-number">7.4.7. </span>We need to go deeper (sometimes)<a class="headerlink" href="#we-need-to-go-deeper-sometimes" title="Permalink to this heading">#</a></h2>
-<img src="deeper1.jpg"><p>Suppose the list is <code class="docutils literal notranslate"><span class="pre">L1</span> <span class="pre">=</span> <span class="pre">[[[1]]]</span></code>. Can we make a deep copy of that list using the previous method (without modifications)? No.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="../../_images/5e3315edf2d5590d7cfd67169d8199752c8eb95695313aa362d4b8adfad58a86.jpg" src="../../_images/5e3315edf2d5590d7cfd67169d8199752c8eb95695313aa362d4b8adfad58a86.jpg" />
+</div>
+</div>
+<p>Suppose the list is <code class="docutils literal notranslate"><span class="pre">L1</span> <span class="pre">=</span> <span class="pre">[[[1]]]</span></code>. Can we make a deep copy of that list using the previous method (without modifications)? No.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><button><a href="https://pythontutor.com/render.html#code=%0A%23+block+1%0AL1+%3D+%5B%5B%5B1%5D%5D%5D%0AL2+%3D+%5B%5D%0Afor+sublist+in+L1%3A%0A++++L2.append%28sublist%5B%3A%5D%29+%0A++++%0A%23+block+2%0AL2%5B0%5D%5B0%5D%5B0%5D%3D5%0A%0A%23+block+3%0AL1%5B0%5D%5B0%5D%5B0%5D%0A&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank">Run in Python Tutor</a></button></div></div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L1</span> <span class="o">=</span> <span class="p">[[[</span><span class="mi">1</span><span class="p">]]]</span>
@@ -709,6 +713,10 @@ L2 =  [[1, 2], [3, 4]]
 </div>
 </div>
 <p>The problem is that we’ve created a new list whose element is a copy of <code class="docutils literal notranslate"><span class="pre">[[1]]</span></code>. However, we never made a copy of the innermost list, <code class="docutils literal notranslate"><span class="pre">[1]</span></code>. If its contents are modified, that has an effect everywhere.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>There is often a midterm/exam question asking you to predict the final state of lists that may be deep/shallow copies of each other. Be familiar with tracing the code <em>without</em> running it.</p>
+</div>
 </section>
 </section>
 
@@ -744,20 +752,20 @@ L2 =  [[1, 2], [3, 4]]
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Aliasing%20and%20mutability.html"
+       href="Intro%20to%20shallow%20and%20deep%20copy.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">7.2. </span>Variables refer to addresses</p>
+        <p class="prev-next-title"><span class="section-number">7.3. </span>First Deep Copy</p>
       </div>
     </a>
     <a class="right-next"
-       href="Finding%20a%20winning%20move%20in%20tic-tac-toe.html"
+       href="Modifying%20mutable%20objects%20inside%20functions.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">7.5. </span>Finding a winning move in tic-tac-toe</p>
+        <p class="prev-next-title"><span class="section-number">7.5. </span>Modifying lists in functions</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
