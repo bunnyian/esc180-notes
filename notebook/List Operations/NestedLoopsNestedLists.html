@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>8.9. Nested loops and nested lists &#8212; ESC180 Notes</title>
+    <title>8.3. Nested loops and nested lists &#8212; ESC180 Notes</title>
   
   
   
@@ -68,8 +68,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/fav.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="8.10. Review of return" href="Return%20review.html" />
-    <link rel="prev" title="8.5. Nested loops" href="NestedLoops.html" />
+    <link rel="next" title="8.4. Slicing lists" href="Slicing%20lists.html" />
+    <link rel="prev" title="8.2. Nested loops" href="NestedLoops.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -235,18 +235,14 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="title.html">8. List Operations</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="Adding%20and%20extending%20lists.html">8.1. Adding lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="NestedLoops.html">8.2. Nested loops</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">8.3. Nested loops and nested lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Slicing%20lists.html">8.4. Slicing lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Slicing%20using%20range%28%29%20and%20while%28%29.html">8.5. Slicing manually using for and while loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Don%27t%20iterate%20over%20lists%20while%20modifying%20them.html">8.6. Don’t iterate over lists while modifying them</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Iterating%20over%20lists%20while%20modifying%20them%20Pt.%202.html">8.7. Iterating over lists while modifying them Pt. 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Return%20review.html">8.8. Review of <code class="docutils literal notranslate"><span class="pre">return</span></code></a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="Don%27t%20iterate%20over%20lists%20while%20modifying%20them.html">8.3. Don’t iterate over lists while modifying them</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Iterating%20over%20lists%20while%20modifying%20them%20Pt.%202.html">8.4. Iterating over lists while modifying them Pt. 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="NestedLoops.html">8.5. Nested loops</a></li>
-
-
-
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">8.9. Nested loops and nested lists</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Return%20review.html">8.10. Review of <code class="docutils literal notranslate"><span class="pre">return</span></code></a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="Slicing%20lists.html">8.12. Slicing lists</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Slicing%20using%20range%28%29%20and%20while%28%29.html">8.13. Slicing manually using for and while loops</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Working%20with%20Strings/title.html">9. Working with Strings</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -535,8 +531,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="nested-loops-and-nested-lists">
-<h1><span class="section-number">8.9. </span>Nested loops and nested lists<a class="headerlink" href="#nested-loops-and-nested-lists" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="nested-loops-and-nested-lists">
+<h1><span class="section-number">8.3. </span>Nested loops and nested lists<a class="headerlink" href="#nested-loops-and-nested-lists" title="Permalink to this heading">#</a></h1>
 <p>Suppose we want to represent a <span class="math notranslate nohighlight">\(3\times 3\)</span> square of numbers. We already saw how to do that: we can use a nested list. For example, for the square
 2  9  4
 1  5  6
@@ -556,6 +552,10 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Recall that in Python indexing begins at 0. However, in ESC103 and MAT185 indexing will begin at 1. Careful!</p>
 </div>
 <p>Recall that in order to access the second row, we can use:</p>
 <div class="cell docutils container">
@@ -663,15 +663,15 @@ now appending number at coord. 2 2
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">8.5. </span>Nested loops</p>
+        <p class="prev-next-title"><span class="section-number">8.2. </span>Nested loops</p>
       </div>
     </a>
     <a class="right-next"
-       href="Return%20review.html"
+       href="Slicing%20lists.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">8.10. </span>Review of <code class="docutils literal notranslate"><span class="pre">return</span></code></p>
+        <p class="prev-next-title"><span class="section-number">8.4. </span>Slicing lists</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

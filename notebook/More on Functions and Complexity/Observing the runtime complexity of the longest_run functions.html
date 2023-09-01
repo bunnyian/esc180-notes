@@ -233,18 +233,14 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../List%20Operations/title.html">8. List Operations</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../List%20Operations/Adding%20and%20extending%20lists.html">8.1. Adding lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../List%20Operations/NestedLoops.html">8.2. Nested loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../List%20Operations/NestedLoopsNestedLists.html">8.3. Nested loops and nested lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../List%20Operations/Slicing%20lists.html">8.4. Slicing lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../List%20Operations/Slicing%20using%20range%28%29%20and%20while%28%29.html">8.5. Slicing manually using for and while loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../List%20Operations/Don%27t%20iterate%20over%20lists%20while%20modifying%20them.html">8.6. Don’t iterate over lists while modifying them</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../List%20Operations/Iterating%20over%20lists%20while%20modifying%20them%20Pt.%202.html">8.7. Iterating over lists while modifying them Pt. 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../List%20Operations/Return%20review.html">8.8. Review of <code class="docutils literal notranslate"><span class="pre">return</span></code></a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="../List%20Operations/Don%27t%20iterate%20over%20lists%20while%20modifying%20them.html">8.3. Don’t iterate over lists while modifying them</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../List%20Operations/Iterating%20over%20lists%20while%20modifying%20them%20Pt.%202.html">8.4. Iterating over lists while modifying them Pt. 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../List%20Operations/NestedLoops.html">8.5. Nested loops</a></li>
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../List%20Operations/NestedLoopsNestedLists.html">8.9. Nested loops and nested lists</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../List%20Operations/Return%20review.html">8.10. Review of <code class="docutils literal notranslate"><span class="pre">return</span></code></a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../List%20Operations/Slicing%20lists.html">8.12. Slicing lists</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../List%20Operations/Slicing%20using%20range%28%29%20and%20while%28%29.html">8.13. Slicing manually using for and while loops</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Working%20with%20Strings/title.html">9. Working with Strings</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -599,7 +595,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;baababbaabbaabbabbbababbbbabbbaabbbabbbaabbabbbabbaaaabaaaaabbabaabbabbbabbababaabbbaabbababbabaabba&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;aaaabaababbaaabbabababababaabbaababaaabbababababaaaaabbaabbbaababbbabaabbbaaababbbabaaaaabbbaabababa&#39;
 </pre></div>
 </div>
 </div>
@@ -680,11 +676,11 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[8.737087249755859e-05,
- 0.00010146141052246094,
- 0.0001592397689819336,
- 0.00020497798919677735,
- 0.0002619600296020508]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[4.048824310302734e-05,
+ 8.131980895996093e-05,
+ 0.00012013435363769531,
+ 0.0001568746566772461,
+ 0.00019690990447998046]
 </pre></div>
 </div>
 </div>
@@ -696,11 +692,11 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.010251641273498535,
- 0.04327033996582031,
- 0.09930002212524414,
- 0.17818950176239012,
- 0.28042510509490964]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.007507681846618652,
+ 0.03137304306030273,
+ 0.07219122409820557,
+ 0.129675931930542,
+ 0.20381297111511232]
 </pre></div>
 </div>
 </div>
@@ -721,7 +717,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;The $O(n)$ algorithm&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/619eaa57f6c49c0f52cb1d2ec7ded07845532abec3629e2b900f279b1fa64c85.png" src="../../_images/619eaa57f6c49c0f52cb1d2ec7ded07845532abec3629e2b900f279b1fa64c85.png" />
+<img alt="../../_images/65645563f59a818c54f4baa24eae9a285ffb7362bfe2db009b5779756ecdf8f0.png" src="../../_images/65645563f59a818c54f4baa24eae9a285ffb7362bfe2db009b5779756ecdf8f0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -738,7 +734,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;The $O(n^2)$ algorithm&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/c1821da9cd7ca103dd0c46e368625b641400e4064a12b700122631fee3ed9e21.png" src="../../_images/c1821da9cd7ca103dd0c46e368625b641400e4064a12b700122631fee3ed9e21.png" />
+<img alt="../../_images/8794da377114b0910dc45fcf1b39f8ad2546ddf0c334685db49fc2ee1718a6f6.png" src="../../_images/8794da377114b0910dc45fcf1b39f8ad2546ddf0c334685db49fc2ee1718a6f6.png" />
 </div>
 </div>
 <p>We <em>could</em> try to plot both curves on the same Figure, but it won’t look good, because the scales are so different:</p>
@@ -757,7 +753,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;The $O(n)$ algorithm and the $O(n^2)$ algorithm&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/56e7ba53f5a804a23e34a591321cb7fd8eba6d12ab43990530d49452571a9c50.png" src="../../_images/56e7ba53f5a804a23e34a591321cb7fd8eba6d12ab43990530d49452571a9c50.png" />
+<img alt="../../_images/67dd49e6f3b71e0bf367c8c289e7474d7f252daf83b82fa34d82f22e7b992d54.png" src="../../_images/67dd49e6f3b71e0bf367c8c289e7474d7f252daf83b82fa34d82f22e7b992d54.png" />
 </div>
 </div>
 <p>We’d have to plot the lines on a log-scale to make things make more sense:</p>
@@ -777,7 +773,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;The $O(n)$ algorithm and $O(n^2)$ algorithm&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/eaf675f122e07822bae7d36dbfe75281e4f53ed25b37834f4a15f526c4016497.png" src="../../_images/eaf675f122e07822bae7d36dbfe75281e4f53ed25b37834f4a15f526c4016497.png" />
+<img alt="../../_images/b0fb30d3b0002fae5001ade6e52af10fa237f10d0a164075b3e8a13f16de5b4c.png" src="../../_images/b0fb30d3b0002fae5001ade6e52af10fa237f10d0a164075b3e8a13f16de5b4c.png" />
 </div>
 </div>
 </section>

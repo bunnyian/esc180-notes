@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>8.10. Review of return &#8212; ESC180 Notes</title>
+    <title>8.8. Review of return &#8212; ESC180 Notes</title>
   
   
   
@@ -66,8 +66,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/fav.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="8.12. Slicing lists" href="Slicing%20lists.html" />
-    <link rel="prev" title="8.9. Nested loops and nested lists" href="NestedLoopsNestedLists.html" />
+    <link rel="next" title="9. Working with Strings" href="../Working%20with%20Strings/title.html" />
+    <link rel="prev" title="8.7. Iterating over lists while modifying them Pt. 2" href="Iterating%20over%20lists%20while%20modifying%20them%20Pt.%202.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -233,18 +233,14 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="title.html">8. List Operations</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="Adding%20and%20extending%20lists.html">8.1. Adding lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="NestedLoops.html">8.2. Nested loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="NestedLoopsNestedLists.html">8.3. Nested loops and nested lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Slicing%20lists.html">8.4. Slicing lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Slicing%20using%20range%28%29%20and%20while%28%29.html">8.5. Slicing manually using for and while loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Don%27t%20iterate%20over%20lists%20while%20modifying%20them.html">8.6. Don’t iterate over lists while modifying them</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Iterating%20over%20lists%20while%20modifying%20them%20Pt.%202.html">8.7. Iterating over lists while modifying them Pt. 2</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">8.8. Review of <code class="docutils literal notranslate"><span class="pre">return</span></code></a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="Don%27t%20iterate%20over%20lists%20while%20modifying%20them.html">8.3. Don’t iterate over lists while modifying them</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Iterating%20over%20lists%20while%20modifying%20them%20Pt.%202.html">8.4. Iterating over lists while modifying them Pt. 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="NestedLoops.html">8.5. Nested loops</a></li>
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="NestedLoopsNestedLists.html">8.9. Nested loops and nested lists</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">8.10. Review of <code class="docutils literal notranslate"><span class="pre">return</span></code></a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="Slicing%20lists.html">8.12. Slicing lists</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Slicing%20using%20range%28%29%20and%20while%28%29.html">8.13. Slicing manually using for and while loops</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Working%20with%20Strings/title.html">9. Working with Strings</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -531,8 +527,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">8.10. Review of <code class="docutils literal notranslate"><span class="pre">return</span></code></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#return-stops-the-execution-of-a-function">8.11. <code class="docutils literal notranslate"><span class="pre">return</span></code> stops the execution of a function</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">8.8. Review of <code class="docutils literal notranslate"><span class="pre">return</span></code></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#return-stops-the-execution-of-a-function">8.9. <code class="docutils literal notranslate"><span class="pre">return</span></code> stops the execution of a function</a></li>
 </ul>
 
             </nav>
@@ -545,8 +541,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="review-of-return">
-<h1><span class="section-number">8.10. </span>Review of <code class="docutils literal notranslate"><span class="pre">return</span></code><a class="headerlink" href="#review-of-return" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="review-of-return">
+<h1><span class="section-number">8.8. </span>Review of <code class="docutils literal notranslate"><span class="pre">return</span></code><a class="headerlink" href="#review-of-return" title="Permalink to this heading">#</a></h1>
 <p>To review, here is what <code class="docutils literal notranslate"><span class="pre">return</span></code> does.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -567,8 +563,8 @@ document.write(`
 </div>
 <p>What is happenning here is that first, <code class="docutils literal notranslate"><span class="pre">n</span></code> gets assigned the value 50. Then, the computation happens inside the function <code class="docutils literal notranslate"><span class="pre">f()</span></code>. Finally, the value of <code class="docutils literal notranslate"><span class="pre">f(50)</span></code> becomes (<code class="docutils literal notranslate"><span class="pre">2*50+5</span></code>), i.e., <code class="docutils literal notranslate"><span class="pre">105</span></code>. That’s what gets printed.</p>
 </section>
-<section id="return-stops-the-execution-of-a-function">
-<h1><span class="section-number">8.11. </span><code class="docutils literal notranslate"><span class="pre">return</span></code> stops the execution of a function<a class="headerlink" href="#return-stops-the-execution-of-a-function" title="Permalink to this heading">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="return-stops-the-execution-of-a-function">
+<h1><span class="section-number">8.9. </span><code class="docutils literal notranslate"><span class="pre">return</span></code> stops the execution of a function<a class="headerlink" href="#return-stops-the-execution-of-a-function" title="Permalink to this heading">#</a></h1>
 <p>Here is a simple function that returns the first even number in the list <code class="docutils literal notranslate"><span class="pre">L</span></code>. For example, if <code class="docutils literal notranslate"><span class="pre">L</span> <span class="pre">=</span> <span class="pre">[3,</span> <span class="pre">5,</span> <span class="pre">7,</span> <span class="pre">1,</span> <span class="pre">10,</span> <span class="pre">3,</span> <span class="pre">2,</span> <span class="pre">8]</span></code>, we want to return <code class="docutils literal notranslate"><span class="pre">10</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -655,20 +651,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="NestedLoopsNestedLists.html"
+       href="Iterating%20over%20lists%20while%20modifying%20them%20Pt.%202.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">8.9. </span>Nested loops and nested lists</p>
+        <p class="prev-next-title"><span class="section-number">8.7. </span>Iterating over lists while modifying them Pt. 2</p>
       </div>
     </a>
     <a class="right-next"
-       href="Slicing%20lists.html"
+       href="../Working%20with%20Strings/title.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">8.12. </span>Slicing lists</p>
+        <p class="prev-next-title"><span class="section-number">9. </span>Working with Strings</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -690,8 +686,8 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">8.10. Review of <code class="docutils literal notranslate"><span class="pre">return</span></code></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#return-stops-the-execution-of-a-function">8.11. <code class="docutils literal notranslate"><span class="pre">return</span></code> stops the execution of a function</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">8.8. Review of <code class="docutils literal notranslate"><span class="pre">return</span></code></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#return-stops-the-execution-of-a-function">8.9. <code class="docutils literal notranslate"><span class="pre">return</span></code> stops the execution of a function</a></li>
 </ul>
 
   </nav></div>

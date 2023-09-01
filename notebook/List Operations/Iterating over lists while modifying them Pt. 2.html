@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>8.4. Iterating over lists while modifying them Pt. 2 &#8212; ESC180 Notes</title>
+    <title>8.7. Iterating over lists while modifying them Pt. 2 &#8212; ESC180 Notes</title>
   
   
   
@@ -66,8 +66,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/fav.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="8.5. Nested loops" href="NestedLoops.html" />
-    <link rel="prev" title="8.3. Don’t iterate over lists while modifying them" href="Don%27t%20iterate%20over%20lists%20while%20modifying%20them.html" />
+    <link rel="next" title="8.8. Review of return" href="Return%20review.html" />
+    <link rel="prev" title="8.6. Don’t iterate over lists while modifying them" href="Don%27t%20iterate%20over%20lists%20while%20modifying%20them.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -233,18 +233,14 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="title.html">8. List Operations</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="Adding%20and%20extending%20lists.html">8.1. Adding lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="NestedLoops.html">8.2. Nested loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="NestedLoopsNestedLists.html">8.3. Nested loops and nested lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Slicing%20lists.html">8.4. Slicing lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Slicing%20using%20range%28%29%20and%20while%28%29.html">8.5. Slicing manually using for and while loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Don%27t%20iterate%20over%20lists%20while%20modifying%20them.html">8.6. Don’t iterate over lists while modifying them</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">8.7. Iterating over lists while modifying them Pt. 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Return%20review.html">8.8. Review of <code class="docutils literal notranslate"><span class="pre">return</span></code></a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="Don%27t%20iterate%20over%20lists%20while%20modifying%20them.html">8.3. Don’t iterate over lists while modifying them</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">8.4. Iterating over lists while modifying them Pt. 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="NestedLoops.html">8.5. Nested loops</a></li>
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="NestedLoopsNestedLists.html">8.9. Nested loops and nested lists</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Return%20review.html">8.10. Review of <code class="docutils literal notranslate"><span class="pre">return</span></code></a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="Slicing%20lists.html">8.12. Slicing lists</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Slicing%20using%20range%28%29%20and%20while%28%29.html">8.13. Slicing manually using for and while loops</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Working%20with%20Strings/title.html">9. Working with Strings</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -534,7 +530,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="iterating-over-lists-while-modifying-them-pt-2">
-<h1><span class="section-number">8.4. </span>Iterating over lists while modifying them Pt. 2<a class="headerlink" href="#iterating-over-lists-while-modifying-them-pt-2" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">8.7. </span>Iterating over lists while modifying them Pt. 2<a class="headerlink" href="#iterating-over-lists-while-modifying-them-pt-2" title="Permalink to this heading">#</a></h1>
 <p>In the previous lecture, we saw that it’s inadvisable to iterate through a list while modifying its contents by removing (or inserting) elements. What <em>should</em> be done?</p>
 <p>One possibility is to go through the list while creating a new list:</p>
 <div class="cell docutils container">
@@ -553,6 +549,37 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</div>
+<p>What are some other ways?</p>
+<p>You could, per se, use a while loop to iterate <code class="docutils literal notranslate"><span class="pre">len(L)</span></code> times using a counter, adjusting the index accordingly when elements are removed.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">remove_4pt0</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;Remove all occurrences of 4.0 from the list L, using a while loop and adjusting index when removing, without copying the list&#39;&#39;&#39;</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mf">4.0</span><span class="p">:</span>
+            <span class="k">del</span> <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+            
+
+<span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mf">3.2</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">,</span> <span class="mf">2.3</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mf">3.9</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">]</span>
+
+<span class="n">remove_4pt0</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>          
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[3.2, 2.3, 1.5, 3.9]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>While it is technically possible to iterate through a list while modifying it, it is not recommended.</p>
 </div>
 </section>
 
@@ -593,15 +620,15 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">8.3. </span>Don’t iterate over lists while modifying them</p>
+        <p class="prev-next-title"><span class="section-number">8.6. </span>Don’t iterate over lists while modifying them</p>
       </div>
     </a>
     <a class="right-next"
-       href="NestedLoops.html"
+       href="Return%20review.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">8.5. </span>Nested loops</p>
+        <p class="prev-next-title"><span class="section-number">8.8. </span>Review of <code class="docutils literal notranslate"><span class="pre">return</span></code></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
