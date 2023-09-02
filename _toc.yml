@@ -100,7 +100,7 @@ parts:
         - file: notebook/Lists/Missing K problem.ipynb
         - file: notebook/Lists/MissingKSorted.ipynb
         - file: notebook/Lists/A final go at the missing K problem .ipynb
-        - file: notebook/Lists/Finding a winning move in tic-tac-toe.ipynb # LAB SOLUTION
+        # - file: notebook/Lists/Finding a winning move in tic-tac-toe.ipynb # LAB SOLUTION
 
       - file: notebook/List Copies/title.md
         sections:
@@ -139,27 +139,26 @@ parts:
         - file: notebook/Turtle Graphics/npsi.ipynb
         - file: notebook/Turtle Graphics/truss.ipynb
 
-      - file: notebook/Dictionaries, Tuples, Sets/title.md
+      - file: notebook/Dictionaries, Tuples, Sets/title.md 
         sections:
-        - file: notebook/Dictionaries, Tuples, Sets/A few notes on numerical stability.ipynb
+        - file: notebook/Dictionaries, Tuples, Sets/Sets.ipynb
+        - file: notebook/Dictionaries, Tuples, Sets/Tuples.ipynb
         - file: notebook/Dictionaries, Tuples, Sets/Dictionaries.ipynb
+        - file: notebook/Dictionaries, Tuples, Sets/dict.update and dict.get.ipynb
+        - file: notebook/Dictionaries, Tuples, Sets/modifying_dict.ipynb
         - file: notebook/Dictionaries, Tuples, Sets/Inverting Dictionaries, Pt. 1.ipynb
         - file: notebook/Dictionaries, Tuples, Sets/Inverting dictionaries.ipynb
-        - file: notebook/Dictionaries, Tuples, Sets/More on iterating over dictionaries.ipynb
-        - file: notebook/Dictionaries, Tuples, Sets/Sets.ipynb
         - file: notebook/Dictionaries, Tuples, Sets/Sparse matrices.ipynb
-        - file: notebook/Dictionaries, Tuples, Sets/Tuples.ipynb
-        - file: notebook/Dictionaries, Tuples, Sets/dict.update and dict.get.ipynb
-        - file: notebook/Dictionaries, Tuples, Sets/versedog.txt
+        # - file: notebook/Dictionaries, Tuples, Sets/A few notes on numerical stability.ipynb ## LAB SOLUTION
 
-      - file: notebook/Working with Files/title.md
+      - file: notebook/Working with Files/title.md ##
         sections:
         - file: notebook/Working with Files/File encoding.ipynb
         - file: notebook/Working with Files/Files Part 2.ipynb
         - file: notebook/Working with Files/Intro to files.ipynb
         - file: notebook/Working with Files/versedog.txt
 
-      - file: notebook/Sorting Algorithms and Complexity/title.md
+      - file: notebook/Sorting Algorithms and Complexity/title.md ##
         sections:
         - file: notebook/Sorting Algorithms and Complexity/A more careful analysis of Selection Sort.ipynb
         - file: notebook/Sorting Algorithms and Complexity/Bozosort.ipynb
@@ -172,7 +171,7 @@ parts:
         - file: notebook/Sorting Algorithms and Complexity/Selection Sort Runtime Complexity Analysis.ipynb
         - file: notebook/Sorting Algorithms and Complexity/Selection Sort.ipynb
 
-      - file: notebook/More on Functions and Complexity/title.md
+      - file: notebook/More on Functions and Complexity/title.md ##
         sections:
         - file: notebook/More on Functions and Complexity/Binary search.ipynb
         - file: notebook/More on Functions and Complexity/Complexity analysis for longest_run().ipynb
@@ -183,11 +182,11 @@ parts:
         - file: notebook/More on Functions and Complexity/How long does an operation take?.ipynb
         - file: notebook/More on Functions and Complexity/Observing the runtime complexity of the longest_run functions.ipynb
 
-      - file: notebook/Monte Carlo Integration/title.md
+      - file: notebook/Monte Carlo Integration/title.md ##
         sections:
         - file: notebook/Monte Carlo Integration/Computing Definite Integrals using Monte Carlo Integration.ipynb
 
-      - file: notebook/Recursion/title.md
+      - file: notebook/Recursion/title.md ##
         sections:
         - file: notebook/Recursion/Intro to recursion and n!.ipynb
         - file: notebook/Recursion/Printing forward and backward.ipynb
@@ -199,7 +198,7 @@ parts:
         - file: notebook/Recursion/is_even.ipynb
         - file: notebook/Recursion/play21.py
 
-      - file: notebook/Recursive Complexity/title.md
+      - file: notebook/Recursive Complexity/title.md ##
         sections:
         - file: notebook/Recursive Complexity/Complexity of exponentiation.ipynb
         - file: notebook/Recursive Complexity/Complexity of fib(n).ipynb
@@ -207,7 +206,7 @@ parts:
         - file: notebook/Recursive Complexity/Intro to the Complexity of Recursive Functions, fact() and slow_fact().ipynb
         - file: notebook/Recursive Complexity/Iteration using recursive functions.ipynb
 
-      - file: notebook/More Sorting/title.md
+      - file: notebook/More Sorting/title.md ##
         sections:
         - file: notebook/More Sorting/Complexity of MergeSort.ipynb
         - file: notebook/More Sorting/Insertion Sort.ipynb
@@ -215,7 +214,7 @@ parts:
         - file: notebook/More Sorting/Recursive merge.ipynb
         - file: notebook/More Sorting/We cannot do better than nlog(n).ipynb
 
-      - file: notebook/More Recursion/title.md
+      - file: notebook/More Recursion/title.md ##
         sections:
         - file: notebook/More Recursion/2015 Exam Partial Solutions.ipynb
         - file: notebook/More Recursion/Fast exponentiation.ipynb
