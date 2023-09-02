@@ -123,21 +123,21 @@ parts:
 
       - file: notebook/Working with Strings/title.md
         sections:
-        - file: notebook/Working with Strings/Anagrams.ipynb
-        - file: notebook/Working with Strings/Generating all password with variable lengths.ipynb
-        - file: notebook/Working with Strings/Generating all passwords of length n.ipynb
         - file: notebook/Working with Strings/Intro to strings.ipynb
-        - file: notebook/Working with Strings/Longest run.ipynb
-        - file: notebook/Working with Strings/Reversing strings.ipynb
-        - file: notebook/Working with Strings/State variables.ipynb
         - file: notebook/Working with Strings/String formatting.ipynb
+        - file: notebook/Working with Strings/Anagrams.ipynb
+        - file: notebook/Working with Strings/Reversing strings.ipynb
+        - file: notebook/Working with Strings/Longest run.ipynb
+        - file: notebook/Working with Strings/State variables.ipynb
         - file: notebook/Working with Strings/Transmitting a random packet.ipynb
         - file: notebook/Working with Strings/exec.ipynb
+        - file: notebook/Working with Strings/Generating all passwords of length n.ipynb
+        - file: notebook/Working with Strings/Generating all password with variable lengths.ipynb
 
       - file: notebook/Turtle Graphics/title.md
         sections:
-        - file: notebook/Turtle Graphics/npsi.py
-        - file: notebook/Turtle Graphics/truss.py
+        - file: notebook/Turtle Graphics/npsi.ipynb
+        - file: notebook/Turtle Graphics/truss.ipynb
 
       - file: notebook/Dictionaries, Tuples, Sets/title.md
         sections:
