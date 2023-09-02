@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>9.4. Intro to Strings &#8212; ESC180 Notes</title>
+    <title>9.1. Intro to Strings &#8212; ESC180 Notes</title>
   
   
   
@@ -66,8 +66,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/fav.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="9.5. Longest run" href="Longest%20run.html" />
-    <link rel="prev" title="9.3. Generating Passwords of Fixed Length n" href="Generating%20all%20passwords%20of%20length%20n.html" />
+    <link rel="next" title="9.2. String formatting" href="String%20formatting.html" />
+    <link rel="prev" title="9. Working with Strings" href="title.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -244,19 +244,22 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="title.html">9. Working with Strings</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="Anagrams.html">9.1. Anagrams</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Generating%20all%20password%20with%20variable%20lengths.html">9.2. Variable Length Password Generator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Generating%20all%20passwords%20of%20length%20n.html">9.3. Generating Passwords of Fixed Length n</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">9.4. Intro to Strings</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">9.1. Intro to Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="String%20formatting.html">9.2. String formatting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Anagrams.html">9.3. Anagrams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Reversing%20strings.html">9.4. Reversing strings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Longest%20run.html">9.5. Longest run</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Reversing%20strings.html">9.6. Reversing strings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="State%20variables.html">9.7. State Variables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="String%20formatting.html">9.8. String formatting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Transmitting%20a%20random%20packet.html">9.9. Transmitting a random packet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="exec.html">9.10. <code class="docutils literal notranslate"><span class="pre">exec</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="State%20variables.html">9.6. State Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Transmitting%20a%20random%20packet.html">9.7. Transmitting a random packet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exec.html">9.8. <code class="docutils literal notranslate"><span class="pre">exec</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Generating%20all%20passwords%20of%20length%20n.html">9.9. Generating Passwords of Fixed Length n</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Generating%20all%20password%20with%20variable%20lengths.html">9.10. Variable Length Password Generator</a></li>
+
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Turtle%20Graphics/title.html">10. Turtle Graphics</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Turtle%20Graphics/title.html">10. Turtle Graphics</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Turtle%20Graphics/npsi.html">10.1. Drawing the NΨ Logo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Turtle%20Graphics/truss.html">10.2. Drawing a Truss</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/title.html">11. Dictionaries, Tuples, Sets</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -527,7 +530,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#strings-are-immutable">9.4.1. Strings are immutable</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#strings-are-immutable">9.1.1. Strings are immutable</a></li>
 </ul>
             </nav>
         </div>
@@ -540,7 +543,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="intro-to-strings">
-<h1><span class="section-number">9.4. </span>Intro to Strings<a class="headerlink" href="#intro-to-strings" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">9.1. </span>Intro to Strings<a class="headerlink" href="#intro-to-strings" title="Permalink to this heading">#</a></h1>
 <p>We already saw how to define strings:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -549,7 +552,7 @@ document.write(`
 </div>
 </div>
 </div>
-<p>(This is the longest word in the English language, according to <a class="reference external" href="https://en.wikipedia.org/wiki/Antidisestablishmentarianism_(word)">some</a></p>
+<p>(This is the longest word in the English language, according to <a class="reference external" href="https://en.wikipedia.org/wiki/Antidisestablishmentarianism_(word)">some</a>)</p>
 <p>You can access elements just like in lists, with every letter behaving like an element. The result is a string of length 1.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -559,6 +562,18 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;a&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>str
 </pre></div>
 </div>
 </div>
@@ -770,7 +785,7 @@ C
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">s.find(a)</span></code> returns <code class="docutils literal notranslate"><span class="pre">-1</span></code> if it cannot find the index of the subtring <code class="docutils literal notranslate"><span class="pre">a</span></code> in <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
 <section id="strings-are-immutable">
-<h2><span class="section-number">9.4.1. </span>Strings are immutable<a class="headerlink" href="#strings-are-immutable" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">9.1.1. </span>Strings are immutable<a class="headerlink" href="#strings-are-immutable" title="Permalink to this heading">#</a></h2>
 <p>Strings are immutable – that means that Python does not provide you with the facilities to change their contents. You can, of course, make the string <code class="docutils literal notranslate"><span class="pre">s</span></code> refer to a new string:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -791,6 +806,25 @@ C
 <p>What you cannot do is keep <code class="docutils literal notranslate"><span class="pre">s</span></code> as the same object, but change its contents:
 s[0] = “b”</p>
 <p>would result in an error.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;abc&quot;</span>
+<span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;d&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">21</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;abc&quot;</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;d&quot;</span>
+
+<span class="ne">TypeError</span>: &#39;str&#39; object does not support item assignment
+</pre></div>
+</div>
+</div>
+</div>
 <p>You can, of course, do something like this:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -859,20 +893,20 @@ s[0] = “b”</p>
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Generating%20all%20passwords%20of%20length%20n.html"
+       href="title.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">9.3. </span>Generating Passwords of Fixed Length n</p>
+        <p class="prev-next-title"><span class="section-number">9. </span>Working with Strings</p>
       </div>
     </a>
     <a class="right-next"
-       href="Longest%20run.html"
+       href="String%20formatting.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">9.5. </span>Longest run</p>
+        <p class="prev-next-title"><span class="section-number">9.2. </span>String formatting</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -894,7 +928,7 @@ s[0] = “b”</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#strings-are-immutable">9.4.1. Strings are immutable</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#strings-are-immutable">9.1.1. Strings are immutable</a></li>
 </ul>
   </nav></div>
 
