@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>11.2. Dictionaries &#8212; ESC180 Notes</title>
+    <title>11.4. Dictionaries &#8212; ESC180 Notes</title>
   
   
   
@@ -66,8 +66,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/fav.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="11.9. Inverting Dictionaries Pt. 1" href="Inverting%20Dictionaries%2C%20Pt.%201.html" />
-    <link rel="prev" title="11.1. Notes on numerical stability" href="A%20few%20notes%20on%20numerical%20stability.html" />
+    <link rel="next" title="11.11. Accessing dictionaries" href="dict.update%20and%20dict.get.html" />
+    <link rel="prev" title="11.2. Tuples" href="Tuples.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -220,7 +220,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../Lists/Missing%20K%20problem.html">6.7. The Missing Number Problem</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Lists/MissingKSorted.html">6.8. Sorted Approach to Missing Number Problem</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Lists/A%20final%20go%20at%20the%20missing%20K%20problem%20.html">6.9. Single Pass Missing Number Solution</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Lists/Finding%20a%20winning%20move%20in%20tic-tac-toe.html">6.10. Finding a winning move in tic-tac-toe</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../List%20Copies/title.html">7. List Copies</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -263,25 +262,21 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="title.html">11. Dictionaries, Tuples, Sets</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="A%20few%20notes%20on%20numerical%20stability.html">11.1. Notes on numerical stability</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">11.2. Dictionaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Sets.html">11.1. Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tuples.html">11.2. Tuples</a></li>
+
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">11.4. Dictionaries</a></li>
 
 
 
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="Inverting%20Dictionaries%2C%20Pt.%201.html">11.9. Inverting Dictionaries Pt. 1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Inverting%20dictionaries.html">11.10. Inverting Dictionaries Pt. 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="More%20on%20iterating%20over%20dictionaries.html">11.11. Modifying dictionaries</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="Sets.html">11.14. Sets</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Sparse%20matrices.html">11.15. Sparse matrices</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Tuples.html">11.16. Tuples</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="dict.update%20and%20dict.get.html">11.19. Accessing dictionaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dict.update%20and%20dict.get.html">11.11. Accessing dictionaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modifying_dict.html">11.12. Modifying dictionaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Inverting%20Dictionaries%2C%20Pt.%201.html">11.13. Inverting Dictionaries Pt. 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Inverting%20dictionaries.html">11.14. Inverting Dictionaries Pt. 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Sparse%20matrices.html">11.15. Sparse Matrices</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Working%20with%20Files/title.html">12. Working with Files</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -530,13 +525,13 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">11.2. Dictionaries</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-dictionary-usage">11.3. Basic dictionary usage</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#using-dictionaries-to-associate-numbers-to-other-numbers">11.4. Using dictionaries to associate numbers to other numbers</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#different-types-of-values">11.5. Different types of values</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#keys-have-to-be-immutable">11.6. Keys have to be immutable</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#keys-values-and-items">11.7. Keys, values, and items</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#iterating-through-a-dictionary">11.8. Iterating through a dictionary</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">11.4. Dictionaries</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-dictionary-usage">11.5. Basic dictionary usage</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#using-dictionaries-to-associate-numbers-to-other-numbers">11.6. Using dictionaries to associate numbers to other numbers</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#different-types-of-values">11.7. Different types of values</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#keys-have-to-be-immutable">11.8. Keys have to be immutable</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#keys-values-and-items">11.9. Keys, values, and items</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#iterating-through-a-dictionary">11.10. Iterating through a dictionary</a></li>
 </ul>
 
             </nav>
@@ -549,9 +544,10 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="dictionaries">
-<h1><span class="section-number">11.2. </span>Dictionaries<a class="headerlink" href="#dictionaries" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="dictionaries">
+<h1><span class="section-number">11.4. </span>Dictionaries<a class="headerlink" href="#dictionaries" title="Permalink to this heading">#</a></h1>
 <p>Recall how we were able to associate kids with their favourite thing about Halloween on the midterm: we used two <em>parallel</em> lists:</p>
+<p>In case midterm has changed… a parallel list are lists who are related to each other by index.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">kids</span>  <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Bob&quot;</span><span class="p">,</span>   <span class="s2">&quot;Dorothy&quot;</span><span class="p">,</span>  <span class="s2">&quot;Alice&quot;</span><span class="p">]</span>
@@ -584,8 +580,8 @@ document.write(`
 <p><code class="docutils literal notranslate"><span class="pre">&quot;Bob&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;Dorothy&quot;</span></code>, and <code class="docutils literal notranslate"><span class="pre">&quot;Alice&quot;</span></code> are called <em>keys</em>. <code class="docutils literal notranslate"><span class="pre">&quot;candy&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;costumes&quot;</span></code>, and  <code class="docutils literal notranslate"><span class="pre">&quot;midterms&quot;</span></code> are called <em>values</em>. We can access the <em>value</em> associted with the <em>key</em> <code class="docutils literal notranslate"><span class="pre">k</span></code> in a dictionary <code class="docutils literal notranslate"><span class="pre">d</span></code> using <code class="docutils literal notranslate"><span class="pre">d[k]</span></code>. That is what we do when we go <code class="docutils literal notranslate"><span class="pre">faves[&quot;Alice&quot;]</span></code>.</p>
 <p>The dictionary <code class="docutils literal notranslate"><span class="pre">faves</span></code> is defined inside the curly braces, with keys and values separated by <code class="docutils literal notranslate"><span class="pre">:</span></code>, and with entries (i.e., key-value pairs) separated by commas.</p>
 </section>
-<section id="basic-dictionary-usage">
-<h1><span class="section-number">11.3. </span>Basic dictionary usage<a class="headerlink" href="#basic-dictionary-usage" title="Permalink to this heading">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="basic-dictionary-usage">
+<h1><span class="section-number">11.5. </span>Basic dictionary usage<a class="headerlink" href="#basic-dictionary-usage" title="Permalink to this heading">#</a></h1>
 <p>Let’s define a new dictionary, <code class="docutils literal notranslate"><span class="pre">grades</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -655,8 +651,8 @@ document.write(`
 </div>
 </div>
 </section>
-<section id="using-dictionaries-to-associate-numbers-to-other-numbers">
-<h1><span class="section-number">11.4. </span>Using dictionaries to associate numbers to other numbers<a class="headerlink" href="#using-dictionaries-to-associate-numbers-to-other-numbers" title="Permalink to this heading">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="using-dictionaries-to-associate-numbers-to-other-numbers">
+<h1><span class="section-number">11.6. </span>Using dictionaries to associate numbers to other numbers<a class="headerlink" href="#using-dictionaries-to-associate-numbers-to-other-numbers" title="Permalink to this heading">#</a></h1>
 <p>Let’s store the UofT endowment (in millions of dollars) in different years</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -667,8 +663,8 @@ document.write(`
 </div>
 <p>Note that we <em>could</em> use a list, but that would require us to also have endowment[0], endowment[1], etc.</p>
 </section>
-<section id="different-types-of-values">
-<h1><span class="section-number">11.5. </span>Different types of values<a class="headerlink" href="#different-types-of-values" title="Permalink to this heading">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="different-types-of-values">
+<h1><span class="section-number">11.7. </span>Different types of values<a class="headerlink" href="#different-types-of-values" title="Permalink to this heading">#</a></h1>
 <p>Back to grades:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -707,8 +703,8 @@ document.write(`
 </div>
 </div>
 </section>
-<section id="keys-have-to-be-immutable">
-<h1><span class="section-number">11.6. </span>Keys have to be immutable<a class="headerlink" href="#keys-have-to-be-immutable" title="Permalink to this heading">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="keys-have-to-be-immutable">
+<h1><span class="section-number">11.8. </span>Keys have to be immutable<a class="headerlink" href="#keys-have-to-be-immutable" title="Permalink to this heading">#</a></h1>
 <p>Keys in a dictionary have to be immutable. The following doesn’t work:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -731,8 +727,8 @@ document.write(`
 </div>
 <p>Why not? Basically, it’s unclear what should happen if we go <code class="docutils literal notranslate"><span class="pre">L[0]</span> <span class="pre">=</span> <span class="pre">15</span></code>. Should <code class="docutils literal notranslate"><span class="pre">grades[L]</span></code> be the same, or hsould <code class="docutils literal notranslate"><span class="pre">5</span></code> always be <code class="docutils literal notranslate"><span class="pre">grades[[1,</span> <span class="pre">2]]</span></code>? We could make the choice, in principle, but, for various reasons, Python simply doesn’t allow for keys to be mutable.</p>
 </section>
-<section id="keys-values-and-items">
-<h1><span class="section-number">11.7. </span>Keys, values, and items<a class="headerlink" href="#keys-values-and-items" title="Permalink to this heading">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="keys-values-and-items">
+<h1><span class="section-number">11.9. </span>Keys, values, and items<a class="headerlink" href="#keys-values-and-items" title="Permalink to this heading">#</a></h1>
 <p>Here is how you can get the list of all the keys in a dictionary:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -823,8 +819,8 @@ document.write(`
 </div>
 </div>
 </section>
-<section id="iterating-through-a-dictionary">
-<h1><span class="section-number">11.8. </span>Iterating through a dictionary<a class="headerlink" href="#iterating-through-a-dictionary" title="Permalink to this heading">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="iterating-through-a-dictionary">
+<h1><span class="section-number">11.10. </span>Iterating through a dictionary<a class="headerlink" href="#iterating-through-a-dictionary" title="Permalink to this heading">#</a></h1>
 <p>We can iterate through the keys, as we saw above:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -855,6 +851,16 @@ I got 95 in ESC
 I got 95 in MAT
 I got 87 in CSC
 I got 95 in ESC
+</pre></div>
+</div>
+</div>
+</div>
+<p>A generic version of the above:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dictionary</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -895,20 +901,20 @@ I got 95 in ESC
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="A%20few%20notes%20on%20numerical%20stability.html"
+       href="Tuples.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">11.1. </span>Notes on numerical stability</p>
+        <p class="prev-next-title"><span class="section-number">11.2. </span>Tuples</p>
       </div>
     </a>
     <a class="right-next"
-       href="Inverting%20Dictionaries%2C%20Pt.%201.html"
+       href="dict.update%20and%20dict.get.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">11.9. </span>Inverting Dictionaries Pt. 1</p>
+        <p class="prev-next-title"><span class="section-number">11.11. </span>Accessing dictionaries</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -930,13 +936,13 @@ I got 95 in ESC
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">11.2. Dictionaries</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-dictionary-usage">11.3. Basic dictionary usage</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#using-dictionaries-to-associate-numbers-to-other-numbers">11.4. Using dictionaries to associate numbers to other numbers</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#different-types-of-values">11.5. Different types of values</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#keys-have-to-be-immutable">11.6. Keys have to be immutable</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#keys-values-and-items">11.7. Keys, values, and items</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#iterating-through-a-dictionary">11.8. Iterating through a dictionary</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">11.4. Dictionaries</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-dictionary-usage">11.5. Basic dictionary usage</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#using-dictionaries-to-associate-numbers-to-other-numbers">11.6. Using dictionaries to associate numbers to other numbers</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#different-types-of-values">11.7. Different types of values</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#keys-have-to-be-immutable">11.8. Keys have to be immutable</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#keys-values-and-items">11.9. Keys, values, and items</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#iterating-through-a-dictionary">11.10. Iterating through a dictionary</a></li>
 </ul>
 
   </nav></div>

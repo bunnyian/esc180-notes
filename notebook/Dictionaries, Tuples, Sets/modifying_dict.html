@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>6.10. Finding a winning move in tic-tac-toe &#8212; ESC180 Notes</title>
+    <title>11.12. Modifying dictionaries &#8212; ESC180 Notes</title>
   
   
   
@@ -61,13 +61,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebook/Lists/Finding a winning move in tic-tac-toe';</script>
-    <link rel="canonical" href="https://bunnyian.github.io/esc180-notes/notebook/Lists/Finding a winning move in tic-tac-toe.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebook/Dictionaries, Tuples, Sets/modifying_dict';</script>
+    <link rel="canonical" href="https://bunnyian.github.io/esc180-notes/notebook/Dictionaries, Tuples, Sets/modifying_dict.html" />
     <link rel="shortcut icon" href="../../_static/fav.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="7. List Copies" href="../List%20Copies/title.html" />
-    <link rel="prev" title="6.9. Single Pass Missing Number Solution" href="A%20final%20go%20at%20the%20missing%20K%20problem%20.html" />
+    <link rel="next" title="11.13. Inverting Dictionaries Pt. 1" href="Inverting%20Dictionaries%2C%20Pt.%201.html" />
+    <link rel="prev" title="11.11. Accessing dictionaries" href="dict.update%20and%20dict.get.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -210,17 +210,16 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../Functions/Counting%20trailing%20zeros%20--%20Solution.html">5.9. Counting trailing zeros in n!</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="title.html">6. Lists</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="Lists.html">6.1. Lists</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Lists%20II.html">6.2. More on Lists in Python</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Lists%20III.html">6.3. <code class="docutils literal notranslate"><span class="pre">list.insert()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="Lists%20IV.html">6.4. <code class="docutils literal notranslate"><span class="pre">list.extend()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="Lists%20V.html">6.5. Accessing list elements: last element, negative indices, middle</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Loops%2C%20lists%2C%20and%20globals.html">6.6. Login System with Loops, Lists, and Globals</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Missing%20K%20problem.html">6.7. The Missing Number Problem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="MissingKSorted.html">6.8. Sorted Approach to Missing Number Problem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="A%20final%20go%20at%20the%20missing%20K%20problem%20.html">6.9. Single Pass Missing Number Solution</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">6.10. Finding a winning move in tic-tac-toe</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Lists/title.html">6. Lists</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Lists.html">6.1. Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Lists%20II.html">6.2. More on Lists in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Lists%20III.html">6.3. <code class="docutils literal notranslate"><span class="pre">list.insert()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Lists%20IV.html">6.4. <code class="docutils literal notranslate"><span class="pre">list.extend()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Lists%20V.html">6.5. Accessing list elements: last element, negative indices, middle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Loops%2C%20lists%2C%20and%20globals.html">6.6. Login System with Loops, Lists, and Globals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lists/Missing%20K%20problem.html">6.7. The Missing Number Problem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lists/MissingKSorted.html">6.8. Sorted Approach to Missing Number Problem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lists/A%20final%20go%20at%20the%20missing%20K%20problem%20.html">6.9. Single Pass Missing Number Solution</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../List%20Copies/title.html">7. List Copies</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -262,26 +261,22 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../Turtle%20Graphics/truss.html">10.2. Drawing a Truss</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/title.html">11. Dictionaries, Tuples, Sets</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/A%20few%20notes%20on%20numerical%20stability.html">11.1. Notes on numerical stability</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/Dictionaries.html">11.2. Dictionaries</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="title.html">11. Dictionaries, Tuples, Sets</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Sets.html">11.1. Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tuples.html">11.2. Tuples</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="Dictionaries.html">11.4. Dictionaries</a></li>
 
 
 
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/Inverting%20Dictionaries%2C%20Pt.%201.html">11.9. Inverting Dictionaries Pt. 1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/Inverting%20dictionaries.html">11.10. Inverting Dictionaries Pt. 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/More%20on%20iterating%20over%20dictionaries.html">11.11. Modifying dictionaries</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/Sets.html">11.14. Sets</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/Sparse%20matrices.html">11.15. Sparse matrices</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/Tuples.html">11.16. Tuples</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/dict.update%20and%20dict.get.html">11.19. Accessing dictionaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dict.update%20and%20dict.get.html">11.11. Accessing dictionaries</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">11.12. Modifying dictionaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Inverting%20Dictionaries%2C%20Pt.%201.html">11.13. Inverting Dictionaries Pt. 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Inverting%20dictionaries.html">11.14. Inverting Dictionaries Pt. 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Sparse%20matrices.html">11.15. Sparse Matrices</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Working%20with%20Files/title.html">12. Working with Files</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -439,7 +434,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/bunnyian/esc180-notes/edit/main/notebook/Lists/Finding a winning move in tic-tac-toe.ipynb" target="_blank"
+      <li><a href="https://github.com/bunnyian/esc180-notes/edit/main/notebook/Dictionaries, Tuples, Sets/modifying_dict.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -456,7 +451,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/bunnyian/esc180-notes/issues/new?title=Issue%20on%20page%20%2Fnotebook/Lists/Finding a winning move in tic-tac-toe.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/bunnyian/esc180-notes/issues/new?title=Issue%20on%20page%20%2Fnotebook/Dictionaries, Tuples, Sets/modifying_dict.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -507,7 +502,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -518,11 +515,20 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Finding a winning move in tic-tac-toe</h1>
+    <h1>Modifying dictionaries</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-note-on-modifying-dictionaries-inside-of-functions">11.12.1. A note on modifying dictionaries inside of functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clearing-a-dictionary">11.12.2. Clearing a dictionary</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -532,52 +538,231 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="finding-a-winning-move-in-tic-tac-toe">
-<h1><span class="section-number">6.10. </span>Finding a winning move in tic-tac-toe<a class="headerlink" href="#finding-a-winning-move-in-tic-tac-toe" title="Permalink to this heading">#</a></h1>
-<p>Let’s look in a little more detail at the solution to Lab 6.</p>
-<p>Here is the <code class="docutils literal notranslate"><span class="pre">make_computer_move_attack(board,</span> <span class="pre">mark)</span></code> function. The function makes use of the <code class="docutils literal notranslate"><span class="pre">is_win(board,</span> <span class="pre">mark)</span></code> function, which returns <code class="docutils literal notranslate"><span class="pre">True</span></code> iff <code class="docutils literal notranslate"><span class="pre">mark</span></code> has won on board <code class="docutils literal notranslate"><span class="pre">board</span></code>. The strategy is to try every possible move, see if it resulted in a win, return (and stop the execution of the function) if it did, and undo it if it didn’t.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="modifying-dictionaries">
+<h1><span class="section-number">11.12. </span>Modifying dictionaries<a class="headerlink" href="#modifying-dictionaries" title="Permalink to this heading">#</a></h1>
+<p>We can remove items from dictionaries using the <code class="docutils literal notranslate"><span class="pre">del</span></code> operator.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">make_computer_move_attack</span><span class="p">(</span><span class="n">board</span><span class="p">,</span> <span class="n">mark</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;If possible, make a winning move using mark mark on the board. If not,</span>
-<span class="sd">    put the mark mark in the first available square, where we&#39;re going </span>
-<span class="sd">    through the square in the order</span>
-<span class="sd">    for i in range(3):</span>
-<span class="sd">      for j in range(3)</span>
-<span class="sd">      </span>
-<span class="sd">    Aruguments:</span>
-<span class="sd">    board -- a list of lists of strings representing a 3x3 table of &quot; &quot;, &quot;X&quot;, and &quot;O&quot;. Assume board is not full.</span>
-<span class="sd">    mark -- &quot;X&quot; or &quot;O&quot;</span>
-<span class="sd">    &#39;&#39;&#39;</span>
-    
-    <span class="c1">#First, we look through all the squares and</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
-            <span class="c1">#Only try to make the move at (i, j)</span>
-            <span class="c1">#if the square is current empty</span>
-            <span class="k">if</span> <span class="n">board</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot; &quot;</span><span class="p">:</span>
-                <span class="n">board</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">mark</span>
-                <span class="k">if</span> <span class="n">is_win</span><span class="p">(</span><span class="n">board</span><span class="p">,</span> <span class="n">mark</span><span class="p">):</span>
-                    <span class="c1">#We found the winning move -- keep the move</span>
-                    <span class="c1">#on the board, and stop the function</span>
-                    <span class="k">return</span>
-                
-                <span class="c1">#is_win(board, mark) is False, so we should undo</span>
-                <span class="c1">#the move and keep going.</span>
-                <span class="n">board</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span>
-            
-    <span class="c1">#If we reached this point, we haven&#39;t found a winning move. Go</span>
-    <span class="c1">#through the board until we find an empty square, put mark</span>
-    <span class="c1">#there, and return</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
-            <span class="k">if</span> <span class="n">board</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot; &quot;</span><span class="p">:</span>
-                <span class="n">board</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">mark</span>
-                <span class="k">return</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grades</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;PHY&quot;</span><span class="p">:</span> <span class="s2">&quot;A+&quot;</span><span class="p">,</span> <span class="s2">&quot;CIV&quot;</span><span class="p">:</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;CSC&quot;</span><span class="p">:</span> <span class="s2">&quot;A+&quot;</span><span class="p">,</span> <span class="s2">&quot;ESC&quot;</span><span class="p">:</span><span class="s2">&quot;B+&quot;</span><span class="p">}</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p>Suppose we want to remove the entry with the key <code class="docutils literal notranslate"><span class="pre">&quot;PHY&quot;</span></code>. This is done similarly to removing elements from lists by specifying elements at what index we want to remove:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">del</span> <span class="n">grades</span><span class="p">[</span><span class="s2">&quot;PHY&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grades</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;CIV&#39;: &#39;A&#39;, &#39;CSC&#39;: &#39;A+&#39;, &#39;ESC&#39;: &#39;B+&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can also remove all the entries at ones:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grades</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span class="n">grades</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{}
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s restore the grades to what they were, and try to remove some of the entries according to their values (note that there’s no easy way to do this – <code class="docutils literal notranslate"><span class="pre">del</span></code> only removes entries using their <em>keys</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grades</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;PHY&quot;</span><span class="p">:</span> <span class="s2">&quot;A+&quot;</span><span class="p">,</span> <span class="s2">&quot;CIV&quot;</span><span class="p">:</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;CSC&quot;</span><span class="p">:</span> <span class="s2">&quot;A+&quot;</span><span class="p">,</span> <span class="s2">&quot;ESC&quot;</span><span class="p">:</span><span class="s2">&quot;B+&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">correct_transcript_bad</span><span class="p">(</span><span class="n">grades</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">course</span> <span class="ow">in</span> <span class="n">grades</span><span class="p">:</span>
+        <span class="c1">#grades[course] is a grade, like &quot;B+&quot; or &quot;A&quot;. We </span>
+        <span class="c1">#are checking whether grades[course] is &quot;A&quot; ор &quot;А+&quot;</span>
+        <span class="k">if</span> <span class="n">grades</span><span class="p">[</span><span class="n">course</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;A+&quot;</span><span class="p">]:</span>
+            <span class="k">del</span> <span class="n">grades</span><span class="p">[</span><span class="n">course</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">correct_transcript_bad</span><span class="p">(</span><span class="n">grades</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">RuntimeError</span><span class="g g-Whitespace">                              </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">correct_transcript_bad</span><span class="p">(</span><span class="n">grades</span><span class="p">)</span>
+
+<span class="nn">Cell In[6], line 2,</span> in <span class="ni">correct_transcript_bad</span><span class="nt">(grades)</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="k">def</span> <span class="nf">correct_transcript_bad</span><span class="p">(</span><span class="n">grades</span><span class="p">):</span>
+<span class="ne">----&gt; </span><span class="mi">2</span>     <span class="k">for</span> <span class="n">course</span> <span class="ow">in</span> <span class="n">grades</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span>         <span class="c1">#grades[course] is a grade, like &quot;B+&quot; or &quot;A&quot;. We </span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>         <span class="c1">#are checking whether grades[course] is &quot;A&quot; ор &quot;А+&quot;</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>         <span class="k">if</span> <span class="n">grades</span><span class="p">[</span><span class="n">course</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;A+&quot;</span><span class="p">]:</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span>             <span class="k">del</span> <span class="n">grades</span><span class="p">[</span><span class="n">course</span><span class="p">]</span>
+
+<span class="ne">RuntimeError</span>: dictionary changed size during iteration
+</pre></div>
+</div>
+</div>
+</div>
+<p>This results in an error. The reason we get an error is that, just like with lists, <strong>we cannot iterate over dictionaries while modifying their contents.</strong></p>
+<p>Here is how to avoid the error: create a list of all the keys in the dictionary (that will from there on be independent of the dictionary), and go over all the keys, deleting the entries corresponding to them one-by-one.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">remove_bad_grades</span><span class="p">(</span><span class="n">grades</span><span class="p">):</span>
+    <span class="c1">#The following is fine, since list(grades.keys()), once created</span>
+    <span class="c1">#is not updated and is independent of the dictionary</span>
+    <span class="k">for</span> <span class="n">subj</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">grades</span><span class="o">.</span><span class="n">keys</span><span class="p">()):</span> 
+        <span class="k">if</span> <span class="n">grades</span><span class="p">[</span><span class="n">subj</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;A+&quot;</span><span class="p">]:</span>
+            <span class="k">del</span> <span class="n">grades</span><span class="p">[</span><span class="n">subj</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The function above is equivalent to doing something like:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>if grades[&quot;CIV&quot;] not in [&quot;A&quot;, &quot;A+&quot;]:
+    del grades[&quot;CIV&quot;]
+
+if grades[&quot;CSC&quot;] not in [&quot;A&quot;, &quot;A+&quot;]:
+    del grades[&quot;CSC&quot;]
+ 
+#... 
+</pre></div>
+</div>
+<p>which is completely fine.</p>
+<section id="a-note-on-modifying-dictionaries-inside-of-functions">
+<h2><span class="section-number">11.12.1. </span>A note on modifying dictionaries inside of functions<a class="headerlink" href="#a-note-on-modifying-dictionaries-inside-of-functions" title="Permalink to this heading">#</a></h2>
+<p>Note that we can modify the contents of a dictionary. That means that what we’ve been doing above makes sense: you can write a function that modifies the contents of a dictionary, and it would make sense to call it in order to modify a dictionary</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><button><a href="https://pythontutor.com/render.html#code=%0Agrades+%3D+%7B%22PHY%22%3A+%22A%2B%22%2C+%22CIV%22%3A+%22A%22%2C+%22CSC%22%3A+%22A%2B%22%2C+%22ESC%22%3A%22B%2B%22%7D%0A%0Adef+make_CSC_100%28grades%29%3A%0A++++grades%5B%22CSC%22%5D+%3D+100+%23has+an+effect+outside+the+function%2C%0A++++++++++++++++++++++++%23since+grades+is+an+alias+of+a+dictionary%0A++++++++++++++++++++++++%23that+exists+outside+the+function%0A%0Amake_CSC_100%28grades%29%0A&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank">Run in Python Tutor</a></button></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">make_CSC_100</span><span class="p">(</span><span class="n">grades</span><span class="p">):</span>
+    <span class="n">grades</span><span class="p">[</span><span class="s2">&quot;CSC&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span> <span class="c1">#has an effect outside the function,</span>
+                        <span class="c1">#since grades is an alias of a dictionary</span>
+                        <span class="c1">#that exists outside the function</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="clearing-a-dictionary">
+<h2><span class="section-number">11.12.2. </span>Clearing a dictionary<a class="headerlink" href="#clearing-a-dictionary" title="Permalink to this heading">#</a></h2>
+<p>The function below still doesn’t make sense, since it doesn’t modify the contents of the dictionary, but rather makes the local variable <code class="docutils literal notranslate"><span class="pre">grades</span></code> refer to a new dictionary:</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><button><a href="https://pythontutor.com/render.html#code=%0Agrades+%3D+%7B%22PHY%22%3A+%22A%2B%22%2C+%22CIV%22%3A+%22A%22%2C+%22CSC%22%3A+%22A%2B%22%2C+%22ESC%22%3A%22B%2B%22%7D%0Adef+drop_everything%28grades%29%3A%0A++++grades+%3D+%7B%7D+%23doesn%27t+have+an+effect+outside+the+function%0A++++%0Adrop_everything%28grades%29%0A&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank">Run in Python Tutor</a></button></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">drop_everything</span><span class="p">(</span><span class="n">grades</span><span class="p">):</span>
+    <span class="n">grades</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1">#doesn&#39;t have an effect outside the function</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>But the following function does make sense:</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><button><a href="https://pythontutor.com/render.html#code=%0Agrades+%3D+%7B%22PHY%22%3A+%22A%2B%22%2C+%22CIV%22%3A+%22A%22%2C+%22CSC%22%3A+%22A%2B%22%2C+%22ESC%22%3A%22B%2B%22%7D%0Adef+drop_everything%28grades%29%3A%0A++++grades.clear%28%29+%23.clear%28%29+changes+the+contents+of+grades%0A++++%0Adrop_everything%28grades%29%0A&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank">Run in Python Tutor</a></button></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">drop_everything</span><span class="p">(</span><span class="n">grades</span><span class="p">):</span>
+    <span class="n">grades</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span> <span class="c1">#.clear() changes the contents of grades</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here is another function that makes sense:</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><button><a href="https://pythontutor.com/render.html#code=%0Agrades+%3D+%7B%22PHY%22%3A+%22A%2B%22%2C+%22CIV%22%3A+%22A%22%2C+%22CSC%22%3A+%22A%2B%22%2C+%22ESC%22%3A%22B%2B%22%7D%0A%0Adef+drop_everything%28grades%29%3A%0A++++for+subj+in+list%28grades.keys%28%29%29%3A+%0A++++++++del+grades%5Bsubj%5D%0A++++++++++++%0Adrop_everything%28grades%29%0A&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank">Run in Python Tutor</a></button></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">drop_everything</span><span class="p">(</span><span class="n">grades</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">subj</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">grades</span><span class="o">.</span><span class="n">keys</span><span class="p">()):</span> 
+        <span class="k">del</span> <span class="n">grades</span><span class="p">[</span><span class="n">subj</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Finally, here’s another idea. A way to get some key in the dictionary grades is to get a list of all the keys:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="n">grades</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;CIV&#39;, &#39;CSC&#39;, &#39;PHY&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can get the first element of this list:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="n">grades</span><span class="o">.</span><span class="n">keys</span><span class="p">())[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;CIV&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>We could, if we wanted, delete the entry that corresponds to this key:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">del</span> <span class="n">grades</span><span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="n">grades</span><span class="o">.</span><span class="n">keys</span><span class="p">())[</span><span class="mi">0</span><span class="p">]]</span>
+<span class="n">grades</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;CSC&#39;: &#39;A+&#39;, &#39;PHY&#39;: &#39;A+&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here is the final version of <code class="docutils literal notranslate"><span class="pre">drop_everything()</span></code> that uses this idea:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">drop_everything2</span><span class="p">(</span><span class="n">grades</span><span class="p">):</span>
+    <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">grades</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">del</span> <span class="n">grades</span><span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="n">grades</span><span class="o">.</span><span class="n">keys</span><span class="p">())[</span><span class="mi">0</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -593,7 +778,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./notebook/Lists"
+            path: "./notebook/Dictionaries, Tuples, Sets"
         },
         predefinedOutput: true
     }
@@ -612,20 +797,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="A%20final%20go%20at%20the%20missing%20K%20problem%20.html"
+       href="dict.update%20and%20dict.get.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">6.9. </span>Single Pass Missing Number Solution</p>
+        <p class="prev-next-title"><span class="section-number">11.11. </span>Accessing dictionaries</p>
       </div>
     </a>
     <a class="right-next"
-       href="../List%20Copies/title.html"
+       href="Inverting%20Dictionaries%2C%20Pt.%201.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">7. </span>List Copies</p>
+        <p class="prev-next-title"><span class="section-number">11.13. </span>Inverting Dictionaries Pt. 1</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -638,6 +823,21 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-note-on-modifying-dictionaries-inside-of-functions">11.12.1. A note on modifying dictionaries inside of functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clearing-a-dictionary">11.12.2. Clearing a dictionary</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>11.16. Tuples &#8212; ESC180 Notes</title>
+    <title>11.2. Tuples &#8212; ESC180 Notes</title>
   
   
   
@@ -66,8 +66,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/fav.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="11.19. Accessing dictionaries" href="dict.update%20and%20dict.get.html" />
-    <link rel="prev" title="11.15. Sparse matrices" href="Sparse%20matrices.html" />
+    <link rel="next" title="11.4. Dictionaries" href="Dictionaries.html" />
+    <link rel="prev" title="11.1. Sets" href="Sets.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -220,7 +220,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../Lists/Missing%20K%20problem.html">6.7. The Missing Number Problem</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Lists/MissingKSorted.html">6.8. Sorted Approach to Missing Number Problem</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Lists/A%20final%20go%20at%20the%20missing%20K%20problem%20.html">6.9. Single Pass Missing Number Solution</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Lists/Finding%20a%20winning%20move%20in%20tic-tac-toe.html">6.10. Finding a winning move in tic-tac-toe</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../List%20Copies/title.html">7. List Copies</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -263,25 +262,21 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="title.html">11. Dictionaries, Tuples, Sets</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="A%20few%20notes%20on%20numerical%20stability.html">11.1. Notes on numerical stability</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Dictionaries.html">11.2. Dictionaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Sets.html">11.1. Sets</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">11.2. Tuples</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="Dictionaries.html">11.4. Dictionaries</a></li>
 
 
 
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="Inverting%20Dictionaries%2C%20Pt.%201.html">11.9. Inverting Dictionaries Pt. 1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Inverting%20dictionaries.html">11.10. Inverting Dictionaries Pt. 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="More%20on%20iterating%20over%20dictionaries.html">11.11. Modifying dictionaries</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="Sets.html">11.14. Sets</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Sparse%20matrices.html">11.15. Sparse matrices</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">11.16. Tuples</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="dict.update%20and%20dict.get.html">11.19. Accessing dictionaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dict.update%20and%20dict.get.html">11.11. Accessing dictionaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modifying_dict.html">11.12. Modifying dictionaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Inverting%20Dictionaries%2C%20Pt.%201.html">11.13. Inverting Dictionaries Pt. 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Inverting%20dictionaries.html">11.14. Inverting Dictionaries Pt. 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Sparse%20matrices.html">11.15. Sparse Matrices</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Working%20with%20Files/title.html">12. Working with Files</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -530,9 +525,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">11.16. Tuples</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#immutability-of-tuples">11.17. Immutability of tuples</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#upacking-tuples">11.18. Upacking tuples</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">11.2. Tuples</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#immutability-of-tuples">11.2.1. Immutability of tuples</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#upacking-tuples">11.3. Upacking tuples</a></li>
 </ul>
 
             </nav>
@@ -545,8 +542,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="tuples">
-<h1><span class="section-number">11.16. </span>Tuples<a class="headerlink" href="#tuples" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="tuples">
+<h1><span class="section-number">11.2. </span>Tuples<a class="headerlink" href="#tuples" title="Permalink to this heading">#</a></h1>
 <p>Tuples are another object type in Python. Tuples are like lists, except that tuples are immutable. Here is how a tuple is defined:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -600,9 +597,8 @@ document.write(`
 </div>
 </div>
 </div>
-</section>
 <section id="immutability-of-tuples">
-<h1><span class="section-number">11.17. </span>Immutability of tuples<a class="headerlink" href="#immutability-of-tuples" title="Permalink to this heading">#</a></h1>
+<h2><span class="section-number">11.2.1. </span>Immutability of tuples<a class="headerlink" href="#immutability-of-tuples" title="Permalink to this heading">#</a></h2>
 <p>Tuples are <em>immutable</em>. That means we cannot modify their contents:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -654,8 +650,9 @@ document.write(`
 </div>
 </div>
 </section>
-<section id="upacking-tuples">
-<h1><span class="section-number">11.18. </span>Upacking tuples<a class="headerlink" href="#upacking-tuples" title="Permalink to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="upacking-tuples">
+<h1><span class="section-number">11.3. </span>Upacking tuples<a class="headerlink" href="#upacking-tuples" title="Permalink to this heading">#</a></h1>
 <p>We often want to <em>unpack</em> tuples. That means that for a tuple <code class="docutils literal notranslate"><span class="pre">t</span></code>, we want to put <code class="docutils literal notranslate"><span class="pre">t[0]</span></code> in one variable, <code class="docutils literal notranslate"><span class="pre">t[1]</span></code> in another variable, and so on. Here is how this works:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -714,6 +711,18 @@ document.write(`
 <p>Here, the function <code class="docutils literal notranslate"><span class="pre">f()</span></code> actually returns the tuple <code class="docutils literal notranslate"><span class="pre">(42,</span> <span class="pre">43)</span></code>, which then gets unpacked into the variables <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code>. We alternatively could use <code class="docutils literal notranslate"><span class="pre">f()</span></code> as follows:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">f</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tuple
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">f</span><span class="p">()</span>
 <span class="n">a</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">b</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
@@ -755,20 +764,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Sparse%20matrices.html"
+       href="Sets.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">11.15. </span>Sparse matrices</p>
+        <p class="prev-next-title"><span class="section-number">11.1. </span>Sets</p>
       </div>
     </a>
     <a class="right-next"
-       href="dict.update%20and%20dict.get.html"
+       href="Dictionaries.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">11.19. </span>Accessing dictionaries</p>
+        <p class="prev-next-title"><span class="section-number">11.4. </span>Dictionaries</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -790,9 +799,11 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">11.16. Tuples</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#immutability-of-tuples">11.17. Immutability of tuples</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#upacking-tuples">11.18. Upacking tuples</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">11.2. Tuples</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#immutability-of-tuples">11.2.1. Immutability of tuples</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#upacking-tuples">11.3. Upacking tuples</a></li>
 </ul>
 
   </nav></div>
