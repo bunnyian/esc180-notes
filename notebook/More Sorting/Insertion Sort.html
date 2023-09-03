@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>18.2. Complexity of Insertion Sort &#8212; ESC180 Notes</title>
+    <title>18.1. Complexity of Insertion Sort &#8212; ESC180 Notes</title>
   
   
   
@@ -68,8 +68,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/fav.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="18.3. Merge Sort" href="Intro%20to%20MergeSort.html" />
-    <link rel="prev" title="18.1. Complexity of MergeSort" href="Complexity%20of%20MergeSort.html" />
+    <link rel="next" title="18.2. Merge Sort" href="Intro%20to%20MergeSort.html" />
+    <link rel="prev" title="18. More Sorting" href="title.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -204,12 +204,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../Functions/Functions%3B%20Local%20and%20Global%20Variables.html">5.1. Functions; Local and Global Variables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Functions/Passing%20data%20to%20and%20from%20functions.html">5.2. Passing data to and from functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Functions/Named%20arguments.html">5.3. Named Arguments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Functions/Control%20flow%20using%20return%20statements.html">5.4. Control flow using return statements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Functions/The%20truth%20about%20the%20if%20__name__%20%3D%3D%20%27__main__%27%20block.html">5.5. The if __name__ == ‘__main__’ block</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Functions/Fixing%20has_roots.html">5.6. Fixing <code class="docutils literal notranslate"><span class="pre">has_roots</span></code> function</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Functions/Checking%20for%20primality.html">5.7. <code class="docutils literal notranslate"><span class="pre">is_prime(n)</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Functions/rewrite_primality.html">5.8. Rewriting <code class="docutils literal notranslate"><span class="pre">is_prime()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Functions/Counting%20trailing%20zeros%20--%20Solution.html">5.9. Counting trailing zeros in n!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Functions/Functions%20as%20variables.html">5.4. Functions as Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Functions/Control%20flow%20using%20return%20statements.html">5.5. Control flow using return statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Functions/The%20truth%20about%20the%20if%20__name__%20%3D%3D%20%27__main__%27%20block.html">5.6. The if __name__ == ‘__main__’ block</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Functions/Fixing%20has_roots.html">5.7. Fixing <code class="docutils literal notranslate"><span class="pre">has_roots</span></code> function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Functions/Checking%20for%20primality.html">5.8. <code class="docutils literal notranslate"><span class="pre">is_prime(n)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Functions/rewrite_primality.html">5.9. Rewriting <code class="docutils literal notranslate"><span class="pre">is_prime()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Functions/Counting%20trailing%20zeros%20--%20Solution.html">5.10. Counting trailing zeros in n!</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Lists/title.html">6. Lists</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -283,27 +284,26 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/title.html">13. Sorting Algorithms and Complexity</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/A%20more%20careful%20analysis%20of%20Selection%20Sort.html">13.1. More Detailed Analysis of Selection Sort</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/Bozosort.html">13.2. Bozosort</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/Bubble%20Sort%20Complexity%20Analysis.html">13.3. Bubble Sort Complexity Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/Bubble%20Sort.html">13.4. Bubble Sort</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/Bucket%20%28or%20Counting%29%20Sort.html">13.5. Bucket/Counting Sort</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/BucketSort%20Complexity%20Analysis.html">13.6. Bucket/Counting Sort Complexity Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/Complexity%20analysis.html">13.7. Complexity Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/Intro%20to%20runtime.html">13.8. Intro to Runtime</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/Selection%20Sort%20Runtime%20Complexity%20Analysis.html">13.9. Selection Sort Runtime Complexity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/Selection%20Sort.html">13.10. Selection Sort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/Intro%20to%20runtime.html">13.1. Intro to Runtime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/Complexity%20analysis.html">13.2. Complexity Analysis (and Big Oh notation)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/Selection%20Sort.html">13.3. Selection Sort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/Selection%20Sort%20Runtime%20Complexity%20Analysis.html">13.4. Selection Sort Runtime Complexity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/A%20more%20careful%20analysis%20of%20Selection%20Sort.html">13.5. More Detailed Analysis of Selection Sort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/Bubble%20Sort.html">13.6. Bubble Sort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/Bubble%20Sort%20Complexity%20Analysis.html">13.7. Bubble Sort Complexity Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/Bucket%20%28or%20Counting%29%20Sort.html">13.8. Bucket/Counting Sort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/BucketSort%20Complexity%20Analysis.html">13.9. Bucket/Counting Sort Complexity Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/Bozosort.html">13.10. Bozosort</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../More%20on%20Functions%20and%20Complexity/title.html">14. More on Functions and Complexity</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../More%20on%20Functions%20and%20Complexity/Binary%20search.html">14.1. Binary Search</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../More%20on%20Functions%20and%20Complexity/Complexity%20analysis%20for%20longest_run%28%29.html">14.2. Complexity Analysis of <code class="docutils literal notranslate"><span class="pre">longest_run()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../More%20on%20Functions%20and%20Complexity/Complexity%20is%20Hard.html">14.3. Complexity is Hard, Fermat’s Theorem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../More%20on%20Functions%20and%20Complexity/Complexity%20of%20Arithmetic.html">14.4. Complexity of arithmetic operations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../More%20on%20Functions%20and%20Complexity/Complexity%20of%20multiplication%202.html">14.5. Complexity of long multiplication</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../More%20on%20Functions%20and%20Complexity/Functions%20as%20variables.html">14.6. Functions as Variables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../More%20on%20Functions%20and%20Complexity/How%20long%20does%20an%20operation%20take%3F.html">14.7. How long does an operation take <code class="docutils literal notranslate"><span class="pre">time.time()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../More%20on%20Functions%20and%20Complexity/Observing%20the%20runtime%20complexity%20of%20the%20longest_run%20functions.html">14.8. Complexity of <code class="docutils literal notranslate"><span class="pre">longest_run</span></code> functions</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../More%20on%20Functions%20and%20Complexity/title.html">14. More on Complexity of Operations</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../More%20on%20Functions%20and%20Complexity/Complexity%20of%20Arithmetic.html">14.1. Complexity of arithmetic operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20on%20Functions%20and%20Complexity/Complexity%20of%20multiplication%202.html">14.2. Complexity of long multiplication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20on%20Functions%20and%20Complexity/How%20long%20does%20an%20operation%20take%3F.html">14.3. How long does an operation take <code class="docutils literal notranslate"><span class="pre">time.time()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20on%20Functions%20and%20Complexity/Complexity%20analysis%20for%20longest_run%28%29.html">14.4. Complexity Analysis of <code class="docutils literal notranslate"><span class="pre">longest_run()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20on%20Functions%20and%20Complexity/Observing%20the%20runtime%20complexity%20of%20the%20longest_run%20functions.html">14.5. Observing the Complexity of <code class="docutils literal notranslate"><span class="pre">longest_run</span></code> functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20on%20Functions%20and%20Complexity/Binary%20search.html">14.6. Binary Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20on%20Functions%20and%20Complexity/Complexity%20is%20Hard.html">14.7. Complexity is Hard, Fermat’s Theorem</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Monte%20Carlo%20Integration/title.html">15. Monte Carlo Integration</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -315,45 +315,39 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Recursion/title.html">16. Recursion</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Recursion/Intro%20to%20recursion%20and%20n%21.html">16.1. Recursion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Recursion/Printing%20forward%20and%20backward.html">16.2. Recursive <code class="docutils literal notranslate"><span class="pre">print_list(L)</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Recursion/Race%20to%2021.html">16.3. Race to 21</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Recursion/Summing%20lists.html">16.4. Recursive Summing Lists</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Recursion/Tracing%20is_even.html">16.5. Tracing Recursive <code class="docutils literal notranslate"><span class="pre">is_even(n)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Recursion/Iteration%20using%20recursive%20functions.html">16.2. n! using a while loop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Recursion/is_even.html">16.3. Recursive <code class="docutils literal notranslate"><span class="pre">is_even(n)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Recursion/Tracing%20is_even.html">16.4. Tracing Recursive <code class="docutils literal notranslate"><span class="pre">is_even(n)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Recursion/Printing%20forward%20and%20backward.html">16.5. Recursive <code class="docutils literal notranslate"><span class="pre">print_list(L)</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Recursion/Tracing%20print_list%20and%20print_list_reverse.html">16.6. Tracing Recursive <code class="docutils literal notranslate"><span class="pre">print_list()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Recursion/fib%28n%29.html">16.7. Fibonacci Sequence <code class="docutils literal notranslate"><span class="pre">fib(n)</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Recursion/is_even.html">16.8. Recursive <code class="docutils literal notranslate"><span class="pre">is_even(n)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Recursion/Summing%20lists.html">16.8. Recursive Summing Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Recursion/Race%20to%2021.html">16.9. Race to 21</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Recursion/play21.html">16.10. Play 21 vs. the computer</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Recursive%20Complexity/title.html">17. Recursive Complexity</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Recursive%20Complexity/Complexity%20of%20exponentiation.html">17.1. The naive way to compute <span class="math notranslate nohighlight">\(x^n\)</span></a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="../Recursive%20Complexity/Complexity%20of%20fib%28n%29.html">17.4. Complexity of <code class="docutils literal notranslate"><span class="pre">fib(n)</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Recursive%20Complexity/Complexity%20of%20recursive%20functions%2C%20sum_list.html">17.5. <code class="docutils literal notranslate"><span class="pre">sum_list2</span></code> again</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Recursive%20Complexity/Intro%20to%20the%20Complexity%20of%20Recursive%20Functions%2C%20fact%28%29%20and%20slow_fact%28%29.html">17.7. The runtime complexity of recursive functions</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Recursive%20Complexity/Iteration%20using%20recursive%20functions.html">17.9. n! using a while loop</a></li>
-
-
+<li class="toctree-l2"><a class="reference internal" href="../Recursive%20Complexity/Intro%20to%20the%20Complexity%20of%20Recursive%20Functions%2C%20fact%28%29%20and%20slow_fact%28%29.html">17.1. The runtime complexity of recursive functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Recursive%20Complexity/Complexity%20of%20recursive%20functions%2C%20sum_list.html">17.2. <code class="docutils literal notranslate"><span class="pre">sum_list2</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Recursive%20Complexity/Complexity%20of%20fib%28n%29.html">17.3. Complexity of <code class="docutils literal notranslate"><span class="pre">fib(n)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Recursive%20Complexity/Complexity%20of%20exponentiation.html">17.4. Exponentiation</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="title.html">18. More Sorting</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="Complexity%20of%20MergeSort.html">18.1. Complexity of MergeSort</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">18.2. Complexity of Insertion Sort</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Intro%20to%20MergeSort.html">18.3. Merge Sort</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">18.1. Complexity of Insertion Sort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Intro%20to%20MergeSort.html">18.2. Merge Sort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Complexity%20of%20MergeSort.html">18.3. Complexity of MergeSort</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Recursive%20merge.html">18.4. Recursive <code class="docutils literal notranslate"><span class="pre">merge(L1,</span> <span class="pre">L2)</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="We%20cannot%20do%20better%20than%20nlog%28n%29.html">18.5. How fast can a sorting algorithm be? hint: <span class="math notranslate nohighlight">\(\mathcal{O}(n\log n)\)</span></a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../More%20Recursion/title.html">19. More Recursion</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../More%20Recursion/2015%20Exam%20Partial%20Solutions.html">19.1. 2015 Exam Partial Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../More%20Recursion/Fast%20exponentiation.html">19.2. Fast Exponentiation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../More%20Recursion/Recursive%20Deep%20Copy.html">19.3. Recursive Deep Copy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../More%20Recursion/Review%20of%20call%20trees.html">19.4. Review of Call Trees</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20Recursion/Review%20of%20call%20trees.html">19.1. Review of Call Trees</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20Recursion/print_all.html">19.2. Print All</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20Recursion/Fast%20exponentiation.html">19.3. Fast Exponentiation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20Recursion/Recursive%20Deep%20Copy.html">19.4. Recursive Deep Copy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../More%20Recursion/Turing%20and%20Godel.html">19.5. The Halting Problem</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../More%20Recursion/print_all.html">19.7. Print All</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20Recursion/2015%20Exam%20Partial%20Solutions.html">19.6. 2015 Exam Partial Solutions</a></li>
 </ul>
 </li>
 </ul>
@@ -560,7 +554,7 @@ document.write(`
 </div>
 <p>The reason this sort is called <code class="docutils literal notranslate"><span class="pre">insertion_sort</span></code> is that the <code class="docutils literal notranslate"><span class="pre">merge</span></code> <em>inserts</em> <code class="docutils literal notranslate"><span class="pre">L[0]</span></code> into <code class="docutils literal notranslate"><span class="pre">L[1:]</span></code> so that the resultant list is sorted.</p>
 <section id="complexity-of-insertion-sort">
-<h1><span class="section-number">18.2. </span>Complexity of Insertion Sort<a class="headerlink" href="#complexity-of-insertion-sort" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">18.1. </span>Complexity of Insertion Sort<a class="headerlink" href="#complexity-of-insertion-sort" title="Permalink to this heading">#</a></h1>
 <p>Let’s look at the call tree for Insertion Sort</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>                              n. of ops merge takes
           [(1)]              k
@@ -614,12 +608,12 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Complexity%20of%20MergeSort.html"
+       href="title.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">18.1. </span>Complexity of MergeSort</p>
+        <p class="prev-next-title"><span class="section-number">18. </span>More Sorting</p>
       </div>
     </a>
     <a class="right-next"
@@ -627,7 +621,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">18.3. </span>Merge Sort</p>
+        <p class="prev-next-title"><span class="section-number">18.2. </span>Merge Sort</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
