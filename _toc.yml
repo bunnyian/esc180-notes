@@ -151,12 +151,12 @@ parts:
         - file: notebook/Dictionaries, Tuples, Sets/Sparse matrices.ipynb
         # - file: notebook/Dictionaries, Tuples, Sets/A few notes on numerical stability.ipynb ## LAB SOLUTION
 
-      - file: notebook/Working with Files/title.md ##
+      - file: notebook/Working with Files/title.md
         sections:
+        - file: notebook/Working with Files/sample_texts.ipynb
+        - file: notebook/Working with Files/Intro to files.ipynb
         - file: notebook/Working with Files/File encoding.ipynb
         - file: notebook/Working with Files/Files Part 2.ipynb
-        - file: notebook/Working with Files/Intro to files.ipynb
-        - file: notebook/Working with Files/versedog.txt
 
       - file: notebook/Sorting Algorithms and Complexity/title.md ##
         sections:
