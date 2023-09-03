@@ -493,7 +493,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -509,6 +511,14 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complexity-analysis">14.6.1. Complexity Analysis</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -520,7 +530,14 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="binary-search">
 <h1><span class="section-number">14.6. </span>Binary Search<a class="headerlink" href="#binary-search" title="Permalink to this heading">#</a></h1>
-<p>(See the Complexity handout for the analysis of Binary Search)</p>
+<p>Binary search is a search algorithm for finding elements in a <em>sorted list</em>. It works by dividing the list in half, then checking if the desired element <code class="docutils literal notranslate"><span class="pre">e</span></code> is greater or less than the middle element <code class="docutils literal notranslate"><span class="pre">mid</span></code>. Using this information, the algorithm can discard half of the list and repeat the process until the element is found.</p>
+<p>eg. if L = [1, 3, 10, 20, 100], and e = 3 then the algorithm would <em>approximately</em> proceed as follows:</p>
+<ol class="arabic simple">
+<li><p>middle element is 10</p></li>
+<li><p>mid != e, mid &gt; e
+From here, we are able to discard the right half of the list (since mid &gt; e).</p></li>
+<li><p>continue dividing the list in half until e is found</p></li>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">find_i_binary</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
@@ -557,6 +574,22 @@ document.write(`
 <p>Suppose that one iteration of Binary Search runs  <span class="math notranslate nohighlight">\(c_1\)</span> ms, and one iteration of Linear Search runs <span class="math notranslate nohighlight">\(c_2\)</span> ms. <span class="math notranslate nohighlight">\(c_1\)</span> and <span class="math notranslate nohighlight">\(c_2\)</span> are quite equal, but are pretty close.</p>
 <p>For <span class="math notranslate nohighlight">\(n=1,000,000\)</span>, Binary Search will take, in the worst case, about <span class="math notranslate nohighlight">\(c_1\times \log_2 (1,000,000) = 20c_1\)</span> ms. Linear Search will take <span class="math notranslate nohighlight">\(1,000,000 \times c_2\)</span> ms. A big difference!</p>
 <p>Of course, that’s all assuming that the list is sorted. But if we need to perform multiple look-ups, it’s worth it to sort the list the once, and then be able to use the much faster Binary Search.</p>
+<section id="complexity-analysis">
+<h2><span class="section-number">14.6.1. </span>Complexity Analysis<a class="headerlink" href="#complexity-analysis" title="Permalink to this heading">#</a></h2>
+<p>In the worst case scenario, <code class="docutils literal notranslate"><span class="pre">e</span></code> is not in the list. This means that binary search will divide the list until len(L) = 3. When len(L) == 1 then the while loop exits and the two final comparisons are done (constant time).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">low</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">high</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">high</span><span class="o">-</span><span class="n">low</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># exit from the while loop</span>
+</pre></div>
+</div>
+<p>Within the loop, there are 3 comparisons (1 for the while loop condition, and two for if statements) and outside of the loop there is a constant 2 final comparisons before a <code class="docutils literal notranslate"><span class="pre">return</span></code>.</p>
+<p>To find the complexity, we need to find the number of times the loop runs. In other words, we want to know how many times we can divide the list in half before we get to a list of length 1 (each time would correspond to 1 iteration).</p>
+<p>We can find this by solving the following equation for <span class="math notranslate nohighlight">\(x\)</span> (the number of times we can divide the list in half), where <span class="math notranslate nohighlight">\(n\)</span> is the length of the list:</p>
+<p><span class="math notranslate nohighlight">\(\frac{n}{2^x} = 1\)</span></p>
+<p><span class="math notranslate nohighlight">\(n = 2^x\)</span></p>
+<p><span class="math notranslate nohighlight">\(\log_2 n = x\)</span></p>
+<p>Thus the complexity is equal to <span class="math notranslate nohighlight">\(3\log_2 n + 2\)</span>. Or in big oh notation, <span class="math notranslate nohighlight">\(\mathcal{O}(\log n)\)</span>.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -617,6 +650,20 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complexity-analysis">14.6.1. Complexity Analysis</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

@@ -555,7 +555,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.142352
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.1407116
 </pre></div>
 </div>
 </div>
@@ -593,13 +593,13 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f91a5dc3b80&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7ff7c1cc4b20&gt;
 </pre></div>
 </div>
-<img alt="../../_images/bb1c05d85ed365149d7849808bc7631e4ab15209b9e0bc3e5139c3be2db5e982.png" src="../../_images/bb1c05d85ed365149d7849808bc7631e4ab15209b9e0bc3e5139c3be2db5e982.png" />
+<img alt="../../_images/fa2e03cff008c3fb3b7825fe14e01bc6720539f2cc8c7eeb8f43ccaf5c94dc8d.png" src="../../_images/fa2e03cff008c3fb3b7825fe14e01bc6720539f2cc8c7eeb8f43ccaf5c94dc8d.png" />
 </div>
 </div>
-<p>The red curve is the unit qaurter circle, and also the curve <span class="math notranslate nohighlight">\(y = \sqrt{1-x^2}\)</span>.</p>
+<p>The red curve is the unit quarter circle, and also the curve <span class="math notranslate nohighlight">\(y = \sqrt{1-x^2}\)</span>.</p>
 <p>We can generalize this approach to curves other than <span class="math notranslate nohighlight">\(y = \sqrt{1-x^2}\)</span>. The idea is this: For an arbitrary curve, find the rectangle that contains it, generate random point in that rectangle, and figure out how many of the random points fall under the curve.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -634,10 +634,10 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f91a5cd23d0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7ff7c1bd1370&gt;
 </pre></div>
 </div>
-<img alt="../../_images/34506ad7dd6c3a01e045b772dfa91f9c05c6cedaec22ea43e51466442fefae60.png" src="../../_images/34506ad7dd6c3a01e045b772dfa91f9c05c6cedaec22ea43e51466442fefae60.png" />
+<img alt="../../_images/baeb19e548686ec711f2d8f5ec8e0f2f65741c493ee10dc7497bcb5038aab02f.png" src="../../_images/baeb19e548686ec711f2d8f5ec8e0f2f65741c493ee10dc7497bcb5038aab02f.png" />
 </div>
 </div>
 <p>Whe computing <span class="math notranslate nohighlight">\(\int_{x_0}^{x_1} f(x) dx\)</span>, we want to find the rectangle in which to generate random points. A suitable rectangle can be found by finding <span class="math notranslate nohighlight">\(f_{max} = \max_{x_0\leq x\leq x_1} f(x)\)</span>. The rectangle would then be <span class="math notranslate nohighlight">\([x_0, x_1]\times [0, f_{max}]\)</span>.</p>
@@ -712,7 +712,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.63758447, 0.35087821, 0.33477773, 0.07814233, 0.79842948])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.17242597, 0.01598505, 0.58723828, 0.06647607, 0.65991043])
 </pre></div>
 </div>
 </div>
@@ -726,7 +726,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.33477773, 0.07814233])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.58723828, 0.06647607])
 </pre></div>
 </div>
 </div>
@@ -739,7 +739,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([0, 4]),)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([2, 4]),)
 </pre></div>
 </div>
 </div>
@@ -752,7 +752,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ True, False, False, False,  True])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([False, False,  True, False,  True])
 </pre></div>
 </div>
 </div>
@@ -853,14 +853,14 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of pts above the curve: 43
-Number of pts below the curve: 157
-N. below/N.total: 0.785
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of pts above the curve: 40
+Number of pts below the curve: 160
+N. below/N.total: 0.8
 Rectangle area: 1.0
-Area under the curve: 0.785
+Area under the curve: 0.8
 </pre></div>
 </div>
-<img alt="../../_images/f219bed73990a1630dae07fb228456187dc1559e4552e0ac77753a33c7f7bd6e.png" src="../../_images/f219bed73990a1630dae07fb228456187dc1559e4552e0ac77753a33c7f7bd6e.png" />
+<img alt="../../_images/561637bbedb4fe26927200a7259d8da89cc5c7e3428c2921bd24670a0af3495a.png" src="../../_images/561637bbedb4fe26927200a7259d8da89cc5c7e3428c2921bd24670a0af3495a.png" />
 </div>
 </div>
 <p>Let’s now define another function:</p>
@@ -874,14 +874,17 @@ Area under the curve: 0.785
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of pts above the curve: 680
-Number of pts below the curve: 320
-N. below/N.total: 0.32
-Rectangle area: 204.1474722428738
-Area under the curve: 65.32719111771962
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of pts above the curve:
 </pre></div>
 </div>
-<img alt="../../_images/022828705517a97191705ef53a06164dcee6c057f1497669b92cd2282eaeac49.png" src="../../_images/022828705517a97191705ef53a06164dcee6c057f1497669b92cd2282eaeac49.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 713
+Number of pts below the curve: 287
+N. below/N.total: 0.287
+Rectangle area: 204.1474722428738
+Area under the curve: 58.59032453370478
+</pre></div>
+</div>
+<img alt="../../_images/48671c19cf539fdeabeda47e9a2ed726ece2cb0ab79e77309aa4c4cccd55c3b0.png" src="../../_images/48671c19cf539fdeabeda47e9a2ed726ece2cb0ab79e77309aa4c4cccd55c3b0.png" />
 </div>
 </div>
 </section>
@@ -889,7 +892,7 @@ Area under the curve: 65.32719111771962
 <h1><span class="section-number">15.4. </span>Computing <span class="math notranslate nohighlight">\(\log(x)\)</span> using Monte Carlo integration<a class="headerlink" href="#computing-log-x-using-monte-carlo-integration" title="Permalink to this heading">#</a></h1>
 <p>In Calculus, you saw that <span class="math notranslate nohighlight">\(\log(x) = \int_{1}^{x} 1/x dx\)</span> by definition.</p>
 <p>This is pretty easy to derive by defining <span class="math notranslate nohighlight">\(\exp(x)\)</span> to be the function such that <span class="math notranslate nohighlight">\(\exp'(x) = \exp(x)\)</span> (Note that this causes some issues: in particular, if we’re using this definition, it needs to be proved that such a function exists – that’s why in Calculus, this route is not taken). By the Inverse Function Theorem, since <span class="math notranslate nohighlight">\(\log(y) = \exp^{-1}(y)\)</span>,</p>
-<p>$<span class="math notranslate nohighlight">\(\exp^{-1{'}}(exp(y)) = 1/\exp'(y) = 1/\exp(y)\)</span>$.</p>
+<p><span class="math notranslate nohighlight">\(\exp^{-1{'}}(exp(y)) = 1/\exp'(y) = 1/\exp(y)\)</span>.</p>
 <p>Since <span class="math notranslate nohighlight">\(\log(y) = \exp^{-1}(t)\)</span>, we can substitute <span class="math notranslate nohighlight">\(t = \exp(y)\)</span> to get <span class="math notranslate nohighlight">\(\log'(t) = 1/t\)</span>.</p>
 <p>Let’s try to compute <span class="math notranslate nohighlight">\(\log(5)\)</span>:</p>
 <div class="cell docutils container">
@@ -902,14 +905,14 @@ Area under the curve: 65.32719111771962
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of pts above the curve: 55
-Number of pts below the curve: 45
-N. below/N.total: 0.45
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of pts above the curve: 57
+Number of pts below the curve: 43
+N. below/N.total: 0.43
 Rectangle area: 4.0
-Area under the curve: 1.8
+Area under the curve: 1.72
 </pre></div>
 </div>
-<img alt="../../_images/beb27eff44f9410c3d79500213c42621a20c64d2962ec2759238ad6ba0e17f41.png" src="../../_images/beb27eff44f9410c3d79500213c42621a20c64d2962ec2759238ad6ba0e17f41.png" />
+<img alt="../../_images/bc985cca92704ffd89f1e5ba0f13baa4bfb5c58de57b8795bbe3449b8951465e.png" src="../../_images/bc985cca92704ffd89f1e5ba0f13baa4bfb5c58de57b8795bbe3449b8951465e.png" />
 </div>
 </div>
 <p>With more points:</p>
@@ -920,14 +923,14 @@ Area under the curve: 1.8
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of pts above the curve: 601
-Number of pts below the curve: 399
-N. below/N.total: 0.399
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of pts above the curve: 590
+Number of pts below the curve: 410
+N. below/N.total: 0.41
 Rectangle area: 4.0
-Area under the curve: 1.596
+Area under the curve: 1.64
 </pre></div>
 </div>
-<img alt="../../_images/20fe2b00386ea9e22ad4c286c6f0ef2aa678cc665c3f9fc2f2440276f4cb80a3.png" src="../../_images/20fe2b00386ea9e22ad4c286c6f0ef2aa678cc665c3f9fc2f2440276f4cb80a3.png" />
+<img alt="../../_images/8ac938946ff6c568ea5b29b8e4d079d1bb3ce1e6a35af00d733343fecc435984.png" src="../../_images/8ac938946ff6c568ea5b29b8e4d079d1bb3ce1e6a35af00d733343fecc435984.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -937,14 +940,14 @@ Area under the curve: 1.596
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of pts above the curve: 59894
-Number of pts below the curve: 40106
-N. below/N.total: 0.40106
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of pts above the curve: 59901
+Number of pts below the curve: 40099
+N. below/N.total: 0.40099
 Rectangle area: 4.0
-Area under the curve: 1.60424
+Area under the curve: 1.60396
 </pre></div>
 </div>
-<img alt="../../_images/b0085d7f16afae5d7adab8d7f87d0abc9c5159c46dc6d9341257c8d9f410988a.png" src="../../_images/b0085d7f16afae5d7adab8d7f87d0abc9c5159c46dc6d9341257c8d9f410988a.png" />
+<img alt="../../_images/1c0d7cc4b2cf21bb8dc8e1fd7ee0f07d93d78f17250073a5bb52aaf43c58ad33.png" src="../../_images/1c0d7cc4b2cf21bb8dc8e1fd7ee0f07d93d78f17250073a5bb52aaf43c58ad33.png" />
 </div>
 </div>
 <p>The actual value is:</p>
