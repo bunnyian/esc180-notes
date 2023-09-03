@@ -82,6 +82,7 @@ parts:
         - file: notebook/Functions/Functions; Local and Global Variables.ipynb
         - file: notebook/Functions/Passing data to and from functions.ipynb
         - file: notebook/Functions/Named arguments.ipynb
+        - file: notebook/Functions/Functions as variables.ipynb
         - file: notebook/Functions/Control flow using return statements.ipynb
         - file: notebook/Functions/The truth about the if __name__ == '__main__' block.ipynb
         - file: notebook/Functions/Fixing has_roots.ipynb
@@ -160,27 +161,26 @@ parts:
 
       - file: notebook/Sorting Algorithms and Complexity/title.md ##
         sections:
+        - file: notebook/Sorting Algorithms and Complexity/Intro to runtime.ipynb
+        - file: notebook/Sorting Algorithms and Complexity/Complexity analysis.ipynb
+        - file: notebook/Sorting Algorithms and Complexity/Selection Sort.ipynb
+        - file: notebook/Sorting Algorithms and Complexity/Selection Sort Runtime Complexity Analysis.ipynb
         - file: notebook/Sorting Algorithms and Complexity/A more careful analysis of Selection Sort.ipynb
-        - file: notebook/Sorting Algorithms and Complexity/Bozosort.ipynb
-        - file: notebook/Sorting Algorithms and Complexity/Bubble Sort Complexity Analysis.ipynb
         - file: notebook/Sorting Algorithms and Complexity/Bubble Sort.ipynb
+        - file: notebook/Sorting Algorithms and Complexity/Bubble Sort Complexity Analysis.ipynb
         - file: notebook/Sorting Algorithms and Complexity/Bucket (or Counting) Sort.ipynb
         - file: notebook/Sorting Algorithms and Complexity/BucketSort Complexity Analysis.ipynb
-        - file: notebook/Sorting Algorithms and Complexity/Complexity analysis.ipynb
-        - file: notebook/Sorting Algorithms and Complexity/Intro to runtime.ipynb
-        - file: notebook/Sorting Algorithms and Complexity/Selection Sort Runtime Complexity Analysis.ipynb
-        - file: notebook/Sorting Algorithms and Complexity/Selection Sort.ipynb
+        - file: notebook/Sorting Algorithms and Complexity/Bozosort.ipynb
 
       - file: notebook/More on Functions and Complexity/title.md ##
         sections:
-        - file: notebook/More on Functions and Complexity/Binary search.ipynb
-        - file: notebook/More on Functions and Complexity/Complexity analysis for longest_run().ipynb
-        - file: notebook/More on Functions and Complexity/Complexity is Hard.ipynb
         - file: notebook/More on Functions and Complexity/Complexity of Arithmetic.ipynb
         - file: notebook/More on Functions and Complexity/Complexity of multiplication 2.ipynb
-        - file: notebook/More on Functions and Complexity/Functions as variables.ipynb
         - file: notebook/More on Functions and Complexity/How long does an operation take?.ipynb
+        - file: notebook/More on Functions and Complexity/Complexity analysis for longest_run().ipynb
         - file: notebook/More on Functions and Complexity/Observing the runtime complexity of the longest_run functions.ipynb
+        - file: notebook/More on Functions and Complexity/Binary search.ipynb
+        - file: notebook/More on Functions and Complexity/Complexity is Hard.ipynb
 
       - file: notebook/Monte Carlo Integration/title.md ##
         sections:
@@ -189,39 +189,39 @@ parts:
       - file: notebook/Recursion/title.md ##
         sections:
         - file: notebook/Recursion/Intro to recursion and n!.ipynb
-        - file: notebook/Recursion/Printing forward and backward.ipynb
-        - file: notebook/Recursion/Race to 21.ipynb
-        - file: notebook/Recursion/Summing lists.ipynb
+        - file: notebook/Recursion/Iteration using recursive functions.ipynb
+        - file: notebook/Recursion/is_even.ipynb
         - file: notebook/Recursion/Tracing is_even.ipynb
+        - file: notebook/Recursion/Printing forward and backward.ipynb
         - file: notebook/Recursion/Tracing print_list and print_list_reverse.ipynb
         - file: notebook/Recursion/fib(n).ipynb
-        - file: notebook/Recursion/is_even.ipynb
-        - file: notebook/Recursion/play21.py
+        - file: notebook/Recursion/Summing lists.ipynb
+        - file: notebook/Recursion/Race to 21.ipynb
+        - file: notebook/Recursion/play21.ipynb
 
       - file: notebook/Recursive Complexity/title.md ##
         sections:
-        - file: notebook/Recursive Complexity/Complexity of exponentiation.ipynb
-        - file: notebook/Recursive Complexity/Complexity of fib(n).ipynb
-        - file: notebook/Recursive Complexity/Complexity of recursive functions, sum_list.ipynb
         - file: notebook/Recursive Complexity/Intro to the Complexity of Recursive Functions, fact() and slow_fact().ipynb
-        - file: notebook/Recursive Complexity/Iteration using recursive functions.ipynb
+        - file: notebook/Recursive Complexity/Complexity of recursive functions, sum_list.ipynb
+        - file: notebook/Recursive Complexity/Complexity of fib(n).ipynb
+        - file: notebook/Recursive Complexity/Complexity of exponentiation.ipynb
 
       - file: notebook/More Sorting/title.md ##
         sections:
-        - file: notebook/More Sorting/Complexity of MergeSort.ipynb
         - file: notebook/More Sorting/Insertion Sort.ipynb
         - file: notebook/More Sorting/Intro to MergeSort.ipynb
+        - file: notebook/More Sorting/Complexity of MergeSort.ipynb
         - file: notebook/More Sorting/Recursive merge.ipynb
         - file: notebook/More Sorting/We cannot do better than nlog(n).ipynb
 
       - file: notebook/More Recursion/title.md ##
         sections:
-        - file: notebook/More Recursion/2015 Exam Partial Solutions.ipynb
+        - file: notebook/More Recursion/Review of call trees.ipynb
+        - file: notebook/More Recursion/print_all.ipynb
         - file: notebook/More Recursion/Fast exponentiation.ipynb
         - file: notebook/More Recursion/Recursive Deep Copy.ipynb
-        - file: notebook/More Recursion/Review of call trees.ipynb
         - file: notebook/More Recursion/Turing and Godel.ipynb
-        - file: notebook/More Recursion/print_all.ipynb
+        - file: notebook/More Recursion/2015 Exam Partial Solutions.ipynb
 
   - caption: The Next Chapter
     chapters:

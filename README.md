@@ -1,4 +1,5 @@
 # esc180-notes
+[![Jupyter Book Badge](https://jupyterbook.org/badge.svg)](https://bunnyian.github.io/esc180-notes/)
 
 pages link = [https://bunnyian.github.io/esc180-notes/](https://bunnyian.github.io/esc180-notes/)
 
