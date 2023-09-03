@@ -159,7 +159,7 @@ parts:
         - file: notebook/Working with Files/File encoding.ipynb
         - file: notebook/Working with Files/Files Part 2.ipynb
 
-      - file: notebook/Sorting Algorithms and Complexity/title.md ##
+      - file: notebook/Sorting Algorithms and Complexity/title.md
         sections:
         - file: notebook/Sorting Algorithms and Complexity/Intro to runtime.ipynb
         - file: notebook/Sorting Algorithms and Complexity/Complexity analysis.ipynb
@@ -172,7 +172,7 @@ parts:
         - file: notebook/Sorting Algorithms and Complexity/BucketSort Complexity Analysis.ipynb
         - file: notebook/Sorting Algorithms and Complexity/Bozosort.ipynb
 
-      - file: notebook/More on Functions and Complexity/title.md ##
+      - file: notebook/More on Functions and Complexity/title.md
         sections:
         - file: notebook/More on Functions and Complexity/Complexity of Arithmetic.ipynb
         - file: notebook/More on Functions and Complexity/Complexity of multiplication 2.ipynb
