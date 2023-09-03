@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>11.12. Modifying dictionaries &#8212; ESC180 Notes</title>
+    <title>11.6. Modifying dictionaries &#8212; ESC180 Notes</title>
   
   
   
@@ -66,8 +66,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/fav.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="11.13. Inverting Dictionaries Pt. 1" href="Inverting%20Dictionaries%2C%20Pt.%201.html" />
-    <link rel="prev" title="11.11. Accessing dictionaries" href="dict.update%20and%20dict.get.html" />
+    <link rel="next" title="11.7. Inverting Dictionaries Pt. 1" href="Inverting%20Dictionaries%2C%20Pt.%201.html" />
+    <link rel="prev" title="11.5. Accessing dictionaries" href="dict.update%20and%20dict.get.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -266,23 +266,18 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="Tuples.html">11.2. Tuples</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="Dictionaries.html">11.4. Dictionaries</a></li>
-
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="dict.update%20and%20dict.get.html">11.11. Accessing dictionaries</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">11.12. Modifying dictionaries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Inverting%20Dictionaries%2C%20Pt.%201.html">11.13. Inverting Dictionaries Pt. 1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Inverting%20dictionaries.html">11.14. Inverting Dictionaries Pt. 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Sparse%20matrices.html">11.15. Sparse Matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dict.update%20and%20dict.get.html">11.5. Accessing dictionaries</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">11.6. Modifying dictionaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Inverting%20Dictionaries%2C%20Pt.%201.html">11.7. Inverting Dictionaries Pt. 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Inverting%20dictionaries.html">11.8. Inverting Dictionaries Pt. 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Sparse%20matrices.html">11.9. Sparse Matrices</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Working%20with%20Files/title.html">12. Working with Files</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Files/File%20encoding.html">12.1. File Encoding</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Files/Files%20Part%202.html">12.2. Files Pt. 2, splitting strings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Files/Intro%20to%20files.html">12.3. Intro to Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Files/sample_texts.html">12.1. Prerequisite Texts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Files/Intro%20to%20files.html">12.2. Intro to Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Files/File%20encoding.html">12.3. File Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Files/Files%20Part%202.html">12.4. Splitting strings</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/title.html">13. Sorting Algorithms and Complexity</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -525,8 +520,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-note-on-modifying-dictionaries-inside-of-functions">11.12.1. A note on modifying dictionaries inside of functions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clearing-a-dictionary">11.12.2. Clearing a dictionary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-note-on-modifying-dictionaries-inside-of-functions">11.6.1. A note on modifying dictionaries inside of functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clearing-a-dictionary">11.6.2. Clearing a dictionary</a></li>
 </ul>
             </nav>
         </div>
@@ -539,7 +534,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="modifying-dictionaries">
-<h1><span class="section-number">11.12. </span>Modifying dictionaries<a class="headerlink" href="#modifying-dictionaries" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">11.6. </span>Modifying dictionaries<a class="headerlink" href="#modifying-dictionaries" title="Permalink to this heading">#</a></h1>
 <p>We can remove items from dictionaries using the <code class="docutils literal notranslate"><span class="pre">del</span></code> operator.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -653,7 +648,7 @@ if grades[&quot;CSC&quot;] not in [&quot;A&quot;, &quot;A+&quot;]:
 </div>
 <p>which is completely fine.</p>
 <section id="a-note-on-modifying-dictionaries-inside-of-functions">
-<h2><span class="section-number">11.12.1. </span>A note on modifying dictionaries inside of functions<a class="headerlink" href="#a-note-on-modifying-dictionaries-inside-of-functions" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">11.6.1. </span>A note on modifying dictionaries inside of functions<a class="headerlink" href="#a-note-on-modifying-dictionaries-inside-of-functions" title="Permalink to this heading">#</a></h2>
 <p>Note that we can modify the contents of a dictionary. That means that what we’ve been doing above makes sense: you can write a function that modifies the contents of a dictionary, and it would make sense to call it in order to modify a dictionary</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
@@ -671,7 +666,7 @@ if grades[&quot;CSC&quot;] not in [&quot;A&quot;, &quot;A+&quot;]:
 </div>
 </section>
 <section id="clearing-a-dictionary">
-<h2><span class="section-number">11.12.2. </span>Clearing a dictionary<a class="headerlink" href="#clearing-a-dictionary" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">11.6.2. </span>Clearing a dictionary<a class="headerlink" href="#clearing-a-dictionary" title="Permalink to this heading">#</a></h2>
 <p>The function below still doesn’t make sense, since it doesn’t modify the contents of the dictionary, but rather makes the local variable <code class="docutils literal notranslate"><span class="pre">grades</span></code> refer to a new dictionary:</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
@@ -802,7 +797,7 @@ if grades[&quot;CSC&quot;] not in [&quot;A&quot;, &quot;A+&quot;]:
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">11.11. </span>Accessing dictionaries</p>
+        <p class="prev-next-title"><span class="section-number">11.5. </span>Accessing dictionaries</p>
       </div>
     </a>
     <a class="right-next"
@@ -810,7 +805,7 @@ if grades[&quot;CSC&quot;] not in [&quot;A&quot;, &quot;A+&quot;]:
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">11.13. </span>Inverting Dictionaries Pt. 1</p>
+        <p class="prev-next-title"><span class="section-number">11.7. </span>Inverting Dictionaries Pt. 1</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -832,8 +827,8 @@ if grades[&quot;CSC&quot;] not in [&quot;A&quot;, &quot;A+&quot;]:
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-note-on-modifying-dictionaries-inside-of-functions">11.12.1. A note on modifying dictionaries inside of functions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clearing-a-dictionary">11.12.2. Clearing a dictionary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-note-on-modifying-dictionaries-inside-of-functions">11.6.1. A note on modifying dictionaries inside of functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clearing-a-dictionary">11.6.2. Clearing a dictionary</a></li>
 </ul>
   </nav></div>
 

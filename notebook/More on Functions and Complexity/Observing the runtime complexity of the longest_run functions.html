@@ -266,23 +266,18 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/Tuples.html">11.2. Tuples</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/Dictionaries.html">11.4. Dictionaries</a></li>
-
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/dict.update%20and%20dict.get.html">11.11. Accessing dictionaries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/modifying_dict.html">11.12. Modifying dictionaries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/Inverting%20Dictionaries%2C%20Pt.%201.html">11.13. Inverting Dictionaries Pt. 1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/Inverting%20dictionaries.html">11.14. Inverting Dictionaries Pt. 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/Sparse%20matrices.html">11.15. Sparse Matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/dict.update%20and%20dict.get.html">11.5. Accessing dictionaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/modifying_dict.html">11.6. Modifying dictionaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/Inverting%20Dictionaries%2C%20Pt.%201.html">11.7. Inverting Dictionaries Pt. 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/Inverting%20dictionaries.html">11.8. Inverting Dictionaries Pt. 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/Sparse%20matrices.html">11.9. Sparse Matrices</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Working%20with%20Files/title.html">12. Working with Files</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Files/File%20encoding.html">12.1. File Encoding</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Files/Files%20Part%202.html">12.2. Files Pt. 2, splitting strings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Files/Intro%20to%20files.html">12.3. Intro to Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Files/sample_texts.html">12.1. Prerequisite Texts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Files/Intro%20to%20files.html">12.2. Intro to Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Files/File%20encoding.html">12.3. File Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Working%20with%20Files/Files%20Part%202.html">12.4. Splitting strings</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/title.html">13. Sorting Algorithms and Complexity</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -593,7 +588,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;abaaaabbbbbaaaaaaaabaabbabababaabaabaaabaabbbbbbabbabaababaabbaabbaababbbaabbaabbbbaabbabbaaabbababb&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;abbbbabbbbaaabaababbbbbbabbabaabbaabaaababbabbababbaabbababbababaabbabaababbbbbaababaaabaabbbbabaaaa&#39;
 </pre></div>
 </div>
 </div>
@@ -606,7 +601,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
 </pre></div>
 </div>
 </div>
@@ -618,7 +613,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
 </pre></div>
 </div>
 </div>
@@ -674,11 +669,11 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[4.4088363647460935e-05,
- 8.691787719726563e-05,
- 0.00013012409210205077,
- 0.00017106056213378907,
- 0.0002125692367553711]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[4.757881164550781e-05,
+ 0.0001029205322265625,
+ 0.00013923168182373047,
+ 0.0002131938934326172,
+ 0.0002362680435180664]
 </pre></div>
 </div>
 </div>
@@ -690,11 +685,11 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.008319172859191894,
- 0.03717409133911133,
- 0.0854436206817627,
- 0.15408733367919922,
- 0.2431248950958252]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.008914523124694824,
+ 0.041346468925476075,
+ 0.09125916957855225,
+ 0.15523200511932372,
+ 0.24406694412231444]
 </pre></div>
 </div>
 </div>
@@ -715,7 +710,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;The $O(n)$ algorithm&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/351b07f1366d26db26a41e53bf98a23f2e76f0dd198312f6f1f6b1e2f418291d.png" src="../../_images/351b07f1366d26db26a41e53bf98a23f2e76f0dd198312f6f1f6b1e2f418291d.png" />
+<img alt="../../_images/29781ba2ebf936ed2deb74557a44f6608c9d167843afc679b1f5deabbb786a01.png" src="../../_images/29781ba2ebf936ed2deb74557a44f6608c9d167843afc679b1f5deabbb786a01.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -732,7 +727,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;The $O(n^2)$ algorithm&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/d655ff9ae1f7c0c3c4d8fe4e3b82c710aeee8963cb480a7bacf5b834f06dbce9.png" src="../../_images/d655ff9ae1f7c0c3c4d8fe4e3b82c710aeee8963cb480a7bacf5b834f06dbce9.png" />
+<img alt="../../_images/daf0eaf739fa8913274a7f6c1ebe66431b6de58be05d8902cf64d7c526d5175a.png" src="../../_images/daf0eaf739fa8913274a7f6c1ebe66431b6de58be05d8902cf64d7c526d5175a.png" />
 </div>
 </div>
 <p>We <em>could</em> try to plot both curves on the same Figure, but it won’t look good, because the scales are so different:</p>
@@ -751,7 +746,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;The $O(n)$ algorithm and the $O(n^2)$ algorithm&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/cd4f375fc6405c166cbfaccc7b62133d8135bd103e416eb45567cdf3cbfebc64.png" src="../../_images/cd4f375fc6405c166cbfaccc7b62133d8135bd103e416eb45567cdf3cbfebc64.png" />
+<img alt="../../_images/93103fde071b2dd45347f2d5e1d359fc686d8763ffaea5dce07424112a3fff6c.png" src="../../_images/93103fde071b2dd45347f2d5e1d359fc686d8763ffaea5dce07424112a3fff6c.png" />
 </div>
 </div>
 <p>We’d have to plot the lines on a log-scale to make things make more sense:</p>
@@ -771,7 +766,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;The $O(n)$ algorithm and $O(n^2)$ algorithm&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/02f17054b9853c605c17b7796a5fafc47ba1ba7503db5dcc81c132298186fde5.png" src="../../_images/02f17054b9853c605c17b7796a5fafc47ba1ba7503db5dcc81c132298186fde5.png" />
+<img alt="../../_images/f90c9d1a4b8d5286ede8ab81830cdc047ff4cf8e98d020009ba93b1e695ce40f.png" src="../../_images/f90c9d1a4b8d5286ede8ab81830cdc047ff4cf8e98d020009ba93b1e695ce40f.png" />
 </div>
 </div>
 </section>

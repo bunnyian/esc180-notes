@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>12.3. Intro to Files &#8212; ESC180 Notes</title>
+    <title>12.2. Intro to Files &#8212; ESC180 Notes</title>
   
   
   
@@ -66,8 +66,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/fav.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="13. Sorting Algorithms and Complexity" href="../Sorting%20Algorithms%20and%20Complexity/title.html" />
-    <link rel="prev" title="12.2. Files Pt. 2, splitting strings" href="Files%20Part%202.html" />
+    <link rel="next" title="12.3. File Encoding" href="File%20encoding.html" />
+    <link rel="prev" title="12.1. Prerequisite Texts" href="sample_texts.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -266,23 +266,18 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/Tuples.html">11.2. Tuples</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/Dictionaries.html">11.4. Dictionaries</a></li>
-
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/dict.update%20and%20dict.get.html">11.11. Accessing dictionaries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/modifying_dict.html">11.12. Modifying dictionaries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/Inverting%20Dictionaries%2C%20Pt.%201.html">11.13. Inverting Dictionaries Pt. 1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/Inverting%20dictionaries.html">11.14. Inverting Dictionaries Pt. 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/Sparse%20matrices.html">11.15. Sparse Matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/dict.update%20and%20dict.get.html">11.5. Accessing dictionaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/modifying_dict.html">11.6. Modifying dictionaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/Inverting%20Dictionaries%2C%20Pt.%201.html">11.7. Inverting Dictionaries Pt. 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/Inverting%20dictionaries.html">11.8. Inverting Dictionaries Pt. 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Dictionaries%2C%20Tuples%2C%20Sets/Sparse%20matrices.html">11.9. Sparse Matrices</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="title.html">12. Working with Files</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="File%20encoding.html">12.1. File Encoding</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Files%20Part%202.html">12.2. Files Pt. 2, splitting strings</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">12.3. Intro to Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sample_texts.html">12.1. Prerequisite Texts</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">12.2. Intro to Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="File%20encoding.html">12.3. File Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Files%20Part%202.html">12.4. Splitting strings</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Sorting%20Algorithms%20and%20Complexity/title.html">13. Sorting Algorithms and Complexity</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -528,7 +523,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="intro-to-files">
-<h1><span class="section-number">12.3. </span>Intro to Files<a class="headerlink" href="#intro-to-files" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">12.2. </span>Intro to Files<a class="headerlink" href="#intro-to-files" title="Permalink to this heading">#</a></h1>
 <p>Let’s say that we want to read a file named <code class="docutils literal notranslate"><span class="pre">&quot;versedog.txt&quot;</span></code> from the current folder (Python always has a current folder – it’s the same story as when we had to <code class="docutils literal notranslate"><span class="pre">import</span></code> modules.) Here is how we can do it:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -537,7 +532,7 @@ document.write(`
 </div>
 </div>
 </div>
-<p>(To make this work, place your <code class="docutils literal notranslate"><span class="pre">.py</span></code> file in the same folder as the file that you want to read, and use “Run file as script” in Pyzo).</p>
+<p>(To make this work, place your <code class="docutils literal notranslate"><span class="pre">.py</span></code> file in the same folder as the file that you want to read, and use “Run file as script” in Pyzo). More instructions and file downloads are found in the previous chapter.</p>
 <p>We specify <code class="docutils literal notranslate"><span class="pre">encoding=&quot;latin1&quot;</span></code> to make Python interpret all characters in <code class="docutils literal notranslate"><span class="pre">versedog.txt</span></code> as English letters. This will avoid all sorts of problems with file encodings. Of course, if the file is not actually written in the Lating alphabet, we’d be in big trouble!</p>
 <p>To get the text of the file, we can now use</p>
 <div class="cell docutils container">
@@ -555,7 +550,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Verse For A Certain Dog, Dorothy Parker\n\nSuch glorious faith as fills your limpid eyes, \nDear little friend of mine, I never knew. \nAll-innocent are you, and yet all-wise. \n(For Heaven\&#39;s sake, stop worrying that shoe!) \nYou look about, and all you see is fair; \nThis mighty globe was made for you alone. \nOf all the thunderous ages, you\&#39;re the heir. \n(Get off the pillow with that dirty bone!) \n\nA skeptic world you face with steady gaze; \nHigh in young pride you hold your noble head, \nGayly you meet the rush of roaring days. \n(Must you eat puppy biscuit on the bed?) \nLancelike your courage, gleaming swift and strong, \nYours the white rapture of a winged soul, \nYours is a spirit like a Mayday song. \n(God help you, if you break the goldfish bowl!) \n\n&quot;Whatever is, is good&quot; - your gracious creed. \nYou wear your joy of living like a crown. \nLove lights your simplest act, your every deed. \n(Drop it, I tell you- put that kitten down!) \nYou are God\&#39;s kindliest gift of all - a friend. \nYour shining loyalty unflecked by doubt, \nYou ask but leave to follow to the end. \n(Couldn\&#39;t you wait until I took you out?)\n&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Verse For A Certain Dog, Dorothy Parker\n\nSuch glorious faith as fills your limpid eyes, \nDear little friend of mine, I never knew. \nAll-innocent are you, and yet all-wise. \n(For Heaven\&#39;s sake, stop worrying that shoe!) \nYou look about, and all you see is fair; \nThis mighty globe was made for you alone. \nOf all the thunderous ages, you\&#39;re the heir. \n(Get off the pillow with that dirty bone!) \n\nA skeptic world you face with steady gaze; \nHigh in young pride you hold your noble head, \nGayly you meet the rush of roaring days. \n(Must you eat puppy biscuit on the bed?) \nLancelike your courage, gleaming swift and strong, \nYours the white rapture of a winged soul, \nYours is a spirit like a Mayday song. \n(God help you, if you break the goldfish bowl!) \n\n&quot;Whatever is, is good&quot; - your gracious creed. \nYou wear your joy of living like a crown. \nLove lights your simplest act, your every deed. \n(Drop it, I tell you- put that kitten down!) \nYou are God\&#39;s kindliest gift of all - a friend. \nYour shining loyalty unflecked by doubt, \nYou ask but leave to follow to the end. \n(Couldn\&#39;t you wait until I took you out?)&#39;
 </pre></div>
 </div>
 </div>
@@ -635,8 +630,7 @@ You ask but leave to follow to the end.
  &quot;You are God&#39;s kindliest gift of all - a friend. &quot;,
  &#39;Your shining loyalty unflecked by doubt, &#39;,
  &#39;You ask but leave to follow to the end. &#39;,
- &quot;(Couldn&#39;t you wait until I took you out?)&quot;,
- &#39;&#39;]
+ &quot;(Couldn&#39;t you wait until I took you out?)&quot;]
 </pre></div>
 </div>
 </div>
@@ -688,20 +682,20 @@ You ask but leave to follow to the end.
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Files%20Part%202.html"
+       href="sample_texts.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">12.2. </span>Files Pt. 2, splitting strings</p>
+        <p class="prev-next-title"><span class="section-number">12.1. </span>Prerequisite Texts</p>
       </div>
     </a>
     <a class="right-next"
-       href="../Sorting%20Algorithms%20and%20Complexity/title.html"
+       href="File%20encoding.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">13. </span>Sorting Algorithms and Complexity</p>
+        <p class="prev-next-title"><span class="section-number">12.3. </span>File Encoding</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
