@@ -6,9 +6,10 @@ Link to site = [https://bunnyian.github.io/esc180-notes/](https://bunnyian.githu
 ## Prequisites
 - [Jupyter Book](https://jupyterbook.org/en/stable/start/overview.html)
 
-    ```pip install -U jupyter-book```
-
-    Strongly recommended to be able to preview changes locally before pushing to GitHub, but technically not required.
+```bash
+pip install -U jupyter-book
+```
+Strongly recommended to be able to preview changes locally before pushing to GitHub, but technically not required.
 
 ## Making Changes
 Any changes to the source files that are pushed to the main branch will automatically be updated on the website via GitHub actions (see `.github/workflows/). (this can take 3-5 mins depend on how many changes are made)
@@ -26,10 +27,14 @@ Useful cheatsheet for formatting etc. [MyST syntax cheatsheet](https://jupyterbo
 
 ## Previewing and Pushing Changes
 Open the root directory `esc180-notes` in terminal and run:
-```jupyter-book build .```
+```bash
+jupyter-book build .
+```
 
 Depending on what kind of changes are made, it may be recommended to clear old files beforehand (this will rebuild from scratch).
-```jupyter-book clean .```
+```bash
+jupyter-book clean .
+```
 
 When changes are pushed to GitHub, the [deploy.yml](.github/workflows/deploy.yml) file will perform the same compilation, as well as push the changes to the `gh-pages` branch, which is what the website is built from.
 
