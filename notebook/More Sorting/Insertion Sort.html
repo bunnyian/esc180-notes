@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>18.1. Complexity of Insertion Sort &#8212; ESC180 Notes</title>
+    <title>18.3. Insertion Sort &#8212; ESC180 Notes</title>
   
   
   
@@ -68,8 +68,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/fav.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="18.2. Merge Sort" href="Intro%20to%20MergeSort.html" />
-    <link rel="prev" title="18. More Sorting" href="title.html" />
+    <link rel="next" title="18.4. How fast can a sorting algorithm be? hint: \(\mathcal{O}(n\log n)\)" href="We%20cannot%20do%20better%20than%20nlog%28n%29.html" />
+    <link rel="prev" title="18.2. MergeSort" href="Merge%20Sort.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -334,11 +334,10 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="title.html">18. More Sorting</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">18.1. Complexity of Insertion Sort</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Intro%20to%20MergeSort.html">18.2. Merge Sort</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Complexity%20of%20MergeSort.html">18.3. Complexity of MergeSort</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Recursive%20merge.html">18.4. Recursive <code class="docutils literal notranslate"><span class="pre">merge(L1,</span> <span class="pre">L2)</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="We%20cannot%20do%20better%20than%20nlog%28n%29.html">18.5. How fast can a sorting algorithm be? hint: <span class="math notranslate nohighlight">\(\mathcal{O}(n\log n)\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Recursive%20merge.html">18.1. Recursive <code class="docutils literal notranslate"><span class="pre">merge(L1,</span> <span class="pre">L2)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Merge%20Sort.html">18.2. MergeSort</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">18.3. Insertion Sort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="We%20cannot%20do%20better%20than%20nlog%28n%29.html">18.4. How fast can a sorting algorithm be? hint: <span class="math notranslate nohighlight">\(\mathcal{O}(n\log n)\)</span></a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../More%20Recursion/title.html">19. More Recursion</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -493,7 +492,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -504,11 +505,19 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Complexity of Insertion Sort</h1>
+    <h1>Insertion Sort</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complexity-of-insertion-sort">18.3.1. Complexity of Insertion Sort</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -518,10 +527,30 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <p>Insertion Sort can be looked at as a small modification of Merge Sort. Instead of breaking the list up in two halves, we’ll break it up into <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">n-1</span></code> elements:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="insertion-sort">
+<h1><span class="section-number">18.3. </span>Insertion Sort<a class="headerlink" href="#insertion-sort" title="Permalink to this heading">#</a></h1>
+<p>Insertion Sort can be looked at as a small modification of Merge Sort. Instead of breaking the list up in two halves, we’ll break it up into <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">n-1</span></code> elements:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">insertion_sort</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">merge</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span> <span class="n">L2</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;Return the sorted version of L1 + L2</span>
+<span class="sd">    </span>
+<span class="sd">    Arguments:</span>
+<span class="sd">    L1, L2 -- lists of floats</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">L1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">L2</span><span class="p">[:]</span>
+    
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">L2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">L1</span><span class="p">[:]</span>
+    
+    <span class="k">if</span> <span class="n">L1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">L2</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">L1</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">+</span> <span class="n">merge</span><span class="p">(</span><span class="n">L1</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">L2</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">L2</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">+</span> <span class="n">merge</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span> <span class="n">L2</span><span class="p">[:])</span>
+    
+<span class="k">def</span> <span class="nf">insertion_sort</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;Return a sorted version of lis</span>
 <span class="sd">    </span>
 <span class="sd">    &#39;&#39;&#39;</span>
@@ -533,8 +562,8 @@ document.write(`
                       <span class="c1">#need to be kept separated</span>
     
     <span class="c1">#Sort the first half, sort the second half, and then merge the two halves!</span>
-    <span class="n">mid</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="n">merge</span><span class="p">(</span><span class="n">insertion_sort</span><span class="p">(</span><span class="n">lis</span><span class="p">[:</span><span class="n">mid</span><span class="p">]),</span> <span class="n">insertion_sort</span><span class="p">(</span><span class="n">lis</span><span class="p">[</span><span class="n">mid</span><span class="p">:]))</span>
+    <span class="n">mid</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># split into 1 and n-1 parts</span>
+    <span class="k">return</span> <span class="n">merge</span><span class="p">(</span><span class="n">insertion_sort</span><span class="p">(</span><span class="n">L</span><span class="p">[:</span><span class="n">mid</span><span class="p">]),</span> <span class="n">insertion_sort</span><span class="p">(</span><span class="n">L</span><span class="p">[</span><span class="n">mid</span><span class="p">:]))</span>
 </pre></div>
 </div>
 </div>
@@ -554,7 +583,7 @@ document.write(`
 </div>
 <p>The reason this sort is called <code class="docutils literal notranslate"><span class="pre">insertion_sort</span></code> is that the <code class="docutils literal notranslate"><span class="pre">merge</span></code> <em>inserts</em> <code class="docutils literal notranslate"><span class="pre">L[0]</span></code> into <code class="docutils literal notranslate"><span class="pre">L[1:]</span></code> so that the resultant list is sorted.</p>
 <section id="complexity-of-insertion-sort">
-<h1><span class="section-number">18.1. </span>Complexity of Insertion Sort<a class="headerlink" href="#complexity-of-insertion-sort" title="Permalink to this heading">#</a></h1>
+<h2><span class="section-number">18.3.1. </span>Complexity of Insertion Sort<a class="headerlink" href="#complexity-of-insertion-sort" title="Permalink to this heading">#</a></h2>
 <p>Let’s look at the call tree for Insertion Sort</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>                              n. of ops merge takes
           [(1)]              k
@@ -574,6 +603,7 @@ document.write(`
 <p>(We are using the usual notation of <code class="docutils literal notranslate"><span class="pre">[</span>&#160; <span class="pre">(m)</span>&#160; <span class="pre">]</span></code> as a list of length <code class="docutils literal notranslate"><span class="pre">m</span></code>.)</p>
 <p>Like in MergeSort, not every call takes the same amount of time/operations: the <code class="docutils literal notranslate"><span class="pre">merge()</span></code> takes <span class="math notranslate nohighlight">\(\mathcal{O}(\text{len(L)})\)</span> operations like before. Again, let’s assume that <code class="docutils literal notranslate"><span class="pre">merge()</span></code> takes <span class="math notranslate nohighlight">\(k\text{len(L)}\)</span> operations.</p>
 <p>In total, we’ll have <span class="math notranslate nohighlight">\(kn+k(n-1)+k(n-2)+...+2k = k(n+(n-1)+...+2)  = k((\sum_{i=1}^n i)-1) = kn(n+1)/2-1\)</span>, which is <span class="math notranslate nohighlight">\(\mathcal{O}(n^2)\)</span>. The small change we made caused the sorting algorithm to be <span class="math notranslate nohighlight">\(\mathcal{O}(n^2)\)</span> rather than <span class="math notranslate nohighlight">\(\mathcal{O}(n\log(n))\)</span>.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -608,20 +638,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="title.html"
+       href="Merge%20Sort.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">18. </span>More Sorting</p>
+        <p class="prev-next-title"><span class="section-number">18.2. </span>MergeSort</p>
       </div>
     </a>
     <a class="right-next"
-       href="Intro%20to%20MergeSort.html"
+       href="We%20cannot%20do%20better%20than%20nlog%28n%29.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">18.2. </span>Merge Sort</p>
+        <p class="prev-next-title"><span class="section-number">18.4. </span>How fast can a sorting algorithm be? hint: <span class="math notranslate nohighlight">\(\mathcal{O}(n\log n)\)</span></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -634,6 +664,20 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complexity-of-insertion-sort">18.3.1. Complexity of Insertion Sort</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

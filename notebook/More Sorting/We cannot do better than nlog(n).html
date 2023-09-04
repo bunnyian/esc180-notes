@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>18.5. How fast can a sorting algorithm be? hint: \(\mathcal{O}(n\log n)\) &#8212; ESC180 Notes</title>
+    <title>18.4. How fast can a sorting algorithm be? hint: \(\mathcal{O}(n\log n)\) &#8212; ESC180 Notes</title>
   
   
   
@@ -69,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="19. More Recursion" href="../More%20Recursion/title.html" />
-    <link rel="prev" title="18.4. Recursive merge(L1, L2)" href="Recursive%20merge.html" />
+    <link rel="prev" title="18.3. Insertion Sort" href="Insertion%20Sort.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -334,11 +334,10 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="title.html">18. More Sorting</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="Insertion%20Sort.html">18.1. Complexity of Insertion Sort</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Intro%20to%20MergeSort.html">18.2. Merge Sort</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Complexity%20of%20MergeSort.html">18.3. Complexity of MergeSort</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Recursive%20merge.html">18.4. Recursive <code class="docutils literal notranslate"><span class="pre">merge(L1,</span> <span class="pre">L2)</span></code></a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">18.5. How fast can a sorting algorithm be? hint: <span class="math notranslate nohighlight">\(\mathcal{O}(n\log n)\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Recursive%20merge.html">18.1. Recursive <code class="docutils literal notranslate"><span class="pre">merge(L1,</span> <span class="pre">L2)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Merge%20Sort.html">18.2. MergeSort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Insertion%20Sort.html">18.3. Insertion Sort</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">18.4. How fast can a sorting algorithm be? hint: <span class="math notranslate nohighlight">\(\mathcal{O}(n\log n)\)</span></a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../More%20Recursion/title.html">19. More Recursion</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -518,14 +517,14 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="how-fast-can-a-sorting-algorithm-be-hint-mathcal-o-n-log-n">
-<h1><span class="section-number">18.5. </span>How fast can a sorting algorithm be? hint: <span class="math notranslate nohighlight">\(\mathcal{O}(n\log n)\)</span><a class="headerlink" href="#how-fast-can-a-sorting-algorithm-be-hint-mathcal-o-n-log-n" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="how-fast-can-a-sorting-algorithm-be-hint-mathcal-o-n-log-n">
+<h1><span class="section-number">18.4. </span>How fast can a sorting algorithm be? hint: <span class="math notranslate nohighlight">\(\mathcal{O}(n\log n)\)</span><a class="headerlink" href="#how-fast-can-a-sorting-algorithm-be-hint-mathcal-o-n-log-n" title="Permalink to this heading">#</a></h1>
 <p>Here is a brief and informal argument that a sorting algorithm that relies only on comparisons of individual elements (note: this excludes Bucket Sort, which relies on the elements of the list being of a certain type and in a certain range), cannot run faster than <span class="math notranslate nohighlight">\(\mathcal{O}(n\log n)\)</span>.</p>
 <p>There are <span class="math notranslate nohighlight">\(n!\)</span> ways to rearrange a list of length <span class="math notranslate nohighlight">\(n\)</span>. One of them leads to the list being sorted (if all the elements in the list are unique.)</p>
 <p>Now, each time we ask a question like “is element <code class="docutils literal notranslate"><span class="pre">i</span></code> smaller than element <code class="docutils literal notranslate"><span class="pre">j</span></code>?,” the best we can hope for is to eliminate one half of the possibile rearrangements. If all we’re allowed to do is compare elements, we’d keep asking questions like this until we get to the point that only one rearrangement is left. This is similar to how in the game of Twenty Questions, we ask yes/no questions and eliminate possible answers.</p>
 <p>So, we start out with <span class="math notranslate nohighlight">\(n!\)</span> possible rearrangements, after the first comparison there will be <span class="math notranslate nohighlight">\(n!/2\)</span> possible rearrangements, and so on, until we just have the one rearrangement which leads to the list being sorted.</p>
 <p>In total, we need <span class="math notranslate nohighlight">\(\log_2 (n!)\)</span> comparisons if each comparison eliminates half the remaining rearrangements.</p>
-<p>Using Stirling’s Apprixmation, <span class="math notranslate nohighlight">\(\log_2(n!)\)</span> is <span class="math notranslate nohighlight">\(\mathcal{O}n\log(n)\)</span>.</p>
+<p>Using <a class="reference external" href="https://en.wikipedia.org/wiki/Stirling%27s_approximation">Stirling’s Approximation</a>, <span class="math notranslate nohighlight">\(\log_2(n!)\)</span> is <span class="math notranslate nohighlight">\(\mathcal{O}(n\log(n))\)</span>.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -560,12 +559,12 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Recursive%20merge.html"
+       href="Insertion%20Sort.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">18.4. </span>Recursive <code class="docutils literal notranslate"><span class="pre">merge(L1,</span> <span class="pre">L2)</span></code></p>
+        <p class="prev-next-title"><span class="section-number">18.3. </span>Insertion Sort</p>
       </div>
     </a>
     <a class="right-next"

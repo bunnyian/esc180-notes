@@ -334,11 +334,10 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../More%20Sorting/title.html">18. More Sorting</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/Insertion%20Sort.html">18.1. Complexity of Insertion Sort</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/Intro%20to%20MergeSort.html">18.2. Merge Sort</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/Complexity%20of%20MergeSort.html">18.3. Complexity of MergeSort</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/Recursive%20merge.html">18.4. Recursive <code class="docutils literal notranslate"><span class="pre">merge(L1,</span> <span class="pre">L2)</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/We%20cannot%20do%20better%20than%20nlog%28n%29.html">18.5. How fast can a sorting algorithm be? hint: <span class="math notranslate nohighlight">\(\mathcal{O}(n\log n)\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/Recursive%20merge.html">18.1. Recursive <code class="docutils literal notranslate"><span class="pre">merge(L1,</span> <span class="pre">L2)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/Merge%20Sort.html">18.2. MergeSort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/Insertion%20Sort.html">18.3. Insertion Sort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/We%20cannot%20do%20better%20than%20nlog%28n%29.html">18.4. How fast can a sorting algorithm be? hint: <span class="math notranslate nohighlight">\(\mathcal{O}(n\log n)\)</span></a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="title.html">19. More Recursion</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
@@ -534,7 +533,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="review-of-call-trees">
 <h1><span class="section-number">19.1. </span>Review of Call Trees<a class="headerlink" href="#review-of-call-trees" title="Permalink to this heading">#</a></h1>
-<p>Here are the fix common shapes of call trees. Of course, there are other kinds as well.</p>
+<p>Here are the five common shapes of call trees. Of course, there are other kinds as well.</p>
 <section id="example-1-factorial">
 <h2><span class="section-number">19.1.1. </span>Example 1: Factorial<a class="headerlink" href="#example-1-factorial" title="Permalink to this heading">#</a></h2>
 <p>Only one recursive call from each call, the runtime does not depend on <code class="docutils literal notranslate"><span class="pre">n</span></code>, <code class="docutils literal notranslate"><span class="pre">n</span></code> decreases by a constant amount (i.e., <code class="docutils literal notranslate"><span class="pre">1</span></code>) with each call</p>

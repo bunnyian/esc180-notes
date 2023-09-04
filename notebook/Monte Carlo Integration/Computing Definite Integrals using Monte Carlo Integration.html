@@ -334,11 +334,10 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../More%20Sorting/title.html">18. More Sorting</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/Insertion%20Sort.html">18.1. Complexity of Insertion Sort</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/Intro%20to%20MergeSort.html">18.2. Merge Sort</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/Complexity%20of%20MergeSort.html">18.3. Complexity of MergeSort</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/Recursive%20merge.html">18.4. Recursive <code class="docutils literal notranslate"><span class="pre">merge(L1,</span> <span class="pre">L2)</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/We%20cannot%20do%20better%20than%20nlog%28n%29.html">18.5. How fast can a sorting algorithm be? hint: <span class="math notranslate nohighlight">\(\mathcal{O}(n\log n)\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/Recursive%20merge.html">18.1. Recursive <code class="docutils literal notranslate"><span class="pre">merge(L1,</span> <span class="pre">L2)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/Merge%20Sort.html">18.2. MergeSort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/Insertion%20Sort.html">18.3. Insertion Sort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/We%20cannot%20do%20better%20than%20nlog%28n%29.html">18.4. How fast can a sorting algorithm be? hint: <span class="math notranslate nohighlight">\(\mathcal{O}(n\log n)\)</span></a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../More%20Recursion/title.html">19. More Recursion</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -555,7 +554,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.1407116
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.1420672
 </pre></div>
 </div>
 </div>
@@ -593,10 +592,10 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7ff7c1cc4b20&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f9cec7cbb20&gt;
 </pre></div>
 </div>
-<img alt="../../_images/fa2e03cff008c3fb3b7825fe14e01bc6720539f2cc8c7eeb8f43ccaf5c94dc8d.png" src="../../_images/fa2e03cff008c3fb3b7825fe14e01bc6720539f2cc8c7eeb8f43ccaf5c94dc8d.png" />
+<img alt="../../_images/c8ea0b73391a302ff7de07c6b6ebc556e839e3b509cf979ad55ccea23f522586.png" src="../../_images/c8ea0b73391a302ff7de07c6b6ebc556e839e3b509cf979ad55ccea23f522586.png" />
 </div>
 </div>
 <p>The red curve is the unit quarter circle, and also the curve <span class="math notranslate nohighlight">\(y = \sqrt{1-x^2}\)</span>.</p>
@@ -634,10 +633,10 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7ff7c1bd1370&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f9cec6d61c0&gt;
 </pre></div>
 </div>
-<img alt="../../_images/baeb19e548686ec711f2d8f5ec8e0f2f65741c493ee10dc7497bcb5038aab02f.png" src="../../_images/baeb19e548686ec711f2d8f5ec8e0f2f65741c493ee10dc7497bcb5038aab02f.png" />
+<img alt="../../_images/455aaa84669646ee043c2021ef159e715e2e54328f4836528621fc5c937e7984.png" src="../../_images/455aaa84669646ee043c2021ef159e715e2e54328f4836528621fc5c937e7984.png" />
 </div>
 </div>
 <p>Whe computing <span class="math notranslate nohighlight">\(\int_{x_0}^{x_1} f(x) dx\)</span>, we want to find the rectangle in which to generate random points. A suitable rectangle can be found by finding <span class="math notranslate nohighlight">\(f_{max} = \max_{x_0\leq x\leq x_1} f(x)\)</span>. The rectangle would then be <span class="math notranslate nohighlight">\([x_0, x_1]\times [0, f_{max}]\)</span>.</p>
@@ -712,7 +711,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.17242597, 0.01598505, 0.58723828, 0.06647607, 0.65991043])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.54270967, 0.22548002, 0.10857086, 0.82468422, 0.92756238])
 </pre></div>
 </div>
 </div>
@@ -726,7 +725,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.58723828, 0.06647607])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.10857086, 0.82468422])
 </pre></div>
 </div>
 </div>
@@ -739,7 +738,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([2, 4]),)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([0, 3, 4]),)
 </pre></div>
 </div>
 </div>
@@ -752,7 +751,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([False, False,  True, False,  True])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ True, False, False,  True,  True])
 </pre></div>
 </div>
 </div>
@@ -853,14 +852,14 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of pts above the curve: 40
-Number of pts below the curve: 160
-N. below/N.total: 0.8
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of pts above the curve: 35
+Number of pts below the curve: 165
+N. below/N.total: 0.825
 Rectangle area: 1.0
-Area under the curve: 0.8
+Area under the curve: 0.825
 </pre></div>
 </div>
-<img alt="../../_images/561637bbedb4fe26927200a7259d8da89cc5c7e3428c2921bd24670a0af3495a.png" src="../../_images/561637bbedb4fe26927200a7259d8da89cc5c7e3428c2921bd24670a0af3495a.png" />
+<img alt="../../_images/918a4d08b32dc7837434e8d379e39025433d2e1519947b36f0902539d7945bfc.png" src="../../_images/918a4d08b32dc7837434e8d379e39025433d2e1519947b36f0902539d7945bfc.png" />
 </div>
 </div>
 <p>Let’s now define another function:</p>
@@ -874,17 +873,14 @@ Area under the curve: 0.8
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of pts above the curve:
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 713
-Number of pts below the curve: 287
-N. below/N.total: 0.287
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of pts above the curve: 690
+Number of pts below the curve: 310
+N. below/N.total: 0.31
 Rectangle area: 204.1474722428738
-Area under the curve: 58.59032453370478
+Area under the curve: 63.285716395290876
 </pre></div>
 </div>
-<img alt="../../_images/48671c19cf539fdeabeda47e9a2ed726ece2cb0ab79e77309aa4c4cccd55c3b0.png" src="../../_images/48671c19cf539fdeabeda47e9a2ed726ece2cb0ab79e77309aa4c4cccd55c3b0.png" />
+<img alt="../../_images/0db26a03ade65da572c7849be184c51bf84fec41adbdda0af58fcceb11c61647.png" src="../../_images/0db26a03ade65da572c7849be184c51bf84fec41adbdda0af58fcceb11c61647.png" />
 </div>
 </div>
 </section>
@@ -905,14 +901,14 @@ Area under the curve: 58.59032453370478
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of pts above the curve: 57
-Number of pts below the curve: 43
-N. below/N.total: 0.43
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of pts above the curve: 60
+Number of pts below the curve: 40
+N. below/N.total: 0.4
 Rectangle area: 4.0
-Area under the curve: 1.72
+Area under the curve: 1.6
 </pre></div>
 </div>
-<img alt="../../_images/bc985cca92704ffd89f1e5ba0f13baa4bfb5c58de57b8795bbe3449b8951465e.png" src="../../_images/bc985cca92704ffd89f1e5ba0f13baa4bfb5c58de57b8795bbe3449b8951465e.png" />
+<img alt="../../_images/5c543721384fb018232914bc4ce3609dab9fcedc642e74ab5565c0905d77d2da.png" src="../../_images/5c543721384fb018232914bc4ce3609dab9fcedc642e74ab5565c0905d77d2da.png" />
 </div>
 </div>
 <p>With more points:</p>
@@ -923,14 +919,14 @@ Area under the curve: 1.72
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of pts above the curve: 590
-Number of pts below the curve: 410
-N. below/N.total: 0.41
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of pts above the curve: 600
+Number of pts below the curve: 400
+N. below/N.total: 0.4
 Rectangle area: 4.0
-Area under the curve: 1.64
+Area under the curve: 1.6
 </pre></div>
 </div>
-<img alt="../../_images/8ac938946ff6c568ea5b29b8e4d079d1bb3ce1e6a35af00d733343fecc435984.png" src="../../_images/8ac938946ff6c568ea5b29b8e4d079d1bb3ce1e6a35af00d733343fecc435984.png" />
+<img alt="../../_images/a0cfeed6635aa61b3967bcd96a6dfbf5d4e00c6e6baab3174a2aef4f11ebcdcc.png" src="../../_images/a0cfeed6635aa61b3967bcd96a6dfbf5d4e00c6e6baab3174a2aef4f11ebcdcc.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -940,14 +936,14 @@ Area under the curve: 1.64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of pts above the curve: 59901
-Number of pts below the curve: 40099
-N. below/N.total: 0.40099
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of pts above the curve: 60231
+Number of pts below the curve: 39769
+N. below/N.total: 0.39769
 Rectangle area: 4.0
-Area under the curve: 1.60396
+Area under the curve: 1.59076
 </pre></div>
 </div>
-<img alt="../../_images/1c0d7cc4b2cf21bb8dc8e1fd7ee0f07d93d78f17250073a5bb52aaf43c58ad33.png" src="../../_images/1c0d7cc4b2cf21bb8dc8e1fd7ee0f07d93d78f17250073a5bb52aaf43c58ad33.png" />
+<img alt="../../_images/db661a5fab27875e0f7bad1cdff9377bc4fe46dcc99429a6c87ad9235c90a153.png" src="../../_images/db661a5fab27875e0f7bad1cdff9377bc4fe46dcc99429a6c87ad9235c90a153.png" />
 </div>
 </div>
 <p>The actual value is:</p>

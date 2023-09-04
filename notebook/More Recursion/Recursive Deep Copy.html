@@ -332,11 +332,10 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../More%20Sorting/title.html">18. More Sorting</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/Insertion%20Sort.html">18.1. Complexity of Insertion Sort</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/Intro%20to%20MergeSort.html">18.2. Merge Sort</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/Complexity%20of%20MergeSort.html">18.3. Complexity of MergeSort</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/Recursive%20merge.html">18.4. Recursive <code class="docutils literal notranslate"><span class="pre">merge(L1,</span> <span class="pre">L2)</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/We%20cannot%20do%20better%20than%20nlog%28n%29.html">18.5. How fast can a sorting algorithm be? hint: <span class="math notranslate nohighlight">\(\mathcal{O}(n\log n)\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/Recursive%20merge.html">18.1. Recursive <code class="docutils literal notranslate"><span class="pre">merge(L1,</span> <span class="pre">L2)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/Merge%20Sort.html">18.2. MergeSort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/Insertion%20Sort.html">18.3. Insertion Sort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/We%20cannot%20do%20better%20than%20nlog%28n%29.html">18.4. How fast can a sorting algorithm be? hint: <span class="math notranslate nohighlight">\(\mathcal{O}(n\log n)\)</span></a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="title.html">19. More Recursion</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
@@ -563,6 +562,10 @@ document.write(`
 <p>We are not creating a copy of <code class="docutils literal notranslate"><span class="pre">[4,</span> <span class="pre">5]</span></code> here, only a copy of <code class="docutils literal notranslate"><span class="pre">[3,</span> <span class="pre">[4,</span> <span class="pre">5]</span></code>. That means that <code class="docutils literal notranslate"><span class="pre">L1[1][1]</span></code> and <code class="docutils literal notranslate"><span class="pre">copy[1][1]</span></code> will be alises. Changing one will change the other.</p>
 <p>If, instead of appending the shallow copy of <code class="docutils literal notranslate"><span class="pre">e</span></code> (i.e., <code class="docutils literal notranslate"><span class="pre">e[:]</span></code>), we were to append the <em>deep</em> copy of <code class="docutils literal notranslate"><span class="pre">e</span></code>, things would work. We use a recursive solution to accomplish this.</p>
 <p>(Side note: <code class="docutils literal notranslate"><span class="pre">type(obj)</span></code> returns the type of <code class="docutils literal notranslate"><span class="pre">obj</span></code>. For example, <code class="docutils literal notranslate"><span class="pre">type([1,</span> <span class="pre">2,</span> <span class="pre">3])</span> <span class="pre">==</span> <span class="pre">list</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><button><a href="https://pythontutor.com/render.html#code=%0Adef+deep_copy%28obj%29%3A%0A++++%27%27%27Return+a+deep+%28i.e.%2C+non-aliased+at+all%29+copy+of+obj%2C+a+nested+list+of+%0A++++integers%27%27%27%0A++++%23Base+case%3A%0A++++if+type%28obj%29+%21%3D+list%3A%0A++++++++return+obj%0A++++copy+%3D+%5B%5D%0A++++for+elem+in+obj%3A%0A++++++++%23The+leap+of+faith%3A+assume+that+deep_copy+works%21%0A++++++++copy.append%28deep_copy%28elem%29%29%0A++++return+copy%0A++++%0AL+%3D+%5B%5B1%2C+2%5D%2C+%5B3%2C+4%5D%5D%0AL_copy+%3D+deep_copy%28L%29%0A&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank">Run in Python Tutor</a></button></div></div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">deep_copy</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>

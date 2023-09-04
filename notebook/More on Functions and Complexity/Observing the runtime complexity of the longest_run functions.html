@@ -332,11 +332,10 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../More%20Sorting/title.html">18. More Sorting</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/Insertion%20Sort.html">18.1. Complexity of Insertion Sort</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/Intro%20to%20MergeSort.html">18.2. Merge Sort</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/Complexity%20of%20MergeSort.html">18.3. Complexity of MergeSort</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/Recursive%20merge.html">18.4. Recursive <code class="docutils literal notranslate"><span class="pre">merge(L1,</span> <span class="pre">L2)</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/We%20cannot%20do%20better%20than%20nlog%28n%29.html">18.5. How fast can a sorting algorithm be? hint: <span class="math notranslate nohighlight">\(\mathcal{O}(n\log n)\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/Recursive%20merge.html">18.1. Recursive <code class="docutils literal notranslate"><span class="pre">merge(L1,</span> <span class="pre">L2)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/Merge%20Sort.html">18.2. MergeSort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/Insertion%20Sort.html">18.3. Insertion Sort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/We%20cannot%20do%20better%20than%20nlog%28n%29.html">18.4. How fast can a sorting algorithm be? hint: <span class="math notranslate nohighlight">\(\mathcal{O}(n\log n)\)</span></a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../More%20Recursion/title.html">19. More Recursion</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -582,7 +581,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;baabaaabaabbbbbabbabbbbababbbbaabbabbaabaaaababbabbbbabbabbabaababbaaaabbbabbbaabbbbaabbbbbbababbaaa&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;bbbabbbaabbbbbabaaaaaabbbabbbabbabbbabbbaaabababbbbbababbabaaabbbbbaaabbbaaaabababbababbaaabaabbaabb&#39;
 </pre></div>
 </div>
 </div>
@@ -595,7 +594,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
 </pre></div>
 </div>
 </div>
@@ -607,7 +606,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
 </pre></div>
 </div>
 </div>
@@ -663,11 +662,11 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[4.557609558105469e-05,
- 8.495330810546875e-05,
- 0.000128021240234375,
- 0.00017008781433105468,
- 0.00021342277526855468]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[5.195140838623047e-05,
+ 0.00010639190673828125,
+ 0.0001601409912109375,
+ 0.0002205514907836914,
+ 0.0002643013000488281]
 </pre></div>
 </div>
 </div>
@@ -679,11 +678,11 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.008338723182678223,
- 0.03608016014099121,
- 0.08315973758697509,
- 0.1494784927368164,
- 0.23510048389434815]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.00975252628326416,
+ 0.04321012496948242,
+ 0.099580397605896,
+ 0.17896758079528807,
+ 0.28229530811309816]
 </pre></div>
 </div>
 </div>
@@ -704,7 +703,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;The $O(n)$ algorithm&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/1db4ef0096bdf332ad60f52886f2948a1a6a1dd20095bb31e932fda7424f6772.png" src="../../_images/1db4ef0096bdf332ad60f52886f2948a1a6a1dd20095bb31e932fda7424f6772.png" />
+<img alt="../../_images/fbd966387c92a8cccb0fbd433bef2aada22c148d941da815d78a4ead9234187c.png" src="../../_images/fbd966387c92a8cccb0fbd433bef2aada22c148d941da815d78a4ead9234187c.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -721,7 +720,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;The $O(n^2)$ algorithm&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/e7b6ed0c290ea10e628745f6afe7551a5ea852bd64c5b054b73c9ba775a03690.png" src="../../_images/e7b6ed0c290ea10e628745f6afe7551a5ea852bd64c5b054b73c9ba775a03690.png" />
+<img alt="../../_images/fc4e9a3afdf7c812d413acf057c4b035ae60a111e9eeff56d9ca88bd776a99cd.png" src="../../_images/fc4e9a3afdf7c812d413acf057c4b035ae60a111e9eeff56d9ca88bd776a99cd.png" />
 </div>
 </div>
 <p>We <em>could</em> try to plot both curves on the same Figure, but it won’t look good, because the scales are so different:</p>
@@ -740,7 +739,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;The $O(n)$ algorithm and the $O(n^2)$ algorithm&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/b6d1d859f888872a42c6c67e3c4923abad866046b9ffe7a1d3adf26f5ab6d4b1.png" src="../../_images/b6d1d859f888872a42c6c67e3c4923abad866046b9ffe7a1d3adf26f5ab6d4b1.png" />
+<img alt="../../_images/ddeac16f84ce441456c131c57079c8f625480e8cac875009751f6734c515923c.png" src="../../_images/ddeac16f84ce441456c131c57079c8f625480e8cac875009751f6734c515923c.png" />
 </div>
 </div>
 <p>We’d have to plot the lines on a log-scale to make things make more sense:</p>
@@ -760,7 +759,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;The $O(n)$ algorithm and $O(n^2)$ algorithm&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/0f9ba94ff07459966e4dc90421defa359f662997190954e25e9df5aa457df64e.png" src="../../_images/0f9ba94ff07459966e4dc90421defa359f662997190954e25e9df5aa457df64e.png" />
+<img alt="../../_images/86c84a1045aed8f7570639f47a63f6bfc5d02cc2a42c80b2a342b68dc80805fe.png" src="../../_images/86c84a1045aed8f7570639f47a63f6bfc5d02cc2a42c80b2a342b68dc80805fe.png" />
 </div>
 </div>
 </section>

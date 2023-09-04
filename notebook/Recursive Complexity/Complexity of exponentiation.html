@@ -334,11 +334,10 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../More%20Sorting/title.html">18. More Sorting</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/Insertion%20Sort.html">18.1. Complexity of Insertion Sort</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/Intro%20to%20MergeSort.html">18.2. Merge Sort</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/Complexity%20of%20MergeSort.html">18.3. Complexity of MergeSort</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/Recursive%20merge.html">18.4. Recursive <code class="docutils literal notranslate"><span class="pre">merge(L1,</span> <span class="pre">L2)</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/We%20cannot%20do%20better%20than%20nlog%28n%29.html">18.5. How fast can a sorting algorithm be? hint: <span class="math notranslate nohighlight">\(\mathcal{O}(n\log n)\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/Recursive%20merge.html">18.1. Recursive <code class="docutils literal notranslate"><span class="pre">merge(L1,</span> <span class="pre">L2)</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/Merge%20Sort.html">18.2. MergeSort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/Insertion%20Sort.html">18.3. Insertion Sort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../More%20Sorting/We%20cannot%20do%20better%20than%20nlog%28n%29.html">18.4. How fast can a sorting algorithm be? hint: <span class="math notranslate nohighlight">\(\mathcal{O}(n\log n)\)</span></a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../More%20Recursion/title.html">19. More Recursion</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -555,7 +554,7 @@ document.write(`
 <p><span class="math notranslate nohighlight">\((...((x^2)^2)^2... ^2)^2 = x^{2^{k+1}}\)</span></p>
 <p>if the squaring is performed <span class="math notranslate nohighlight">\(k\)</span> times. For example,</p>
 <p><span class="math notranslate nohighlight">\(((x^2)^2)^2 = x^{16} = x^{2^{3+1}}\)</span>.</p>
-<p>Suppose that <span class="math notranslate nohighlight">\(n = 2^{k+1}\)</span> for some whole <span class="math notranslate nohighlight">\(k\)</span> (i.e., <span class="math notranslate nohighlight">\(n\)</span> is a power of two.) We can now use the repeated squaring trick and the fact that $(x^{n/2})</p>
+<p>Suppose that <span class="math notranslate nohighlight">\(n = 2^{k+1}\)</span> for some whole <span class="math notranslate nohighlight">\(k\)</span> (i.e., <span class="math notranslate nohighlight">\(n\)</span> is a power of two.) We can now use the repeated squaring trick and the fact that <span class="math notranslate nohighlight">\((x^{n/2} = x^{2^k}\)</span>)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">power</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
@@ -636,7 +635,7 @@ document.write(`
               x^32
 </pre></div>
 </div>
-<p>We just had to make <span class="math notranslate nohighlight">\(6\)</span> calls to compute <span class="math notranslate nohighlight">\(x^32\)</span> (compared to 32 iterations of the <span class="math notranslate nohighlight">\(\mathcal{O}(n)\)</span> algorithm.</p>
+<p>We just had to make <span class="math notranslate nohighlight">\(6\)</span> calls to compute <span class="math notranslate nohighlight">\(x^{32}\)</span> (compared to 32 iterations of the <span class="math notranslate nohighlight">\(\mathcal{O}(n)\)</span> algorithm.</p>
 <section id="slow-exponentiation">
 <h3><span class="section-number">17.4.2.1. </span>Slow exponentiation<a class="headerlink" href="#slow-exponentiation" title="Permalink to this heading">#</a></h3>
 <p>Here’s another true fact: <span class="math notranslate nohighlight">\(2^n = 2\times 2^{n-1} = 2^{n-1} + 2^{n-1}\)</span>. Let’s use it to compute (really slowly) the powers of 2.</p>
