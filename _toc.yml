@@ -7,18 +7,8 @@
 # First line of notebooks/md MUST be a header (eg. # Lecture 1) to be included
 
 # 1. Changes to file/toc structure
-# If major changes are made to the file structure, simply move the files around in the file system
-# Export the file tree
-# eg. 
-# ├── L01
-# │   ├── A Simple Python Program.ipynb
-# │   ├── Introduction to Python Expressions and Variables.ipynb
-# │   ├── conditionals.ipynb
-# │   ├── header01.md
-# │   └── tracing.mkv
-
-# Then pass the file tree and part of this toc to Chat-GPT and it can regenerate the toc for you
-# of course, check the output to make sure it's correct
+# You can move around pages in the toc below. Currently everything is organized in folders, but as long as 
+# the filepaths are valid, the folders do not matter.
 
 # 2. HEADER files are used to change the title of the chapter
 # they are currently only used as  "Lecture 1", "Lecture 2", etc.
@@ -206,14 +196,14 @@ parts:
         - file: notebook/Recursive Complexity/Complexity of fib(n).ipynb
         - file: notebook/Recursive Complexity/Complexity of exponentiation.ipynb
 
-      - file: notebook/More Sorting/title.md ##
+      - file: notebook/More Sorting/title.md
         sections:
         - file: notebook/More Sorting/Recursive merge.ipynb
         - file: notebook/More Sorting/Merge Sort.ipynb
         - file: notebook/More Sorting/Insertion Sort.ipynb
         - file: notebook/More Sorting/We cannot do better than nlog(n).ipynb
 
-      - file: notebook/More Recursion/title.md ##
+      - file: notebook/More Recursion/title.md
         sections:
         - file: notebook/More Recursion/Review of call trees.ipynb
         - file: notebook/More Recursion/print_all.ipynb
