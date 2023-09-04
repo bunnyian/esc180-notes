@@ -182,11 +182,11 @@ parts:
         - file: notebook/More on Functions and Complexity/Binary search.ipynb
         - file: notebook/More on Functions and Complexity/Complexity is Hard.ipynb
 
-      - file: notebook/Monte Carlo Integration/title.md ##
+      - file: notebook/Monte Carlo Integration/title.md 
         sections:
         - file: notebook/Monte Carlo Integration/Computing Definite Integrals using Monte Carlo Integration.ipynb
 
-      - file: notebook/Recursion/title.md ##
+      - file: notebook/Recursion/title.md
         sections:
         - file: notebook/Recursion/Intro to recursion and n!.ipynb
         - file: notebook/Recursion/Iteration using recursive functions.ipynb
@@ -199,7 +199,7 @@ parts:
         - file: notebook/Recursion/Race to 21.ipynb
         - file: notebook/Recursion/play21.ipynb
 
-      - file: notebook/Recursive Complexity/title.md ##
+      - file: notebook/Recursive Complexity/title.md
         sections:
         - file: notebook/Recursive Complexity/Intro to the Complexity of Recursive Functions, fact() and slow_fact().ipynb
         - file: notebook/Recursive Complexity/Complexity of recursive functions, sum_list.ipynb
