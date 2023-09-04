@@ -208,10 +208,9 @@ parts:
 
       - file: notebook/More Sorting/title.md ##
         sections:
-        - file: notebook/More Sorting/Insertion Sort.ipynb
-        - file: notebook/More Sorting/Intro to MergeSort.ipynb
-        - file: notebook/More Sorting/Complexity of MergeSort.ipynb
         - file: notebook/More Sorting/Recursive merge.ipynb
+        - file: notebook/More Sorting/Merge Sort.ipynb
+        - file: notebook/More Sorting/Insertion Sort.ipynb
         - file: notebook/More Sorting/We cannot do better than nlog(n).ipynb
 
       - file: notebook/More Recursion/title.md ##
